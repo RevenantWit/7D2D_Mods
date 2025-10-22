@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RWSUI_StatBarsTextRemover"/>
+	<DisplayName value="SimpleUI StatBars Text Remover"/>
+	<Version value="1.0"/>
+	<Description value="Cause Simple UI to remove the text from the statbars"/>
+	<Author value="RevenantWit"/>
+	<Website value="https://community.7daystodie.com/topic/32081-revs-simple-ui"/>
+</xml>

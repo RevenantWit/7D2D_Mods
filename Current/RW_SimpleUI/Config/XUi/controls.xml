@@ -1,0 +1,80 @@
+<configs>
+<!--CONTENTS START-->
+<!---->
+<!--StatBar_Text_Remover-->
+<!--StatBar_Icons_Remover-->
+<!--Player_BackPack_Size-->
+<!---->
+<!--CONTENTS END-->
+
+<!--Load Core Simple UI Templates First-->
+<include filename="RWSUI_xuiConfigs/_Core/controls.xml"/>
+
+<!--StatBar_Text_Remover START-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_StatBarsTextRemover')">
+		<include filename="RWSUI_xuiConfigs/Tools/StatBarTextRemover/controls.xml" />
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.StatBars.StatBarText') == 'Off'">
+				<include filename="RWSUI_xuiConfigs/Tools/StatBarTextRemover/controls.xml" />
+			</if>
+		</conditional>
+	</if>
+</conditional>
+<!--StatBar_Text_Remover END-->
+
+<!--StatBar_Icon_Remover START-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_StatBarsIconRemover')">
+		<include filename="RWSUI_xuiConfigs/Tools/StatBarIconRemover/controls.xml" />
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.StatBars.StatBarIcons') == 'Off'">
+				<include filename="RWSUI_xuiConfigs/Tools/StatBarIconRemover/controls.xml" />
+			</if>
+		</conditional>
+	</if>
+</conditional>
+<!--StatBar_Icon_Remover END-->
+
+<!--Player_BackPack_Size START-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_BigBag60') or mod_loaded('RWSUI_BigBag120')">
+		<!-- Check for old add ons to avoid conflicts -->
+		<!-- This check will get removed in a future update -->
+	</if>
+	<if cond="mod_loaded('RWSUI_PlayerBackPackSize')">
+		<conditional>
+			<if cond="mod_loaded('RWSUI_BBInfoPanel_Blocker') == 'false'">
+				<conditional>
+					<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(6,0)">
+						<include filename="RWSUI_xuiConfigs/AddOns/BigBag/BB60/InfoPanel/controls.xml" />
+					</if>
+					<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(12,0)">
+						<include filename="RWSUI_xuiConfigs/AddOns/BigBag/BB120/InfoPanel/controls.xml" />
+					</if>
+				</conditional>
+			</if>
+		</conditional>
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BigBagInfoPanelBlocker') == 'Off'">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '60_Slots'">
+						<include filename="RWSUI_xuiConfigs/AddOns/BigBag/BB60/InfoPanel/controls.xml" />
+					</if>
+					<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '120_Slots'">
+						<include filename="RWSUI_xuiConfigs/AddOns/BigBag/BB120/InfoPanel/controls.xml" />
+					</if>
+				</conditional>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+<!--Player_BackPack_Size END-->
+
+</configs>

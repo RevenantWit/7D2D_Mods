@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RWSUIT_VanillaTheme"/>
+	<DisplayName value="Simple UI Vanilla Theme"/>
+	<Version value="1.0.0"/>
+	<Description value="This theme changes all HUD bars and the toolbelt to use the same colors as in vanilla 7 Days. Also changes the Simple Buff Panels to match. Does not apply any changes to radial HUD bar backgrounds."/>
+	<Author value="RevenantWit"/>
+	<Website value="https://community.7daystodie.com/topic/32081-revs-simple-ui"/>
+</xml>

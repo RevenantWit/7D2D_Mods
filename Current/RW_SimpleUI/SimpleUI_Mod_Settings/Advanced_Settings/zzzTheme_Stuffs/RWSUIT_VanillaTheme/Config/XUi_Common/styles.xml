@@ -1,0 +1,43 @@
+<configs>
+
+<!--Check to make sure Simple UI is installed first-->
+<conditional>
+	<if cond="mod_loaded('RW_SimpleUI')">
+
+		<!--Stealth Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_stealthbar_background_color']/@value">110,110,110,128</set>
+
+		<!--Stamina Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_staminabar_background_color']/@value">110,110,110,128</set>
+		<set xpath="//global/style_entry[@name='rwsui_staminabar_content_color']/@value">0,54,255,128</set>
+
+		<!--Health Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_healthbar_background_color']/@value">110,110,110,128</set>
+		<set xpath="//global/style_entry[@name='rwsui_healthbar_content_color']/@value">255,0,0,128</set>
+
+		<!--Food Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_foodbar_background_color']/@value">110,110,110,128</set>
+		<set xpath="//global/style_entry[@name='rwsui_foodbar_content_color']/@value">0,255,54,128</set>
+
+		<!--Water Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_waterbar_background_color']/@value">110,110,110,128</set>
+		<set xpath="//global/style_entry[@name='rwsui_waterbar_content_color']/@value">0,54,255,160</set>
+
+		<!--Buff Panel-->
+		<set xpath="//global/style_entry[@name='rwsui_buffpanel_background_color']/@value">110,110,110,225</set>
+
+		<!--ToolBelt-->
+		<set xpath="//global/style_entry[@name='rwsui_toolbelt_innerborder_color']/@value">[mediumGrey]</set>
+		<set xpath="//global/style_entry[@name='rwsui_toolbelt_background_color']/@value">[mediumGrey]</set>
+		<set xpath="//global/style_entry[@name='rwsui_toolbelt_holding_color']/@value">[white]</set>
+
+		<!--XP Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_xpbar_background_color']/@value">[mediumGrey]</set>
+
+		<!--ToolBelt Keys and Background-->
+		<set xpath="//global/style_entry[@name='rwsui_tbkeys_background_color']/@value">110,110,110,225</set>
+
+	</if>
+</conditional>
+
+</configs>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RWSUIT_ColorChanger"/>
+	<DisplayName value="Simple UI Theme Template"/>
+	<Version value="1.0.0"/>
+	<Description value="Template for changing colors in Simple UI. By default this mod makes no changes to Simple UI so that it can serve as a template for making Simple UI Themes. All themes names should start with RWSUIT_ and then your theme name. (i.e. RWSUIT_ColorChanger.)"/>
+	<Author value="RevenantWit"/>
+	<Website value="https://community.7daystodie.com/topic/32081-revs-simple-ui"/>
+</xml>

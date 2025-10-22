@@ -1,0 +1,16 @@
+Key,english,schinese
+RWBindingBench,"Binding Bench","装订台"
+RWBindingBenchDesc,"Book binding bench for binding together books and magazines","用于将书籍与杂志装订成册的专业工作台"
+
+lblCategoryRWPerkBooks,"Books","技能书"
+lblCategoryRWSkillMagazines,"Magazines","技能杂志"
+lblCategoryRWSchematics,"Schematics","设计图纸"
+
+resourceRWPerkPapers,"Perk Papers","技能书页"
+resourceRWPerkPapersDesc,"Perk papers can be used at a binding bench to bind together a new perk book of your choosing.","技能书页可在装订台用于合成自选类型的技能书"
+
+resourceRWSkillPapers,"Skill Papers","技能杂志页"
+resourceRWSkillPapersDesc,"Skill papers can be used at a binding bench to bind together a new skill magazine of your choosing.","技能杂志页可在装订台用于制作自选类型的技能杂志"
+
+resourceRWBlueprintScraps,"Blueprint Scraps","图纸残页"
+resourceRWBlueprintScrapsDesc,"Blueprint scraps can be used at a binding bench to piece together a schematic of your choosing.","图纸残页可在装订台拼合成自选类型的设计图纸"

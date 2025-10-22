@@ -1,0 +1,555 @@
+<config>
+
+<!--All values used in each group below are a percentage add-->
+<!--This means 0.1 = 10% and 1 = 100%  /  so for example 2.5 would be 250% -->
+<!--A positive or negative value can be used so for instance by default most body damage is -1 which equals -100% body damage-->
+<!--A zero can be used if not wanting to affect damage-->
+<!--Each zombie group is labeled with a comment-->
+<!--Each effect group also has a comment next to each multiplier value you can change-->
+
+    <append xpath="//entity_class[@name='playerMale']">
+
+		<!--Regular Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRegularZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRegularZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.05"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Feral Regular Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwFeralRegZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwFeralRegZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.1"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Radiated Regular Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadRegZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadRegZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.2"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+		<!--Charged Regular Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwChargedRegZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwChargedRegZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.2"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Infernal Regular Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwInfernalRegZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwInfernalRegZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.2"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+	</if>
+</conditional>
+
+		<!--Spider Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwSpiderZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwSpiderZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.05"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Feral Spider Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwFeralSpiderZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwFeralSpiderZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.1"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Radiated Spider Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadSpiderZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadSpiderZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.2"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+		<!--Charged Spider Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwChargedSpiderZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwChargedSpiderZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.2"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Infernal Spider Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwInfernalSpiderZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwInfernalSpiderZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.2"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+	</if>
+</conditional>
+
+		<!--Special Zombies-->
+		<!--Zombie Cops, Zombie Wights, Demolition Zombies, Frost Claws, Plaque Spitters, Mutated Zombies -->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwSpecialZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-0.8"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwSpecialZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.1"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Feral Special Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwFeralSpecZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-0.8"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwFeralSpecZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.1"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Radiated Special Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadSpecZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-0.8"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadSpecZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.2"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+		<!--Charged Special Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwChargedSpecZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-0.8"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwChargedSpecZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.2"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Infernal Special Zombies-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwInfernalSpecZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-0.8"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwInfernalSpecZombies"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.2"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+	</if>
+</conditional>
+
+		<!--Zombie Dogs-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwZombieDogs"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwZombieDogs"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.1"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Zombie Bears-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwZombieBears"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwZombieBears"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.1"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Regular Zombie Vultures-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRegZombieVultures"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRegZombieVultures"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.1"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Radiated Zombie Vultures-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadZombieVultures"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="-1"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadZombieVultures"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0.2"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Dire Wolf-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwDireWolf"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwDireWolf"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+		<!--Boar Boss Grace-->
+        <effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwBoarBossGrace"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0"/><!--Body Damage Multiplier Value-->
+        </effect_group>
+
+        <effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwBoarBossGrace"/>
+            <passive_effect name="DamageModifier" operation="perc_add" value="0"/><!--Head Damage Multiplier Value-->
+        </effect_group>
+
+    </append>
+
+<!--Below this line sets the tags used for each group, messing with these can break this mod, edit at your own risk-->
+
+
+<!--Spider Tag Fix-->
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,2)">
+		<csv xpath="//entity_class[starts-with(@name, 'zombieSpider')]/property[@name='Tags'][not(contains(@value, 'spider'))]/@value" delim="," op="add" >spider</csv>
+	</if>
+</conditional>
+
+	<!--Special Zombies Group Tag-->
+	<csv xpath="//entity_class[
+		contains(@name, 'zombieFatCop') or
+		contains(@name, 'zombieWight') or
+		contains(@name, 'zombieDemolition') or
+		contains(@name, 'zombieFrostclaw') or
+		contains(@name, 'zombiePlagueSpitter') or
+		contains(@name, 'zombieMutated')
+	]/property[@name='Tags']/@value" delim="," op="add" >rwSpecialZGroup</csv>
+
+	<!--Regular Zombies Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'zombie') and
+		not(contains(@value, 'feral')) and
+		not(contains(@value, 'radiated')) and
+		not(contains(@value, 'spider')) and
+		not(contains(@value, 'rwSpecialZGroup')) and
+		not(contains(@value, 'animal')) and
+		not(contains(@value, 'charged')) and
+		not(contains(@value, 'infernal'))
+	]/@value" delim="," op="add" >rwRegularZombies</csv>
+
+	<!--Feral Regular Zombies Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'zombie') and
+		contains(@value, 'feral') and
+		not(contains(@value, 'radiated')) and
+		not(contains(@value, 'spider')) and
+		not(contains(@value, 'rwSpecialZGroup')) and
+		not(contains(@value, 'animal')) and
+		not(contains(@value, 'charged')) and
+		not(contains(@value, 'infernal'))
+	]/@value" delim="," op="add" >rwFeralRegZombies</csv>
+
+	<!--Radiated Regular Zombies Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'zombie') and
+		contains(@value, 'radiated') and
+		not(contains(@value, 'spider')) and
+		not(contains(@value, 'rwSpecialZGroup')) and
+		not(contains(@value, 'animal')) and
+		not(contains(@value, 'charged')) and
+		not(contains(@value, 'infernal'))
+	]/@value" delim="," op="add" >rwRadRegZombies</csv>
+
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+		<!--Charged Regular Zombies Tag-->
+		<csv xpath="//entity_class/property[@name='Tags'][
+			contains(@value, 'zombie') and
+			contains(@value, 'charged') and
+			not(contains(@value, 'spider')) and
+			not(contains(@value, 'rwSpecialZGroup')) and
+			not(contains(@value, 'animal')) and
+			not(contains(@value, 'radiated')) and
+			not(contains(@value, 'infernal'))
+		]/@value" delim="," op="add" >rwChargedRegZombies</csv>
+
+		<!--Infernal Regular Zombies Tag-->
+		<csv xpath="//entity_class/property[@name='Tags'][
+			contains(@value, 'zombie') and
+			contains(@value, 'infernal') and
+			not(contains(@value, 'spider')) and
+			not(contains(@value, 'rwSpecialZGroup')) and
+			not(contains(@value, 'animal')) and
+			not(contains(@value, 'radiated')) and
+			not(contains(@value, 'charged'))
+		]/@value" delim="," op="add" >rwInfernalRegZombies</csv>
+	</if>
+</conditional>
+
+	<!--Spider Zombies Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'zombie') and
+		not(contains(@value, 'feral')) and
+		not(contains(@value, 'radiated')) and
+		contains(@value, 'spider') and
+		not(contains(@value, 'rwSpecialZGroup')) and
+		not(contains(@value, 'animal')) and
+		not(contains(@value, 'charged')) and
+		not(contains(@value, 'infernal'))
+	]/@value" delim="," op="add" >rwSpiderZombies</csv>
+
+	<!--Feral Spider Zombies Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'zombie') and
+		contains(@value, 'feral') and
+		not(contains(@value, 'radiated')) and
+		contains(@value, 'spider') and
+		not(contains(@value, 'rwSpecialZGroup')) and
+		not(contains(@value, 'animal')) and
+		not(contains(@value, 'charged')) and
+		not(contains(@value, 'infernal'))
+	]/@value" delim="," op="add" >rwFeralSpiderZombies</csv>
+
+	<!--Radiated Spider Zombies Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'zombie') and
+		contains(@value, 'radiated') and
+		contains(@value, 'spider') and
+		not(contains(@value, 'rwSpecialZGroup')) and
+		not(contains(@value, 'animal')) and
+		not(contains(@value, 'charged')) and
+		not(contains(@value, 'infernal'))
+	]/@value" delim="," op="add" >rwRadSpiderZombies</csv>
+
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+		<!--Charged Spider Zombies Tag-->
+		<csv xpath="//entity_class/property[@name='Tags'][
+			contains(@value, 'zombie') and
+			contains(@value, 'charged') and
+			contains(@value, 'spider') and
+			not(contains(@value, 'rwSpecialZGroup')) and
+			not(contains(@value, 'animal')) and
+			not(contains(@value, 'radiated')) and
+			not(contains(@value, 'infernal'))
+		]/@value" delim="," op="add" >rwChargedSpiderZombies</csv>
+
+		<!--Infernal Spider Zombies Tag-->
+		<csv xpath="//entity_class/property[@name='Tags'][
+			contains(@value, 'zombie') and
+			contains(@value, 'infernal') and
+			contains(@value, 'spider') and
+			not(contains(@value, 'rwSpecialZGroup')) and
+			not(contains(@value, 'animal')) and
+			not(contains(@value, 'charged')) and
+			not(contains(@value, 'radiated'))
+		]/@value" delim="," op="add" >rwInfernalSpiderZombies</csv>
+	</if>
+</conditional>
+
+	<!--Special Zombies Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'zombie') and
+		not(contains(@value, 'feral')) and
+		not(contains(@value, 'radiated')) and
+		not(contains(@value, 'spider')) and
+		contains(@value, 'rwSpecialZGroup') and
+		not(contains(@value, 'animal')) and
+		not(contains(@value, 'charged')) and
+		not(contains(@value, 'infernal'))
+	]/@value" delim="," op="add" >rwSpecialZombies</csv>
+
+	<!--Feral Special Zombies Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'zombie') and
+		contains(@value, 'feral') and
+		not(contains(@value, 'radiated')) and
+		not(contains(@value, 'spider')) and
+		contains(@value, 'rwSpecialZGroup') and
+		not(contains(@value, 'animal')) and
+		not(contains(@value, 'charged')) and
+		not(contains(@value, 'infernal'))
+	]/@value" delim="," op="add" >rwFeralSpecZombies</csv>
+
+	<!--Radiated Special Zombies Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'zombie') and
+		contains(@value, 'radiated') and
+		not(contains(@value, 'spider')) and
+		contains(@value, 'rwSpecialZGroup') and
+		not(contains(@value, 'animal')) and
+		not(contains(@value, 'charged')) and
+		not(contains(@value, 'infernal'))
+	]/@value" delim="," op="add" >rwRadSpecZombies</csv>
+
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+		<!--Charged Special Zombies Tag-->
+		<csv xpath="//entity_class/property[@name='Tags'][
+			contains(@value, 'zombie') and
+			contains(@value, 'charged') and
+			not(contains(@value, 'spider')) and
+			contains(@value, 'rwSpecialZGroup') and
+			not(contains(@value, 'animal')) and
+			not(contains(@value, 'radiated')) and
+			not(contains(@value, 'infernal'))
+		]/@value" delim="," op="add" >rwChargedSpecZombies</csv>
+
+		<!--Infernal Special Zombies Tag-->
+		<csv xpath="//entity_class/property[@name='Tags'][
+			contains(@value, 'zombie') and
+			contains(@value, 'infernal') and
+			not(contains(@value, 'spider')) and
+			contains(@value, 'rwSpecialZGroup') and
+			not(contains(@value, 'animal')) and
+			not(contains(@value, 'charged')) and
+			not(contains(@value, 'radiated'))
+		]/@value" delim="," op="add" >rwInfernalSpecZombies</csv>
+	</if>
+</conditional>
+
+	<!--Zombie Dogs Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'animal') and
+		contains(@value, 'zombie') and
+		contains(@value, 'dog') and
+		not(contains(@value, 'boss'))
+	]/@value" delim="," op="add" >rwZombieDogs</csv>
+
+	<!--Zombie Bears Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'animal') and
+		contains(@value, 'zombie') and
+		contains(@value, 'bear') and
+		not(contains(@value, 'boss'))
+	]/@value" delim="," op="add" >rwZombieBears</csv>
+
+	<!--Regular Zombie Vultures Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'animal') and
+		contains(@value, 'zombie') and
+		contains(@value, 'vulture') and
+		not(contains(@value, 'radiated')) and
+		not(contains(@value, 'boss'))
+	]/@value" delim="," op="add" >rwRegZombieVultures</csv>
+
+	<!--Radiated Zombie Vultures Tag-->
+	<csv xpath="//entity_class/property[@name='Tags'][
+		contains(@value, 'animal') and
+		contains(@value, 'zombie') and
+		contains(@value, 'vulture') and
+		contains(@value, 'radiated') and
+		not(contains(@value, 'boss'))
+	]/@value" delim="," op="add" >rwRadZombieVultures</csv>
+
+	<!--Dire Wolf Tag-->
+	<csv xpath="//entity_class[@name='animalDireWolf']/property[@name='Tags']/@value" delim="," op="add" >rwDireWolf</csv>
+
+	<!--Boar Boss Grace's Tag-->
+	<csv xpath="//entity_class[@name='animalBossGrace']/property[@name='Tags']/@value" delim="," op="add" >rwBoarBossGrace</csv>
+
+</config>

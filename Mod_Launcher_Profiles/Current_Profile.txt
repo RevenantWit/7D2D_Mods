@@ -1,0 +1,4 @@
+https://github.com/RevenantWit/7D2D_Mods/tree/main/Current/RW_AAS
+https://github.com/RevenantWit/7D2D_Mods/tree/main/Current/RW_CZDM
+https://github.com/RevenantWit/7D2D_Mods/tree/main/Current/RW_SimpleUI
+https://github.com/RevenantWit/7D2D_Mods/tree/main/Current/RW_SkillPapers

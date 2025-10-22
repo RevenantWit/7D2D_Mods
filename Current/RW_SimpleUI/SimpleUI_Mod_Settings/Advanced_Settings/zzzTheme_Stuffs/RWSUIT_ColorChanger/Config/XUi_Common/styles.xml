@@ -1,0 +1,118 @@
+<configs>
+
+<!--Check to make sure Simple UI is installed first-->
+<conditional>
+	<if cond="mod_loaded('RW_SimpleUI')">
+
+		<!--Stealth Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_stealthbar_background_color']/@value">[darkestGrey]</set>
+		<set xpath="//global/style_entry[@name='rwsui_stealthbar_content_safeColor']/@value">50,135,0,255</set>
+		<set xpath="//global/style_entry[@name='rwsui_stealthbar_content_dangerColor']/@value">180,180,0,255</set>
+		<set xpath="//global/style_entry[@name='rwsui_stealthbar_icon_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_stealthbar_text_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_stealthbar_textOutline_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_stealthbar_textOutline_size']/@value">1,1</set>
+
+		<!--only applies to radial stealth bars-->
+		<set xpath="//global/style_entry[@name='rwsui_stealthbar_border_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_stealthbar_borderCover_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_stealthbar_topLayer_color']/@value">[black]</set>
+
+		<!--Stamina Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_staminabar_background_color']/@value">[darkestGrey]</set>
+		<set xpath="//global/style_entry[@name='rwsui_staminabar_content_color']/@value">0,54,255,200</set>
+		<set xpath="//global/style_entry[@name='rwsui_staminabar_icon_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_staminabar_text_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_staminabar_textOutline_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_staminabar_textOutline_size']/@value">1,1</set>
+
+		<!--only applies to radial stamina bars-->
+		<set xpath="//global/style_entry[@name='rwsui_staminabar_border_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_staminabar_borderCover_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_staminabar_topLayer_color']/@value">[black]</set>
+
+		<!--Health Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_healthbar_background_color']/@value">[darkestGrey]</set>
+		<set xpath="//global/style_entry[@name='rwsui_healthbar_content_color']/@value">255,0,0,200</set>
+		<set xpath="//global/style_entry[@name='rwsui_healthbar_icon_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_healthbar_text_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_healthbar_textOutline_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_healthbar_textOutline_size']/@value">1,1</set>
+
+		<!--only applies to radial health bars-->
+		<set xpath="//global/style_entry[@name='rwsui_healthbar_border_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_healthbar_borderCover_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_healthbar_topLayer_color']/@value">[black]</set>
+
+		<!--Food Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_foodbar_background_color']/@value">[darkestGrey]</set>
+		<set xpath="//global/style_entry[@name='rwsui_foodbar_content_color']/@value">0,255,54,180</set>
+		<set xpath="//global/style_entry[@name='rwsui_foodbar_icon_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_foodbar_text_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_foodbar_textOutline_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_foodbar_textOutline_size']/@value">1,1</set>
+
+		<!--only applies to radial food bars-->
+		<set xpath="//global/style_entry[@name='rwsui_foodbar_border_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_foodbar_borderCover_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_foodbar_topLayer_color']/@value">[black]</set>
+
+		<!--Water Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_waterbar_background_color']/@value">[darkestGrey]</set>
+		<set xpath="//global/style_entry[@name='rwsui_waterbar_content_color']/@value">64,164,223,200</set>
+		<set xpath="//global/style_entry[@name='rwsui_waterbar_icon_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_waterbar_text_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_waterbar_textOutline_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_waterbar_textOutline_size']/@value">1,1</set>
+
+		<!--only applies to radial water bars-->
+		<set xpath="//global/style_entry[@name='rwsui_waterbar_border_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_waterbar_borderCover_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_waterbar_topLayer_color']/@value">[black]</set>
+
+		<!--Buff Panel-->
+		<set xpath="//global/style_entry[@name='rwsui_buffpanel_border_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_buffpanel_background_color']/@value">[darkestGrey]</set>
+		<set xpath="//global/style_entry[@name='rwsui_buffpanel_textOutline_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_buffpanel_textOutline_size']/@value">1,1</set>
+
+		<!--WARNING: changing these will cause the buff icons and text to not change color depending on the severity of the buff -->
+		<set xpath="//global/style_entry[@name='rwsui_buffpanel_icon_color']/@value">{buffcolor}</set>
+		<set xpath="//global/style_entry[@name='rwsui_buffpanel_text_color']/@value">{buffcolor}</set>
+
+		<!--only applies to round buff panel -->
+		<set xpath="//global/style_entry[@name='rwsui_buffpanelR_border_color']/@value">{buffcolor}</set>
+		<set xpath="//global/style_entry[@name='rwsui_buffpanel_topLayer_color']/@value">[black]</set>
+
+		<!--ToolBelt-->
+		<set xpath="//global/style_entry[@name='rwsui_toolbelt_border_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_toolbelt_innerborder_color']/@value">[transparent]</set>
+		<set xpath="//global/style_entry[@name='rwsui_toolbelt_background_color']/@value">[darkestGrey]</set>
+		<set xpath="//global/style_entry[@name='rwsui_toolbelt_select_color']/@value">[beige]</set>
+		<set xpath="//global/style_entry[@name='rwsui_toolbelt_holding_color']/@value">[green]</set>
+
+		<!--XP Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_xpbar_background_color']/@value">[darkestGrey]</set>
+		<set xpath="//global/style_entry[@name='rwsui_xpbar_standard_color']/@value">128,4,128,255</set>
+		<set xpath="//global/style_entry[@name='rwsui_xpbar_updating_color']/@value">128,4,128,255</set>
+		<set xpath="//global/style_entry[@name='rwsui_xpbar_deficit_color']/@value">222,20,20,255</set>	
+		<set xpath="//global/style_entry[@name='rwsui_xpbar_icon_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_xpbar_text_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_xpbar_textOutline_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_xpbar_textOutline_size']/@value">1,1</set>
+
+		<!--only applies to radial xp bars-->
+		<set xpath="//global/style_entry[@name='rwsui_xpbar_border_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_xpbar_borderCover_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_xpbar_topLayer_color']/@value">[black]</set>
+
+		<!--ToolBelt Keys and Background-->
+		<set xpath="//global/style_entry[@name='rwsui_tbkeys_background_color']/@value">[darkestGrey]</set>
+		<set xpath="//global/style_entry[@name='rwsui_tbkeys_text_color']/@value">[white]</set>
+		<set xpath="//global/style_entry[@name='rwsui_tbkeys_textOutline_color']/@value">[black]</set>
+		<set xpath="//global/style_entry[@name='rwsui_tbkeys_textOutline_size']/@value">1,1</set>
+
+	</if>
+</conditional>
+
+</configs>

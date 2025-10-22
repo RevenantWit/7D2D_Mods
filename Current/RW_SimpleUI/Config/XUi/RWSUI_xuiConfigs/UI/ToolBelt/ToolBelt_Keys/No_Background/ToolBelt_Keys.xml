@@ -1,0 +1,10 @@
+<configs>
+
+<append xpath="//window[@name='RWSUI_ToolBelt10']/rect[@name='windowToolbelt']">
+
+	<!--Toolbelt Keys Text-->
+	<rwsui_toolbelt_keys keys_grid_pos="0,17" depth="11" rows="1" cols="10" cell_height="20" cell_width="75" font_size="18" text_color="[rwsui_tbkeys_text_color]" textOutline_color="[rwsui_tbkeys_textOutline_color]" textOutline_size="[rwsui_tbkeys_textOutline_size]" text_justify="center"/>
+
+</append>
+
+</configs>
