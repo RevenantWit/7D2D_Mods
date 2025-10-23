@@ -30,7 +30,7 @@
       <Category name="SimpleUIBlockers" displayKey="rwsuiSimpleUIBlockers_Category" tooltipKey="rwsuiSimpleUIBlockers_Category_Desc">
         <Switch name="HUDBlocker" displayKey="rwsuiHUDBlocker_Toggle" tooltipKey="rwsuiHUDBlocker_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
         <Switch name="ToolBeltBlocker" displayKey="rwsuiToolBeltBlocker_Toggle" tooltipKey="rwsuiToolBeltBlocker_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
-		<Switch name="VanillaTBStatBar" displayKey="rwsuiVTBStatBarBlocker_Toggle" tooltipKey="rwsuiVTBStatBarBlocker_Toggle_Desc" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="VanillaTBStatBar" displayKey="rwsuiVTBStatBarBlocker_Toggle" tooltipKey="rwsuiVTBStatBarBlocker_Toggle_Desc" defaultValue="On" leftValue="Off" rightValue="On" />
       </Category>
       <Category name="PopUps" displayKey="rwsuiPopUp_Category" tooltipKey="rwsuiPopUp_Category_Desc">
         <Switch name="LocationPopUps" displayKey="rwsuiLocationPopUp_Toggle" tooltipKey="rwsuiLocationPopUp_Toggle_Desc" defaultValue="On" leftValue="Off" rightValue="On" />
@@ -41,34 +41,34 @@
     </Tab>
   </Global>
   <World>
-      <Category name="CraftingUI" displayKey="rwsuiCraftingUI_Category" tooltipKey="rwsuiCraftingUI_Category_Desc">
-        <Switch name="ForgeInputSlots" displayKey="rwsuiForgeInput3Slot_Toggle" tooltipKey="rwsuiForgeInput3Slot_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
-        <Selector name="CraftingQueueSlots" displayKey="rwsuiCraftingQueueSize_Option" tooltipKey="rwsuiCraftingQueueSize_Option_Desc" defaultValue="Vanilla">
-          <Property type="arrayValues" allowedValues="Vanilla,05_Slots" />
-        </Selector>
-      </Category>
-      <Category name="PlayerBackPack" displayKey="rwsuiPlayerBackPack_Category" tooltipKey="rwsuiPlayerBackPack_Category_Desc">
-        <Switch name="BigBagInfoPanelBlocker" displayKey="rwsuiBBInfoPanelBlocker_Toggle" tooltipKey="rwsuiBBInfoPanelBlocker_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
-        <Selector name="PlayerBackPackSize" displayKey="rwsuiPlayerBackPackSize_Option" tooltipKey="rwsuiPlayerBackPackSize_Option_Desc" defaultValue="Vanilla">
-          <Property type="arrayValues" allowedValues="Vanilla,60_Slots,120_Slots" />
-        </Selector>
-      </Category>
-      <Category name="VehicleStorage" displayKey="rwsuiVehicleStorage_Category" tooltipKey="rwsuiVehicleStorage_Category_Desc">
-        <Selector name="vehicleBicycle" displayKey="rwsuiBicycleStorageSize_Option" tooltipKey="rwsuiBicycleStorageSize_Option_Desc" defaultValue="Vanilla">
-          <Property type="arrayValues" allowedValues="Vanilla,10_Slots,20_Slots,30_Slots,40_Slots,50_Slots,60_Slots,70_Slots,80_Slots,90_Slots" />
-        </Selector>
-        <Selector name="vehicleMinibike" displayKey="rwsuiMinibikeStorageSize_Option" tooltipKey="rwsuiMinibikeStorageSize_Option_Desc" defaultValue="Vanilla">
-          <Property type="arrayValues" allowedValues="Vanilla,10_Slots,20_Slots,30_Slots,40_Slots,50_Slots,60_Slots,70_Slots,80_Slots,90_Slots" />
-        </Selector>
-        <Selector name="vehicleMotorcycle" displayKey="rwsuiMotorcycleStorageSize_Option" tooltipKey="rwsuiMotorcycleStorageSize_Option_Desc" defaultValue="Vanilla">
-          <Property type="arrayValues" allowedValues="Vanilla,10_Slots,20_Slots,30_Slots,40_Slots,50_Slots,60_Slots,70_Slots,80_Slots,90_Slots" />
-        </Selector>
-        <Selector name="vehicle4x4Truck" displayKey="rwsui4x4TruckStorageSize_Option" tooltipKey="rwsui4x4TruckStorageSize_Option_Desc" defaultValue="Vanilla">
-          <Property type="arrayValues" allowedValues="Vanilla,10_Slots,20_Slots,30_Slots,40_Slots,50_Slots,60_Slots,70_Slots,80_Slots,90_Slots" />
-        </Selector>
-        <Selector name="vehicleGyrocopter" displayKey="rwsuiGyrocopterStorageSize_Option" tooltipKey="rwsuiGyrocopterStorageSize_Option_Desc" defaultValue="Vanilla">
-          <Property type="arrayValues" allowedValues="Vanilla,10_Slots,20_Slots,30_Slots,40_Slots,50_Slots,60_Slots,70_Slots,80_Slots,90_Slots" />
-        </Selector>
-      </Category>
+    <Category name="CraftingUI" displayKey="rwsuiCraftingUI_Category" tooltipKey="rwsuiCraftingUI_Category_Desc">
+      <Switch name="ForgeInputSlots" displayKey="rwsuiForgeInput3Slot_Toggle" tooltipKey="rwsuiForgeInput3Slot_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
+      <Selector name="CraftingQueueSlots" displayKey="rwsuiCraftingQueueSize_Option" tooltipKey="rwsuiCraftingQueueSize_Option_Desc" defaultValue="Vanilla">
+        <Property type="arrayValues" allowedValues="Vanilla,05_Slots" />
+      </Selector>
+    </Category>
+    <Category name="PlayerBackPack" displayKey="rwsuiPlayerBackPack_Category" tooltipKey="rwsuiPlayerBackPack_Category_Desc">
+      <Switch name="BigBagInfoPanelBlocker" displayKey="rwsuiBBInfoPanelBlocker_Toggle" tooltipKey="rwsuiBBInfoPanelBlocker_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
+      <Selector name="PlayerBackPackSize" displayKey="rwsuiPlayerBackPackSize_Option" tooltipKey="rwsuiPlayerBackPackSize_Option_Desc" defaultValue="Vanilla">
+        <Property type="arrayValues" allowedValues="Vanilla,60_Slots,120_Slots" />
+      </Selector>
+    </Category>
+    <Category name="VehicleStorage" displayKey="rwsuiVehicleStorage_Category" tooltipKey="rwsuiVehicleStorage_Category_Desc">
+      <Selector name="vehicleBicycle" displayKey="rwsuiBicycleStorageSize_Option" tooltipKey="rwsuiBicycleStorageSize_Option_Desc" defaultValue="Vanilla">
+        <Property type="arrayValues" allowedValues="Vanilla,10_Slots,20_Slots,30_Slots,40_Slots,50_Slots,60_Slots,70_Slots,80_Slots,90_Slots" />
+      </Selector>
+      <Selector name="vehicleMinibike" displayKey="rwsuiMinibikeStorageSize_Option" tooltipKey="rwsuiMinibikeStorageSize_Option_Desc" defaultValue="Vanilla">
+        <Property type="arrayValues" allowedValues="Vanilla,10_Slots,20_Slots,30_Slots,40_Slots,50_Slots,60_Slots,70_Slots,80_Slots,90_Slots" />
+      </Selector>
+      <Selector name="vehicleMotorcycle" displayKey="rwsuiMotorcycleStorageSize_Option" tooltipKey="rwsuiMotorcycleStorageSize_Option_Desc" defaultValue="Vanilla">
+        <Property type="arrayValues" allowedValues="Vanilla,10_Slots,20_Slots,30_Slots,40_Slots,50_Slots,60_Slots,70_Slots,80_Slots,90_Slots" />
+      </Selector>
+      <Selector name="vehicle4x4Truck" displayKey="rwsui4x4TruckStorageSize_Option" tooltipKey="rwsui4x4TruckStorageSize_Option_Desc" defaultValue="Vanilla">
+        <Property type="arrayValues" allowedValues="Vanilla,10_Slots,20_Slots,30_Slots,40_Slots,50_Slots,60_Slots,70_Slots,80_Slots,90_Slots" />
+      </Selector>
+      <Selector name="vehicleGyrocopter" displayKey="rwsuiGyrocopterStorageSize_Option" tooltipKey="rwsuiGyrocopterStorageSize_Option_Desc" defaultValue="Vanilla">
+        <Property type="arrayValues" allowedValues="Vanilla,10_Slots,20_Slots,30_Slots,40_Slots,50_Slots,60_Slots,70_Slots,80_Slots,90_Slots" />
+      </Selector>
+    </Category>
   </World>
 </ModSettings>

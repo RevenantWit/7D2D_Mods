@@ -17,8 +17,8 @@
 	</if>
 	<if cond="mod_loaded('Gears')">
 		<conditional>
-			<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.HUDBlocker') == 'On'">
-				<!-- If HUD Blocker is on do nothing -->
+			<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.HUDBlocker') == 'Off'">
+				<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='HUDLeftStatBars' or @name='RevsWW_LeftHUD' or @name='RevsWW_MultiHUD' or @name='RWSUI_LeftHUD']/@name">RWSUI_LeftHUD</set>
 			</if>
 		</conditional>
 	</if>
@@ -33,8 +33,8 @@
 	</if>
 	<if cond="mod_loaded('Gears')">
 		<conditional>
-			<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'On'">
-				<!-- If Toolbelt Blocker is on do nothing -->
+			<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
+				<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt10</set>
 			</if>
 		</conditional>
 	</if>
@@ -95,36 +95,44 @@
 
 <!-- Wookies_12_Slot_ToolBelt START -->
 <conditional>
-	<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
-		<!-- If Toolbelt Blocker is installed do nothing -->
-	</if>
-	<if cond="mod_loaded('Gears')">
-		<conditional>
-			<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'On'">
-				<!-- If Toolbelt Blocker is on do nothing -->
-			</if>
-		</conditional>
-	</if>
 	<if cond="mod_loaded('WMM12SlotToolbelt') == 'true'">
-		<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt12</set>
+		<conditional>
+			<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
+				<!-- If Toolbelt Blocker is installed do nothing -->
+			</if>
+			<if cond="mod_loaded('Gears')">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
+						<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt12</set>
+					</if>
+				</conditional>
+			</if>
+			<else>
+				<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt12</set>
+			</else>
+		</conditional>
 	</if>
 </conditional>
 <!-- Wookies_12_Slot_ToolBelt END -->
 
 <!-- Khaines_15_Slot_ToolBelt START -->
 <conditional>
-	<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
-		<!-- If Toolbelt Blocker is installed do nothing -->
-	</if>
-	<if cond="mod_loaded('Gears')">
-		<conditional>
-			<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'On'">
-				<!-- If Toolbelt Blocker is on do nothing -->
-			</if>
-		</conditional>
-	</if>
 	<if cond="mod_loaded('15SlotToolbelt') == 'true'">
-		<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt15</set>
+		<conditional>
+			<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
+				<!-- If Toolbelt Blocker is installed do nothing -->
+			</if>
+			<if cond="mod_loaded('Gears')">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
+						<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt15</set>
+					</if>
+				</conditional>
+			</if>
+			<else>
+				<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt15</set>
+			</else>
+		</conditional>
 	</if>
 </conditional>
 <!-- Khaines_15_Slot_ToolBelt END -->
