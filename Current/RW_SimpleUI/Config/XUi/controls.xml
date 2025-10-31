@@ -1,44 +1,14 @@
 <configs>
 <!--CONTENTS START-->
 <!---->
-<!--StatBar_Text_Remover-->
-<!--StatBar_Icons_Remover-->
+<!--SimpleUI_Templates-->
 <!--Player_BackPack_Size-->
 <!---->
 <!--CONTENTS END-->
 
-<!--Load Core Simple UI Templates First-->
+<!--SimpleUI_Templates Start-->
 <include filename="RWSUI_xuiConfigs/_Core/controls.xml"/>
-
-<!--StatBar_Text_Remover START-->
-<conditional>
-	<if cond="mod_loaded('RWSUI_StatBarsTextRemover')">
-		<include filename="RWSUI_xuiConfigs/Tools/StatBarTextRemover/controls.xml" />
-	</if>
-	<if cond="mod_loaded('Gears')">
-		<conditional>
-			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.StatBars.StatBarText') == 'Off'">
-				<include filename="RWSUI_xuiConfigs/Tools/StatBarTextRemover/controls.xml" />
-			</if>
-		</conditional>
-	</if>
-</conditional>
-<!--StatBar_Text_Remover END-->
-
-<!--StatBar_Icon_Remover START-->
-<conditional>
-	<if cond="mod_loaded('RWSUI_StatBarsIconRemover')">
-		<include filename="RWSUI_xuiConfigs/Tools/StatBarIconRemover/controls.xml" />
-	</if>
-	<if cond="mod_loaded('Gears')">
-		<conditional>
-			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.StatBars.StatBarIcons') == 'Off'">
-				<include filename="RWSUI_xuiConfigs/Tools/StatBarIconRemover/controls.xml" />
-			</if>
-		</conditional>
-	</if>
-</conditional>
-<!--StatBar_Icon_Remover END-->
+<!--SimpleUI_Templates END-->
 
 <!--Player_BackPack_Size START-->
 <conditional>

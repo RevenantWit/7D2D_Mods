@@ -29,6 +29,9 @@ rwsuiStatBarText_Toggle_Desc,"Toggles the text being displayed on or off for Sim
 rwsuiStatBarIcons_Toggle,"StatBar Icons"
 rwsuiStatBarIcons_Toggle_Desc,"Toggles the icons being displayed on or off for Simple UI's stat bars."
 
+rwsuiFoodWaterTextAV_Toggle,"Food/Water Actual Values"
+rwsuiFoodWaterTextAV_Toggle_Desc,"Toggles whether or not to use the actual values instead of percentage for the food and water bar text."
+
 rwsuiToolBeltLabel_Category,"ToolBelt Label Settings"
 rwsuiToolBeltLabel_Category_Desc,""
 
@@ -50,7 +53,7 @@ rwsuiHUDBlocker_Toggle_Desc,"Turning this on will prevent Simple UI from using i
 rwsuiToolBeltBlocker_Toggle,"ToolBelt Blocker"
 rwsuiToolBeltBlocker_Toggle_Desc,"Turning this on will prevent Simple UI from using it's toolbelt elements"
 
-rwsuiVTBStatBarBlocker_Toggle,"Vanilla Food-Water Blocker"
+rwsuiVTBStatBarBlocker_Toggle,"Vanilla Food/Water Blocker"
 rwsuiVTBStatBarBlocker_Toggle_Desc,"Turning this on will remove the vanilla food and water bar from the toolbelt. This is only useful if the toolbelt blocker is turned on."
 
 rwsuiPopUp_Category,"PopUp Settings"

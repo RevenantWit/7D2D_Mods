@@ -11,7 +11,7 @@
 			<rwsui_toolbelt pos="3,-3" cols="10" clear_inventory1_pos="800,-32" clear_inventory2_pos="800,50"/>
 
 			<!--XP Bar-->
-			<rwsui_toolbelt_xpBar pos="0,-77" filldirection="horizontal" width="753" height="18" barBackground_color="[rwsui_xpbar_background_color]" sprite="ui_game_symbol_trophy" icon_color="[rwsui_xpbar_icon_color]" icon_size="14,14" icon_pos="${Round(width/2, 0)-50},-9" text="{# localization('xuiLevel')}    {cvar($LastPlayerLevel)}" text_pos="0,-1" text_width="749" font_size="16" text_height="16" text_color="[rwsui_xpbar_text_color]" textOutline_color="[rwsui_xpbar_textOutline_color]" textOutline_size="[rwsui_xpbar_textOutline_size]" text_justify="center" />
+			<rwsui_toolbelt_xpBar pos="0,-77" filldirection="horizontal" width="753" height="18" barBackground_color="[rwsui_xpbar_background_color]" sprite="ui_game_symbol_trophy" icon_color="[rwsui_xpbar_icon_color]" icon_size="14,14" icon_pos="${Round(width/2, 0)-50},-9" icon_hidden="false" text="{# localization('xuiLevel')}    {cvar($LastPlayerLevel)}" text_pos="0,-1" text_width="749" font_size="16" text_height="16" text_color="[rwsui_xpbar_text_color]" textOutline_color="[rwsui_xpbar_textOutline_color]" textOutline_size="[rwsui_xpbar_textOutline_size]" text_justify="center" text_hidden="false" />
 
 		</rect>
 	</window>
@@ -25,7 +25,7 @@
 			<rwsui_toolbelt pos="3,-3" cols="12" clear_inventory1_pos="950,-32" clear_inventory2_pos="950,50"/>
 
 			<!--XP Bar-->
-			<rwsui_toolbelt_xpBar pos="0,-77" filldirection="horizontal" width="903" height="18" barBackground_color="[rwsui_xpbar_background_color]" sprite="ui_game_symbol_trophy" icon_color="[rwsui_xpbar_icon_color]" icon_size="14,14" icon_pos="${Round(width/2, 0)-50},-9" text="{# localization('xuiLevel')}    {cvar($LastPlayerLevel)}" text_pos="0,-1" text_width="899" font_size="16" text_height="16" text_color="[rwsui_xpbar_text_color]" textOutline_color="[rwsui_xpbar_textOutline_color]" textOutline_size="[rwsui_xpbar_textOutline_size]" text_justify="center" />
+			<rwsui_toolbelt_xpBar pos="0,-77" filldirection="horizontal" width="903" height="18" barBackground_color="[rwsui_xpbar_background_color]" sprite="ui_game_symbol_trophy" icon_color="[rwsui_xpbar_icon_color]" icon_size="14,14" icon_pos="${Round(width/2, 0)-50},-9" icon_hidden="false" text="{# localization('xuiLevel')}    {cvar($LastPlayerLevel)}" text_pos="0,-1" text_width="899" font_size="16" text_height="16" text_color="[rwsui_xpbar_text_color]" textOutline_color="[rwsui_xpbar_textOutline_color]" textOutline_size="[rwsui_xpbar_textOutline_size]" text_justify="center" text_hidden="false" />
 
 		</rect>
 	</window>
@@ -39,7 +39,7 @@
 			<rwsui_toolbelt pos="3,-3" cols="15" clear_inventory1_pos="1175,-32" clear_inventory2_pos="1175,50"/>
 
 			<!--XP Bar-->
-			<rwsui_toolbelt_xpBar pos="0,-77" filldirection="horizontal" width="1128" height="18" barBackground_color="[rwsui_xpbar_background_color]" sprite="ui_game_symbol_trophy" icon_color="[rwsui_xpbar_icon_color]" icon_size="14,14" icon_pos="${Round(width/2, 0)-50},-9" text="{# localization('xuiLevel')}    {cvar($LastPlayerLevel)}" text_pos="17,-1" text_width="1124" font_size="16" text_height="16" text_color="[rwsui_xpbar_text_color]" textOutline_color="[rwsui_xpbar_textOutline_color]" textOutline_size="[rwsui_xpbar_textOutline_size]" text_justify="center" />
+			<rwsui_toolbelt_xpBar pos="0,-77" filldirection="horizontal" width="1128" height="18" barBackground_color="[rwsui_xpbar_background_color]" sprite="ui_game_symbol_trophy" icon_color="[rwsui_xpbar_icon_color]" icon_size="14,14" icon_pos="${Round(width/2, 0)-50},-9" icon_hidden="false" text="{# localization('xuiLevel')}    {cvar($LastPlayerLevel)}" text_pos="17,-1" text_width="1124" font_size="16" text_height="16" text_color="[rwsui_xpbar_text_color]" textOutline_color="[rwsui_xpbar_textOutline_color]" textOutline_size="[rwsui_xpbar_textOutline_size]" text_justify="center" text_hidden="false" />
 
 		</rect>
 	</window>

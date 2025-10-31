@@ -1,14 +1,17 @@
 <configs>
 <!--CONTENTS START-->
 <!---->
-<!--Core_Simple_UI_Templates-->
+<!--Stat_Bars-->
+<!--No_Fill_Bars-->
+<!--Buffs-->
+<!--ToolBelt-->
 <!---->
 <!--CONTENTS END-->
 
-<!--Core_Simple_UI_Templates START-->
 <append xpath="/controls">
+<!--Stat_Bars START-->
 	<rwsui_hud_statBar>
-		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
+		<rect width="${width}" height="${height}" pos="${pos}" controller="${controller}" stat_type="${stat_type}" visible="{statvisible}">
 			<sprite depth="0" name="border" color="0,0,0,140" type="sliced" />
 			<sprite depth="1" name="border" color="0,0,0,255" type="sliced" fillcenter="false" />
 			<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
@@ -16,8 +19,8 @@
 			<filledsprite depth="3" name="background" color="${barBackground_color}" type="filled" filldirection="${filldirection}" fill="${barBackground_fill}" />
 
 			<filledsprite depth="4" name="BarContent" color="${barContent_color}" type="filled" filldirection="${filldirection}" fill="0" />
-			<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
-			<label depth="6" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}"/>
+			<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" force_hide="${icon_hidden}" controller="HUDStatBar" stat_type="${stat_type}" />
+			<label depth="6" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
 
 			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
 			<filledsprite depth="8" name="background" color="0,0,0,255" fillcenter="false" type="filled" filldirection="${filldirection}" fill="${barBackground_fill}" />
@@ -26,7 +29,7 @@
 	</rwsui_hud_statBar>
 
 	<rwsui_hud_statBarR>
-		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
+		<rect width="${width}" height="${height}" pos="${pos}" controller="${controller}" stat_type="${stat_type}" visible="{statvisible}">
 			<sprite depth="1" name="border" color="${border_color}" sprite="ui_game_filled_circle" globalopacity="${border_globalopacity}" />
 			<sprite depth="2" name="borderCover" pos="${Round(border_thickness/2, 0)},-${Round(border_thickness/2, 0)}" color="${borderCover_color}" height="${height-Round(border_thickness, 0)}" width="${width-Round(border_thickness, 0)}" sprite="ui_game_filled_circle" globalopacity="${borderCover_globalopacity}" />
 
@@ -36,14 +39,14 @@
 
 			<sprite depth="5" name="topLayer" pos="${topLayer_pos}" color="${topLayer_color}" height="${topLayer_height}" width="${topLayer_width}" sprite="ui_game_filled_circle" globalopacity="${toplayer_globalopacity}" />
 
-			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" force_hide="${icon_hidden}" controller="HUDStatBar" stat_type="${stat_type}"/>
 
-			<label depth="7" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" />
+			<label depth="7" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
 		</rect>
 	</rwsui_hud_statBarR>
 
 	<rwsui_hud_statBar_reverseFillH>
-		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="${stat_type}" visible="{statvisible}">
+		<rect width="${width}" height="${height}" pos="${pos}" controller="${controller}" stat_type="${stat_type}" visible="{statvisible}">
 			<sprite depth="0" name="border" color="0,0,0,140" type="sliced" />
 			<sprite depth="1" name="border" color="0,0,0,255" type="sliced" fillcenter="false" />
 			<sprite depth="2" name="background" color="0,0,0,140" type="sliced" />
@@ -51,8 +54,8 @@
 			<filledsprite depth="3" name="background" pos="${width},-${height}" color="${barBackground_color}" type="filled" rotation="180" filldirection="${filldirection}" fill="${barBackground_fill}" />
 
 			<filledsprite depth="4" name="BarContent" pos="${width},-${height}" color="${barContent_color}" type="filled" rotation="180" filldirection="${filldirection}" fill="0" />
-			<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
-			<label depth="6" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}"/>
+			<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" force_hide="${icon_hidden}" controller="HUDStatBar" stat_type="${stat_type}"/>
+			<label depth="6" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
 
 			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
 			<filledsprite depth="8" name="background" pos="${width},-${height}" color="0,0,0,255" fillcenter="false" type="filled" rotation="180" filldirection="${filldirection}" fill="${barBackground_fill}" />
@@ -68,8 +71,8 @@
 			<filledsprite depth="3" name="background" color="${barBackground_color}" type="filled" filldirection="${filldirection}" fill="1" />
 
 			<filledsprite depth="4" name="BarContent" color="{xpcolor}" type="filled" filldirection="${filldirection}" fill="{xp}" />
-			<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
-			<label depth="6" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}"/>
+			<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" force_hide="${icon_hidden}"/>
+			<label depth="6" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
 
 			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
 			<filledsprite depth="8" name="background" color="0,0,0,255" width="${width}" height="${height}" fillcenter="false" type="filled" filldirection="${filldirection}" fill="1" />
@@ -88,9 +91,9 @@
 
 			<sprite depth="5" name="topLayer" pos="${topLayer_pos}" color="${topLayer_color}" height="${topLayer_height}" width="${topLayer_width}" sprite="ui_game_filled_circle" globalopacity="${toplayer_globalopacity}" />
 
-			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" force_hide="${icon_hidden}"/>
 
-			<label depth="7" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" />
+			<label depth="7" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
 		</rect>
 	</rwsui_hud_xpBarR>
 
@@ -98,16 +101,18 @@
 		<rect name="stealthBar" depth="1" pos="${pos}" width="${width}" height="${height}" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}" >
 			<filledsprite depth="1" name="BarContent" sprite="ui_game_header_insert" pos="-7,0" color="${barContent_color}" type="filled" fill="0" />
 			<filledsprite depth="1" name="BarContent" sprite="ui_game_header_insert" pos="7,-${height}" color="${barContent_color}" rotation="180" type="filled" fill="0" controller="HUDStatBar" stat_type="Stealth" />
-			<sprite depth="2" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<sprite depth="2" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" force_hide="${icon_hidden}"/>
 		</rect>
 	</rwsui_hud_doubleNoText_stealthBar>
+<!--Stat_Bars END-->
 
+<!--No_Fill_Bars START-->
 	<rwsui_hud_nofill>
 		<panel depth="${depth}" width="${width}" height="${height}" pos="${pos}" >	
 			<sprite depth="1" name="border" color="${border_color}" type="sliced" fillcenter="false" />
 			<sprite depth="2" name="background" color="${background_color}" type="sliced" />
-			<sprite depth="3" name="Icon" sprite="${sprite}" size="${icon_size}" pos="${icon_pos}" color="${icon_color}" foregroundlayer="true" tooltip="${tooltip}" on_hover="${on_hover}" />
-			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" font_size="${font_size}" color="${text_color}" text="${text}" justify="${text_justify}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" />
+			<sprite depth="3" name="Icon" sprite="${sprite}" size="${icon_size}" pos="${icon_pos}" color="${icon_color}" foregroundlayer="true" tooltip="${tooltip}" on_hover="${on_hover}" force_hide="${icon_hidden}"/>
+			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" font_size="${font_size}" color="${text_color}" text="${text}" justify="${text_justify}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
 			<sprite depth="5" name="border" color="${border_color}" type="sliced" fillcenter="false" />
 		</panel>
 	</rwsui_hud_nofill>
@@ -116,8 +121,8 @@
 		<rect depth="${depth}" width="${width}" height="${height}" pos="${pos}" >	
 			<sprite depth="1" name="border" color="${border_color}" sprite="ui_game_filled_circle" globalopacity="${border_globalopacity}" />
 			<sprite depth="2" name="background" pos="${Round(border_thickness/2, 0)},-${Round(border_thickness/2, 0)}" width="${width-Round(border_thickness, 0)}" height="${height-Round(border_thickness, 0)}" color="${background_color}" sprite="ui_game_filled_circle" globalopacity="${background_globalopacity}" />
-			<sprite depth="3" name="Icon" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" foregroundlayer="true" tooltip="${tooltip}" on_hover="${on_hover}" />
-			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" font_size="${font_size}" color="${text_color}" text="${text}" justify="${text_justify}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" />
+			<sprite depth="3" name="Icon" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" foregroundlayer="true" tooltip="${tooltip}" on_hover="${on_hover}" force_hide="${icon_hidden}"/>
+			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" font_size="${font_size}" color="${text_color}" text="${text}" justify="${text_justify}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
 		</rect>
 	</rwsui_hud_nofillR>
 
@@ -125,9 +130,9 @@
 		<rect depth="${depth}" width="${width}" height="${height}" pos="${pos}" controller="${controller}" >	
 			<sprite depth="1" name="border" color="${border_color}" type="sliced" fillcenter="false" />
 			<sprite depth="2" name="background" color="${background_color}" type="sliced" />
-			<sprite depth="3" name="Icon" sprite="${sprite}" size="${icon_size}" pos="${icon_pos}" color="${icon_color}" foregroundlayer="true" tooltip="${tooltip}" on_hover="${on_hover}" />
+			<sprite depth="3" name="Icon" sprite="${sprite}" size="${icon_size}" pos="${icon_pos}" color="${icon_color}" foregroundlayer="true" tooltip="${tooltip}" on_hover="${on_hover}" force_hide="${icon_hidden}"/>
 			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" font_size="${font_size}" color="${text_color}" text="${text}" justify="${text_justify}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" />
-			<sprite depth="5" name="border" color="${border_color}" type="sliced" fillcenter="false" />
+			<sprite depth="5" name="border" color="${border_color}" type="sliced" fillcenter="false" force_hide="${text_hidden}" />
 		</rect>
 	</rwsui_hud_nofill_controller>
 
@@ -135,11 +140,13 @@
 		<rect depth="${depth}" width="${width}" height="${height}" pos="${pos}" controller="${controller}" >	
 			<sprite depth="1" name="border" color="${border_color}" sprite="ui_game_filled_circle" globalopacity="${border_globalopacity}" />
 			<sprite depth="2" name="background" pos="${Round(border_thickness/2, 0)},-${Round(border_thickness/2, 0)}" width="${width-Round(border_thickness, 0)}" height="${height-Round(border_thickness, 0)}" color="${background_color}" sprite="ui_game_filled_circle" globalopacity="${background_globalopacity}" />
-			<sprite depth="3" name="Icon" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" foregroundlayer="true" tooltip="${tooltip}" on_hover="${on_hover}" />
-			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" font_size="${font_size}" color="${text_color}" text="${text}" justify="${text_justify}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" />
+			<sprite depth="3" name="Icon" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" foregroundlayer="true" tooltip="${tooltip}" on_hover="${on_hover}" force_hide="${icon_hidden}"/>
+			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" font_size="${font_size}" color="${text_color}" text="${text}" justify="${text_justify}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
 		</rect>
 	</rwsui_hud_nofill_controllerR>
+<!--No_Fill_Bars END-->
 
+<!--Buffs START-->
 	<rwsui_hud_buffpanel_buff>
 		<panel width="${width}" height="${height}" pos="${pos}" controller="ActiveBuffEntry" disableautobackground="true" >	
 			<sprite depth="1" name="border" color="${border_color}" type="sliced" fillcenter="false" visible="{# bufficon != ''}" />
@@ -496,7 +503,9 @@
 			<rwsui_hud_buffpanel_buffR width="${width}" height="${height}" pos="0,${height*14+(Round(panel_offset, 0)*14)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" font_size="${font_size}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" textOutline_color="${textOutline_color}" textOutline_size="${textOutline_size}" tooltip="${tooltip}" on_hover="${on_hover}" />
 		</rect>
 	</rwsui_hud_detailed_buffpanelR>
+<!--Buffs END-->
 
+<!--ToolBelt START-->
 <conditional>
 	<if cond="game_version() &gt;= version(1,2,2)">
 		<rwsui_toolbelt_item_stack controller="ItemStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false">
@@ -591,8 +600,8 @@
 			<filledsprite depth="3" name="background" color="${barBackground_color}" type="filled" filldirection="${filldirection}" fill="1" />
 
 			<filledsprite depth="4" name="BarContent" color="{xpcolor}" type="filled" filldirection="${filldirection}" fill="{xp}" />
-			<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
-			<label depth="6" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}"/>
+			<sprite depth="5" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" force_hide="${icon_hidden}"/>
+			<label depth="6" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
 
 			<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
 			<filledsprite depth="8" name="background" color="0,0,0,255" fillcenter="false" type="filled" filldirection="${filldirection}" fill="1" />
@@ -611,9 +620,9 @@
 
 			<sprite depth="5" name="topLayer" pos="${topLayer_pos}" color="${topLayer_color}" height="${topLayer_height}" width="${topLayer_width}" sprite="ui_game_filled_circle" globalopacity="${toplayer_globalopacity}" />
 
-			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true"/>
+			<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" force_hide="${icon_hidden}"/>
 
-			<label depth="7" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" />
+			<label depth="7" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
 		</rect>
 	</rwsui_toolbelt_xpBarR>
 
@@ -629,6 +638,6 @@
 		</grid>
 	</rwsui_toolbelt_keys>
 </append>
-<!--Core_Simple_UI_Templates END-->
+<!--ToolBelt END-->
 
 </configs>

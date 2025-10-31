@@ -20,6 +20,7 @@
       <Category name="StatBars" displayKey="rwsuiStatBarsLabel_Category" tooltipKey="rwsuiStatBarsLabel_Category_Desc">
         <Switch name="StatBarText" displayKey="rwsuiStatBarText_Toggle" tooltipKey="rwsuiStatBarText_Toggle_Desc" defaultValue="On" leftValue="Off" rightValue="On" />
         <Switch name="StatBarIcons" displayKey="rwsuiStatBarIcons_Toggle" tooltipKey="rwsuiStatBarIcons_Toggle_Desc" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="FoodWaterTextAV" displayKey="rwsuiFoodWaterTextAV_Toggle" tooltipKey="rwsuiFoodWaterTextAV_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
       </Category>
       <Category name="ToolBelt" displayKey="rwsuiToolBeltLabel_Category" tooltipKey="rwsuiToolBeltLabel_Category_Desc">
         <Switch name="ToolBeltKeys" displayKey="rwsuiToolBeltKeys_Toggle" tooltipKey="rwsuiToolBeltKeys_Toggle_Desc" defaultValue="On" leftValue="Off" rightValue="On" />
