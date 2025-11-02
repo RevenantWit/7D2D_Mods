@@ -1,0 +1,343 @@
+<configs>
+	<config name="items">
+		<append xpath="/items">
+			<item id="" name="gunDoubleBarrel">
+				<!--Double Barrel Shotgun(https://sketchfab.com/models/04741a40f2224cffafc343b0236d5bbe) by Pepego is licensed under CC Attribution(http://creativecommons.org/licenses/by/4.0/)-->
+				<property name="Extends" value="gunPumpShotgun"/>
+				<property name="Meshfile" value="#shotgunDoubleBarrel?shotgunDoubleBarrelPrefab" />
+				<property class="Parts">
+					<property name="Stock" value="partsDoubleBarrel_stock" />
+					<property name="Receiver" value="partsDoubleBarrel_receiver" />
+					<property name="Pump" value="partsDoubleBarrel_parts" />
+					<property name="Barrel" value="partsDoubleBarrel_barrel" />
+				</property>
+				<property class="Action0">
+					<property name="Magazine_size" value="2" />
+				</property>
+			</item>
+			<item id="" name="gunM4A1">
+				<!--Free Unity store asset by 7XF Design-->
+				<property name="Extends" value="gunAK47"/>
+				<property name="Meshfile" value="#M4A1?M4A1Prefab" />
+				<property class="Parts">
+					<property name="Stock" value="partsM4A1_stock" />
+					<property name="Receiver" value="partsM4A1_receiver" />
+					<property name="Pump" value="partsM4A1_parts" />
+					<property name="Barrel" value="partsM4A1_barrel" />
+				</property>
+				<property class="Action0">
+					<property name="Magazine_items" value="556mmBullet" />
+				</property>
+			</item>
+			<item id="" name="gunMP40">
+				<!--Free Unity store asset by Helica-->
+				<property name="Extends" value="gunPistol"/>
+				<property name="Meshfile" value="#MP40?MP40Prefab" />
+				<property class="Parts">
+					<property name="Stock" value="partsMP40_grip" />
+					<property name="Receiver" value="partsMP40_receiver" />
+					<property name="Pump" value="partsMP40_parts" />
+					<property name="Barrel" value="partsMP40_barrel" />
+				</property>
+				<property class="Action0">
+					<property name="Magazine_items" value="40SWBullet" />
+				</property>
+			</item>
+			<item id="" name="556mmBullet">
+				<property name="Extends" value="762mmBullet"/>
+				<property name="EconomicValue" value="18" />
+			</item>
+			<item id="" name="40SWBullet">
+				<property name="Extends" value="9mmBullet"/>
+				<property name="Meshfile" value="Items/Weapons/Ranged/Pistol/10mm_bulletPrefab"/>
+				<property name="EconomicValue" value="16"/>
+			</item>
+			<item id="" name="partsDoubleBarrel_receiver">
+				<property name="Extends" value="partsMaster" />
+				<property name="CustomIcon" value="partsPumpShotgun_receiver" />
+				<property name="DescriptionKey" value="partsDoubleBarrelGroupDesc" />
+				<property name="PartType" value="Receiver" />
+				<property name="Weight" value="25" />
+				<property class="Attributes">
+					<property name="FalloffRange" value="55,99" />
+					<property name="DegradationMax" value="1800,3600" />
+				</property>
+			</item>
+			<item id="" name="partsDoubleBarrel_parts">
+				<property name="Extends" value="partsMaster" />
+				<property name="CustomIcon" value="partsPumpShotgun_parts" />
+				<property name="DescriptionKey" value="partsDoubleBarrelGroupDesc" />
+				<property name="PartType" value="Pump" />
+				<property name="Weight" value="15" />
+				<property class="Attributes">
+					<property name="Accuracy" value="0.5,0.02" />
+					<property name="DegradationMax" value="1800,3600" />
+				</property>
+			</item>
+			<item id="" name="partsDoubleBarrel_stock">
+				<property name="Extends" value="partsMaster" />
+				<property name="CustomIcon" value="partsPumpShotgun_stock" />
+				<property name="DescriptionKey" value="partsDoubleBarrelGroupDesc" />
+				<property name="PartType" value="Stock" />
+				<property name="Material" value="wood" />
+				<property name="FuelValue" value="24" />
+				<property class="Attributes">
+					<property name="DegradationRate" value="9,5" />
+					<property name="DegradationMax" value="1800,3600" />
+				</property>
+			</item>
+			<item id="" name="partsDoubleBarrel_barrel">
+				<property name="Extends" value="partsMaster" />
+				<property name="CustomIcon" value="partsPumpShotgun_barrelShort" />
+				<property name="DescriptionKey" value="partsDoubleBarrelGroupDesc" />
+				<property name="PartType" value="Barrel" />
+				<property name="Weight" value="30" />
+				<property class="Attributes">
+					<property name="DegradationMax" value="1800,3600" />
+				</property>
+			</item>
+			<item id="" name="partsM4A1_stock">
+				<property name="Extends" value="partsMaster" />
+				<property name="CustomIcon" value="partsMP5_stock" />
+				<property name="DescriptionKey" value="partsM4A1GroupDesc" />
+				<property name="PartType" value="Stock" />
+				<property name="Weight" value="30" />
+				<property class="Attributes">
+					<property name="DegradationRate" value="12,16" />
+					<property name="DegradationMax" value="5600,14000" />
+					<property name="DismembermentBaseChance" value="-0.2,-0.1" />
+				</property>
+				<property name="EconomicValue" value="1000" />
+			</item>
+			<item id="" name="partsM4A1_receiver">
+				<property name="Extends" value="partsMaster" />
+				<property name="CustomIcon" value="partsAK47_receiver" />
+				<property name="DescriptionKey" value="partsM4A1GroupDesc" />
+				<property name="PartType" value="Receiver" />
+				<property name="Weight" value="30" />
+				<property class="Attributes">
+					<property name="FalloffRange" value="54,90" />
+					<property name="DegradationMax" value="5600,14000" />
+				</property>
+				<property name="EconomicValue" value="1000" />
+			</item>
+			<item id="" name="partsM4A1_parts">
+				<property name="Extends" value="partsMaster" />
+				<property name="CustomIcon" value="partsAK47_parts" />
+				<property name="DescriptionKey" value="partsM4A1GroupDesc" />
+				<property name="PartType" value="Pump" />
+				<property name="Weight" value="15" />
+				<property class="Attributes">
+					<property name="Accuracy" value="7,7" />
+					<property name="DegradationMax" value="5600,14000" />
+				</property>
+				<property name="EconomicValue" value="1000" />
+			</item>
+			<item id="" name="partsM4A1_barrel">
+				<property name="Extends" value="partsMaster" />
+				<property name="CustomIcon" value="partsPistol_barrel" />
+				<property name="DescriptionKey" value="partsM4A1GroupDesc" />
+				<property name="PartType" value="Barrel" />
+				<property name="Weight" value="35" />
+				<property class="Attributes">
+					<property name="EntityDamage" value="35,55" />
+					<property name="BlockDamage" value="5,9.5" />
+					<property name="DegradationMax" value="5600,14000" />
+				</property>
+				<property name="EconomicValue" value="1000" />
+			</item>
+			<item id="" name="partsMP40_grip">
+				<property name="Extends" value="partsMaster" />
+				<property name="CustomIcon" value="partsPistol_grip" />
+				<property name="DescriptionKey" value="partsMP40GroupDesc" />
+				<property name="PartType" value="Stock" />
+				<property name="Weight" value="10" />
+				<property class="Attributes">
+					<property name="DegradationRate" value="10,10" />
+					<property name="DegradationMax" value="5000,8000" />
+				</property>
+				<property name="EconomicValue" value="750" />
+			</item>
+			<item id="" name="partsMP40_receiver">
+				<property name="Extends" value="partsMaster" />
+				<property name="CustomIcon" value="partsPistol_receiver" />
+				<property name="DescriptionKey" value="partsMP40GroupDesc" />
+				<property name="PartType" value="Receiver" />
+				<property name="Weight" value="20" />
+				<property class="Attributes">
+					<property name="FalloffRange" value="22,50" />
+					<property name="DegradationMax" value="5000,8000" />
+				</property>
+				<property name="EconomicValue" value="750" />
+			</item>
+			<item id="" name="partsMP40_parts">
+				<property name="Extends" value="partsMaster" />
+				<property name="CustomIcon" value="partsPistol_parts" />
+				<property name="DescriptionKey" value="partsMP40GroupDesc" />
+				<property name="PartType" value="Pump" />
+				<property name="Weight" value="10" />
+				<property class="Attributes">
+					<!-- <property name="Accuracy" value="1,0.01"/> -->
+					<property name="DegradationMax" value="5000,8000" />
+				</property>
+				<property name="EconomicValue" value="750" />
+			</item>
+			<item id="" name="partsMP40_barrel">
+				<property name="Extends" value="partsMaster" />
+				<property name="CustomIcon" value="partsPistol_barrel" />
+				<property name="DescriptionKey" value="partsMP40GroupDesc" />
+				<property name="PartType" value="Barrel" />
+				<property name="Weight" value="10" />
+				<property class="Attributes">
+					<property name="EntityDamage" value="25,30" />
+					<property name="BlockDamage" value="10,15" />
+					<property name="DegradationMax" value="5000,8000" />
+				</property>
+				<property name="EconomicValue" value="750" />
+			</item>
+			<item id="" name="gunM4A1Schematic">
+				<property name="Extends" value="schematicMaster" />
+				<property name="EconomicValue" value="500" />
+				<property class="Action1">
+					<property name="Recipes_to_learn" value="gunM4A1,556mmBullet" />
+				</property>
+			</item>
+			<item id="" name="gunMP40Schematic">
+				<property name="Extends" value="schematicMaster" />
+				<property name="EconomicValue" value="500" />
+				<property class="Action1">
+					<property name="Recipes_to_learn" value="gunMP40,40SWBullet" />
+				</property>
+			</item>
+		</append>
+		<set xpath="/items/item[@name='pumpShotgunSchematic']/property[@class='Action1']/property[@name='Recipes_to_learn']/@value">gunPumpShotgun,gunSawedOffPumpShotgun,gunDoubleBarrel</set>
+	</config>
+	<config name="recipes">
+		<append xpath="/recipes">
+			<recipe name="gunDoubleBarrel" count="1" craft_area="assembly">		
+				<ingredient name="flashlight02" count="0" />
+				<ingredient name="partsDoubleBarrel_stock" count="1" />
+				<ingredient name="partsDoubleBarrel_receiver" count="1" />
+				<ingredient name="partsDoubleBarrel_parts" count="1" />
+				<ingredient name="partsDoubleBarrel_barrel" count="1" />
+			</recipe>
+			<recipe name="gunM4A1" count="1" craft_area="assembly">
+				<ingredient name="flashlight02" count="0" />
+				<ingredient name="partsM4A1_stock" count="1" />
+				<ingredient name="partsM4A1_receiver" count="1" />
+				<ingredient name="partsM4A1_parts" count="1" />
+				<ingredient name="partsM4A1_barrel" count="1" />
+			</recipe>
+			<recipe name="gunMP40" count="1" craft_area="assembly">
+				<ingredient name="flashlight02" count="0" />
+				<ingredient name="partsMP40_grip" count="1" />
+				<ingredient name="partsMP40_receiver" count="1" />
+				<ingredient name="partsMP40_parts" count="1" />
+				<ingredient name="partsMP40_barrel" count="1" />
+			</recipe>
+			<recipe name="556mmBullet" count="1" craft_area="workbench">
+				<ingredient name="bulletTip" count="1" />
+				<ingredient name="gunPowder" count="3" />
+				<ingredient name="bulletCasing" count="1" />
+			</recipe>
+			<recipe name="40SWBullet" count="1" craft_area="workbench">
+				<ingredient name="bulletTip" count="1" />
+				<ingredient name="gunPowder" count="2" />
+				<ingredient name="bulletCasing" count="1" />
+			</recipe>
+		</append>
+	</config>
+	<config name="loot">
+		<append xpath="/lootcontainers/lootgroup[@name='ammo']">
+				<item name="40SWBullet" count="1,20" />
+				<item name="556mmBullet" count="1,20" />
+		</append>
+		<insertAfter xpath="/lootcontainers/lootgroup[@name='weaponsPistol+ammo']">
+			<lootgroup name="weaponsMP40+ammo" count="all">
+				<item name="40SWBullet" count="1,10" />
+				<item name="gunMP40" />
+			</lootgroup>
+		</insertAfter>
+		<append xpath="/lootcontainers/lootgroup[@name='toiletLoot']">
+				<item group="weaponsMP40+ammo" count="1" prob="0.02" />
+		</append>
+		<append xpath="/lootcontainers/lootgroup[@name='weaponsAnyShotguns']">
+				<item name="gunDoubleBarrel" prob="0.4" />
+		</append>
+		<insertAfter xpath="/lootcontainers/lootgroup[@name='weaponsAK47+ammo']">
+			<lootgroup name="weaponsM4A1+ammo" count="all">
+				<item name="556mmBullet" count="1,20" />
+				<item name="gunM4A1" />
+			</lootgroup>
+		</insertAfter>
+		<append xpath="/lootcontainers/lootgroup[@name='weaponsCommonParts']">
+				<item name="partsDoubleBarrel_stock"/>
+				<item name="partsDoubleBarrel_receiver"/>
+				<item name="partsDoubleBarrel_parts"/>
+				<item name="partsDoubleBarrel_barrel"/>
+		</append>
+		<append xpath="/lootcontainers/lootgroup[@name='weaponsMilitaryParts']">
+				<item name="partsM4A1_stock"/>
+				<item name="partsM4A1_receiver"/>
+				<item name="partsM4A1_parts"/>
+				<item name="partsM4A1_barrel"/>
+				<item name="partsMP40_grip"/>
+				<item name="partsMP40_receiver"/>
+				<item name="partsMP40_parts"/>
+				<item name="partsMP40_barrel"/>
+		</append>
+		<append xpath="/lootcontainers/lootgroup[@name='rareBooks']">
+				<item name="gunM4A1Schematic" />
+				<item name="gunMP40Schematic" />
+		</append>
+		<append xpath="/lootcontainers/lootgroup[@name='weaponsMilitaryGuns+ammo']">
+				<item group="weaponsM4A1+ammo" prob="0.07" />
+				<item group="weaponsMP40+ammo" prob="0.07" />
+		</append>
+		<append xpath="/lootcontainers/lootgroup[@name='militaryAmmo']">
+				<item name="40SWBullet" count="5,15" />
+				<item name="556mmBullet" count="5,30" />
+		</append>
+		<append xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
+				<item name="40SWBullet" count="50,140" />
+				<item name="556mmBullet" count="50,140" />
+		</append>
+		<!-- zombie cop-->
+		<append xpath="/lootcontainers/lootcontainer[@id='17']">
+				<item group="weaponsMP40+ammo" prob="0.7" />
+		</append>
+	</config>
+	<config name="traders">
+		<append xpath="/traders/trader_item_groups/trader_item_group[@name='weaponsCommonParts']">
+			<item name="partsDoubleBarrel_stock"/>
+			<item name="partsDoubleBarrel_receiver"/>
+			<item name="partsDoubleBarrel_parts"/>
+			<item name="partsDoubleBarrel_barrel"/>
+		</append>
+		<append xpath="/traders/trader_item_groups/trader_item_group[@name='weaponsMilitaryParts']">
+			<item name="partsM4A1_stock"/>
+			<item name="partsM4A1_receiver"/>
+			<item name="partsM4A1_parts"/>
+			<item name="partsM4A1_barrel"/>
+			<item name="partsMP40_grip"/>
+			<item name="partsMP40_receiver"/>
+			<item name="partsMP40_parts"/>
+			<item name="partsMP40_barrel"/>
+		</append>
+		<append xpath="/traders/trader_item_groups/trader_item_group[@name='rareBooks']">
+			<item name="gunM4A1Schematic" />
+			<item name="gunMP40Schematic" />
+		</append>
+		<append xpath="/traders/trader_item_groups/trader_item_group[@name='weaponsGunsCommon']">
+			<item name="gunDoubleBarrel" prob="0.9" />
+		</append>
+		<append xpath="/traders/trader_item_groups/trader_item_group[@name='weaponsGunsMilitary']">
+			<item name="gunM4A1" prob="0.6" />
+			<item name="gunMP40" prob="0.8" />
+		</append>
+		<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammo']">
+			<item name="556mmBullet" count="20,80"/>
+			<item name="40SWBullet" count="20,80"/>
+		</append>
+	</config>
+</configs>
