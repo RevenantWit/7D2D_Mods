@@ -1,0 +1,159 @@
+<configs>
+<!-- Vehicle storage max is 90 slots in vanilla UI windows.xml -->
+
+<!--Bicycle_Storage_Size-->
+<conditional>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleBicycle') == '10_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,1</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleBicycle') == '20_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,2</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleBicycle') == '30_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,3</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleBicycle') == '40_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,4</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleBicycle') == '50_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,5</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleBicycle') == '60_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,6</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleBicycle') == '70_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,7</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleBicycle') == '80_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,8</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleBicycle') == '90_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,9</set>
+	</if>
+</conditional>
+
+<!--Minibike_Storage_Size-->
+<conditional>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMinibike') == '10_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,1</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMinibike') == '20_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,2</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMinibike') == '30_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,3</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMinibike') == '40_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,4</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMinibike') == '50_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,5</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMinibike') == '60_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,6</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMinibike') == '70_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,7</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMinibike') == '80_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,8</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMinibike') == '90_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,9</set>
+	</if>
+</conditional>
+
+<!--Motorcycle_Storage_Size-->
+<conditional>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMotorcycle') == '10_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,1</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMotorcycle') == '20_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,2</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMotorcycle') == '30_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,3</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMotorcycle') == '40_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,4</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMotorcycle') == '50_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,5</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMotorcycle') == '60_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,6</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMotorcycle') == '70_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,7</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMotorcycle') == '80_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,8</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleMotorcycle') == '90_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,9</set>
+	</if>
+</conditional>
+
+<!--4x4Truck_Storage_Size-->
+<conditional>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicle4x4Truck') == '10_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,1</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicle4x4Truck') == '20_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,2</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicle4x4Truck') == '30_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,3</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicle4x4Truck') == '40_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,4</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicle4x4Truck') == '50_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,5</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicle4x4Truck') == '60_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,6</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicle4x4Truck') == '70_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,7</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicle4x4Truck') == '80_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,8</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicle4x4Truck') == '90_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,9</set>
+	</if>
+</conditional>
+
+<!--Gyrocopter_Storage_Size-->
+<conditional>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleGyrocopter') == '10_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,1</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleGyrocopter') == '20_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,2</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleGyrocopter') == '30_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,3</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleGyrocopter') == '40_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,4</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleGyrocopter') == '50_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,5</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleGyrocopter') == '60_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,6</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleGyrocopter') == '70_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,7</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleGyrocopter') == '80_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,8</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'VehicleStorage.vehicleGyrocopter') == '90_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,9</set>
+	</if>
+</conditional>
+
+</configs>

@@ -1,0 +1,140 @@
+<configs>
+<!--CONTENTS START-->
+<!---->
+<!--Blockers-->
+<!--Location_PopUp-->
+<!--Player_BackPack_Size-->
+<!--Wookies_12_Slot_ToolBelt-->
+<!--Khaines_15_Slot_ToolBelt-->
+<!---->
+<!--CONTENTS END-->
+
+<!-- Blockers START -->
+<!--HUD Blocker-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_HUD_Blocker')">
+		<!-- If HUD Blocker is installed do nothing  -->
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.HUDBlocker') == 'Off'">
+				<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='HUDLeftStatBars' or @name='RevsWW_LeftHUD' or @name='RevsWW_MultiHUD' or @name='RWSUI_LeftHUD']/@name">RWSUI_LeftHUD</set>
+			</if>
+		</conditional>
+	</if>
+	<else>
+		<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='HUDLeftStatBars' or @name='RevsWW_LeftHUD' or @name='RevsWW_MultiHUD' or @name='RWSUI_LeftHUD']/@name">RWSUI_LeftHUD</set>
+	</else>
+</conditional>
+<!--ToolBelt Blocker-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
+		<!-- If Toolbelt Blocker is installed do nothing -->
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
+				<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt10</set>
+			</if>
+		</conditional>
+	</if>
+	<else>
+		<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt10</set>
+	</else>
+</conditional>
+<!-- Blockers END -->
+
+<!--Location_PopUp START-->
+<!-- remove the pop up from it's window group so it no longers gets called when entering a location. -->
+<conditional>
+	<if cond="mod_loaded('RWSUI_NoLPU')">
+		<!-- Check for old add on to avoid conflicts -->
+		<!-- This check will get removed in a future update -->
+	</if>
+	<if cond="mod_loaded('RWSUI_LocationPopUpRemover')">
+		<remove xpath="/xui/ruleset/window_group[@name='compass']/window[@name='windowEntering']"/>
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.PopUps.LocationPopUps') == 'Off'">
+				<remove xpath="/xui/ruleset/window_group[@name='compass']/window[@name='windowEntering']"/>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+<!--Location_PopUp END-->
+
+<!--Player_BackPack_Size START-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_BigBag60') or mod_loaded('RWSUI_BigBag120')">
+		<!-- Check for old add ons to avoid conflicts -->
+		<!-- This check will get removed in a future update -->
+	</if>
+	<if cond="mod_loaded('RWSUI_PlayerBackPackSize')">
+		<conditional>
+			<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(6,0)">
+				<include filename="RWSUI_xuiConfigs/AddOns/BigBag/BB60/xui.xml" />
+			</if>
+			<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(12,0)">
+				<include filename="RWSUI_xuiConfigs/AddOns/BigBag/BB120/xui.xml" />
+			</if>
+		</conditional>
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '60_Slots'">
+				<include filename="RWSUI_xuiConfigs/AddOns/BigBag/BB60/xui.xml" />
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '120_Slots'">
+				<include filename="RWSUI_xuiConfigs/AddOns/BigBag/BB120/xui.xml" />
+			</if>
+		</conditional>
+	</if>
+</conditional>
+<!--Player_BackPack_Size END-->
+
+<!-- Wookies_12_Slot_ToolBelt START -->
+<conditional>
+	<if cond="mod_loaded('WMM12SlotToolbelt') == 'true'">
+		<conditional>
+			<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
+				<!-- If Toolbelt Blocker is installed do nothing -->
+			</if>
+			<if cond="mod_loaded('Gears')">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
+						<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt12</set>
+					</if>
+				</conditional>
+			</if>
+			<else>
+				<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt12</set>
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!-- Wookies_12_Slot_ToolBelt END -->
+
+<!-- Khaines_15_Slot_ToolBelt START -->
+<conditional>
+	<if cond="mod_loaded('15SlotToolbelt') == 'true'">
+		<conditional>
+			<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
+				<!-- If Toolbelt Blocker is installed do nothing -->
+			</if>
+			<if cond="mod_loaded('Gears')">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
+						<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt15</set>
+					</if>
+				</conditional>
+			</if>
+			<else>
+				<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt15</set>
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!-- Khaines_15_Slot_ToolBelt END -->
+
+</configs>

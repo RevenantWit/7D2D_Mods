@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RWSUI_GyrocopterStorage"/>
+	<DisplayName value="Simple UI 80 Slot Gyrocopter Storage"/>
+	<Version value="8.0"/>
+	<Description value="Causes Simple UI to resize vanilla gyrocopter storage to 80 slots."/>
+	<Author value="RevenantWit"/>
+	<Website value="https://community.7daystodie.com/topic/32081-revs-simple-ui"/>
+</xml>

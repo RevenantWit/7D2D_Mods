@@ -1,0 +1,179 @@
+<configs>
+<!-- vehicle storage max is 90 slots in vanilla UI windows.xml -->
+
+<!--Bicycle_Storage_Size-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_BicycleStorageSize')">
+		<conditional>
+			<if cond="mod_version('RWSUI_BicycleStorageSize') == version(1,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,1</set>
+			</if>
+			<if cond="mod_version('RWSUI_BicycleStorageSize') == version(2,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,2</set>
+			</if>
+			<if cond="mod_version('RWSUI_BicycleStorageSize') == version(3,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,3</set>
+			</if>
+			<if cond="mod_version('RWSUI_BicycleStorageSize') == version(4,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,4</set>
+			</if>
+			<if cond="mod_version('RWSUI_BicycleStorageSize') == version(5,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,5</set>
+			</if>
+			<if cond="mod_version('RWSUI_BicycleStorageSize') == version(6,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,6</set>
+			</if>
+			<if cond="mod_version('RWSUI_BicycleStorageSize') == version(7,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,7</set>
+			</if>
+			<if cond="mod_version('RWSUI_BicycleStorageSize') == version(8,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,8</set>
+			</if>
+			<if cond="mod_version('RWSUI_BicycleStorageSize') == version(9,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']/@size">10,9</set>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+
+<!--Minibike_Storage_Size-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_MinibikeStorageSize')">
+		<conditional>
+			<if cond="mod_version('RWSUI_MinibikeStorageSize') == version(1,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,1</set>
+			</if>
+			<if cond="mod_version('RWSUI_MinibikeStorageSize') == version(2,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,2</set>
+			</if>
+			<if cond="mod_version('RWSUI_MinibikeStorageSize') == version(3,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,3</set>
+			</if>
+			<if cond="mod_version('RWSUI_MinibikeStorageSize') == version(4,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,4</set>
+			</if>
+			<if cond="mod_version('RWSUI_MinibikeStorageSize') == version(5,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,5</set>
+			</if>
+			<if cond="mod_version('RWSUI_MinibikeStorageSize') == version(6,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,6</set>
+			</if>
+			<if cond="mod_version('RWSUI_MinibikeStorageSize') == version(7,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,7</set>
+			</if>
+			<if cond="mod_version('RWSUI_MinibikeStorageSize') == version(8,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,8</set>
+			</if>
+			<if cond="mod_version('RWSUI_MinibikeStorageSize') == version(9,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']/@size">10,9</set>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+
+<!--Motorcycle_Storage_Size-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_MotorcycleStorageSize')">
+		<conditional>
+			<if cond="mod_version('RWSUI_MotorcycleStorageSize') == version(1,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,1</set>
+			</if>
+			<if cond="mod_version('RWSUI_MotorcycleStorageSize') == version(2,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,2</set>
+			</if>
+			<if cond="mod_version('RWSUI_MotorcycleStorageSize') == version(3,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,3</set>
+			</if>
+			<if cond="mod_version('RWSUI_MotorcycleStorageSize') == version(4,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,4</set>
+			</if>
+			<if cond="mod_version('RWSUI_MotorcycleStorageSize') == version(5,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,5</set>
+			</if>
+			<if cond="mod_version('RWSUI_MotorcycleStorageSize') == version(6,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,6</set>
+			</if>
+			<if cond="mod_version('RWSUI_MotorcycleStorageSize') == version(7,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,7</set>
+			</if>
+			<if cond="mod_version('RWSUI_MotorcycleStorageSize') == version(8,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,8</set>
+			</if>
+			<if cond="mod_version('RWSUI_MotorcycleStorageSize') == version(9,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']/@size">10,9</set>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+
+<!--4x4Truck_Storage_Size-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_4x4TruckStorageSize')">
+		<conditional>
+			<if cond="mod_version('RWSUI_4x4TruckStorageSize') == version(1,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,1</set>
+			</if>
+			<if cond="mod_version('RWSUI_4x4TruckStorageSize') == version(2,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,2</set>
+			</if>
+			<if cond="mod_version('RWSUI_4x4TruckStorageSize') == version(3,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,3</set>
+			</if>
+			<if cond="mod_version('RWSUI_4x4TruckStorageSize') == version(4,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,4</set>
+			</if>
+			<if cond="mod_version('RWSUI_4x4TruckStorageSize') == version(5,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,5</set>
+			</if>
+			<if cond="mod_version('RWSUI_4x4TruckStorageSize') == version(6,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,6</set>
+			</if>
+			<if cond="mod_version('RWSUI_4x4TruckStorageSize') == version(7,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,7</set>
+			</if>
+			<if cond="mod_version('RWSUI_4x4TruckStorageSize') == version(8,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,8</set>
+			</if>
+			<if cond="mod_version('RWSUI_4x4TruckStorageSize') == version(9,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']/@size">10,9</set>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+
+<!--Gyrocopter_Storage_Size-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_GyrocopterStorageSize')">
+		<conditional>
+			<if cond="mod_version('RWSUI_GyrocopterStorageSize') == version(1,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,1</set>
+			</if>
+			<if cond="mod_version('RWSUI_GyrocopterStorageSize') == version(2,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,2</set>
+			</if>
+			<if cond="mod_version('RWSUI_GyrocopterStorageSize') == version(3,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,3</set>
+			</if>
+			<if cond="mod_version('RWSUI_GyrocopterStorageSize') == version(4,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,4</set>
+			</if>
+			<if cond="mod_version('RWSUI_GyrocopterStorageSize') == version(5,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,5</set>
+			</if>
+			<if cond="mod_version('RWSUI_GyrocopterStorageSize') == version(6,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,6</set>
+			</if>
+			<if cond="mod_version('RWSUI_GyrocopterStorageSize') == version(7,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,7</set>
+			</if>
+			<if cond="mod_version('RWSUI_GyrocopterStorageSize') == version(8,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,8</set>
+			</if>
+			<if cond="mod_version('RWSUI_GyrocopterStorageSize') == version(9,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,9</set>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+
+</configs>

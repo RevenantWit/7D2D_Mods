@@ -1,0 +1,106 @@
+Key,english
+rwsuiHUD_Tab,"HUD"
+rwsuiHUD_Tab_Desc,"HUD Settings \n\n Changing these settings only has an effect in Singleplayer or a self hosted game. If in game you will need to exit to main menu and reload into game to see changes."
+
+rwsuiStatBar_Category,"StatBar Settings"
+rwsuiStatBar_Category_Desc,""
+
+rwsuiStatBar_Option,"StatBars Type"
+rwsuiStatBar_Option_Desc,"Current Values: \n Horizontal, Vertical, Round, MiniHUD"
+
+rwsuiStatBarLocation_Option,"Statbars Location"
+rwsuiStatBarLocation_Option_Desc,"Current Values: \n Bottom_Left, Toolbelt"
+
+rwsuiBuffPanel_Category,"Buff Panel Settings"
+rwsuiBuffPanel_Category_Desc,""
+
+rwsuiBuffPanel_Option,"Buff Panel Type"
+rwsuiBuffPanel_Option_Desc,"Current Values: \n Vanilla, Simple_Buffs, Detailed_Buffs"
+
+rwsuiLabels_Tab,"Labels"
+rwsuiLabels_Tab_Desc,"Label Settings \n\n Changing these settings only has an effect in Singleplayer or a self hosted game. If in game you will need to exit to main menu and reload into game to see changes."
+
+rwsuiStatBarsLabel_Category,"StatBar Label Settings"
+rwsuiStatBarsLabel_Category_Desc,""
+
+rwsuiStatBarText_Toggle,"StatBar Text"
+rwsuiStatBarText_Toggle_Desc,"Toggles the text being displayed on or off for Simple UI's stat bars."
+
+rwsuiStatBarIcons_Toggle,"StatBar Icons"
+rwsuiStatBarIcons_Toggle_Desc,"Toggles the icons being displayed on or off for Simple UI's stat bars."
+
+rwsuiFoodWaterTextAV_Toggle,"Food/Water Actual Values"
+rwsuiFoodWaterTextAV_Toggle_Desc,"Toggles whether or not to use the actual values instead of percentage for the food and water bar text."
+
+rwsuiToolBeltLabel_Category,"ToolBelt Label Settings"
+rwsuiToolBeltLabel_Category_Desc,""
+
+rwsuiToolBeltKeys_Toggle,"ToolBelt Keys"
+rwsuiToolBeltKeys_Toggle_Desc,"Toggles the toolbelt keys being displayed on or off for Simple UI's toolbelt."
+
+rwsuiToolBeltKeysBG_Toggle,"ToolBelt Keys Background"
+rwsuiToolBeltKeysBG_Toggle_Desc,"Toggles the toolbelt keys background from being displayed on or off for Simple UI's toolbelt."
+
+rwsuiMisc_Tab,"Misc"
+rwsuiMisc_Tab_Desc,"Misc Settings \n\n Changing these settings only has an effect in Singleplayer or a self hosted game. If in game you will need to exit to main menu and reload into game to see changes."
+
+rwsuiSimpleUIBlockers_Category,"Simple UI Blockers"
+rwsuiSimpleUIBlockers_Category_Desc,""
+
+rwsuiHUDBlocker_Toggle,"Hud Blocker"
+rwsuiHUDBlocker_Toggle_Desc,"Turning this on will prevent Simple UI from using it's HUD elements."
+
+rwsuiToolBeltBlocker_Toggle,"ToolBelt Blocker"
+rwsuiToolBeltBlocker_Toggle_Desc,"Turning this on will prevent Simple UI from using it's toolbelt elements"
+
+rwsuiVTBStatBarBlocker_Toggle,"Vanilla Food/Water Blocker"
+rwsuiVTBStatBarBlocker_Toggle_Desc,"Turning this on will remove the vanilla food and water bar from the toolbelt. This is only useful if the toolbelt blocker is turned on."
+
+rwsuiPopUp_Category,"PopUp Settings"
+rwsuiPopUp_Category_Desc,""
+
+rwsuiLocationPopUp_Toggle,"Location PopUp"
+rwsuiLocationPopUp_Toggle_Desc,"Toggles the Location Pop-Up being displayed on or off. \n\n This is the giant Pop-Up message you get top center of screen when entering a location."
+
+rwsuiOnScreenIcons_Category,"On-Screen Icon Settings"
+rwsuiOnScreenIcons_Category_Desc,""
+
+rwsuiAlliedPlayerIcon_Toggle,"Allied Player Icon"
+rwsuiAlliedPlayerIcon_Toggle_Desc,"Toggles the On Screen Allied Player Icon being displayed on or off. \n\n This is the on screen player icon that shows in the world when within 20m of party members. Does not remove the allied player icons from the compass or map."
+
+rwsuiCraftingUI_Category,"Crafting UI Settings"
+rwsuiCraftingUI_Category_Desc,""
+
+rwsuiForgeInput3Slot_Toggle,"3 Forge Inputs"
+rwsuiForgeInput3Slot_Toggle_Desc,"Toggle on to expand the forge inputs to 03 slots. \n\n This setting should not be turned off on a save has it turned on."
+
+rwsuiCraftingQueueSize_Option,"Crafting Queue Size"
+rwsuiCraftingQueueSize_Option_Desc,"Current Values: \n Vanilla, 05_Slots \n\n This can expand crafting queue to 5 slots. \n\n Once player backpack size is expanded it should not be reduced again on the same save. More options might be added to this at some point."
+
+rwsuiPlayerBackPack_Category,"Player BackPack Settings"
+rwsuiPlayerBackPack_Category_Desc,""
+
+rwsuiBBInfoPanelBlocker_Toggle,"BigBag Info Panel Blocker"
+rwsuiBBInfoPanelBlocker_Toggle_Desc,"Toggle to prevent Simple UI's bigger backpacks from also increasing the size of the info panels above the backpack. \n\n This is mainly for compatibilty reasons in case changing the windows above backpack causes issues with other mods."
+
+rwsuiPlayerBackPackSize_Option,"Backpack Size"
+rwsuiPlayerBackPackSize_Option_Desc,"Current Values: \n Vanilla, 60_Slots, 120_Slots \n\n Once player backpack size is expanded it should not be reduced again on the same save."
+
+rwsuiVehicleStorage_Category,"Vehicle Storage Settings"
+rwsuiVehicleStorage_Category_Desc,""
+
+rwsuiBicycleStorageSize_Option,"Bicycle Storage Size"
+rwsuiBicycleStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\n Once vehicle storage size is expanded it should not be reduced again on the same save."
+
+rwsuiMinibikeStorageSize_Option,"Minibike Storage Size"
+rwsuiMinibikeStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\n Once vehicle storage size is expanded it should not be reduced again on the same save."
+
+rwsuiMotorcycleStorageSize_Option,"Motorcycle Storage Size"
+rwsuiMotorcycleStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\n Once vehicle storage size is expanded it should not be reduced again on the same save."
+
+rwsui4x4TruckStorageSize_Option,"4x4 Truck Storage Size"
+rwsui4x4TruckStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\n Once vehicle storage size is expanded it should not be reduced again on the same save."
+
+rwsuiGyrocopterStorageSize_Option,"Gyrocopter Storage Size"
+rwsuiGyrocopterStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\n Once vehicle storage size is expanded it should not be reduced again on the same save."
+

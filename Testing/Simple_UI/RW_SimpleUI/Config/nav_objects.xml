@@ -1,0 +1,29 @@
+<configs>
+<!--CONTENTS START-->
+<!---->
+<!--On_Screen_Icons-->
+<!---->
+<!--CONTENTS END-->
+
+<!--On_Screen_Icons START-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_NoPOSPI')">
+		<!-- Check for old add on to avoid conflicts -->
+		<!-- This check will get removed in a future update -->
+	</if>
+	<if cond="mod_loaded('RWSUI_OSAPIRemover')">
+		<!-- remove only the on screen icon so party members still show on compass and map. -->
+		<remove xpath="/nav_object_classes/nav_object_class[@name='party']/onscreen_settings"/>
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.OnScreenIcons.AlliedPlayerIcon') == 'Off'">
+				<!-- remove only the on screen icon so party members still show on compass and map. -->
+				<remove xpath="/nav_object_classes/nav_object_class[@name='party']/onscreen_settings"/>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+<!--On_Screen_Icons END-->
+
+</configs>

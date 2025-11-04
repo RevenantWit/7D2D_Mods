@@ -1,0 +1,48 @@
+<configs>
+
+<conditional>
+	<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'Horizontal'">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'Bottom_Left'">
+				<set xpath="//window/rect//rwsui_hud_statBar/@text_hidden">true</set>
+				<set xpath="//window//rwsui_toolbelt_xpBar/@text_hidden">true</set>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
+				<set xpath="//window//rwsui_toolbelt_xpBar/@text_hidden">true</set>
+				<set xpath="//window/rwsui_hud_statBar_reverseFillH/@text_hidden">true</set>
+				<set xpath="//window/rwsui_hud_statBar/@text_hidden">true</set>
+			</if>
+		</conditional>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'Vertical'">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'Bottom_Left'">
+				<set xpath="//window/rect//rwsui_hud_statBar/@text_hidden">true</set>
+				<set xpath="//window//rwsui_toolbelt_xpBar/@text_hidden">true</set>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
+				<set xpath="//window//rwsui_toolbelt_xpBar/@text_hidden">true</set>
+				<set xpath="//window/rwsui_hud_statBar/@text_hidden">true</set>
+			</if>
+		</conditional>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'Round'">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'Bottom_Left'">
+				<set xpath="//window/rect//rwsui_hud_statBarR/@text_hidden">true</set>
+				<set xpath="//window//rwsui_hud_xpBarR/@text_hidden">true</set>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
+				<set xpath="//window//rwsui_hud_statBarR/@text_hidden">true</set>
+				<set xpath="//window/rwsui_hud_xpBarR/@text_hidden">true</set>
+				<set xpath="//window[@name='RWSUI_ToolBelt15']//rwsui_toolbelt_xpBar/@text_hidden">true</set>
+			</if>
+		</conditional>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'MiniHUD'">
+		<set xpath="//window//rwsui_toolbelt_xpBar/@text_hidden">true</set>
+		<set xpath="//window/rwsui_hud_statBar/@text_hidden">true</set>
+	</if>
+</conditional>
+
+</configs>

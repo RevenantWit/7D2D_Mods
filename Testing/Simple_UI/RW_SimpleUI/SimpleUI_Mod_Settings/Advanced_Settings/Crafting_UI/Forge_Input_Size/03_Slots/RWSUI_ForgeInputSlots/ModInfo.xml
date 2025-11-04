@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RWSUI_ForgeInputSlots"/>
+	<DisplayName value="Simple UI 03 Slot Forge Input"/>
+	<Version value="3.0.0"/>
+	<Description value="Causes Simple UI to expand the forge inputs to 03 slots"/>
+	<Author value="RevenantWit"/>
+	<Website value="https://community.7daystodie.com/topic/32081-revs-simple-ui"/>
+</xml>
