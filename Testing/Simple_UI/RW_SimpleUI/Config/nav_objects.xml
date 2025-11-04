@@ -1,11 +1,11 @@
 <configs>
 <!--CONTENTS START-->
 <!---->
-<!--On_Screen_Icons-->
+<!--_On_Screen_Icons-->
 <!---->
 <!--CONTENTS END-->
 
-<!--On_Screen_Icons START-->
+<!--_On_Screen_Icons START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_NoPOSPI')">
 		<!-- Check for old add on to avoid conflicts -->
@@ -24,6 +24,6 @@
 		</conditional>
 	</if>
 </conditional>
-<!--On_Screen_Icons END-->
+<!--_On_Screen_Icons END-->
 
 </configs>

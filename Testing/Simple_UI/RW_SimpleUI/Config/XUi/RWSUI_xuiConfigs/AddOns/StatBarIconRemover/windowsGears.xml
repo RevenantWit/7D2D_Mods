@@ -6,6 +6,7 @@
 			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'Bottom_Left'">
 				<set xpath="//window/rect//rwsui_hud_statBar/@icon_hidden">true</set>
 				<set xpath="//window//rwsui_toolbelt_xpBar/@icon_hidden">true</set>
+				<set xpath="//window//rwsui_hud_statBar_reverseFillH/@icon_hidden">true</set>
 			</if>
 			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
 				<set xpath="//window/rect//rwsui_hud_doubleNoText_stealthBar/@icon_hidden">true</set>

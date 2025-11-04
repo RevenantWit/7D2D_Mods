@@ -1,39 +1,45 @@
 <configs>
 <!--CONTENTS START-->
 <!---->
-<!--HUD_Settings-->
-<!--Vanilla_Toolbelt_StatBars-->
-<!--StatBar_Text_Remover-->
-<!--StatBar_Icons_Remover-->
-<!--ToolbeltKey_Labels-->
-<!--Crafting_Queue_Size-->
-<!--Forge_Input_Size-->
-<!--Player_BackPack_Size-->
+<!--_HUD_Settings-->
+<!--_Vanilla_Toolbelt_StatBars-->
+<!--_StatBar_Text_Remover-->
+<!--_StatBar_Icons_Remover-->
+<!--_ToolbeltKey_Labels-->
+<!--_Crafting_Queue_Size-->
+<!--_Forge_Input_Size-->
+<!--_Player_BackPack_Size-->
 <!---->
-<!--Quartz_Only_Settings-->
-<!--Food/Water_Actual_Values-->
+<!--_Quartz_Only_Settings-->
+<!--_Food_Water_Actual_Values-->
 <!---->
 <!--CONTENTS END-->
 
-<!--HUD_Settings START-->
+<!--_HUD_Settings START-->
 <conditional>
 	<!-- First number is HUD choice. (Currently 1-7) -->
 	<!-- Second number is Buff Panel choice. (0=vanilla, 1=simple, 2=detailed) -->
 	<if cond="mod_version('RWSUI_HUD_Settings') == version(1,0)">
 		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/LeftHUD.xml" />
-		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/VanillaBuffs/BuffPanel.xml" />
+		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/0/BuffPanel.xml" />
+		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/0/RightHUD.xml" />
+		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/VehicleStatBars.xml" />
 		<include filename="RWSUI_xuiConfigs/_Core/ToolBelt/Simple/ToolBelt.xml" />
 		<include filename="RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 	</if>
 	<if cond="mod_version('RWSUI_HUD_Settings') == version(1,1)">
 		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/LeftHUD.xml" />
-		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/SimpleBuffs/BuffPanel.xml" />
+		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/1/BuffPanel.xml" />
+		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/1/RightHUD.xml" />
+		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/VehicleStatBars.xml" />
 		<include filename="RWSUI_xuiConfigs/_Core/ToolBelt/Simple/ToolBelt.xml" />
 		<include filename="RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 	</if>
 	<if cond="mod_version('RWSUI_HUD_Settings') == version(1,2)">
 		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/LeftHUD.xml" />
-		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/DetailedBuffs/BuffPanel.xml" />
+		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/2/BuffPanel.xml" />
+		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/2/RightHUD.xml" />
+		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/VehicleStatBars.xml" />
 		<include filename="RWSUI_xuiConfigs/_Core/ToolBelt/Simple/ToolBelt.xml" />
 		<include filename="RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 	</if>
@@ -151,19 +157,23 @@
 				<conditional>
 					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'Bottom_Left'">
 						<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/LeftHUD.xml" />
-						<include filename="RWSUI_xuiConfigs/_Core/ToolBelt/Simple/ToolBelt.xml" />
-						<include filename="RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 						<conditional>
 							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
-								<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/VanillaBuffs/BuffPanel.xml" />
+								<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/0/BuffPanel.xml" />
+								<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/0/RightHUD.xml" />
 							</if>
 							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Simple_Buffs'">
-								<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/SimpleBuffs/BuffPanel.xml" />
+								<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/1/BuffPanel.xml" />
+								<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/1/RightHUD.xml" />
 							</if>
 							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
-								<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/DetailedBuffs/BuffPanel.xml" />
+								<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/2/BuffPanel.xml" />
+								<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/2/RightHUD.xml" />
 							</if>
 						</conditional>
+						<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/VehicleStatBars.xml" />
+						<include filename="RWSUI_xuiConfigs/_Core/ToolBelt/Simple/ToolBelt.xml" />
+						<include filename="RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 					</if>
 					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
 						<include filename="RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/LeftHUD.xml" />
@@ -276,14 +286,16 @@
 	<!-- Fallback to these configs(v1.1) as default if nothing else is set. -->
 	<else>
 		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/LeftHUD.xml" />
-		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/SimpleBuffs/BuffPanel.xml" />
+		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/1/BuffPanel.xml" />
+		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/1/RightHUD.xml" />
+		<include filename="RWSUI_xuiConfigs/_Core/HUD/Horizontal/VehicleStatBars.xml" />
 		<include filename="RWSUI_xuiConfigs/_Core/ToolBelt/Simple/ToolBelt.xml" />
 		<include filename="RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 	</else>
 </conditional>
-<!--HUD_Settings END-->
+<!--_HUD_Settings END-->
 
-<!--Vanilla_Food_Water_Bars START-->
+<!--_Vanilla_Food_Water_Bars START-->
 <conditional>
 	<!-- Backwards compatibility for the way the old add on was handeled -->
 	<if cond="mod_loaded('RWSUI_ToolBelt_Blocker') and mod_version('RWSUI_ToolBelt_Blocker') == version(1,1)">
@@ -301,9 +313,9 @@
 		</conditional>
 	</if>
 </conditional>
-<!--Vanilla_Food_Water_Bars END-->
+<!--_Vanilla_Food_Water_Bars END-->
 
-<!--StatBar_Text_Remover START-->
+<!--_StatBar_Text_Remover START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_StatBarsTextRemover')">
 		<include filename="RWSUI_xuiConfigs/AddOns/StatBarTextRemover/windows.xml" />
@@ -316,9 +328,9 @@
 		</conditional>
 	</if>
 </conditional>
-<!--StatBar_Text_Remover END-->
+<!--_StatBar_Text_Remover END-->
 
-<!--StatBar_Icon_Remover START-->
+<!--_StatBar_Icon_Remover START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_StatBarsIconRemover')">
 		<include filename="RWSUI_xuiConfigs/AddOns/StatBarIconRemover/windows.xml" />
@@ -331,9 +343,9 @@
 		</conditional>
 	</if>
 </conditional>
-<!--StatBar_Icon_Remover END-->
+<!--_StatBar_Icon_Remover END-->
 
-<!--ToolbeltKey_Labels START-->
+<!--_ToolbeltKey_Labels START-->
 <conditional>
 	<!-- If ToolbeltKeys Remover version number is 1.1 remove only the toolbelt keys background -->
 	<if cond="mod_loaded('RWSUI_ToolBeltKeys_Remover') and mod_version('RWSUI_ToolBeltKeys_Remover') == version(1,1)">
@@ -357,9 +369,9 @@
 		</conditional>
 	</if>
 </conditional>
-<!--ToolbeltKey_Labels END-->
+<!--_ToolbeltKey_Labels END-->
 
-<!--Crafting_Queue_Size START-->
+<!--_Crafting_Queue_Size START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_CraftingQueue')">
 		<!-- Check for old add on to avoid conflicts -->
@@ -380,9 +392,9 @@
 		</conditional>
 	</if>
 </conditional>
-<!--Crafting_Queue_Size END-->
+<!--_Crafting_Queue_Size END-->
 
-<!--Forge_Input_Size START-->
+<!--_Forge_Input_Size START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_ForgeInput')">
 		<!-- Check for old add on to avoid conflicts -->
@@ -399,9 +411,9 @@
 		</conditional>
 	</if>
 </conditional>
-<!--Forge_Input_Size END-->
+<!--_Forge_Input_Size END-->
 
-<!--Player_BackPack_Size START-->
+<!--_Player_BackPack_Size START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_BigBag60') or mod_loaded('RWSUI_BigBag120')">
 		<!-- Check for old add ons to avoid conflicts -->
@@ -448,11 +460,11 @@
 		</conditional>
 	</if>
 </conditional>
-<!--Player_BackPack_Size END-->
+<!--_Player_BackPack_Size END-->
 
-<!--Quartz_Only_Settings START-->
+<!--_Quartz_Only_Settings START-->
 
-<!--Food/Water_Actual_Values START-->
+<!--_Food_Water_Actual_Values START-->
 <conditional>
 	<if cond="mod_loaded('Quartz') and mod_loaded('Gears')">
 		<conditional>
@@ -462,9 +474,9 @@
 		</conditional>
 	</if>
 </conditional>
-<!--Food/Water_Actual_Values END-->
+<!--_Food_Water_Actual_Values END-->
 
-<!--Quartz_Only_Settings END-->
+<!--_Quartz_Only_Settings END-->
 
 
 

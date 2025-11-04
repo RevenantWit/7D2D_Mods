@@ -1,15 +1,15 @@
 <configs>
 <!--CONTENTS START-->
 <!---->
-<!--Stat_Bars-->
-<!--No_Fill_Bars-->
-<!--Buffs-->
-<!--ToolBelt-->
+<!--_Stat_Bars-->
+<!--_No_Fill_Bars-->
+<!--_Buffs-->
+<!--_ToolBelt-->
 <!---->
 <!--CONTENTS END-->
 
 <append xpath="/controls">
-<!--Stat_Bars START-->
+<!--_Stat_Bars START-->
 	<rwsui_hud_statBar>
 		<rect width="${width}" height="${height}" pos="${pos}" controller="${controller}" stat_type="${stat_type}" visible="{statvisible}">
 			<sprite depth="0" name="border" color="0,0,0,140" type="sliced" />
@@ -104,17 +104,17 @@
 			<sprite depth="2" name="Icon" atlas="{staticonatlas|once}" sprite="${sprite}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" force_hide="${icon_hidden}"/>
 		</rect>
 	</rwsui_hud_doubleNoText_stealthBar>
-<!--Stat_Bars END-->
+<!--_Stat_Bars END-->
 
-<!--No_Fill_Bars START-->
+<!--_No_Fill_Bars START-->
 	<rwsui_hud_nofill>
-		<panel depth="${depth}" width="${width}" height="${height}" pos="${pos}" >	
+		<rect depth="${depth}" width="${width}" height="${height}" pos="${pos}" >	
 			<sprite depth="1" name="border" color="${border_color}" type="sliced" fillcenter="false" />
 			<sprite depth="2" name="background" color="${background_color}" type="sliced" />
 			<sprite depth="3" name="Icon" sprite="${sprite}" size="${icon_size}" pos="${icon_pos}" color="${icon_color}" foregroundlayer="true" tooltip="${tooltip}" on_hover="${on_hover}" force_hide="${icon_hidden}"/>
 			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" font_size="${font_size}" color="${text_color}" text="${text}" justify="${text_justify}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
 			<sprite depth="5" name="border" color="${border_color}" type="sliced" fillcenter="false" />
-		</panel>
+		</rect>
 	</rwsui_hud_nofill>
 
 	<rwsui_hud_nofillR>
@@ -144,9 +144,9 @@
 			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" font_size="${font_size}" color="${text_color}" text="${text}" justify="${text_justify}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
 		</rect>
 	</rwsui_hud_nofill_controllerR>
-<!--No_Fill_Bars END-->
+<!--_No_Fill_Bars END-->
 
-<!--Buffs START-->
+<!--_Buffs START-->
 	<rwsui_hud_buffpanel_buff>
 		<panel width="${width}" height="${height}" pos="${pos}" controller="ActiveBuffEntry" disableautobackground="true" >	
 			<sprite depth="1" name="border" color="${border_color}" type="sliced" fillcenter="false" visible="{# bufficon != ''}" />
@@ -503,9 +503,9 @@
 			<rwsui_hud_buffpanel_buffR width="${width}" height="${height}" pos="0,${height*14+(Round(panel_offset, 0)*14)}" border_color="${border_color}" border_thickness="${border_thickness}" border_globalopacity="${border_globalopacity}" background_color="${background_color}" background_globalopacity="${background_globalopacity}" icon_size="${icon_size}" icon_pos="${icon_pos}" icon_color="${icon_color}" text_pos="${text_pos}" text_width="${text_width}" font_size="${font_size}" text_color="${text_color}" text="${text}" text_justify="${text_justify}" textOutline_color="${textOutline_color}" textOutline_size="${textOutline_size}" tooltip="${tooltip}" on_hover="${on_hover}" />
 		</rect>
 	</rwsui_hud_detailed_buffpanelR>
-<!--Buffs END-->
+<!--_Buffs END-->
 
-<!--ToolBelt START-->
+<!--_ToolBelt START-->
 <conditional>
 	<if cond="game_version() &gt;= version(1,2,2)">
 		<rwsui_toolbelt_item_stack controller="ItemStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false">
@@ -638,6 +638,6 @@
 		</grid>
 	</rwsui_toolbelt_keys>
 </append>
-<!--ToolBelt END-->
+<!--_ToolBelt END-->
 
 </configs>

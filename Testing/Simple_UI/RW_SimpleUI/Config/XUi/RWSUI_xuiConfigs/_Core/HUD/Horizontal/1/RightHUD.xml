@@ -1,0 +1,32 @@
+<configs>
+
+<append xpath="/windows">
+
+	<window name="RWSUI_RightHUD" anchor="RightBottom">
+
+		<rect name="hud" pos="-93,28" side="right" controller="CollectedItemList" pivot="BottomLeft">
+			<panel width="180" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" >
+				<sprite depth="1" name="border" color="[rwsui_collectedItemList_border_color]" type="sliced" fillcenter="false" pivot="center" />
+				<sprite depth="2" name="background" color="[rwsui_collectedItemList_background_color]" type="sliced" pivot="center" />
+				<sprite depth="4" name="Icon" pos="65,-1" atlas="ItemIconAtlas" size="35,35" pivot="center" foregroundlayer="true"/>
+				<label depth="6" pos="37,-2" name="TextContent" font_size="28" color="[rwsui_collectedItemList_text_color]" justify="right" height="26" width="130" effect="Outline8" effect_color="[rwsui_collectedItemList_textOutline_color]" effect_distance="[rwsui_collectedItemList_textOutline_size]" pivot="right"/>
+				<sprite depth="6" pos="0,14" width="30" height="30" name="Negative" sprite="ui_game_symbol_x" color="[red]" />
+				<sprite depth="5" name="border" color="[rwsui_collectedItemList_border_color]" type="sliced" fillcenter="false" pivot="center" />
+			</panel>
+		</rect>
+
+		<grid name="hud" pos="-183,49" rows="2" cols="1" width="168" cell_width="168" cell_height="46" repeat_content="false" side="right">
+			<rect width="180" height="46" controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
+				<sprite depth="1" name="border" color="[rwsui_activeItem_border_color]" type="sliced" fillcenter="false" />
+				<sprite depth="2" name="background" color="[rwsui_activeItem_background_color]" type="sliced" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="35,35" pos="137,-6" color="[rwsui_activeItem_icon_color]" foregroundlayer="true" />
+				<label depth="6" name="TextContent" pos="122,-26" font_size="28" color="[rwsui_activeItem_text_color]" justify="right" pivot="right" text="{statcurrentwithmax}" width="130" height="30" effect="Outline8" effect_color="[rwsui_activeItem_textOutline_color]" effect_distance="[rwsui_activeItem_textOutline_size]" />
+				<sprite depth="5" name="border" color="[rwsui_activeItem_border_color]" type="sliced" fillcenter="false"/>
+			</rect>
+		</grid>
+
+	</window>
+
+</append>
+
+</configs>

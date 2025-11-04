@@ -1,12 +1,12 @@
 <configs>
 <!--CONTENTS START-->
 <!---->
-<!--Player_BackPack_Size-->
-<!--Vehicle_Storage_Size-->
+<!--_Player_BackPack_Size-->
+<!--_Vehicle_Storage_Size-->
 <!---->
 <!--CONTENTS END-->
 
-<!--Player_BackPack_Size START-->
+<!--_Player_BackPack_Size START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_BigBag60') or mod_loaded('RWSUI_BigBag120')">
 		<!-- Check for old add ons to avoid conflicts -->
@@ -33,9 +33,9 @@
 		</conditional>
 	</if>
 </conditional>
-<!--Player_BackPack_Size END-->
+<!--_Player_BackPack_Size END-->
 
-<!--Vehicle_Storage_Size START-->
+<!--_Vehicle_Storage_Size START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_VehicleStorage') or mod_loaded('RWSUI_VehicleStorageXL')">
 		<!-- Check for old add ons to avoid conflicts -->
@@ -47,6 +47,6 @@
 		<include filename="RWSUI_Configs/AddOns/VehicleStorageSize/lootGears.xml" />
 	</if>
 </conditional>
-<!--Vehicle_Storage_Size END-->
+<!--_Vehicle_Storage_Size END-->
 
 </configs>

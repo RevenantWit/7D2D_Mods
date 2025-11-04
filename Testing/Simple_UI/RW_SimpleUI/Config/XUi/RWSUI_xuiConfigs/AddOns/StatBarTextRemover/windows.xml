@@ -1,7 +1,12 @@
 <configs>
 
 <conditional>
-	<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(1,0) and mod_version('RWSUI_HUD_Settings') &lt; version(3,0)">
+	<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(1,0) and mod_version('RWSUI_HUD_Settings') &lt; version(2,0)">
+		<set xpath="//window/rect//rwsui_hud_statBar/@text_hidden">true</set>
+		<set xpath="//window//rwsui_toolbelt_xpBar/@text_hidden">true</set>
+		<set xpath="//window//rwsui_hud_statBar_reverseFillH/@text_hidden">true</set>
+	</if>
+	<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(2,0) and mod_version('RWSUI_HUD_Settings') &lt; version(3,0)">
 		<set xpath="//window/rect//rwsui_hud_statBar/@text_hidden">true</set>
 		<set xpath="//window//rwsui_toolbelt_xpBar/@text_hidden">true</set>
 	</if>

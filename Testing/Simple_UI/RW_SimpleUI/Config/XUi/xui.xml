@@ -1,29 +1,31 @@
 <configs>
 <!--CONTENTS START-->
 <!---->
-<!--Blockers-->
-<!--Location_PopUp-->
-<!--Player_BackPack_Size-->
-<!--Wookies_12_Slot_ToolBelt-->
-<!--Khaines_15_Slot_ToolBelt-->
+<!--_Blockers-->
+<!--_Location_PopUp-->
+<!--_Player_BackPack_Size-->
+<!--_Wookies_12_Slot_ToolBelt-->
+<!--_Khaines_15_Slot_ToolBelt-->
 <!---->
 <!--CONTENTS END-->
 
-<!-- Blockers START -->
+<!--_Blockers START-->
 <!--HUD Blocker-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_HUD_Blocker')">
-		<!-- If HUD Blocker is installed do nothing  -->
+		<!-- If HUD Blocker is installed do nothing -->
 	</if>
 	<if cond="mod_loaded('Gears')">
 		<conditional>
 			<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.HUDBlocker') == 'Off'">
 				<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='HUDLeftStatBars' or @name='RevsWW_LeftHUD' or @name='RevsWW_MultiHUD' or @name='RWSUI_LeftHUD']/@name">RWSUI_LeftHUD</set>
+				<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='HUDRightStatBars']/@name">RWSUI_RightHUD</set>
 			</if>
 		</conditional>
 	</if>
 	<else>
 		<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='HUDLeftStatBars' or @name='RevsWW_LeftHUD' or @name='RevsWW_MultiHUD' or @name='RWSUI_LeftHUD']/@name">RWSUI_LeftHUD</set>
+		<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='HUDRightStatBars']/@name">RWSUI_RightHUD</set>
 	</else>
 </conditional>
 <!--ToolBelt Blocker-->
@@ -42,15 +44,15 @@
 		<set xpath="/xui/ruleset/window_group[@name='toolbelt']/window[@name='windowToolbelt' or @name='RevsWW_ToolBelt' or @name='RevsWW_MultiBelt' or @name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/@name">RWSUI_ToolBelt10</set>
 	</else>
 </conditional>
-<!-- Blockers END -->
+<!--_Blockers END-->
 
-<!--Location_PopUp START-->
-<!-- remove the pop up from it's window group so it no longers gets called when entering a location. -->
+<!--_Location_PopUp START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_NoLPU')">
 		<!-- Check for old add on to avoid conflicts -->
 		<!-- This check will get removed in a future update -->
 	</if>
+	<!-- remove the pop up from it's window group so it no longers gets called when entering a location. -->
 	<if cond="mod_loaded('RWSUI_LocationPopUpRemover')">
 		<remove xpath="/xui/ruleset/window_group[@name='compass']/window[@name='windowEntering']"/>
 	</if>
@@ -62,9 +64,9 @@
 		</conditional>
 	</if>
 </conditional>
-<!--Location_PopUp END-->
+<!--_Location_PopUp END-->
 
-<!--Player_BackPack_Size START-->
+<!--_Player_BackPack_Size START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_BigBag60') or mod_loaded('RWSUI_BigBag120')">
 		<!-- Check for old add ons to avoid conflicts -->
@@ -91,9 +93,9 @@
 		</conditional>
 	</if>
 </conditional>
-<!--Player_BackPack_Size END-->
+<!--_Player_BackPack_Size END-->
 
-<!-- Wookies_12_Slot_ToolBelt START -->
+<!--_Wookies_12_Slot_ToolBelt START-->
 <conditional>
 	<if cond="mod_loaded('WMM12SlotToolbelt') == 'true'">
 		<conditional>
@@ -113,9 +115,9 @@
 		</conditional>
 	</if>
 </conditional>
-<!-- Wookies_12_Slot_ToolBelt END -->
+<!--_Wookies_12_Slot_ToolBelt END-->
 
-<!-- Khaines_15_Slot_ToolBelt START -->
+<!--_Khaines_15_Slot_ToolBelt START-->
 <conditional>
 	<if cond="mod_loaded('15SlotToolbelt') == 'true'">
 		<conditional>
@@ -135,6 +137,6 @@
 		</conditional>
 	</if>
 </conditional>
-<!-- Khaines_15_Slot_ToolBelt END -->
+<!--_Khaines_15_Slot_ToolBelt END-->
 
 </configs>
