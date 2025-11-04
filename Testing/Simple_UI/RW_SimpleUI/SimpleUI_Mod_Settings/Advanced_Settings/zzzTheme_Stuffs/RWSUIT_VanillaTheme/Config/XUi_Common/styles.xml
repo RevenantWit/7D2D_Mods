@@ -1,41 +1,72 @@
 <configs>
+<!--CONTENTS START-->
+<!---->
+<!--_Stealth_Bar-->
+<!--_Stamina_Bar-->
+<!--_Health_Bar-->
+<!--_Food_Bar-->
+<!--_Water_Bar-->
+<!--_Buff_Panel-->
+<!--_ToolBelt-->
+<!--_XP_Bar-->
+<!--_ToolBelt_Keys-->
+<!--_Vehicle_Fuel_Bar-->
+<!--_Vehicle_Health_Bar-->
+<!--_Collected_Item_List-->
+<!--_Active_Item-->
+<!---->
+<!--CONTENTS END-->
 
 <!--Check to make sure Simple UI is installed first-->
 <conditional>
 	<if cond="mod_loaded('RW_SimpleUI')">
 
-		<!--Stealth Bar-->
+		<!--_Stealth_Bar-->
 		<set xpath="//global/style_entry[@name='rwsui_stealthbar_background_color']/@value">110,110,110,128</set>
 
-		<!--Stamina Bar-->
+		<!--_Stamina_Bar-->
 		<set xpath="//global/style_entry[@name='rwsui_staminabar_background_color']/@value">110,110,110,128</set>
 		<set xpath="//global/style_entry[@name='rwsui_staminabar_content_color']/@value">0,54,255,128</set>
 
-		<!--Health Bar-->
+		<!--_Health_Bar-->
 		<set xpath="//global/style_entry[@name='rwsui_healthbar_background_color']/@value">110,110,110,128</set>
 		<set xpath="//global/style_entry[@name='rwsui_healthbar_content_color']/@value">255,0,0,128</set>
 
-		<!--Food Bar-->
+		<!--_Food_Bar-->
 		<set xpath="//global/style_entry[@name='rwsui_foodbar_background_color']/@value">110,110,110,128</set>
 		<set xpath="//global/style_entry[@name='rwsui_foodbar_content_color']/@value">0,255,54,128</set>
 
-		<!--Water Bar-->
+		<!--_Water_Bar-->
 		<set xpath="//global/style_entry[@name='rwsui_waterbar_background_color']/@value">110,110,110,128</set>
 		<set xpath="//global/style_entry[@name='rwsui_waterbar_content_color']/@value">0,54,255,160</set>
 
-		<!--Buff Panel-->
+		<!--_Buff_Panel-->
 		<set xpath="//global/style_entry[@name='rwsui_buffpanel_background_color']/@value">110,110,110,225</set>
 
-		<!--ToolBelt-->
+		<!--_ToolBelt-->
 		<set xpath="//global/style_entry[@name='rwsui_toolbelt_innerborder_color']/@value">[mediumGrey]</set>
 		<set xpath="//global/style_entry[@name='rwsui_toolbelt_background_color']/@value">[mediumGrey]</set>
 		<set xpath="//global/style_entry[@name='rwsui_toolbelt_holding_color']/@value">[white]</set>
 
-		<!--XP Bar-->
+		<!--_XP_Bar-->
 		<set xpath="//global/style_entry[@name='rwsui_xpbar_background_color']/@value">[mediumGrey]</set>
 
-		<!--ToolBelt Keys and Background-->
+		<!--_ToolBelt_Keys-->
 		<set xpath="//global/style_entry[@name='rwsui_tbkeys_background_color']/@value">110,110,110,225</set>
+
+		<!--_Vehicle_Fuel_Bar-->
+		<set xpath="//global/style_entry[@name='rwsui_vehicleFuel_background_color']/@value">110,110,110,128</set>
+		<set xpath="//global/style_entry[@name='rwsui_vehicleFuel_content_color']/@value">0,54,255,128</set>
+
+		<!--_Vehicle_Health_Bar START-->
+		<set xpath="//global/style_entry[@name='rwsui_vehicleHealth_background_color']/@value">110,110,110,128</set>
+		<set xpath="//global/style_entry[@name='rwsui_vehicleHealth_content_color']/@value">255,0,0,128</set>
+
+		<!--_Collected_Item_List-->
+		<set xpath="//global/style_entry[@name='rwsui_collectedItemList_background_color']/@value">110,110,110,225</set>
+
+		<!--_Active_Item START-->
+		<set xpath="//global/style_entry[@name='rwsui_activeItem_background_color']/@value">110,110,110,225</set>
 
 	</if>
 </conditional>

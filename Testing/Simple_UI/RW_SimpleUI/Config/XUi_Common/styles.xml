@@ -144,7 +144,7 @@
 	<style_entry name="rwsui_vehicleFuel_textOutline_color" value="[black]"/>
 	<style_entry name="rwsui_vehicleFuel_textOutline_size" value="1,1"/>
 
-	<!--only applies to radial stamina bars-->
+	<!--only applies to radial fuel bars-->
 	<style_entry name="rwsui_vehicleFuel_border_color" value="[white]"/>
 	<style_entry name="rwsui_vehicleFuel_borderCover_color" value="[black]"/>
 	<style_entry name="rwsui_vehicleFuel_topLayer_color" value="[black]"/>
@@ -172,7 +172,7 @@
 	<style_entry name="rwsui_collectedItemList_textOutline_size" value="1,1"/>
 
 	<!--only applies to round collected item list -->
-	<style_entry name="rwsui_collectedItemListR_border_color" value="{buffcolor}"/>
+	<style_entry name="rwsui_collectedItemListR_border_color" value="[white]"/>
 	<style_entry name="rwsui_collectedItemList_topLayer_color" value="[black]"/>
 <!--_Collected_Item_List END-->
 
@@ -184,12 +184,11 @@
 	<style_entry name="rwsui_activeItem_textOutline_size" value="1,1"/>
 
 	<!--only applies to round collected item list -->
-	<style_entry name="rwsui_activeItemR_border_color" value="{buffcolor}"/>
+	<style_entry name="rwsui_activeItemR_border_color" value="[white]"/>
 	<style_entry name="rwsui_activeItem_topLayer_color" value="[black]"/>
 
 	<!--TEST-->
 	<style_entry name="rwsui_activeItem_icon_color" value="{staticoncolor}"/>
-
 <!--_Active_Item END-->
 
 </append>
