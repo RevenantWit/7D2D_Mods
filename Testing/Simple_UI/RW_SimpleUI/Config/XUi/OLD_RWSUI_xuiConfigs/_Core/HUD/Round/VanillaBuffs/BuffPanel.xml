@@ -1,0 +1,10 @@
+<configs>
+
+<append xpath="//window[@name='RWSUI_LeftHUD']">
+
+	<!--Vanilla Buff Panel-->
+	<OLD_rwsui_hud_vanilla_buffpanel pos="112,34" panel_width="225" panel_height="40" icon_size="24,24" icon_pos="-95,12" text_pos="-86,0" text_width="175" font_size="22" text_height="20" />
+
+</append>
+
+</configs>

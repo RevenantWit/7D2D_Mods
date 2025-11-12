@@ -27,11 +27,9 @@
 	<style_entry name="rwsui_stealthbar_text_color" value="[white]"/>
 	<style_entry name="rwsui_stealthbar_textOutline_color" value="[black]"/>
 	<style_entry name="rwsui_stealthbar_textOutline_size" value="1,1"/>
-
 	<!--only applies to radial stealth bars-->
-	<style_entry name="rwsui_stealthbar_border_color" value="[white]"/>
-	<style_entry name="rwsui_stealthbar_borderCover_color" value="[black]"/>
-	<style_entry name="rwsui_stealthbar_topLayer_color" value="[black]"/>
+	<style_entry name="rwsui_stealthbar_border_color" value="[black]"/>
+	<style_entry name="rwsui_stealthbar_centerBG_color" value="[black]"/>
 <!--_Stealth_Bar END-->
 
 <!--_Stamina_Bar START-->
@@ -41,11 +39,9 @@
 	<style_entry name="rwsui_staminabar_text_color" value="[white]"/>
 	<style_entry name="rwsui_staminabar_textOutline_color" value="[black]"/>
 	<style_entry name="rwsui_staminabar_textOutline_size" value="1,1"/>
-
 	<!--only applies to radial stamina bars-->
-	<style_entry name="rwsui_staminabar_border_color" value="[white]"/>
-	<style_entry name="rwsui_staminabar_borderCover_color" value="[black]"/>
-	<style_entry name="rwsui_staminabar_topLayer_color" value="[black]"/>
+	<style_entry name="rwsui_staminabar_border_color" value="[black]"/>
+	<style_entry name="rwsui_staminabar_centerBG_color" value="[black]"/>
 <!--_Stamina_Bar END-->
 
 <!--_Health_Bar START-->
@@ -55,11 +51,9 @@
 	<style_entry name="rwsui_healthbar_text_color" value="[white]"/>
 	<style_entry name="rwsui_healthbar_textOutline_color" value="[black]"/>
 	<style_entry name="rwsui_healthbar_textOutline_size" value="1,1"/>
-
 	<!--only applies to radial health bars-->
-	<style_entry name="rwsui_healthbar_border_color" value="[white]"/>
-	<style_entry name="rwsui_healthbar_borderCover_color" value="[black]"/>
-	<style_entry name="rwsui_healthbar_topLayer_color" value="[black]"/>
+	<style_entry name="rwsui_healthbar_border_color" value="[black]"/>
+	<style_entry name="rwsui_healthbar_centerBG_color" value="[black]"/>
 <!--_Health_Bar END-->
 
 <!--_Food_Bar START-->
@@ -69,11 +63,9 @@
 	<style_entry name="rwsui_foodbar_text_color" value="[white]"/>
 	<style_entry name="rwsui_foodbar_textOutline_color" value="[black]"/>
 	<style_entry name="rwsui_foodbar_textOutline_size" value="1,1"/>
-
 	<!--only applies to radial food bars-->
-	<style_entry name="rwsui_foodbar_border_color" value="[white]"/>
-	<style_entry name="rwsui_foodbar_borderCover_color" value="[black]"/>
-	<style_entry name="rwsui_foodbar_topLayer_color" value="[black]"/>
+	<style_entry name="rwsui_foodbar_border_color" value="[black]"/>
+	<style_entry name="rwsui_foodbar_centerBG_color" value="[black]"/>
 <!--_Food_Bar END-->
 
 <!--_Water_Bar START-->
@@ -83,11 +75,9 @@
 	<style_entry name="rwsui_waterbar_text_color" value="[white]"/>
 	<style_entry name="rwsui_waterbar_textOutline_color" value="[black]"/>
 	<style_entry name="rwsui_waterbar_textOutline_size" value="1,1"/>
-
 	<!--only applies to radial water bars-->
-	<style_entry name="rwsui_waterbar_border_color" value="[white]"/>
-	<style_entry name="rwsui_waterbar_borderCover_color" value="[black]"/>
-	<style_entry name="rwsui_waterbar_topLayer_color" value="[black]"/>
+	<style_entry name="rwsui_waterbar_border_color" value="[black]"/>
+	<style_entry name="rwsui_waterbar_centerBG_color" value="[black]"/>
 <!--_Water_Bar END-->
 
 <!--_Buff_Panel START-->
@@ -95,13 +85,12 @@
 	<style_entry name="rwsui_buffpanel_background_color" value="[darkestGrey]"/>
 	<style_entry name="rwsui_buffpanel_textOutline_color" value="[black]"/>
 	<style_entry name="rwsui_buffpanel_textOutline_size" value="1,1"/>
-
+	<style_entry name="rwsui_buffpanel_panelOffset" value="2"/>
 	<!--WARNING: changing these will cause the buff icons and text to not change color depending on the severity of the buff -->
 	<style_entry name="rwsui_buffpanel_icon_color" value="{buffcolor}"/>
 	<style_entry name="rwsui_buffpanel_text_color" value="{buffcolor}"/>
-
 	<!--only applies to round buff panel -->
-	<style_entry name="rwsui_buffpanelR_border_color" value="{buffcolor}"/>
+	<style_entry name="rwsui_buffpanelR_border_color" value="[black]"/>
 	<style_entry name="rwsui_buffpanel_topLayer_color" value="[black]"/>
 <!--_Buff_Panel END-->
 
@@ -122,11 +111,9 @@
 	<style_entry name="rwsui_xpbar_text_color" value="[white]"/>
 	<style_entry name="rwsui_xpbar_textOutline_color" value="[black]"/>
 	<style_entry name="rwsui_xpbar_textOutline_size" value="1,1"/>
-
 	<!--only applies to radial xp bars-->
-	<style_entry name="rwsui_xpbar_border_color" value="[white]"/>
-	<style_entry name="rwsui_xpbar_borderCover_color" value="[black]"/>
-	<style_entry name="rwsui_xpbar_topLayer_color" value="[black]"/>
+	<style_entry name="rwsui_xpbar_border_color" value="[black]"/>
+	<style_entry name="rwsui_xpbar_centerBG_color" value="[black]"/>
 <!--_XP_Bar END-->
 
 <!--_ToolBelt_Keys START-->
@@ -143,11 +130,9 @@
 	<style_entry name="rwsui_vehicleFuel_text_color" value="[white]"/>
 	<style_entry name="rwsui_vehicleFuel_textOutline_color" value="[black]"/>
 	<style_entry name="rwsui_vehicleFuel_textOutline_size" value="1,1"/>
-
 	<!--only applies to radial fuel bars-->
-	<style_entry name="rwsui_vehicleFuel_border_color" value="[white]"/>
-	<style_entry name="rwsui_vehicleFuel_borderCover_color" value="[black]"/>
-	<style_entry name="rwsui_vehicleFuel_topLayer_color" value="[black]"/>
+	<style_entry name="rwsui_vehicleFuel_border_color" value="[black]"/>
+	<style_entry name="rwsui_vehicleFuel_centerBG_color" value="[black]"/>
 <!--_Vehicle_Fuel_Bar END-->
 
 <!--_Vehicle_Health_Bar START-->
@@ -157,11 +142,9 @@
 	<style_entry name="rwsui_vehicleHealth_text_color" value="[white]"/>
 	<style_entry name="rwsui_vehicleHealth_textOutline_color" value="[black]"/>
 	<style_entry name="rwsui_vehicleHealth_textOutline_size" value="1,1"/>
-
 	<!--only applies to radial health bars-->
-	<style_entry name="rwsui_vehicleHealth_border_color" value="[white]"/>
-	<style_entry name="rwsui_vehicleHealth_borderCover_color" value="[black]"/>
-	<style_entry name="rwsui_vehicleHealth_topLayer_color" value="[black]"/>
+	<style_entry name="rwsui_vehicleHealth_border_color" value="[black]"/>
+	<style_entry name="rwsui_vehicleHealth_centerBG_color" value="[black]"/>
 <!--_Vehicle_Health_Bar END-->
 
 <!--_Collected_Item_List START-->
@@ -170,7 +153,7 @@
 	<style_entry name="rwsui_collectedItemList_text_color" value="[white]"/>
 	<style_entry name="rwsui_collectedItemList_textOutline_color" value="[black]"/>
 	<style_entry name="rwsui_collectedItemList_textOutline_size" value="1,1"/>
-
+	<style_entry name="rwsui_collectedItemList_X_color" value="[red]"/>
 	<!--only applies to round collected item list -->
 	<style_entry name="rwsui_collectedItemListR_border_color" value="[white]"/>
 	<style_entry name="rwsui_collectedItemList_topLayer_color" value="[black]"/>
@@ -182,13 +165,11 @@
 	<style_entry name="rwsui_activeItem_text_color" value="[white]"/>
 	<style_entry name="rwsui_activeItem_textOutline_color" value="[black]"/>
 	<style_entry name="rwsui_activeItem_textOutline_size" value="1,1"/>
-
-	<!--only applies to round collected item list -->
-	<style_entry name="rwsui_activeItemR_border_color" value="[white]"/>
-	<style_entry name="rwsui_activeItem_topLayer_color" value="[black]"/>
-
 	<!--TEST-->
 	<style_entry name="rwsui_activeItem_icon_color" value="{staticoncolor}"/>
+	<!--only applies to round collected item list -->
+	<style_entry name="rwsui_activeItemR_border_color" value="[black]"/>
+	<style_entry name="rwsui_activeItem_topLayer_color" value="[black]"/>
 <!--_Active_Item END-->
 
 </append>

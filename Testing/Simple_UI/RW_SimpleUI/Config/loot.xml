@@ -15,20 +15,20 @@
 	<if cond="mod_loaded('RWSUI_PlayerBackPackSize')">
 		<conditional>
 			<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(6,0)">
-				<include filename="RWSUI_Configs/AddOns/BigBag/BB60/loot.xml" />
+				<include filename="rwsui_Config/AddOns/BigBag/BB60/loot.xml" />
 			</if>
 			<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(12,0)">
-				<include filename="RWSUI_Configs/AddOns/BigBag/BB120/loot.xml" />
+				<include filename="rwsui_Config/AddOns/BigBag/BB120/loot.xml" />
 			</if>
 		</conditional>
 	</if>
 	<if cond="mod_loaded('Gears')">
 		<conditional>
 			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '60_Slots'">
-				<include filename="RWSUI_Configs/AddOns/BigBag/BB60/loot.xml" />
+				<include filename="rwsui_Config/AddOns/BigBag/BB60/loot.xml" />
 			</if>
 			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '120_Slots'">
-				<include filename="RWSUI_Configs/AddOns/BigBag/BB120/loot.xml" />
+				<include filename="rwsui_Config/AddOns/BigBag/BB120/loot.xml" />
 			</if>
 		</conditional>
 	</if>
@@ -41,10 +41,10 @@
 		<!-- Check for old add ons to avoid conflicts -->
 	</if>
 	<if cond="mod_loaded('RWSUI_4x4TruckStorage') or mod_loaded('RWSUI_BicycleStorage') or mod_loaded('RWSUI_GyrocopterStorage') or mod_loaded('RWSUI_MinibikeStorage') or mod_loaded('RWSUI_MotorcycleStorage')">
-		<include filename="RWSUI_Configs/AddOns/VehicleStorageSize/loot.xml" />
+		<include filename="rwsui_Config/AddOns/VehicleStorageSize/loot.xml" />
 	</if>
 	<if cond="mod_loaded('Gears')">
-		<include filename="RWSUI_Configs/AddOns/VehicleStorageSize/lootGears.xml" />
+		<include filename="rwsui_Config/AddOns/VehicleStorageSize/lootGears.xml" />
 	</if>
 </conditional>
 <!--_Vehicle_Storage_Size END-->

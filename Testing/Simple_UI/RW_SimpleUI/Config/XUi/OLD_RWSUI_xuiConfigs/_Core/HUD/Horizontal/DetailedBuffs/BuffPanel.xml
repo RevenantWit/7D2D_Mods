@@ -1,0 +1,15 @@
+<configs>
+
+<append xpath="//window[@name='RWSUI_LeftHUD']">
+	<!--Detailed Buffs when stealth is not visible-->
+	<rect name="buffsSNV" controller="HUDStatBar" stat_type="Stealth" visible="{# !statvisible}">
+		<OLD_rwsui_hud_detailed_buffpanel pos="0,48" width="46" height="46" panel_offset="2" border_color="[rwsui_buffpanel_border_color]" background_color="[rwsui_buffpanel_background_color]" icon_size="26,26" icon_pos="9,-11" icon_color="[rwsui_buffpanel_icon_color]" text_pos="49,-12" text_width="240" font_size="24" text_height="22" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_color="[rwsui_buffpanel_text_color]" textOutline_color="[rwsui_buffpanel_textOutline_color]" textOutline_size="[rwsui_buffpanel_textOutline_size]" text_justify="left" tooltip="" on_hover="false" />
+	</rect>
+
+	<!--Detailed Buffs when stealth is visible-->
+	<rect name="buffsSV" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+		<OLD_rwsui_hud_detailed_buffpanel pos="0,98" width="46" height="46" panel_offset="2" border_color="[rwsui_buffpanel_border_color]" background_color="[rwsui_buffpanel_background_color]" icon_size="26,26" icon_pos="9,-11" icon_color="[rwsui_buffpanel_icon_color]" text_pos="49,-12" text_width="240" font_size="24" text_height="22" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_color="[rwsui_buffpanel_text_color]" textOutline_color="[rwsui_buffpanel_textOutline_color]" textOutline_size="[rwsui_buffpanel_textOutline_size]" text_justify="left" tooltip="" on_hover="false" />
+	</rect>
+</append>
+
+</configs>

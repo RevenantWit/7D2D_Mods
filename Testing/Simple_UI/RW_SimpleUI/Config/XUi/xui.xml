@@ -75,20 +75,20 @@
 	<if cond="mod_loaded('RWSUI_PlayerBackPackSize')">
 		<conditional>
 			<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(6,0)">
-				<include filename="RWSUI_xuiConfigs/AddOns/BigBag/BB60/xui.xml" />
+				<include filename="rwsui_XUi/AddOns/BigBag/BB60/xui.xml" />
 			</if>
 			<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(12,0)">
-				<include filename="RWSUI_xuiConfigs/AddOns/BigBag/BB120/xui.xml" />
+				<include filename="rwsui_XUi/AddOns/BigBag/BB120/xui.xml" />
 			</if>
 		</conditional>
 	</if>
 	<if cond="mod_loaded('Gears')">
 		<conditional>
 			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '60_Slots'">
-				<include filename="RWSUI_xuiConfigs/AddOns/BigBag/BB60/xui.xml" />
+				<include filename="rwsui_XUi/AddOns/BigBag/BB60/xui.xml" />
 			</if>
 			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '120_Slots'">
-				<include filename="RWSUI_xuiConfigs/AddOns/BigBag/BB120/xui.xml" />
+				<include filename="rwsui_XUi/AddOns/BigBag/BB120/xui.xml" />
 			</if>
 		</conditional>
 	</if>
@@ -97,7 +97,7 @@
 
 <!--_Wookies_12_Slot_ToolBelt START-->
 <conditional>
-	<if cond="mod_loaded('WMM12SlotToolbelt') == 'true'">
+	<if cond="mod_loaded('WMM12SlotToolbelt')">
 		<conditional>
 			<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
 				<!-- If Toolbelt Blocker is installed do nothing -->
@@ -119,7 +119,7 @@
 
 <!--_Khaines_15_Slot_ToolBelt START-->
 <conditional>
-	<if cond="mod_loaded('15SlotToolbelt') == 'true'">
+	<if cond="mod_loaded('15SlotToolbelt')">
 		<conditional>
 			<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
 				<!-- If Toolbelt Blocker is installed do nothing -->

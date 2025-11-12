@@ -1,0 +1,44 @@
+
+<!--Layout Basic Info-->
+StatBars_Name="{Vertical}"
+
+StatBars_Location="{Bottom_Left}"
+
+
+<!--Required Core Files-->
+## Templates ##
+File_Path="{rwsui_XUi/0_Core/controls.xml}"
+
+## Styles ##
+File_Path="{rwsui_XUi/0_Core/styles.xml}"
+
+## Color Styles ##
+File_Path="{RW_SimpleUI/Config/XUi_Common/styles.xml}"
+
+
+<!--Required Common Files-->
+## ToolBelt ##
+File_Path="{rwsui_XUi/HUD/0_Common/ToolBelt.xml}"
+
+## ToolBelt_Keys ##
+File_Path="{rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml}"
+
+
+<!--RWSUI_HUD_Settings Versions-->
+## Vanilla Buffs ##
+Version="{2.0}"
+
+## Simple Buffs ##
+Version="{2.1}"
+
+## Detailed Buffs ##
+Version="{2.2}"
+
+
+<!--Quartz Settings Names-->
+StatBar="{Vertical}"
+
+StatBars_Location="{Bottom_Left}"
+
+Buff_Panel_Type"{Vanilla, Simple_Buffs, Detailed_Buffs}"
+

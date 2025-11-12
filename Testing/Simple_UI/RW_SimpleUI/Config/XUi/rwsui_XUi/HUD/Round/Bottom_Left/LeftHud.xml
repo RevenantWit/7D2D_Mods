@@ -1,0 +1,29 @@
+<configs>
+
+<append xpath="/windows">
+
+	<window name="RWSUI_LeftHUD" anchor="LeftBottom" pos="5,146" >
+		<rect name="HUDLeftStatBars" side="right">
+			<!--Radial Stealth Bar-->
+			<rwsui_hud_statBarR_stealth style="rwsui_statbar_radial, rwsui_statbar_stealth" pos="154,11" />
+
+			<!--Radial Stamina Bar-->
+			<rwsui_hud_statBarR style="rwsui_statbar_radial, rwsui_statbar_stamina, rwsui_statcurrent_stamina" pos="-1,11" />
+
+			<!--Radial Health Bar-->
+			<rwsui_hud_statBarR style="rwsui_statbar_radial, rwsui_statbar_health" pos="77,11" />
+
+			<!--Radial Food Bar-->
+			<rwsui_hud_statBarR style="rwsui_statbar_radial, rwsui_statbar_food, rwsui_statcurrent_foodwater" pos="-1,-68" />
+
+			<!--Radial Water Bar-->
+			<rwsui_hud_statBarR style="rwsui_statbar_radial, rwsui_statbar_water, rwsui_statcurrent_foodwater" pos="77,-68" />
+
+			<!--Radial XP Bar-->
+			<rwsui_hud_xpBarR style="rwsui_statbar_radial, rwsui_statbar_xp, rwsui_xpbar_shorten_text" pos="154,-68" />
+		</rect>
+	</window>
+
+</append>
+
+</configs>

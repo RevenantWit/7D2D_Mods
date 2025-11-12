@@ -1,0 +1,29 @@
+<configs>
+
+<conditional>
+	<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'Vertical'">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
+				<set xpath="//window/rwsui_hud_statBar[@stat_type='Food']/@controller">Quartz.HUDFood, Quartz</set>
+				<set xpath="//window/rwsui_hud_statBar[@stat_type='Water']/@controller">Quartz.HUDWater, Quartz</set>
+				<set xpath="//window/rwsui_hud_statBar[@stat_type='Food' or @stat_type='Water']/@text">{# statcurrent &lt; (statmax-1) ? statcurrent : statmax}</set>
+			</if>
+		</conditional>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'Round'">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
+				<set xpath="//window/rwsui_hud_statBarR[@stat_type='Food']/@controller">Quartz.HUDFood, Quartz</set>
+				<set xpath="//window/rwsui_hud_statBarR[@stat_type='Water']/@controller">Quartz.HUDWater, Quartz</set>
+				<set xpath="//window/rwsui_hud_statBarR[@stat_type='Food' or @stat_type='Water']/@text">{# statcurrent &lt; (statmax-1) ? statcurrent : statmax}</set>
+			</if>
+		</conditional>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'MiniHUD'">
+		<set xpath="//window/rwsui_hud_statBar[@stat_type='Food']/@controller">Quartz.HUDFood, Quartz</set>
+		<set xpath="//window/rwsui_hud_statBar[@stat_type='Water']/@controller">Quartz.HUDWater, Quartz</set>
+		<set xpath="//window/rwsui_hud_statBar[@stat_type='Food' or @stat_type='Water']/@text">{# statcurrent &lt; (statmax-1) ? statcurrent : statmax}/{statmax}</set>
+	</if>
+</conditional>
+
+</configs>

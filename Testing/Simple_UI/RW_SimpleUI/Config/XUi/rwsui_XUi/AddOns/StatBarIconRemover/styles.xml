@@ -1,0 +1,5 @@
+<configs>
+
+	<set xpath="//style[@name='rwsui_statbar' or @name='rwsui_statbar_vertical' or @name='rwsui_statbar_radial']/style_entry[@name='icon_hidden']/@value">true</set>
+
+</configs>
