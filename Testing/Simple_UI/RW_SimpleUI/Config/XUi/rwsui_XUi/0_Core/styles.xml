@@ -54,9 +54,9 @@
 		<style_entry name="icon_hidden" value="false"/>
 		<style_entry name="text" value="{statcurrent}"/>
 		<style_entry name="text_pos" value="1,-90"/>
-		<style_entry name="font_size" value="18"/>
+		<style_entry name="font_size" value="20"/>
 		<style_entry name="text_width" value="46"/>
-		<style_entry name="text_height" value="16"/>
+		<style_entry name="text_height" value="18"/>
 		<style_entry name="text_justify" value="center"/>
 		<style_entry name="text_hidden" value="false"/>
 	</style>
@@ -110,7 +110,15 @@
 		<style_entry name="text_height" value="18"/>
 	</style>
 
-	<!--_Text_Fixes START-->
+	<style name="rwsui_statbar_toolbelt_vertical">
+		<style_entry name="width" value="50"/>
+		<style_entry name="height" value="95"/>
+		<style_entry name="icon_pos" value="25,-77"/>
+		<style_entry name="text_pos" value="2,-25"/>
+	</style>
+<!--_StatBar_Defaults END-->
+
+<!--_Text_Fixes START-->
 	<style name="rwsui_statcurrent_stamina">
 		<style_entry name="text" value="{# length(statcurrent)==0 ? '' : Round(float(statcurrent), 0)}"/>
 	</style>
@@ -126,8 +134,8 @@
 	<style name="rwsui_xpbar_shorten_text">
 		<style_entry name="text" value="{cvar($LastPlayerLevel)}"/>
 	</style>
-	<!--_Text_Fixes END-->
-<!--_StatBar_Defaults END-->
+<!--_Text_Fixes END-->
+
 
 <!--_Stealth_Bar START-->
 	<style name="rwsui_statbar_stealth">

@@ -9,7 +9,7 @@ rwsuiStatBar_Option,"StatBars Type"
 rwsuiStatBar_Option_Desc,"Current Values: \n Horizontal, Vertical, Round, MiniHUD"
 
 rwsuiStatBarLocation_Option,"Statbars Location"
-rwsuiStatBarLocation_Option_Desc,"Current Values: \n Bottom_Left, Toolbelt"
+rwsuiStatBarLocation_Option_Desc,"Current Values: \n Bottom_Left, Toolbelt \n\n\n NOTE: MiniHUD is only available on the toolbelt."
 
 rwsuiBuffPanel_Category,"Buff Panel Settings"
 rwsuiBuffPanel_Category_Desc,""

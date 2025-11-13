@@ -6,9 +6,9 @@
 		<rect name="windowToolbelt" width="753" height="78" depth="5" backgroundcolor="[black]" controller="ToolbeltWindow" standard_xp_color="[rwsui_xpbar_standard_color]" updating_xp_color="[rwsui_xpbar_updating_color]" deficit_xp_color="[rwsui_xpbar_deficit_color]" xp_fill_speed="2.5" >
 
 			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" gamepad_selectable="false" />
-
+			
 			<!--Simple Toolbelt-->
-			<rwsui_toolbelt pos="3,-3" cols="10" clear_inventory1_pos="765,19" clear_inventory2_pos="765,53"/>
+			<rwsui_toolbelt pos="3,-3" cols="10" clear_inventory1_pos="738,19" clear_inventory2_pos="800,50"/>
 
 			<!--Stealth Bar-->
 			<rwsui_hud_toolbelt_doubleStealth style="rwsui_statbar, rwsui_statbar_stealth, rwsui_toolbelt_doubleStealth" />
@@ -16,20 +16,19 @@
 			<!--XP Bar-->
 			<rwsui_hud_xpBar style="rwsui_statbar, rwsui_statbar_xp, rwsui_toolbelt_xpbar" />
 
-
 		</rect>
 
 		<!--Stamina Bar-->
-		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_stamina, rwsui_statbar_flip_horizontal" pos="-171,0" />
+		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_stamina, rwsui_statcurrent_stamina, rwsui_statbar_toolbelt_vertical" pos="-100,0" />
 
 		<!--Health Bar-->
-		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_health, rwsui_statbar_flip_horizontal" pos="-171,-48" />
+		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_health, rwsui_statbar_toolbelt_vertical" pos="-50,0" />
 
 		<!--Food Bar-->
-		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_food, rwsui_statcurrentwithmax_foodwater" pos="753,0" />
+		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_food, rwsui_statcurrent_foodwater, rwsui_statbar_toolbelt_vertical" pos="753,0" />
 
 		<!--Water Bar-->
-		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_water, rwsui_statcurrentwithmax_foodwater" pos="753,-48" />
+		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_water, rwsui_statcurrent_foodwater, rwsui_statbar_toolbelt_vertical" pos="803,0" />
 
 	</window>
 
@@ -37,9 +36,9 @@
 		<rect name="windowToolbelt" width="903" height="78" depth="5" backgroundcolor="[black]" controller="ToolbeltWindow" standard_xp_color="[rwsui_xpbar_standard_color]" updating_xp_color="[rwsui_xpbar_updating_color]" deficit_xp_color="[rwsui_xpbar_deficit_color]" xp_fill_speed="2.5" >
 
 			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" gamepad_selectable="false" />
-
+			
 			<!--Toolbelt-->
-			<rwsui_toolbelt pos="3,-3" cols="12" clear_inventory1_pos="915,19" clear_inventory2_pos="915,53"/>
+			<rwsui_toolbelt pos="3,-3" cols="12" clear_inventory1_pos="888,19" clear_inventory2_pos="950,50"/>
 
 			<!--Stealth Bar-->
 			<rwsui_hud_toolbelt_doubleStealth style="rwsui_statbar, rwsui_statbar_stealth, rwsui_toolbelt12_doubleStealth" />
@@ -50,16 +49,16 @@
 		</rect>
 
 		<!--Stamina Bar-->
-		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_stamina, rwsui_statbar_flip_horizontal" pos="-171,0" />
+		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_stamina, rwsui_statcurrent_stamina, rwsui_statbar_toolbelt_vertical" pos="-100,0" />
 
 		<!--Health Bar-->
-		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_health, rwsui_statbar_flip_horizontal" pos="-171,-48" />
+		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_health, rwsui_statbar_toolbelt_vertical" pos="-50,0" />
 
 		<!--Food Bar-->
-		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_food, rwsui_statcurrentwithmax_foodwater" pos="903,0" />
+		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_food, rwsui_statcurrent_foodwater, rwsui_statbar_toolbelt_vertical" pos="903,0" />
 
 		<!--Water Bar-->
-		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_water, rwsui_statcurrentwithmax_foodwater" pos="903,-48" />
+		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_water, rwsui_statcurrent_foodwater, rwsui_statbar_toolbelt_vertical" pos="953,0" />
 
 	</window>
 
@@ -67,9 +66,9 @@
 		<rect name="windowToolbelt" width="1128" height="78" depth="5" backgroundcolor="[black]" controller="ToolbeltWindow" standard_xp_color="[rwsui_xpbar_standard_color]" updating_xp_color="[rwsui_xpbar_updating_color]" deficit_xp_color="[rwsui_xpbar_deficit_color]" xp_fill_speed="2.5" >
 
 			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" gamepad_selectable="false" />
-
+			
 			<!--Toolbelt-->
-			<rwsui_toolbelt pos="3,-3" cols="15" clear_inventory1_pos="1140,19" clear_inventory2_pos="1140,53"/>
+			<rwsui_toolbelt pos="3,-3" cols="15" clear_inventory1_pos="1175,-32" clear_inventory2_pos="1175,50"/>
 
 			<!--Stealth Bar-->
 			<rwsui_hud_toolbelt_doubleStealth style="rwsui_statbar, rwsui_statbar_stealth, rwsui_toolbelt15_doubleStealth" />
@@ -80,16 +79,16 @@
 		</rect>
 
 		<!--Stamina Bar-->
-		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_stamina, rwsui_statbar_flip_horizontal, rwsui_statbar_half_horizontal" pos="-85,0" />
+		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_stamina, rwsui_statcurrent_stamina, rwsui_statbar_toolbelt_vertical" pos="-100,0" />
 
 		<!--Health Bar-->
-		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_health, rwsui_statbar_flip_horizontal, rwsui_statbar_half_horizontal" pos="-85,-48" />
+		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_health, rwsui_statbar_toolbelt_vertical" pos="-50,0" />
 
 		<!--Food Bar-->
-		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_food, rwsui_statbar_half_horizontal, rwsui_statcurrentwithmax_foodwater" pos="1128,0" />
+		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_food, rwsui_statcurrent_foodwater, rwsui_statbar_toolbelt_vertical" pos="1128,0" />
 
 		<!--Water Bar-->
-		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_water, rwsui_statbar_half_horizontal, rwsui_statcurrentwithmax_foodwater" pos="1128,-48" />
+		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_water, rwsui_statcurrent_foodwater, rwsui_statbar_toolbelt_vertical" pos="1178,0" />
 
 	</window>
 

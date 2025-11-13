@@ -4,8 +4,8 @@
 
 	<rect name="hud" controller="HUDStatBar" stat_type="Health" visible="{statvisible}" >
 
-		<!--Detailed Buffs-->
-		<rwsui_hud_buffpanel_detailed style="rwsui_detailedBuff_vertical" pos="-2,-99" />
+		<!--Simple Buffs-->
+		<rwsui_hud_simple_buffpanel4x10 style="rwsui_simpleBuff_vertical" pos="-2,-82" />
 
 	</rect>
 
