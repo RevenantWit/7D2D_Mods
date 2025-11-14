@@ -3,7 +3,7 @@
 <append xpath="//window[@name='RWSUI_LeftHUD']">
 
 	<!--Vanilla Buff Panel-->
-	<rwsui_hud_buffpanel_vanilla style="rwsui_vanillaBuff_round" pos="110,34" />
+	<rwsui_hud_buffpanel_vanilla style="rwsui_vanillaBuff_round" pos="108,-125" />
 
 </append>
 

@@ -8,8 +8,6 @@
 
 <!--_Core_Templates Start-->
 <include filename="rwsui_XUi/0_Core/controls.xml"/>
-
-<include filename="OLD_RWSUI_xuiConfigs/_Core/controls.xml"/>
 <!--_Core_Templates END-->
 
 <!--_Player_BackPack_Size START-->

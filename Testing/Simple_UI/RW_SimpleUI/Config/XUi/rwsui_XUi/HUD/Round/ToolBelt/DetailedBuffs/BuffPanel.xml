@@ -5,7 +5,7 @@
 	<rect name="hud" controller="HUDStatBar" stat_type="Health" visible="{statvisible}" >
 
 		<!--Detailed Round Buff Panel-->
-		<rwsui_hud_buffpanel_detailed style="rwsui_detailedBuff_round" pos="0,50" />
+		<rwsui_hud_buffpanel_detailed style="rwsui_detailedBuff_round" pos="-3,-109" />
 
 	</rect>
 

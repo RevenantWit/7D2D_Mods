@@ -4,7 +4,7 @@
 
 	<window name="RWSUI_RightHUD" anchor="RightBottom">
 
-		<rect controller="HUDStatBar" stat_type="VehicleHealth" pos="{# statvisible ? '0,-5' : '0,0'}" >
+		<rect controller="HUDStatBar" stat_type="VehicleHealth" pos="{# statvisible ? '0,-60' : '0,0'}" >
 
 			<rect controller="HUDStatBar" stat_type="ActiveItem" pos="{# statvisible ? '0,2' : '0,0'}" >
 

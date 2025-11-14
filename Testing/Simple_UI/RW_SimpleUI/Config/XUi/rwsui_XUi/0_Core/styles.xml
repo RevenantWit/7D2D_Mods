@@ -103,11 +103,36 @@
 		<style_entry name="width" value="85"/>
 		<style_entry name="icon_size" value="20,20"/>
 		<style_entry name="icon_pos" value="42,-12"/>
-		<style_entry name="icon_hidden" value="false"/>
 		<style_entry name="text_pos" value="2,-25"/>
 		<style_entry name="font_size" value="20"/>
 		<style_entry name="text_width" value="81"/>
 		<style_entry name="text_height" value="18"/>
+	</style>
+
+	<style name="rwsui_statbar_mini_horizontal">
+		<style_entry name="width" value="150"/>
+		<style_entry name="height" value="18"/>
+		<style_entry name="icon_size" value="14,14"/>
+		<style_entry name="icon_pos" value="18,-9"/>
+		<style_entry name="text_pos" value="0,-2"/>
+		<style_entry name="text_width" value="146"/>
+		<style_entry name="font_size" value="18"/>
+		<style_entry name="text_height" value="16"/>
+	</style>
+
+	<style name="rwsui_toolbelt12_mini_horizontal">
+		<style_entry name="width" value="180"/>
+		<style_entry name="text_width" value="176"/>
+	</style>
+
+	<style name="rwsui_toolbelt15_mini_horizontal">
+		<style_entry name="width" value="225"/>
+		<style_entry name="text_width" value="221"/>
+	</style>
+
+	<style name="rwsui_statbar_mini_flip_horizontal">
+		<style_entry name="fillinvert" value="true"/>
+		<style_entry name="icon_pos" value="132,-9"/>
 	</style>
 
 	<style name="rwsui_statbar_toolbelt_vertical">
@@ -281,6 +306,19 @@
 		<style_entry name="text_justify" value="left"/>
 	</style>
 
+	<style name="rwsui_toolbelt_xpbar_mini">
+		<style_entry name="xp_fill_speed" value="1.5"/>
+		<style_entry name="pos" value="300,-77"/>
+		<style_entry name="width" value="153"/>
+		<style_entry name="height" value="18"/>
+		<style_entry name="icon_size" value="14,14"/>
+		<style_entry name="icon_pos" value="18,-9"/>
+		<style_entry name="text_pos" value="0,-2"/>
+		<style_entry name="font_size" value="18"/>
+		<style_entry name="text_width" value="149"/>
+		<style_entry name="text_height" value="16"/>
+	</style>
+
 	<style name="rwsui_toolbelt12_xpbar">
 		<style_entry name="xp_fill_speed" value="2.5"/>
 		<style_entry name="pos" value="0,-77"/>
@@ -295,6 +333,19 @@
 		<style_entry name="text_justify" value="left"/>
 	</style>
 
+	<style name="rwsui_toolbelt12_xpbar_mini">
+		<style_entry name="xp_fill_speed" value="1.5"/>
+		<style_entry name="pos" value="360,-77"/>
+		<style_entry name="width" value="183"/>
+		<style_entry name="height" value="18"/>
+		<style_entry name="icon_size" value="14,14"/>
+		<style_entry name="icon_pos" value="18,-9"/>
+		<style_entry name="text_pos" value="0,-2"/>
+		<style_entry name="font_size" value="18"/>
+		<style_entry name="text_width" value="179"/>
+		<style_entry name="text_height" value="16"/>
+	</style>
+
 	<style name="rwsui_toolbelt15_xpbar">
 		<style_entry name="xp_fill_speed" value="2.5"/>
 		<style_entry name="pos" value="0,-77"/>
@@ -307,6 +358,19 @@
 		<style_entry name="text_width" value="1124"/>
 		<style_entry name="text_height" value="16"/>
 		<style_entry name="text_justify" value="left"/>
+	</style>
+
+	<style name="rwsui_toolbelt15_xpbar_mini">
+		<style_entry name="xp_fill_speed" value="1.5"/>
+		<style_entry name="pos" value="450,-77"/>
+		<style_entry name="width" value="228"/>
+		<style_entry name="height" value="18"/>
+		<style_entry name="icon_size" value="14,14"/>
+		<style_entry name="icon_pos" value="18,-9"/>
+		<style_entry name="text_pos" value="0,-2"/>
+		<style_entry name="font_size" value="18"/>
+		<style_entry name="text_width" value="224"/>
+		<style_entry name="text_height" value="16"/>
 	</style>
 
 <!--_Vehicle_Fuel_Bar START-->
@@ -466,7 +530,7 @@
 		<style_entry name="background_height" value="34"/>
 		<style_entry name="icon_size" value="20,20"/>
 		<style_entry name="icon_pos" value="21,-21"/>
-		<style_entry name="text_pos" value="-125,-21"/>
+		<style_entry name="text_pos" value="-125,-24"/>
 		<style_entry name="font_size" value="26"/>
 		<style_entry name="text_width" value="240"/>
 		<style_entry name="text_height" value="24"/>

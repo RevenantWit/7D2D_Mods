@@ -3,15 +3,10 @@
 <!---->
 <!--_HUD_Settings-->
 <!--_Vanilla_Toolbelt_StatBars-->
-<!--_StatBar_Text_Remover-->
-<!--_StatBar_Icons_Remover-->
 <!--_ToolbeltKey_Labels-->
 <!--_Crafting_Queue_Size-->
 <!--_Forge_Input_Size-->
 <!--_Player_BackPack_Size-->
-<!---->
-<!--_Quartz_Only_Settings-->
-<!--_Food_Water_Actual_Values-->
 <!---->
 <!--CONTENTS END-->
 
@@ -140,52 +135,52 @@
 		<include filename="rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 	</if>
 	<if cond="mod_version('RWSUI_HUD_Settings') == version(6,0)">
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/LeftHUD.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/VanillaBuffs/BuffPanel.xml" />
-		<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
-		<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VehicleStatBars.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/HUD/Round/ToolBelt.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Round_Background/ToolBelt_Keys.xml" />
+		<include filename="rwsui_XUi/HUD/0_Common/NoStats/LeftHUD.xml" />
+		<include filename="rwsui_XUi/HUD/Round/ToolBelt/VanillaBuffs/BuffPanel.xml" />
+		<include filename="rwsui_XUi/HUD/Round/ToolBelt/VanillaBuffs/RightHUD.xml" />
+		<include filename="rwsui_XUi/HUD/Round/ToolBelt/VehicleStatBars.xml" />
+		<include filename="rwsui_XUi/HUD/Round/ToolBelt/ToolBelt.xml" />
+		<include filename="rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Round_Background/ToolBelt_Keys.xml" />
 	</if>
 	<if cond="mod_version('RWSUI_HUD_Settings') == version(6,1)">
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/LeftHUD.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/v1_Round/BuffPanel.xml" />
-		<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
-		<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VehicleStatBars.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/HUD/Round/ToolBelt.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Round_Background/ToolBelt_Keys.xml" />
+		<include filename="rwsui_XUi/HUD/0_Common/NoStats/LeftHUD.xml" />
+		<include filename="rwsui_XUi/HUD/Round/ToolBelt/SimpleBuffs/BuffPanel.xml" />
+		<include filename="rwsui_XUi/HUD/Round/ToolBelt/SimpleBuffs/RightHUD.xml" />
+		<include filename="rwsui_XUi/HUD/Round/ToolBelt/VehicleStatBars.xml" />
+		<include filename="rwsui_XUi/HUD/Round/ToolBelt/ToolBelt.xml" />
+		<include filename="rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Round_Background/ToolBelt_Keys.xml" />
 	</if>
 	<if cond="mod_version('RWSUI_HUD_Settings') == version(6,2)">
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/LeftHUD.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/v2_Round/BuffPanel.xml" />
-		<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
-		<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VehicleStatBars.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/HUD/Round/ToolBelt.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Round_Background/ToolBelt_Keys.xml" />
+		<include filename="rwsui_XUi/HUD/0_Common/NoStats/LeftHUD.xml" />
+		<include filename="rwsui_XUi/HUD/Round/ToolBelt/DetailedBuffs/BuffPanel.xml" />
+		<include filename="rwsui_XUi/HUD/Round/ToolBelt/DetailedBuffs/RightHUD.xml" />
+		<include filename="rwsui_XUi/HUD/Round/ToolBelt/VehicleStatBars.xml" />
+		<include filename="rwsui_XUi/HUD/Round/ToolBelt/ToolBelt.xml" />
+		<include filename="rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Round_Background/ToolBelt_Keys.xml" />
 	</if>
 	<if cond="mod_version('RWSUI_HUD_Settings') == version(7,0)">
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/LeftHUD.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/VanillaBuffs/BuffPanel.xml" />
-		<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
-		<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VehicleStatBars.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/HUD/MiniHUD/ToolBelt.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
+		<include filename="rwsui_XUi/HUD/0_Common/NoStats/LeftHUD.xml" />
+		<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/VanillaBuffs/BuffPanel.xml" />
+		<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/VanillaBuffs/RightHUD.xml" />
+		<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/VehicleStatBars.xml" />
+		<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/ToolBelt.xml" />
+		<include filename="rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 	</if>
 	<if cond="mod_version('RWSUI_HUD_Settings') == version(7,1)">
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/LeftHUD.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/SimpleBuffs/BuffPanel.xml" />
-		<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
-		<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VehicleStatBars.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/HUD/MiniHUD/ToolBelt.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
+		<include filename="rwsui_XUi/HUD/0_Common/NoStats/LeftHUD.xml" />
+		<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/SimpleBuffs/BuffPanel.xml" />
+		<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/SimpleBuffs/RightHUD.xml" />
+		<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/VehicleStatBars.xml" />
+		<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/ToolBelt.xml" />
+		<include filename="rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 	</if>
 	<if cond="mod_version('RWSUI_HUD_Settings') == version(7,2)">
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/LeftHUD.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/DetailedBuffs/BuffPanel.xml" />
-		<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
-		<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VehicleStatBars.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/HUD/MiniHUD/ToolBelt.xml" />
-		<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
+		<include filename="rwsui_XUi/HUD/0_Common/NoStats/LeftHUD.xml" />
+		<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/DetailedBuffs/BuffPanel.xml" />
+		<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/DetailedBuffs/RightHUD.xml" />
+		<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/VehicleStatBars.xml" />
+		<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/ToolBelt.xml" />
+		<include filename="rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 	</if>
 	<if cond="mod_loaded('Gears')">
 		<conditional>
@@ -256,24 +251,24 @@
 						<include filename="rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 					</if>
 					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
-						<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/LeftHUD.xml" />
+						<include filename="rwsui_XUi/HUD/0_Common/NoStats/LeftHUD.xml" />
 						<conditional>
 							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
-								<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/VanillaBuffs/BuffPanel.xml" />
-								<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
+								<include filename="rwsui_XUi/HUD/Vertical/ToolBelt/VanillaBuffs/BuffPanel.xml" />
+								<include filename="rwsui_XUi/HUD/Vertical/ToolBelt/VanillaBuffs/RightHUD.xml" />
 							</if>
 							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Simple_Buffs'">
-								<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/SimpleBuffs/BuffPanel.xml" />
-								<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
+								<include filename="rwsui_XUi/HUD/Vertical/ToolBelt/SimpleBuffs/BuffPanel.xml" />
+								<include filename="rwsui_XUi/HUD/Vertical/ToolBelt/SimpleBuffs/RightHUD.xml" />
 							</if>
 							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
-								<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/DetailedBuffs/BuffPanel.xml" />
-								<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
+								<include filename="rwsui_XUi/HUD/Vertical/ToolBelt/DetailedBuffs/BuffPanel.xml" />
+								<include filename="rwsui_XUi/HUD/Vertical/ToolBelt/DetailedBuffs/RightHUD.xml" />
 							</if>
 						</conditional>
-						<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VehicleStatBars.xml" />
-						<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/HUD/Vertical/ToolBelt.xml" />
-						<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
+						<include filename="rwsui_XUi/HUD/Vertical/ToolBelt/VehicleStatBars.xml" />
+						<include filename="rwsui_XUi/HUD/Vertical/ToolBelt/ToolBelt.xml" />
+						<include filename="rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 					</if>
 				</conditional>
 			</if>
@@ -300,46 +295,46 @@
 						<include filename="rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Round_Background/ToolBelt_Keys.xml" />
 					</if>
 					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
-						<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/LeftHUD.xml" />
+						<include filename="rwsui_XUi/HUD/0_Common/NoStats/LeftHUD.xml" />
 						<conditional>
 							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
-								<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/VanillaBuffs/BuffPanel.xml" />
-								<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
+								<include filename="rwsui_XUi/HUD/Round/ToolBelt/VanillaBuffs/BuffPanel.xml" />
+								<include filename="rwsui_XUi/HUD/Round/ToolBelt/VanillaBuffs/RightHUD.xml" />
 							</if>
 							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Simple_Buffs'">
-								<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/v1_Round/BuffPanel.xml" />
-								<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
+								<include filename="rwsui_XUi/HUD/Round/ToolBelt/SimpleBuffs/BuffPanel.xml" />
+								<include filename="rwsui_XUi/HUD/Round/ToolBelt/SimpleBuffs/RightHUD.xml" />
 							</if>
 							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
-								<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/v2_Round/BuffPanel.xml" />
-								<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
+								<include filename="rwsui_XUi/HUD/Round/ToolBelt/DetailedBuffs/BuffPanel.xml" />
+								<include filename="rwsui_XUi/HUD/Round/ToolBelt/DetailedBuffs/RightHUD.xml" />
 							</if>
 						</conditional>
-						<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VehicleStatBars.xml" />
-						<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/HUD/Round/ToolBelt.xml" />
-						<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Round_Background/ToolBelt_Keys.xml" />
+						<include filename="rwsui_XUi/HUD/Round/ToolBelt/VehicleStatBars.xml" />
+						<include filename="rwsui_XUi/HUD/Round/ToolBelt/ToolBelt.xml" />
+						<include filename="rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Round_Background/ToolBelt_Keys.xml" />
 					</if>
 				</conditional>
 			</if>
 			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'MiniHUD'">
-				<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/LeftHUD.xml" />
+				<include filename="rwsui_XUi/HUD/0_Common/NoStats/LeftHUD.xml" />
 				<conditional>
 					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
-						<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/VanillaBuffs/BuffPanel.xml" />
-						<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
+						<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/VanillaBuffs/BuffPanel.xml" />
+						<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/VanillaBuffs/RightHUD.xml" />
 					</if>
 					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Simple_Buffs'">
-						<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/SimpleBuffs/BuffPanel.xml" />
-						<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
+						<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/SimpleBuffs/BuffPanel.xml" />
+						<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/SimpleBuffs/RightHUD.xml" />
 					</if>
 					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
-						<include filename="OLD_RWSUI_xuiConfigs/_Core/HUD/BuffPanel_Only/DetailedBuffs/BuffPanel.xml" />
-						<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VanillaBuffs/RightHUD.xml" />
+						<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/DetailedBuffs/BuffPanel.xml" />
+						<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/DetailedBuffs/RightHUD.xml" />
 					</if>
 				</conditional>
-				<include filename="rwsui_XUi/HUD/Horizontal/Bottom_Left/VehicleStatBars.xml" />
-				<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/HUD/MiniHUD/ToolBelt.xml" />
-				<include filename="OLD_RWSUI_xuiConfigs/_Core/ToolBelt/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
+				<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/VehicleStatBars.xml" />
+				<include filename="rwsui_XUi/HUD/MiniHUD/ToolBelt/ToolBelt.xml" />
+				<include filename="rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Square_Background/ToolBelt_Keys.xml" />
 			</if>
 		</conditional>
 	</if>
@@ -374,36 +369,6 @@
 	</if>
 </conditional>
 <!--_Vanilla_Food_Water_Bars END-->
-
-<!--_StatBar_Text_Remover START-->
-<conditional>
-	<if cond="mod_loaded('RWSUI_StatBarsTextRemover')">
-		<include filename="OLD_RWSUI_xuiConfigs/AddOns/StatBarTextRemover/windows.xml" />
-	</if>
-	<if cond="mod_loaded('Gears')">
-		<conditional>
-			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.StatBars.StatBarText') == 'Off'">
-				<include filename="OLD_RWSUI_xuiConfigs/AddOns/StatBarTextRemover/windowsGears.xml" />
-			</if>
-		</conditional>
-	</if>
-</conditional>
-<!--_StatBar_Text_Remover END-->
-
-<!--_StatBar_Icon_Remover START-->
-<conditional>
-	<if cond="mod_loaded('RWSUI_StatBarsIconRemover')">
-		<include filename="OLD_RWSUI_xuiConfigs/AddOns/StatBarIconRemover/windows.xml" />
-	</if>
-	<if cond="mod_loaded('Gears')">
-		<conditional>
-			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.StatBars.StatBarIcons') == 'Off'">
-				<include filename="OLD_RWSUI_xuiConfigs/AddOns/StatBarIconRemover/windowsGears.xml" />
-			</if>
-		</conditional>
-	</if>
-</conditional>
-<!--_StatBar_Icon_Remover END-->
 
 <!--_ToolbeltKey_Labels START-->
 <conditional>
@@ -521,22 +486,6 @@
 	</if>
 </conditional>
 <!--_Player_BackPack_Size END-->
-
-<!--_Quartz_Only_Settings START-->
-
-<!--_Food_Water_Actual_Values START-->
-<conditional>
-	<if cond="mod_loaded('Quartz') and mod_loaded('Gears')">
-		<conditional>
-			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.StatBars.FoodWaterTextAV') == 'On'">
-				<include filename="OLD_RWSUI_xuiConfigs/QuartzOnly/FoodWaterTextAV/windows.xml" />
-			</if>
-		</conditional>
-	</if>
-</conditional>
-<!--_Food_Water_Actual_Values END-->
-
-<!--_Quartz_Only_Settings END-->
 
 
 

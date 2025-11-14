@@ -9,6 +9,14 @@
 <!--CONTENTS END-->
 
 <append xpath="/controls">
+<!--
+	<rwsui_statbar_horizontal_stamina pos="0,0" style="rwsui_statbar_stamina" staminabar_pos="0" staminabar_style="rwsui_statbar_stamina" >
+
+		<rwsui_hud_statBar pos="${staminabar_pos != 0 ? (staminabar_pos) : (pos)}" style="rwsui_statbar, rwsui_statbar_stamina, ${style}, ${staminabar_style}" />
+
+	</rwsui_statbar_horizontal_stamina>
+-->
+
 <!--_Stat_Bars START-->
 	<rwsui_hud_statBar>
 		<rect width="${width}" height="${height}" pos="${pos}" controller="${controller}" stat_type="${stat_type}" visible="{statvisible}">
