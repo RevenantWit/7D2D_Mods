@@ -1,0 +1,41 @@
+<configs>
+
+<!-- Adjust player dropped backpack size to avoid errors when picking up bag after death -->
+<conditional>
+	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(2,0)">
+		<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">9,15</set>
+	</if>
+	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(3,0)">
+		<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">9,20</set>
+	</if>
+	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(4,0)">
+		<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">9,25</set>
+	</if>
+	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(5,0)">
+		<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">9,30</set>
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '2_Pages'">
+				<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">9,15</set>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '3_Pages'">
+				<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">9,20</set>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '4_Pages'">
+				<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">9,25</set>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '5_Pages'">
+				<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">9,30</set>
+			</if>
+			<else>
+				<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">9,35</set>
+			</else>
+		</conditional>
+	</if>
+	<else>
+		<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">9,35</set>
+	</else>
+</conditional>
+
+</configs>

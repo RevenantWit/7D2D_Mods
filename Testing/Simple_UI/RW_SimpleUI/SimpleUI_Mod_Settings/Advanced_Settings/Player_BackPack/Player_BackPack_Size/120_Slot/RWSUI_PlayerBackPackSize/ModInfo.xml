@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xml>
-	<Name value="RWSUI_PlayerBackPackSize"/>
-	<DisplayName value="Simple UI 120 Slot BackPack"/>
-	<Version value="12.0"/>
-	<Description value="Causes Simple UI to increase the backpack size to 120 slots. Simple UI will also increases the info panels above the backpack window to match the new size unless the info panel blocker is installed"/>
-	<Author value="RevenantWit"/>
-	<Website value="https://community.7daystodie.com/topic/32081-revs-simple-ui"/>
-</xml>

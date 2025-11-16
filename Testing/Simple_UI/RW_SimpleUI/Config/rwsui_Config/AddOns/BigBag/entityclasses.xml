@@ -1,0 +1,52 @@
+<configs>
+
+<conditional>
+	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(2,0)">
+		<!-- Unlocked number of slots in backpack by default -->
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+		<!-- Total number of slots in backpack -->
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize'][@value='45']/@value">90</set>
+	</if>
+	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(3,0)">
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize'][@value='45']/@value">135</set>
+	</if>
+	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(4,0)">
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize'][@value='45']/@value">180</set>
+	</if>
+	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(5,0)">
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize'][@value='45']/@value">225</set>
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '2_Pages'">
+				<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+				<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize'][@value='45']/@value">90</set>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '3_Pages'">
+				<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+				<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize'][@value='45']/@value">135</set>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '4_Pages'">
+				<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+				<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize'][@value='45']/@value">180</set>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '5_Pages'">
+				<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+				<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize'][@value='45']/@value">225</set>
+			</if>
+			<else>
+				<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+				<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize'][@value='45']/@value">270</set>
+			</else>
+		</conditional>
+	</if>
+	<else>
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize'][@value='45']/@value">270</set>
+	</else>
+</conditional>
+
+</configs>

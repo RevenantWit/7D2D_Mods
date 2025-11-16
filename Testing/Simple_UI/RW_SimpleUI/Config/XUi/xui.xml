@@ -3,7 +3,6 @@
 <!---->
 <!--_Blockers-->
 <!--_Location_PopUp-->
-<!--_Player_BackPack_Size-->
 <!--_Wookies_12_Slot_ToolBelt-->
 <!--_Khaines_15_Slot_ToolBelt-->
 <!---->
@@ -65,35 +64,6 @@
 	</if>
 </conditional>
 <!--_Location_PopUp END-->
-
-<!--_Player_BackPack_Size START-->
-<conditional>
-	<if cond="mod_loaded('RWSUI_BigBag60') or mod_loaded('RWSUI_BigBag120')">
-		<!-- Check for old add ons to avoid conflicts -->
-		<!-- This check will get removed in a future update -->
-	</if>
-	<if cond="mod_loaded('RWSUI_PlayerBackPackSize')">
-		<conditional>
-			<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(6,0)">
-				<include filename="rwsui_XUi/AddOns/BigBag/BB60/xui.xml" />
-			</if>
-			<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(12,0)">
-				<include filename="rwsui_XUi/AddOns/BigBag/BB120/xui.xml" />
-			</if>
-		</conditional>
-	</if>
-	<if cond="mod_loaded('Gears')">
-		<conditional>
-			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '60_Slots'">
-				<include filename="rwsui_XUi/AddOns/BigBag/BB60/xui.xml" />
-			</if>
-			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '120_Slots'">
-				<include filename="rwsui_XUi/AddOns/BigBag/BB120/xui.xml" />
-			</if>
-		</conditional>
-	</if>
-</conditional>
-<!--_Player_BackPack_Size END-->
 
 <!--_Wookies_12_Slot_ToolBelt START-->
 <conditional>

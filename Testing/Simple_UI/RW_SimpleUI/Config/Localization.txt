@@ -84,7 +84,7 @@ rwsuiBBInfoPanelBlocker_Toggle,"BigBag Info Panel Blocker"
 rwsuiBBInfoPanelBlocker_Toggle_Desc,"Toggle to prevent Simple UI's bigger backpacks from also increasing the size of the info panels above the backpack. \n\n This is mainly for compatibilty reasons in case changing the windows above backpack causes issues with other mods."
 
 rwsuiPlayerBackPackSize_Option,"Backpack Size"
-rwsuiPlayerBackPackSize_Option_Desc,"Current Values: \n Vanilla, 60_Slots, 120_Slots \n\n Once player backpack size is expanded it should not be reduced again on the same save."
+rwsuiPlayerBackPackSize_Option_Desc,"Increase the number of pages the player backpack has to one of the following: \n2 Pages (90 slots) \n3 Pages (135 slots) \n4 Pages (180 slots) \n5 Pages (225 slots) \n6 Pages (270 slots) \n\n NOTE: Once player backpack size is expanded it should not be reduced again on the same save."
 
 rwsuiVehicleStorage_Category,"Vehicle Storage Settings"
 rwsuiVehicleStorage_Category_Desc,""

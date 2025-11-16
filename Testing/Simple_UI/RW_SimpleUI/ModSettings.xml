@@ -49,9 +49,8 @@
       </Selector>
     </Category>
     <Category name="PlayerBackPack" displayKey="rwsuiPlayerBackPack_Category" tooltipKey="rwsuiPlayerBackPack_Category_Desc">
-      <Switch name="BigBagInfoPanelBlocker" displayKey="rwsuiBBInfoPanelBlocker_Toggle" tooltipKey="rwsuiBBInfoPanelBlocker_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
       <Selector name="PlayerBackPackSize" displayKey="rwsuiPlayerBackPackSize_Option" tooltipKey="rwsuiPlayerBackPackSize_Option_Desc" defaultValue="Vanilla">
-        <Property type="arrayValues" allowedValues="Vanilla,60_Slots,120_Slots" />
+        <Property type="arrayValues" allowedValues="Vanilla,2_Pages,3_Pages,4_Pages,5_Pages,6_Pages" />
       </Selector>
     </Category>
     <Category name="VehicleStorage" displayKey="rwsuiVehicleStorage_Category" tooltipKey="rwsuiVehicleStorage_Category_Desc">

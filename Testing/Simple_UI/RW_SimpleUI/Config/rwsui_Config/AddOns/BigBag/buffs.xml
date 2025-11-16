@@ -1,0 +1,85 @@
+<configs>
+
+<conditional>
+	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(2,0)">
+		<!-- Fix for encumbrance to acccount for the increase in encumbered slots -->
+		<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0104</set>
+		<!-- Fix for god mode to include the new number of total slots -->
+		<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+		<!-- Fix for steroids to include the new number of total slots -->
+		<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+		<!-- Fix for twitch pack mule buff to include the new number of total slots -->
+		<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+		<!-- Fix for twitch encumbered debuff for the increase in encumbered slots (makes half the inventory encumbered slots)-->
+		<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">45</set>
+	</if>
+	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(3,0)">
+		<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0052</set>
+		<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
+		<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
+		<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
+		<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">63</set>
+	</if>
+	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(4,0)">
+		<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0035</set>
+		<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">180</set>
+		<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">180</set>
+		<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">180</set>
+		<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+	</if>
+	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(5,0)">
+		<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0026</set>
+		<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">225</set>
+		<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">225</set>
+		<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">225</set>
+		<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">108</set>
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '2_Pages'">
+				<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0104</set>
+				<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+				<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+				<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+				<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">45</set>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '3_Pages'">
+				<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0052</set>
+				<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
+				<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
+				<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
+				<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">63</set>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '4_Pages'">
+				<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0035</set>
+				<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">180</set>
+				<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">180</set>
+				<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">180</set>
+				<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '5_Pages'">
+				<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0026</set>
+				<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">225</set>
+				<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">225</set>
+				<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">225</set>
+				<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">108</set>
+			</if>
+			<else>
+				<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0021</set>
+				<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">270</set>
+				<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">270</set>
+				<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">270</set>
+				<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
+			</else>
+		</conditional>
+	</if>
+	<else>
+		<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0021</set>
+		<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">270</set>
+		<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">270</set>
+		<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">270</set>
+		<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
+	</else>
+</conditional>
+
+</configs>
