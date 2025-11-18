@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
 	<Name value="RWSUI_HUD_Settings"/>
-	<DisplayName value="SimpleUI HUD Settings 4-1"/>
-	<Version value="4.1"/>
+	<DisplayName value="SimpleUI HUD Settings - Horizontal - ToolBelt - Simple_Buffs"/>
+	<Version value="1.1.0"/>
 	<Description value="Causes Simple UI to use horizontal statBars and a simple buff panel. Player statbars will be located on the toolbelt."/>
 	<Author value="RevenantWit"/>
 	<Website value="https://community.7daystodie.com/topic/32081-revs-simple-ui"/>

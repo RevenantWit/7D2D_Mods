@@ -1,0 +1,75 @@
+<configs>
+
+<append xpath="//window[@name='RWSUI_RightHUD']">
+
+	<rect name="VehicleStatBars" pos="-153,40" side="right">
+
+		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_vehicle_fuel, rwsui_statbar_mini_horizontal, rwsui_statbar_mini_flip_horizontal" />
+
+		<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_vehicle_health, rwsui_statbar_mini_horizontal, rwsui_statbar_mini_flip_horizontal" pos="0,-20" />
+
+	</rect>
+
+</append>
+
+<!--_Wookies_12_Slot_ToolBelt START-->
+<conditional>
+	<if cond="mod_loaded('WMM12SlotToolbelt')">
+		<conditional>
+			<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
+				<!-- If Toolbelt Blocker is installed do nothing -->
+			</if>
+			<if cond="mod_loaded('Gears')">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
+						<set xpath="//window[@name='RWSUI_RightHUD']/rect[@name='VehicleStatBars']/@pos">-183,40</set>
+
+						<set xpath="//window[@name='RWSUI_RightHUD']//rwsui_hud_statBar[contains(@style, 'rwsui_statbar_vehicle_fuel')]/@style">rwsui_statbar, rwsui_statbar_vehicle_fuel, rwsui_statbar_mini_horizontal, rwsui_toolbelt12_mini_horizontal, rwsui_statbar_mini_flip_horizontal</set>
+
+						<set xpath="//window[@name='RWSUI_RightHUD']//rwsui_hud_statBar[contains(@style, 'rwsui_statbar_vehicle_health')]/@style">rwsui_statbar, rwsui_statbar_vehicle_health, rwsui_statbar_mini_horizontal, rwsui_toolbelt12_mini_horizontal, rwsui_statbar_mini_flip_horizontal</set>
+					</if>
+				</conditional>
+			</if>
+			<else>
+				<set xpath="//window[@name='RWSUI_RightHUD']/rect[@name='VehicleStatBars']/@pos">-183,40</set>
+
+				<set xpath="//window[@name='RWSUI_RightHUD']//rwsui_hud_statBar[contains(@style, 'rwsui_statbar_vehicle_fuel')]/@style">rwsui_statbar, rwsui_statbar_vehicle_fuel, rwsui_statbar_mini_horizontal, rwsui_toolbelt12_mini_horizontal, rwsui_statbar_mini_flip_horizontal</set>
+
+				<set xpath="//window[@name='RWSUI_RightHUD']//rwsui_hud_statBar[contains(@style, 'rwsui_statbar_vehicle_health')]/@style">rwsui_statbar, rwsui_statbar_vehicle_health, rwsui_statbar_mini_horizontal, rwsui_toolbelt12_mini_horizontal, rwsui_statbar_mini_flip_horizontal</set>
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!--_Wookies_12_Slot_ToolBelt END-->
+
+<!--_Khaines_15_Slot_ToolBelt START-->
+<conditional>
+	<if cond="mod_loaded('15SlotToolbelt')">
+		<conditional>
+			<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
+				<!-- If Toolbelt Blocker is installed do nothing -->
+			</if>
+			<if cond="mod_loaded('Gears')">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
+						<set xpath="//window[@name='RWSUI_RightHUD']/rect[@name='VehicleStatBars']/@pos">-228,40</set>
+
+						<set xpath="//window[@name='RWSUI_RightHUD']//rwsui_hud_statBar[contains(@style, 'rwsui_statbar_vehicle_fuel')]/@style">rwsui_statbar, rwsui_statbar_vehicle_fuel, rwsui_statbar_mini_horizontal, rwsui_toolbelt15_mini_horizontal, rwsui_statbar_mini_flip_horizontal</set>
+
+						<set xpath="//window[@name='RWSUI_RightHUD']//rwsui_hud_statBar[contains(@style, 'rwsui_statbar_vehicle_health')]/@style">rwsui_statbar, rwsui_statbar_vehicle_health, rwsui_statbar_mini_horizontal, rwsui_toolbelt15_mini_horizontal, rwsui_statbar_mini_flip_horizontal</set>
+					</if>
+				</conditional>
+			</if>
+			<else>
+				<set xpath="//window[@name='RWSUI_RightHUD']/rect[@name='VehicleStatBars']/@pos">-228,40</set>
+
+				<set xpath="//window[@name='RWSUI_RightHUD']//rwsui_hud_statBar[contains(@style, 'rwsui_statbar_vehicle_fuel')]/@style">rwsui_statbar, rwsui_statbar_vehicle_fuel, rwsui_statbar_mini_horizontal, rwsui_toolbelt15_mini_horizontal, rwsui_statbar_mini_flip_horizontal</set>
+
+				<set xpath="//window[@name='RWSUI_RightHUD']//rwsui_hud_statBar[contains(@style, 'rwsui_statbar_vehicle_health')]/@style">rwsui_statbar, rwsui_statbar_vehicle_health, rwsui_statbar_mini_horizontal, rwsui_toolbelt15_mini_horizontal, rwsui_statbar_mini_flip_horizontal</set>
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!--_Khaines_15_Slot_ToolBelt END-->
+
+</configs>

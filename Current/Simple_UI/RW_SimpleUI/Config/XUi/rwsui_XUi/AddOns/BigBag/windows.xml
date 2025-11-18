@@ -1,0 +1,106 @@
+<configs>
+
+<remove xpath="/windows/window[@name='windowBackpack']/panel/sprite[@name='windowIcon' and @sprite='ui_game_symbol_backpack']"/>
+<remove xpath="/windows/window[@name='windowBackpack']/panel/label[@name='windowName' and @text_key='xuiInventory']"/>
+<remove xpath="/windows/window[@name='windowBackpack']/panel[@name='content' and ./grid[@name='inventory']]"/>
+
+<append xpath="/windows/window[@name='windowBackpack']">
+
+	<rect name="tabs" controller="TabSelector" pos="0,0" size="606, 349">
+		<rect name="tabsHeader" height="43" pos="0,0" depth="1">
+
+			<grid name="tabButtons" depth="2" rows="1" cols="6" pos="3,-3" cell_width="35" cell_height="36" repeat_content="true">
+				<rect controller="TabSelectorButton" >
+					<simplebutton name="tabButton" width="35" height="36" depth="2" font_size="24" defaultcolor="0,0,0,1" selectedsprite="map_poi_editor" selectedcolor="[beige]" caption="{tab_name_localized}"/>
+				</rect>
+			</grid>
+		</rect>
+
+		<rect name="tabsContents" controller="Backpack">
+			<panel name="content" width="100%" height="303" depth="0" pos="0,-46" disableautobackground="true">
+				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="606" height="336" color="[black]" type="sliced" fillcenter="false" on_press="true" gamepad_selectable="false"/>
+
+				<rect controller="TabSelectorTab" tab_key="1">
+					<grid depth="10" name="inventory" rows="5" cols="9" pos="3,-3" cell_width="67" cell_height="67" repeat_content="true" >
+						<backpack_item_stack on_scroll="true" name="0"/>
+					</grid>
+				</rect>
+
+				<rect controller="TabSelectorTab" tab_key="2" pos="0,0">
+					<grid depth="10" name="inventory" rows="5" cols="9" pos="3,-3" cell_width="67" cell_height="67" repeat_content="true" >
+						<backpack_item_stack on_scroll="true" name="0"/>
+					</grid>
+				</rect>
+
+				<rect controller="TabSelectorTab" tab_key="3" pos="0,0">
+					<grid depth="10" name="inventory" rows="5" cols="9" pos="3,-3" cell_width="67" cell_height="67" repeat_content="true" >
+						<backpack_item_stack on_scroll="true" name="0"/>
+					</grid>
+				</rect>
+
+				<rect controller="TabSelectorTab" tab_key="4" pos="0,0">
+					<grid depth="10" name="inventory" rows="5" cols="9" pos="3,-3" cell_width="67" cell_height="67" repeat_content="true" >
+						<backpack_item_stack on_scroll="true" name="0"/>
+					</grid>
+				</rect>
+
+				<rect controller="TabSelectorTab" tab_key="5" pos="0,0">
+					<grid depth="10" name="inventory" rows="5" cols="9" pos="3,-3" cell_width="67" cell_height="67" repeat_content="true" >
+						<backpack_item_stack on_scroll="true" name="0"/>
+					</grid>
+				</rect>
+
+				<rect controller="TabSelectorTab" tab_key="6" pos="0,0">
+					<grid depth="10" name="inventory" rows="5" cols="9" pos="3,-3" cell_width="67" cell_height="67" repeat_content="true" >
+						<backpack_item_stack on_scroll="true" name="0"/>
+					</grid>
+				</rect>
+			</panel>
+		</rect>
+	</rect>
+
+</append>
+
+<!-- Adjust looting window size to avoid errors with player dropped bag -->
+<set xpath="/windows/window[@name='windowLooting']/rect/grid/@rows">35</set>
+
+<conditional>
+	<if cond="mod_version('RWSUI_BackPack_Size') == version(2,0)">
+		<set xpath="//window[@name='windowBackpack']/rect/rect/grid[@name='tabButtons']/@cols">2</set>
+		<remove xpath="//window[@name='windowBackpack']/rect/rect/panel/rect[@tab_key='3' or @tab_key='4' or @tab_key='5' or @tab_key='6']"/>
+	</if>
+	<if cond="mod_version('RWSUI_BackPack_Size') == version(3,0)">
+		<set xpath="//window[@name='windowBackpack']/rect/rect/grid[@name='tabButtons']/@cols">3</set>
+		<remove xpath="//window[@name='windowBackpack']/rect/rect/panel/rect[@tab_key='4' or @tab_key='5' or @tab_key='6']"/>
+	</if>
+	<if cond="mod_version('RWSUI_BackPack_Size') == version(4,0)">
+		<set xpath="//window[@name='windowBackpack']/rect/rect/grid[@name='tabButtons']/@cols">4</set>
+		<remove xpath="//window[@name='windowBackpack']/rect/rect/panel/rect[@tab_key='5' or @tab_key='6']"/>
+	</if>
+	<if cond="mod_version('RWSUI_BackPack_Size') == version(5,0)">
+		<set xpath="//window[@name='windowBackpack']/rect/rect/grid[@name='tabButtons']/@cols">5</set>
+		<remove xpath="//window[@name='windowBackpack']/rect/rect/panel/rect[@tab_key='6']"/>
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '2_Pages'">
+				<set xpath="//window[@name='windowBackpack']/rect/rect/grid[@name='tabButtons']/@cols">2</set>
+				<remove xpath="//window[@name='windowBackpack']/rect/rect/panel/rect[@tab_key='3' or @tab_key='4' or @tab_key='5' or @tab_key='6']"/>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '3_Pages'">
+				<set xpath="//window[@name='windowBackpack']/rect/rect/grid[@name='tabButtons']/@cols">3</set>
+				<remove xpath="//window[@name='windowBackpack']/rect/rect/panel/rect[@tab_key='4' or @tab_key='5' or @tab_key='6']"/>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '4_Pages'">
+				<set xpath="//window[@name='windowBackpack']/rect/rect/grid[@name='tabButtons']/@cols">4</set>
+				<remove xpath="//window[@name='windowBackpack']/rect/rect/panel/rect[@tab_key='5' or @tab_key='6']"/>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '5_Pages'">
+				<set xpath="//window[@name='windowBackpack']/rect/rect/grid[@name='tabButtons']/@cols">5</set>
+				<remove xpath="//window[@name='windowBackpack']/rect/rect/panel/rect[@tab_key='6']"/>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+
+</configs>

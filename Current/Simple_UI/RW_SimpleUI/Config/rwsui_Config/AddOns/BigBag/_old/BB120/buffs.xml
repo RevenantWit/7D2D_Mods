@@ -1,0 +1,9 @@
+<configs>
+
+<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0052</set>
+<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
+<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
+<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
+<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+
+</configs>

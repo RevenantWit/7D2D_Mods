@@ -2,8 +2,9 @@
 <xml>
 	<Name value="RW_SimpleUI"/>
 	<DisplayName value="Simple UI"/>
-	<Version value="5.1.2"/>
+	<Version value="5.2.0"/>
 	<Description value="The B.Y.O.B UI (Build Your Own Basic UI) you never knew you needed."/>
 	<Author value="RevenantWit"/>
 	<Website value="https://community.7daystodie.com/topic/32081-revs-simple-ui"/>
+	<Icon value="Gears/SimpleUI_Gears_Icon.png" />
 </xml>

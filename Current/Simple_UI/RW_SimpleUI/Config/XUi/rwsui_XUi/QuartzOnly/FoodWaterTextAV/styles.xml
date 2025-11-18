@@ -1,0 +1,9 @@
+<configs>
+
+	<set xpath="//style[@name='rwsui_statbar_food']/style_entry[@name='controller']/@value">Quartz.HUDFood, Quartz</set>
+	<set xpath="//style[@name='rwsui_statbar_water']/style_entry[@name='controller']/@value">Quartz.HUDWater, Quartz</set>
+
+	<set xpath="//style[@name='rwsui_statcurrentwithmax_foodwater']/style_entry[@name='text']/@value">{# statcurrent &lt; (statmax-1) ? statcurrent : statmax}/{statmax}</set>
+	<set xpath="//style[@name='rwsui_statcurrent_foodwater']/style_entry[@name='text']/@value">{# statcurrent &lt; (statmax-1) ? statcurrent : statmax}</set>
+
+</configs>

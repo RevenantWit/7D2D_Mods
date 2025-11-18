@@ -1,9 +1,0 @@
-<configs>
-
-<append xpath="//window[@name='RWSUI_LeftHUD']">
-
-		<rwsui_hud_detailed_buffpanelR pos="0,-106" width="38" height="38" panel_offset="3" border_color="[rwsui_buffpanelR_border_color]" border_thickness="2" border_globalopacity="false" background_color="[rwsui_buffpanel_topLayer_color]" background_globalopacity="false" icon_size="20,20" icon_pos="9,-9" icon_color="[rwsui_buffpanel_icon_color]" text_pos="42,-9" text_width="240" font_size="22" text_height="20" text="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]" text_color="[rwsui_buffpanel_text_color]" textOutline_color="[rwsui_buffpanel_textOutline_color]" textOutline_size="[rwsui_buffpanel_textOutline_size]" text_justify="left" tooltip="" on_hover="false" />
-
-</append>
-
-</configs>
