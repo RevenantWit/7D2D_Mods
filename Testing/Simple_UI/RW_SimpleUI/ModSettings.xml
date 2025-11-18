@@ -49,8 +49,11 @@
       </Selector>
     </Category>
     <Category name="PlayerBackPack" displayKey="rwsuiPlayerBackPack_Category" tooltipKey="rwsuiPlayerBackPack_Category_Desc">
-      <Selector name="PlayerBackPackSize" displayKey="rwsuiPlayerBackPackSize_Option" tooltipKey="rwsuiPlayerBackPackSize_Option_Desc" defaultValue="Vanilla">
+      <Selector name="BackPackSize" displayKey="rwsuiPlayerBackPackSize_Option" tooltipKey="rwsuiPlayerBackPackSize_Option_Desc" defaultValue="Vanilla">
         <Property type="arrayValues" allowedValues="Vanilla,2_Pages,3_Pages,4_Pages,5_Pages,6_Pages" />
+      </Selector>
+      <Selector name="PlayerBackPackSize" displayKey="old_rwsuiPlayerBackPackSize_Option" tooltipKey="old_rwsuiPlayerBackPackSize_Option_Desc" defaultValue="Vanilla">
+        <Property type="arrayValues" allowedValues="Vanilla,60_Slots,120_Slots" />
       </Selector>
     </Category>
     <Category name="VehicleStorage" displayKey="rwsuiVehicleStorage_Category" tooltipKey="rwsuiVehicleStorage_Category_Desc">

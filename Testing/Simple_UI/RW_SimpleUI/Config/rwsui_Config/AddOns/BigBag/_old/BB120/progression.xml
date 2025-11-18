@@ -1,0 +1,12 @@
+<configs>
+
+<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">18,36,54,72,90</set>
+<set xpath="/progression/perks/book[@name='perkFiremansAlmanacComplete']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+<set xpath="/progression/perks/book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+
+<!-- Fix for twitch encumbered debuff so the completed Firemans Almanac perk doesn't override it -->
+<insertAfter xpath="/progression/perks/book[@name='perkFiremansAlmanacComplete']//requirement[@name='InBiome']">
+		<requirement name="!HasBuff" buff="twitch_buffEncumbered"/>
+</insertAfter>
+
+</configs>

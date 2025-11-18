@@ -3,8 +3,8 @@
 <!---->
 <!--_Blockers-->
 <!--_Location_PopUp-->
-<!--_Wookies_12_Slot_ToolBelt-->
-<!--_Khaines_15_Slot_ToolBelt-->
+<!--_12_Slot_ToolBelt-->
+<!--_15_Slot_ToolBelt-->
 <!---->
 <!--CONTENTS END-->
 
@@ -65,9 +65,9 @@
 </conditional>
 <!--_Location_PopUp END-->
 
-<!--_Wookies_12_Slot_ToolBelt START-->
+<!--_12_Slot_ToolBelt START-->
 <conditional>
-	<if cond="mod_loaded('WMM12SlotToolbelt')">
+	<if cond="mod_loaded('WMM12SlotToolbelt') or mod_loaded('TheMeanOnes12SlotToolbelt') or mod_loaded('Dewtas12SlotToolbelt')">
 		<conditional>
 			<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
 				<!-- If Toolbelt Blocker is installed do nothing -->
@@ -85,11 +85,11 @@
 		</conditional>
 	</if>
 </conditional>
-<!--_Wookies_12_Slot_ToolBelt END-->
+<!--_12_Slot_ToolBelt END-->
 
-<!--_Khaines_15_Slot_ToolBelt START-->
+<!--_15_Slot_ToolBelt START-->
 <conditional>
-	<if cond="mod_loaded('15SlotToolbelt')">
+	<if cond="mod_loaded('15SlotToolbelt') or mod_loaded('TheMeanOnes15SlotToolbelt') or mod_loaded('Dewtas15SlotToolbelt')">
 		<conditional>
 			<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
 				<!-- If Toolbelt Blocker is installed do nothing -->
@@ -107,6 +107,6 @@
 		</conditional>
 	</if>
 </conditional>
-<!--_Khaines_15_Slot_ToolBelt END-->
+<!--_15_Slot_ToolBelt END-->
 
 </configs>

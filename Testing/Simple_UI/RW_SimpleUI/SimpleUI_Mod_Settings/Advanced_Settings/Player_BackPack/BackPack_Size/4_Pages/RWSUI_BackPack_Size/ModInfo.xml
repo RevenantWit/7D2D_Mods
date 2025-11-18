@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="RWSUI_PlayerBackPackSize"/>
+	<Name value="RWSUI_BackPack_Size"/>
 	<DisplayName value="Simple UI - 4 Page Player BackPack"/>
 	<Version value="4.0"/>
 	<Description value="Causes Simple UI to make the players backpack four pages for a total of 180 slots"/>

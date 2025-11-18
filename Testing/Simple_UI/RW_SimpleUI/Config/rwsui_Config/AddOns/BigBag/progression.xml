@@ -6,7 +6,7 @@
 </insertAfter>
 
 <conditional>
-	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(2,0)">
+	<if cond="mod_version('RWSUI_BackPack_Size') == version(2,0)">
 		<!-- Adjust pack mule perk for the increased number of encumbered slots -->
 		<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">9,18,27,36,45</set>
 		<!-- Adjust Firemans Almanac book perk for the increased number of encumbered slots (set to max number of encumbered slots by default) -->
@@ -14,39 +14,39 @@
 		<!-- Adjust Night Stalker book perk for the increased number of encumbered slots (set to max number of encumbered slots by default) -->
 		<set xpath="/progression/perks/book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">45</set>
 	</if>
-	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(3,0)">
+	<if cond="mod_version('RWSUI_BackPack_Size') == version(3,0)">
 		<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">18,36,54,72,90</set>
 		<set xpath="/progression/perks/book[@name='perkFiremansAlmanacComplete']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
 		<set xpath="/progression/perks/book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
 	</if>
-	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(4,0)">
+	<if cond="mod_version('RWSUI_BackPack_Size') == version(4,0)">
 		<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">27,54,81,108,135</set>
 		<set xpath="/progression/perks/book[@name='perkFiremansAlmanacComplete']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
 		<set xpath="/progression/perks/book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
 	</if>
-	<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(5,0)">
+	<if cond="mod_version('RWSUI_BackPack_Size') == version(5,0)">
 		<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">36,72,108,144,180</set>
 		<set xpath="/progression/perks/book[@name='perkFiremansAlmanacComplete']/effect_group/passive_effect[@name='CarryCapacity']/@value">180</set>
 		<set xpath="/progression/perks/book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">180</set>
 	</if>
 	<if cond="mod_loaded('Gears')">
 		<conditional>
-			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '2_Pages'">
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '2_Pages'">
 				<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">9,18,27,36,45</set>
 				<set xpath="/progression/perks/book[@name='perkFiremansAlmanacComplete']/effect_group/passive_effect[@name='CarryCapacity']/@value">45</set>
 				<set xpath="/progression/perks/book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">45</set>
 			</if>
-			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '3_Pages'">
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '3_Pages'">
 				<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">18,36,54,72,90</set>
 				<set xpath="/progression/perks/book[@name='perkFiremansAlmanacComplete']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
 				<set xpath="/progression/perks/book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
 			</if>
-			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '4_Pages'">
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '4_Pages'">
 				<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">27,54,81,108,135</set>
 				<set xpath="/progression/perks/book[@name='perkFiremansAlmanacComplete']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
 				<set xpath="/progression/perks/book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">135</set>
 			</if>
-			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '5_Pages'">
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '5_Pages'">
 				<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">36,72,108,144,180</set>
 				<set xpath="/progression/perks/book[@name='perkFiremansAlmanacComplete']/effect_group/passive_effect[@name='CarryCapacity']/@value">180</set>
 				<set xpath="/progression/perks/book[@name='perkNightStalkerThiefAdrenaline']/effect_group/passive_effect[@name='CarryCapacity']/@value">180</set>

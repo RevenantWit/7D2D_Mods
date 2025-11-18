@@ -1,0 +1,6 @@
+<configs>
+
+<!-- Adjust player dropped backpack size to avoid errors when picking up bag after death -->
+<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">9,15</set>
+
+</configs>

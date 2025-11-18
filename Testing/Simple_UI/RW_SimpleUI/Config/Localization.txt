@@ -84,7 +84,10 @@ rwsuiBBInfoPanelBlocker_Toggle,"BigBag Info Panel Blocker"
 rwsuiBBInfoPanelBlocker_Toggle_Desc,"Toggle to prevent Simple UI's bigger backpacks from also increasing the size of the info panels above the backpack. \n\n This is mainly for compatibilty reasons in case changing the windows above backpack causes issues with other mods."
 
 rwsuiPlayerBackPackSize_Option,"Backpack Size"
-rwsuiPlayerBackPackSize_Option_Desc,"Increase the number of pages the player backpack has to one of the following: \n2 Pages (90 slots) \n3 Pages (135 slots) \n4 Pages (180 slots) \n5 Pages (225 slots) \n6 Pages (270 slots) \n\n NOTE: Once player backpack size is expanded it should not be reduced again on the same save."
+rwsuiPlayerBackPackSize_Option_Desc,"Increase the number of pages the player backpack has to one of the following: \n\n'2_Pages' (90 slots) \n\n'3_Pages' (135 slots) \n\n'4_Pages' (180 slots) \n\n'5_Pages' (225 slots) \n\n'6_Pages' (270 slots) \n\n NOTE: Once player backpack size is expanded it should not be reduced again on the same save."
+
+old_rwsuiPlayerBackPackSize_Option,"SETTING REMOVED - READ TOOLTIP"
+old_rwsuiPlayerBackPackSize_Option_Desc,"This setting has been removed. \n\nPlease use the above 'Backpack Size' setting instead as support for this setting will be removed in the Simple UI v5.3.0 update. \n\nIf using the '60_Slot' backpack you will be converted to the '2_Pages' backpack however you will need to set that in the 'Backpack Size' setting above before Simple UI v5.3.0 comes out \n\nIf using the '120_Slot' backpack you will be converted to the '3_Pages' backpack however you will need to set that in the 'Backpack Size' setting above before Simple UI v5.3.0 comes out."
 
 rwsuiVehicleStorage_Category,"Vehicle Storage Settings"
 rwsuiVehicleStorage_Category_Desc,""
