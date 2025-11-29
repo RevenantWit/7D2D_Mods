@@ -1,0 +1,14 @@
+<configs>
+
+<conditional>
+	<!-- Check to make sure Simple UI is not installed first to avoid conflicts -->
+	<if cond="mod_loaded('RW_SimpleUI') == 'false'">
+
+		<!-- Adjust player dropped backpack size to avoid errors when picking up bag after death -->
+		<!-- Loot window will extend off bottom of screen but no items will be lost and can still loot all/sort-->
+		<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">9,25</set>
+
+	</if>
+</conditional>
+
+</configs>

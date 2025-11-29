@@ -1,0 +1,25 @@
+<configs>
+
+<conditional>
+	<!-- Check to make sure Simple UI is not installed first to avoid conflicts -->
+	<if cond="mod_loaded('RW_SimpleUI') == 'false'">
+
+		<!-- Fix for encumbrance to acccount for the increase in encumbered slots -->
+		<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@value='0.026']/@value">0.0104</set>
+
+		<!-- Fix for god mode to include the new number of total slots -->
+		<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+
+		<!-- Fix for steroids to include the new number of total slots -->
+		<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+
+		<!-- Fix for twitch pack mule buff to include the new number of total slots -->
+		<set xpath="/buffs/buff[@name='twitch_buffPackMule']/effect_group/passive_effect[@name='CarryCapacity']/@value">90</set>
+
+		<!-- Fix for twitch encumbered debuff for the increase in encumbered slots (all but the first backpack tab will be encumbered slots)-->
+		<set xpath="/buffs/buff[@name='twitch_buffEncumbered']/effect_group/passive_effect[@name='CarryCapacity']/@value">45</set>
+
+	</if>
+</conditional>
+
+</configs>

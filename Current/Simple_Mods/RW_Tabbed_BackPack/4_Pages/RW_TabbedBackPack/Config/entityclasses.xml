@@ -1,0 +1,16 @@
+<configs>
+
+<conditional>
+	<!-- Check to make sure Simple UI is not installed first to avoid conflicts -->
+	<if cond="mod_loaded('RW_SimpleUI') == 'false'">
+
+		<!-- Unlocked number of slots in backpack by default -->
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+
+		<!-- Total number of slots in backpack -->
+		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize'][@value='45']/@value">180</set>
+
+	</if>
+</conditional>
+
+</configs>
