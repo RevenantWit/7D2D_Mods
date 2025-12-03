@@ -2,6 +2,7 @@
 <!--CONTENTS START-->
 <!---->
 <!--_Player_BackPack_Size-->
+<!--_Drone_Storage_Size-->
 <!--_Vehicle_Storage_Size-->
 <!---->
 <!--CONTENTS END-->
@@ -41,6 +42,17 @@
 	</if>
 </conditional>
 <!--_Player_BackPack_Size END-->
+
+<!--_Drone_Storage_Size START-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_DroneStorageSize')">
+		<include filename="rwsui_Config/AddOns/DroneStorageSize/loot.xml" />
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<include filename="rwsui_Config/AddOns/DroneStorageSize/lootGears.xml" />
+	</if>
+</conditional>
+<!--_Drone_Storage_Size END-->
 
 <!--_Vehicle_Storage_Size START-->
 <conditional>

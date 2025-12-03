@@ -1,6 +1,6 @@
 Key,english
 rwsuiHUD_Tab,"HUD"
-rwsuiHUD_Tab_Desc,"HUD Settings \n\n Changing these settings only has an effect in Singleplayer or a self hosted game. If in game you will need to exit to main menu and reload into game to see changes."
+rwsuiHUD_Tab_Desc,"HUD Settings \n\nChanging these settings only has an effect in Singleplayer or a self hosted game. If in game you will need to exit to main menu and reload into game to see changes."
 
 rwsuiStatBar_Category,"StatBar Settings"
 rwsuiStatBar_Category_Desc,""
@@ -9,7 +9,7 @@ rwsuiStatBar_Option,"StatBars Type"
 rwsuiStatBar_Option_Desc,"Current Values: \n Horizontal, Vertical, Round, MiniHUD"
 
 rwsuiStatBarLocation_Option,"Statbars Location"
-rwsuiStatBarLocation_Option_Desc,"Current Values: \n Bottom_Left, Toolbelt \n\n\n NOTE: MiniHUD is only available on the toolbelt."
+rwsuiStatBarLocation_Option_Desc,"Current Values: \n Bottom_Left, Toolbelt \n\n\nNOTE: MiniHUD is only available on the toolbelt."
 
 rwsuiBuffPanel_Category,"Buff Panel Settings"
 rwsuiBuffPanel_Category_Desc,""
@@ -18,7 +18,7 @@ rwsuiBuffPanel_Option,"Buff Panel Type"
 rwsuiBuffPanel_Option_Desc,"Current Values: \n Vanilla, Simple_Buffs, Detailed_Buffs"
 
 rwsuiLabels_Tab,"Labels"
-rwsuiLabels_Tab_Desc,"Label Settings \n\n Changing these settings only has an effect in Singleplayer or a self hosted game. If in game you will need to exit to main menu and reload into game to see changes."
+rwsuiLabels_Tab_Desc,"Label Settings \n\nChanging these settings only has an effect in Singleplayer or a self hosted game. If in game you will need to exit to main menu and reload into game to see changes."
 
 rwsuiStatBarsLabel_Category,"StatBar Label Settings"
 rwsuiStatBarsLabel_Category_Desc,""
@@ -42,7 +42,7 @@ rwsuiToolBeltKeysBG_Toggle,"ToolBelt Keys Background"
 rwsuiToolBeltKeysBG_Toggle_Desc,"Toggles the toolbelt keys background from being displayed on or off for Simple UI's toolbelt."
 
 rwsuiMisc_Tab,"Misc"
-rwsuiMisc_Tab_Desc,"Misc Settings \n\n Changing these settings only has an effect in Singleplayer or a self hosted game. If in game you will need to exit to main menu and reload into game to see changes."
+rwsuiMisc_Tab_Desc,"Misc Settings \n\nChanging these settings only has an effect in Singleplayer or a self hosted game. If in game you will need to exit to main menu and reload into game to see changes."
 
 rwsuiSimpleUIBlockers_Category,"Simple UI Blockers"
 rwsuiSimpleUIBlockers_Category_Desc,""
@@ -60,50 +60,53 @@ rwsuiPopUp_Category,"PopUp Settings"
 rwsuiPopUp_Category_Desc,""
 
 rwsuiLocationPopUp_Toggle,"Location PopUp"
-rwsuiLocationPopUp_Toggle_Desc,"Toggles the Location Pop-Up being displayed on or off. \n\n This is the giant Pop-Up message you get top center of screen when entering a location."
+rwsuiLocationPopUp_Toggle_Desc,"Toggles the Location Pop-Up being displayed on or off. \n\nThis is the giant Pop-Up message you get top center of screen when entering a location."
 
 rwsuiOnScreenIcons_Category,"On-Screen Icon Settings"
 rwsuiOnScreenIcons_Category_Desc,""
 
 rwsuiAlliedPlayerIcon_Toggle,"Allied Player Icon"
-rwsuiAlliedPlayerIcon_Toggle_Desc,"Toggles the On Screen Allied Player Icon being displayed on or off. \n\n This is the on screen player icon that shows in the world when within 20m of party members. Does not remove the allied player icons from the compass or map."
+rwsuiAlliedPlayerIcon_Toggle_Desc,"Toggles the On Screen Allied Player Icon being displayed on or off. \n\nThis is the on screen player icon that shows in the world when within 20m of party members. Does not remove the allied player icons from the compass or map."
 
 rwsuiCraftingUI_Category,"Crafting UI Settings"
 rwsuiCraftingUI_Category_Desc,""
 
 rwsuiForgeInput3Slot_Toggle,"3 Forge Inputs"
-rwsuiForgeInput3Slot_Toggle_Desc,"Toggle on to expand the forge inputs to 03 slots. \n\n This setting should not be turned off on a save has it turned on."
+rwsuiForgeInput3Slot_Toggle_Desc,"Toggle on to expand the forge inputs to 03 slots. \n\nThis setting should not be turned off on a save has it turned on."
 
 rwsuiCraftingQueueSize_Option,"Crafting Queue Size"
-rwsuiCraftingQueueSize_Option_Desc,"Current Values: \n Vanilla, 05_Slots \n\n This can expand crafting queue to 5 slots. \n\n Once player backpack size is expanded it should not be reduced again on the same save. More options might be added to this at some point."
+rwsuiCraftingQueueSize_Option_Desc,"Current Values: \n Vanilla, 05_Slots \n\nThis can expand crafting queue to 5 slots. \n\n Once crafting queue size is expanded it should not be reduced again on the same save. More options might be added to this at some point."
 
 rwsuiPlayerBackPack_Category,"Player BackPack Settings"
 rwsuiPlayerBackPack_Category_Desc,""
 
-rwsuiBBInfoPanelBlocker_Toggle,"BigBag Info Panel Blocker"
-rwsuiBBInfoPanelBlocker_Toggle_Desc,"Toggle to prevent Simple UI's bigger backpacks from also increasing the size of the info panels above the backpack. \n\n This is mainly for compatibilty reasons in case changing the windows above backpack causes issues with other mods."
-
 rwsuiPlayerBackPackSize_Option,"Backpack Size"
-rwsuiPlayerBackPackSize_Option_Desc,"Increase the number of pages the player backpack has to one of the following: \n\n'2_Pages' (90 slots) \n\n'3_Pages' (135 slots) \n\n'4_Pages' (180 slots) \n\n'5_Pages' (225 slots) \n\n'6_Pages' (270 slots) \n\n NOTE: Once player backpack size is expanded it should not be reduced again on the same save."
+rwsuiPlayerBackPackSize_Option_Desc,"Increase the number of pages the player backpack has to one of the following: \n\n'2_Pages' (90 slots) \n\n'3_Pages' (135 slots) \n\n'4_Pages' (180 slots) \n\n'5_Pages' (225 slots) \n\n'6_Pages' (270 slots) \n\nNOTE: Once player backpack size is expanded it should not be reduced again on the same save."
 
 old_rwsuiPlayerBackPackSize_Option,"SETTING REMOVED - READ TOOLTIP"
 old_rwsuiPlayerBackPackSize_Option_Desc,"This setting has been removed. \n\nPlease use the above 'Backpack Size' setting instead as support for this setting will be removed in the Simple UI v5.3.0 update. \n\nIf using the '60_Slot' backpack you will be converted to the '2_Pages' backpack however you will need to set that in the 'Backpack Size' setting above before Simple UI v5.3.0 comes out \n\nIf using the '120_Slot' backpack you will be converted to the '3_Pages' backpack however you will need to set that in the 'Backpack Size' setting above before Simple UI v5.3.0 comes out."
+
+rwsuiDroneStorageSize_Category,"Drone Storage Settings"
+rwsuiDroneStorageSize_Category_Desc,""
+
+rwsuiDroneStorageSize_Option,"Drone Storage Size"
+rwsuiDroneStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots \n\nOnce drone storage size is expanded it should not be reduced again on the same save."
 
 rwsuiVehicleStorage_Category,"Vehicle Storage Settings"
 rwsuiVehicleStorage_Category_Desc,""
 
 rwsuiBicycleStorageSize_Option,"Bicycle Storage Size"
-rwsuiBicycleStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\n Once vehicle storage size is expanded it should not be reduced again on the same save."
+rwsuiBicycleStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\nOnce vehicle storage size is expanded it should not be reduced again on the same save."
 
 rwsuiMinibikeStorageSize_Option,"Minibike Storage Size"
-rwsuiMinibikeStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\n Once vehicle storage size is expanded it should not be reduced again on the same save."
+rwsuiMinibikeStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\nOnce vehicle storage size is expanded it should not be reduced again on the same save."
 
 rwsuiMotorcycleStorageSize_Option,"Motorcycle Storage Size"
-rwsuiMotorcycleStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\n Once vehicle storage size is expanded it should not be reduced again on the same save."
+rwsuiMotorcycleStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\nOnce vehicle storage size is expanded it should not be reduced again on the same save."
 
 rwsui4x4TruckStorageSize_Option,"4x4 Truck Storage Size"
-rwsui4x4TruckStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\n Once vehicle storage size is expanded it should not be reduced again on the same save."
+rwsui4x4TruckStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\nOnce vehicle storage size is expanded it should not be reduced again on the same save."
 
 rwsuiGyrocopterStorageSize_Option,"Gyrocopter Storage Size"
-rwsuiGyrocopterStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\n Once vehicle storage size is expanded it should not be reduced again on the same save."
+rwsuiGyrocopterStorageSize_Option_Desc,"Current Values: \n Vanilla, 10_Slots, 20_Slots, 30_Slots, 40_Slots, 50_Slots, 60_Slots, 70_Slots, 80_Slots, 90_Slots \n\nOnce vehicle storage size is expanded it should not be reduced again on the same save."
 
