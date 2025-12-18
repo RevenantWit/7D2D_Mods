@@ -9,4 +9,11 @@
 <include filename="rwsui_XUi/0_Core/controls.xml"/>
 <!--_Core_Templates END-->
 
+<!--Patch if running game v2.5-->
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,5)">
+		<include filename="rwsui_XUi/Patches/Game_v2_5/controls.xml" />
+	</if>
+</conditional>
+
 </configs>

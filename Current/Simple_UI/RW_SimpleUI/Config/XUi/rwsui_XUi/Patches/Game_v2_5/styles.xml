@@ -1,0 +1,9 @@
+<configs>
+
+<set xpath="//style[@name='rwsui_statcurrentwithmax_foodwater']/style_entry[@name='text']/@value">{statcurrentwithmax}</set>
+
+<append xpath="//style[@name='rwsui_statbar_food' or @name='rwsui_statbar_water']">
+	<style_entry name="barBackground_fill" value="{statmodifiedmax}"/>
+</append>
+
+</configs>

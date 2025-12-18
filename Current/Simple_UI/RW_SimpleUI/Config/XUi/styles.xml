@@ -15,6 +15,13 @@
 <include filename="rwsui_XUi/0_Core/styles.xml"/>
 <!--_Core_Styles END-->
 
+<!--Patch if running game v2.5-->
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,5)">
+		<include filename="rwsui_XUi/Patches/Game_v2_5/styles.xml" />
+	</if>
+</conditional>
+
 <!--_StatBar_Text_Remover START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_StatBarsTextRemover')">

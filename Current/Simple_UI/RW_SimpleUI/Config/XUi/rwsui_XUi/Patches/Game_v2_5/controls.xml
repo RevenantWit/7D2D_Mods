@@ -1,0 +1,13 @@
+<configs>
+
+<set xpath="//rwsui_hud_statBar//filledsprite[@name='BarContent']/@fill">{statfill}</set>
+
+<set xpath="//rwsui_hud_statBarR//sprite[@name='BarContent']/@fill">{statfill}</set>
+
+<set xpath="//rwsui_hud_statBar_stealth//filledsprite[@name='BarContent']/@fill">{statfill}</set>
+
+<set xpath="//rwsui_hud_statBarR_stealth//sprite[@name='BarContent']/@fill">{statfill}</set>
+
+<set xpath="//rwsui_hud_toolbelt_doubleStealth//filledsprite[@name='BarContent']/@fill">{statfill}</set>
+
+</configs>
