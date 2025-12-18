@@ -134,6 +134,13 @@
 		<!-- Adjust looting window size to avoid errors with player dropped bag on death -->
 		<set xpath="/windows/window[@name='windowLooting']/rect/grid/@rows">35</set>
 
+		<!--Patch to make backpack tab buttons thinner for compatibilty with Beyond Storage 2-->
+		<conditional>
+			<if cond="mod_loaded('BeyondStorage2')">
+				<set xpath="//window[@name='windowBackpack']//rect/grid[@name='tabButtons' and @cell_width='35']/@cell_width">23</set>
+				<set xpath="//window[@name='windowBackpack']//rect/grid[@name='tabButtons']/rect/simplebutton[@name='tabButton' and @width='35']/@width">23</set>
+			</if>
+		</conditional>
 	</if>
 </conditional>
 
