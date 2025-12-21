@@ -96,8 +96,27 @@
 		</append>
 
 		<!-- Adjust looting window size to avoid errors with player dropped bag on death -->
-		<set xpath="/windows/window[@name='windowLooting']/rect/grid/@rows">20</set>
+		<set xpath="/windows/window[@name='windowLooting']/rect/grid/@rows">25</set>
 
+		<!--Patch oversized loot window on death bag to be scrollable if Quartz is installed-->
+		<conditional>
+			<if cond="mod_loaded('Quartz')">
+				<remove xpath="//window[@name='windowLooting']/rect[@name='content']/grid[@name='queue']"/>
+
+				<append xpath="//window[@name='windowLooting']/rect[@name='content']">
+					<scrollbar name="scrollbar" depth="4" pos="-5,-377" width="12" height="753" padding="2" foregroundname="handler" backgroundname="background" globalopacity="true">
+							<button name="handler" sprite="quartz_scrollbar_handler" pivot="center" hovercolor="[quartz_scrollbar_handler_hover]" color="[quartz_scrollbar_handler]" defaultcolor="[beige]" hoverscale="1" />
+							<button name="background" sprite="quartz_scrollbar_background" pivot="center" hovercolor="[quartz_scrollbar_background_hover]" color="[quartz_scrollbar_background]" defaultcolor="[quartz_scrollbar_background]" hoverscale="1" sound_play_on_press_down="[paging_click]" />
+					</scrollbar>
+					
+					<scrollview name="scrollview" depth="3" pos="0,-3" width="688" height="750" scrollbar="scrollbar" reset_position="true" over_scroll="false" scroll_speed="2.5">
+						<grid depth="5" name="queue" pos="3,0" rows="50" cols="9" cell_width="75" cell_height="75" repeat_content="true" controller="Quartz.LootContainer, Quartz">
+							<item_stack controller="Quartz.ItemStack, Quartz" name="0"/>
+						</grid>
+					</scrollview>
+				</append>
+			</if>
+		</conditional>
 	</if>
 </conditional>
 
