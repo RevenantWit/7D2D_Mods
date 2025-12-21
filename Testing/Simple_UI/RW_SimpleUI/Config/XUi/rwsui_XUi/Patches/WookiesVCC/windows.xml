@@ -1,0 +1,164 @@
+<configs>
+
+<conditional>
+	<!--HUD Settings Addon-->
+	<if cond="mod_loaded('RWSUI_HUD_Settings')">
+		<conditional>
+			<!--Vertical StatBars (v2.x.x)-->
+			<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(2,0,0) and mod_version('RWSUI_HUD_Settings') &lt; version(3,0,0)">
+				<conditional>
+					<!--ToolBelt StatBars (v2.1.x)-->
+					<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(2,1,0)">
+						<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+							<rwsui_wookiesVCC_statbar style="rwsui_wookiesVCC_vertical_statbar, rwsui_toolbelt_vertical_statbar" pos="-102,0"/>
+						</append>
+					</if>
+					<!--Bottom Left StatBars (v2.0.x)-->
+					<else>
+						<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+							<rwsui_wookiesVCC_statbar style="rwsui_wookiesVCC_vertical_statbar" pos="-102,0"/>
+						</append>
+						<conditional>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(2,0,1)">
+								<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '-153,-102' : '0,0'}</set>
+							</if>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(2,0,2)">
+								<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '-153,-100' : '0,0'}</set>
+							</if>
+							<else>
+								<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '-153,-101' : '0,0'}</set>
+							</else>
+						</conditional>
+					</else>
+				</conditional>
+			</if>
+			<!--Round StatBars (v3.x.x)-->
+			<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(3,0,0) and mod_version('RWSUI_HUD_Settings') &lt; version(4,0,0)">
+				<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+					<rwsui_wookiesVCC_statbar style="rwsui_wookiesVCC_radial_statbar" pos="-78,0"/>
+				</append>
+			</if>
+			<!--MiniHUD StatBars (v4.x.x)-->
+			<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(4,0,0) and mod_version('RWSUI_HUD_Settings') &lt; version(5,0,0)">
+				<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+					<rwsui_wookiesVCC_statbar style="rwsui_mini_horizontal_statbar" pos="0,20"/>
+				</append>
+				<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '0,-40' : '0,0'}</set>
+			</if>
+			<!--IconStatBars (v5.x.x)-->
+			<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(5,0,0) and mod_version('RWSUI_HUD_Settings') &lt; version(6,0,0)">
+				<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+					<conditional evaluator="client">
+						<if cond="mod_loaded('RW_SimpleUI')">
+							<rwsui_wookiesVCC_statbar style="rwsui_wookiesVCC_custom_iconstatbar" pos="-65,0" />
+						</if>
+						<else>
+							<rwsui_wookiesVCC_statbar style="rwsui_wookiesVCC_simple_iconstatbar" pos="-65,0" />
+						</else>
+					</conditional>
+				</append>
+			</if>
+			<!--Horizontal StatBars (v1.x.x)-->
+			<else>
+				<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+					<rwsui_wookiesVCC_statbar style="rwsui_flip_horizontal_statbar" pos="0,48"/>
+				</append>
+				<conditional>
+					<!--ToolBelt StatBars (v1.1.x)-->
+					<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(1,1,0)">
+						<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '0,44' : '0,0'}</set>
+					</if>
+					<!--Bottom Left StatBars (v1.0.x)-->
+					<else>
+						<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '0,46' : '0,0'}</set>
+					</else>
+				</conditional>
+			</else>
+		</conditional>
+	</if>
+	<!--Gears Settings-->
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<!--Vertical StatBars-->
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'Vertical'">
+				<conditional>
+					<!--ToolBelt StatBars-->
+					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
+						<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+							<rwsui_wookiesVCC_statbar style="rwsui_wookiesVCC_vertical_statbar, rwsui_toolbelt_vertical_statbar" pos="-102,0"/>
+						</append>
+					</if>
+					<!--Bottom Left StatBars-->
+					<else>
+						<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+							<rwsui_wookiesVCC_statbar style="rwsui_wookiesVCC_vertical_statbar" pos="-102,0"/>
+						</append>
+						<conditional>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
+								<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '-153,-102' : '0,0'}</set>
+							</if>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
+								<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '-153,-100' : '0,0'}</set>
+							</if>
+							<else>
+								<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '-153,-101' : '0,0'}</set>
+							</else>
+						</conditional>
+					</else>
+				</conditional>
+			</if>
+			<!--Round StatBars-->
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'Round'">
+				<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+					<rwsui_wookiesVCC_statbar style="rwsui_wookiesVCC_radial_statbar" pos="-78,0"/>
+				</append>
+			</if>
+			<!--MiniHUD StatBars-->
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'MiniHUD'">
+				<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+					<rwsui_wookiesVCC_statbar style="rwsui_mini_horizontal_statbar" pos="0,20"/>
+				</append>
+				<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '0,-40' : '0,0'}</set>
+			</if>
+			<!--Icon StatBars-->
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'Icon_StatBars'">
+				<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+					<conditional evaluator="client">
+						<if cond="mod_loaded('RW_SimpleUI')">
+							<rwsui_wookiesVCC_statbar style="rwsui_wookiesVCC_custom_iconstatbar" pos="-65,0" />
+						</if>
+						<else>
+							<rwsui_wookiesVCC_statbar style="rwsui_wookiesVCC_simple_iconstatbar" pos="-65,0" />
+						</else>
+					</conditional>
+				</append>
+			</if>
+			<!--Horizontal StatBars-->
+			<else>
+				<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+					<rwsui_wookiesVCC_statbar style="rwsui_flip_horizontal_statbar" pos="0,48"/>
+				</append>
+				<conditional>
+					<!--ToolBelt StatBars-->
+					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
+						<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '0,44' : '0,0'}</set>
+					</if>
+					<!--Bottom Left StatBars-->
+					<else>
+						<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '0,46' : '0,0'}</set>
+					</else>
+				</conditional>
+			</else>
+		</conditional>
+	</if>
+	<!--Fallback to default if hud settings addon or gears is not installed.-->
+	<else>
+		<append xpath="//window[@name='RWSUI_RightHUD']//rect[@name='VehicleStatBars']">
+			<rwsui_wookiesVCC_statbar pos="0,48"/>
+		</append>
+
+		<set xpath="//window[@name='RWSUI_RightHUD']/rect[@controller='HUDStatBar' and @stat_type='VehicleHealth']/@pos">{# statvisible ? '0,46' : '0,0'}</set>
+	</else>
+</conditional>
+
+</configs>

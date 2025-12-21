@@ -1,52 +1,40 @@
 <configs>
 <!--CONTENTS START-->
 <!---->
-<!--_Player_BackPack_Size-->
-<!--_Vehicle_Storage_Size-->
+<!--_Player_BackPack_Size_Addon-->
+<!--_Drone_Storage_Size_Addon-->
+<!--_Vehicle_Storage_Size_Addon-->
 <!---->
 <!--CONTENTS END-->
 
-<!--_Player_BackPack_Size START-->
+<!--_Player_BackPack_Size_Addon START-->
 <conditional>
-	<if cond="mod_loaded('RWSUI_BigBag60') or mod_loaded('RWSUI_BigBag120')">
-		<!-- Check for old add ons to avoid conflicts -->
-	</if>
 	<if cond="mod_loaded('RWSUI_BackPack_Size')">
 		<include filename="rwsui_Config/AddOns/BigBag/loot.xml" />
-	</if>
-	<if cond="mod_loaded('RWSUI_PlayerBackPackSize')">
-		<!-- Convert old backpack size method to the new one to avoid conflicts with current saves -->
-		<conditional>
-			<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(6,0)">
-				<include filename="rwsui_Config/AddOns/BigBag/_old/BB60/loot.xml" />
-			</if>
-			<if cond="mod_version('RWSUI_PlayerBackPackSize') == version(12,0)">
-				<include filename="rwsui_Config/AddOns/BigBag/_old/BB120/loot.xml" />
-			</if>
-		</conditional>
 	</if>
 	<if cond="mod_loaded('Gears')">
 		<conditional>
 			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') != 'Vanilla'">
 				<include filename="rwsui_Config/AddOns/BigBag/loot.xml" />
 			</if>
-			<!-- Convert old backpack size method to the new one to avoid conflicts with current saves -->
-			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '60_Slots'">
-				<include filename="rwsui_Config/AddOns/BigBag/_old/BB60/loot.xml" />
-			</if>
-			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.PlayerBackPackSize') == '120_Slots'">
-				<include filename="rwsui_Config/AddOns/BigBag/_old/BB120/loot.xml" />
-			</if>
 		</conditional>
 	</if>
 </conditional>
-<!--_Player_BackPack_Size END-->
+<!--_Player_BackPack_Size_Addon END-->
 
-<!--_Vehicle_Storage_Size START-->
+<!--_Drone_Storage_Size_Addon START-->
 <conditional>
-	<if cond="mod_loaded('RWSUI_VehicleStorage') or mod_loaded('RWSUI_VehicleStorageXL')">
-		<!-- Check for old add ons to avoid conflicts -->
+	<if cond="mod_loaded('RWSUI_DroneStorageSize')">
+		<include filename="rwsui_Config/AddOns/DroneStorageSize/loot.xml" />
 	</if>
+	<if cond="mod_loaded('Gears')">
+		<include filename="rwsui_Config/AddOns/DroneStorageSize/lootGears.xml" />
+	</if>
+</conditional>
+<!--_Drone_Storage_Size_Addon END-->
+
+<!--_Vehicle_Storage_Size_Addon START-->
+<conditional>
 	<if cond="mod_loaded('RWSUI_4x4TruckStorage') or mod_loaded('RWSUI_BicycleStorage') or mod_loaded('RWSUI_GyrocopterStorage') or mod_loaded('RWSUI_MinibikeStorage') or mod_loaded('RWSUI_MotorcycleStorage')">
 		<include filename="rwsui_Config/AddOns/VehicleStorageSize/loot.xml" />
 	</if>
@@ -54,6 +42,6 @@
 		<include filename="rwsui_Config/AddOns/VehicleStorageSize/lootGears.xml" />
 	</if>
 </conditional>
-<!--_Vehicle_Storage_Size END-->
+<!--_Vehicle_Storage_Size_Addon END-->
 
 </configs>

@@ -1,16 +1,12 @@
 <configs>
 <!--CONTENTS START-->
 <!---->
-<!--_On_Screen_Icons-->
+<!--_Allied_Player_Icon_Setting_Addon-->
 <!---->
 <!--CONTENTS END-->
 
-<!--_On_Screen_Icons START-->
+<!--_Allied_Player_Icon_Setting_Addon START-->
 <conditional>
-	<if cond="mod_loaded('RWSUI_NoPOSPI')">
-		<!-- Check for old add on to avoid conflicts -->
-		<!-- This check will get removed in a future update -->
-	</if>
 	<if cond="mod_loaded('RWSUI_OSAPIRemover')">
 		<!-- remove only the on screen icon so party members still show on compass and map. -->
 		<remove xpath="/nav_object_classes/nav_object_class[@name='party']/onscreen_settings"/>
@@ -24,6 +20,6 @@
 		</conditional>
 	</if>
 </conditional>
-<!--_On_Screen_Icons END-->
+<!--_Allied_Player_Icon_Setting_Addon END-->
 
 </configs>

@@ -3,10 +3,72 @@
 <!---->
 <!--_Core_Templates-->
 <!---->
+<!--_12_Slot_ToolBelt_Patch-->
+<!--_15_Slot_ToolBelt_Patch-->
+<!--_Wookies_Cruise_Control_Patch-->
+<!---->
 <!--CONTENTS END-->
 
 <!--_Core_Templates Start-->
 <include filename="rwsui_XUi/0_Core/controls.xml"/>
+<!--Patch if running less than game v2.5-->
+<conditional>
+	<if cond="game_version() &lt; version(1,2,5)">
+		<include filename="rwsui_XUi/Patches/SimpleUI/Game_v2_5/0_Core/controls.xml" />
+	</if>
+</conditional>
+<!--Patch if running less than game v2.2-->
+<conditional>
+	<if cond="game_version() &lt; version(1,2,2)">
+		<include filename="rwsui_XUi/Patches/SimpleUI/Game_v2_2/0_Core/controls.xml" />
+	</if>
+</conditional>
 <!--_Core_Templates END-->
+
+<!--_12_Slot_ToolBelt_Patch START-->
+<conditional>
+	<if cond="mod_loaded('WMM12SlotToolbelt') or mod_loaded('TheMeanOnes12SlotToolbelt') or mod_loaded('Dewtas12SlotToolbelt') and mod_loaded('RWSUI_ToolBelt_Blocker') == 'false'">
+		<conditional>
+			<if cond="mod_loaded('Gears')">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
+						<include filename="rwsui_XUi/Patches/12SlotToolBelt/controls.xml" />
+					</if>
+				</conditional>
+			</if>
+			<else>
+				<include filename="rwsui_XUi/Patches/12SlotToolBelt/controls.xml" />
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!--_12_Slot_ToolBelt_Patch END-->
+
+<!--_15_Slot_ToolBelt_Patch START-->
+<conditional>
+	<if cond="mod_loaded('15SlotToolbelt') or mod_loaded('TheMeanOnes15SlotToolbelt') or mod_loaded('Dewtas15SlotToolbelt') and mod_loaded('RWSUI_ToolBelt_Blocker') == 'false'">
+		<conditional>
+			<if cond="mod_loaded('Gears')">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
+						<set xpath="//rwsui_toolbelt_keys_bg/@cols">15</set>
+					</if>
+				</conditional>
+			</if>
+			<else>
+				<set xpath="//rwsui_toolbelt_keys_bg/@cols">15</set>
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!--_15_Slot_ToolBelt_Patch END-->
+
+<!--_Wookies_Cruise_Control_Patch START-->
+<conditional>
+	<if cond="mod_loaded('WMMVehicleCruiseControl')">
+		<include filename="rwsui_XUi/Patches/WookiesVCC/controls.xml" />
+	</if>
+</conditional>
+<!--_Wookies_Cruise_Control_Patch END-->
 
 </configs>

@@ -1,115 +1,268 @@
 <configs>
+<!--CONTENTS START-->
+<!---->
+<!--_StatBar_Force_Hide_Settings-->
+<!--_StatBar_Text_Adjustments-->
+<!---->
+<!--_Stealth_Bar-->
+<!--_Stamina_Bar-->
+<!--_Health_Bar-->
+<!--_Food_Bar-->
+<!--_Water_Bar-->
+<!--_XP_Bar-->
+<!--_Vehicle_Fuel_Bar-->
+<!--_Vehicle_Health_Bar-->
+<!---->
+<!--_Horizontal_Statbar_Adjustments-->
+<!--_Vertical_Statbar_Adjustments-->
+<!--_Radial_Statbar_Adjustments-->
+<!--_MiniHUD_Statbar_Adjustments-->
+<!--_Custom_IconStatbar_Adjustments-->
+<!--_Simple_IconStatbar_Adjustments-->
+<!--_ToolBelt_StealthBarx2_Adjustments-->
+<!--_ToolBelt_XpBar_Adjustments-->
+<!---->
+<!--_Toolbelt_Keys-->
+<!--_Toolbelt_Keys_Background-->
+<!--_Toolbelt_Item_Stack-->
+<!---->
+<!--_Active_Item_Grid-->
+<!--_Active_Item_Styles-->
+<!---->
+<!--_Collected_Item_List-->
+<!--_Collected_Item_Styles-->
+<!---->
+<!--_Buff_Panel-->
+<!--_Buff_Styles-->
+<!---->
+<!--CONTENTS END-->
+
+<append xpath="/styles/global">
+
+<!--_StatBar_Force_Hide_Settings START-->
+	<style_entry name="rwsui_statbar_icon_hidden" value="false"/>
+	<style_entry name="rwsui_statbar_text_hidden" value="false"/>
+<!--_StatBar_Force_Hide_Settings END-->
+
+<!--_StatBar_Text_Adjustments START-->
+	<style_entry name="rwsui_statcurrent_stamina_text" value="{# length(statcurrent)==0 ? '' : Round(float(statcurrent), 0)}"/>
+	<style_entry name="rwsui_statcurrent_foodwater_text" value="{# statcurrent &lt; '99' ? statcurrent : '100'}%"/>
+	<style_entry name="rwsui_xpbar_level_only_text" value="{cvar($LastPlayerLevel)}"/>
+<!--_StatBar_Text_Adjustments END-->
+
+</append>
 
 <append xpath="/styles">
 
-<!--_StatBar_Defaults START-->
-	<style name="rwsui_statbar">
-		<style_entry name="pos" value="0,0"/>
-		<style_entry name="width" value="171"/>
-		<style_entry name="height" value="46"/>
+<!--_Stealth_Bar START-->
+	<style name="rwsui_stealthbar">
+		<style_entry name="border_color" value="[rwsui_stealthbar_border_color]"/>
+		<style_entry name="fill_bg_color" value="[rwsui_stealthbar_fill_bg_color]"/>
+		<style_entry name="fill_safe_color" value="[rwsui_stealthbar_fill_safe_color]"/>
+		<style_entry name="fill_danger_color" value="[rwsui_stealthbar_fill_danger_color]"/>
+		<style_entry name="icon_color" value="[rwsui_stealthbar_icon_color]"/>
+		<style_entry name="icon_hidden" value="[rwsui_statbar_icon_hidden]"/>
+		<style_entry name="text_color" value="[rwsui_stealthbar_text_color]"/>
+		<style_entry name="textOutline_color" value="[rwsui_stealthbar_textOutline_color]"/>
+		<style_entry name="textOutline_size" value="[rwsui_stealthbar_textOutline_size]"/>
+		<style_entry name="text_hidden" value="[rwsui_statbar_text_hidden]"/>
+
+		<!--Just in case this style is used on a regular statbar-->
+		<style_entry name="stat_type" value="Stealth"/>
+		<style_entry name="fill_color" value="{stealthcolor}"/>
+		<style_entry name="fill" value="1"/>
+	</style>
+<!--_Stealth_Bar END-->
+
+<!--_Stamina_Bar START-->
+	<style name="rwsui_staminabar">
+		<style_entry name="stat_type" value="Stamina"/>
+		<style_entry name="border_color" value="[rwsui_staminabar_border_color]"/>
+		<style_entry name="fill_bg_color" value="[rwsui_staminabar_fill_bg_color]"/>
+		<style_entry name="fill_color" value="[rwsui_staminabar_fill_color]"/>
+		<style_entry name="icon" value="{# sprintactive ? 'server_z_always_run' : 'server_z_never_run'}"/>
+		<style_entry name="icon_color" value="[rwsui_staminabar_icon_color]"/>
+		<style_entry name="icon_hidden" value="[rwsui_statbar_icon_hidden]"/>
+		<style_entry name="text_color" value="[rwsui_staminabar_text_color]"/>
+		<style_entry name="textOutline_color" value="[rwsui_staminabar_textOutline_color]"/>
+		<style_entry name="textOutline_size" value="[rwsui_staminabar_textOutline_size]"/>
+		<style_entry name="text_hidden" value="[rwsui_statbar_text_hidden]"/>
+	</style>
+<!--_Stamina_Bar END-->
+
+<!--_Health_Bar START-->
+	<style name="rwsui_healthbar">
+		<style_entry name="stat_type" value="Health"/>
+		<style_entry name="border_color" value="[rwsui_healthbar_border_color]"/>
+		<style_entry name="fill_bg_color" value="[rwsui_healthbar_fill_bg_color]"/>
+		<style_entry name="fill_color" value="[rwsui_healthbar_fill_color]"/>
+		<style_entry name="icon_color" value="[rwsui_healthbar_icon_color]"/>
+		<style_entry name="icon_hidden" value="[rwsui_statbar_icon_hidden]"/>
+		<style_entry name="text_color" value="[rwsui_healthbar_text_color]"/>
+		<style_entry name="textOutline_color" value="[rwsui_healthbar_textOutline_color]"/>
+		<style_entry name="textOutline_size" value="[rwsui_healthbar_textOutline_size]"/>
+		<style_entry name="text_hidden" value="[rwsui_statbar_text_hidden]"/>
+	</style>
+<!--_Health_Bar END-->
+
+<!--_Food_Bar START-->
+	<style name="rwsui_foodbar">
 		<style_entry name="controller" value="HUDStatBar"/>
-		<style_entry name="border_depth" value="2"/>
-		<style_entry name="border_sprite" value="[default_sprite]"/>
-		<style_entry name="fillcenter" value="false"/>
-		<style_entry name="barBackground_fill" value="1"/>
-		<style_entry name="background_depth" value="1"/>
-		<style_entry name="background_sprite" value="[default_sprite]"/>
-		<style_entry name="background_pos" value="0,0"/>
-		<style_entry name="background_width" value="171"/>
-		<style_entry name="background_height" value="46"/>
-		<style_entry name="filldirection" value="horizontal"/>
-		<style_entry name="fillinvert" value="false"/>
+		<style_entry name="stat_type" value="Food"/>
+		<style_entry name="border_color" value="[rwsui_foodbar_border_color]"/>
+		<style_entry name="fill_bg_color" value="[rwsui_foodbar_fill_bg_color]"/>
+		<style_entry name="fill_color" value="[rwsui_foodbar_fill_color]"/>
+		<style_entry name="icon_atlas" value="{staticonatlas|once}"/>
+		<style_entry name="icon" value="ui_game_symbol_harvest"/>
+		<style_entry name="icon_color" value="[rwsui_foodbar_icon_color]"/>
+		<style_entry name="icon_hidden" value="[rwsui_statbar_icon_hidden]"/>
+		<style_entry name="text_color" value="[rwsui_foodbar_text_color]"/>
+		<style_entry name="textOutline_color" value="[rwsui_foodbar_textOutline_color]"/>
+		<style_entry name="textOutline_size" value="[rwsui_foodbar_textOutline_size]"/>
+		<style_entry name="text_hidden" value="[rwsui_statbar_text_hidden]"/>
+	</style>
+<!--_Food_Bar END-->
+
+<!--_Water_Bar START-->
+	<style name="rwsui_waterbar">
+		<style_entry name="controller" value="HUDStatBar"/>
+		<style_entry name="stat_type" value="Water"/>
+		<style_entry name="border_color" value="[rwsui_waterbar_border_color]"/>
+		<style_entry name="fill_bg_color" value="[rwsui_waterbar_fill_bg_color]"/>
+		<style_entry name="fill_color" value="[rwsui_waterbar_fill_color]"/>
+		<style_entry name="icon_atlas" value="{staticonatlas|once}"/>
+		<style_entry name="icon" value="ui_game_symbol_water"/>
+		<style_entry name="icon_color" value="[rwsui_waterbar_icon_color]"/>
+		<style_entry name="icon_hidden" value="[rwsui_statbar_icon_hidden]"/>
+		<style_entry name="text_color" value="[rwsui_waterbar_text_color]"/>
+		<style_entry name="textOutline_color" value="[rwsui_waterbar_textOutline_color]"/>
+		<style_entry name="textOutline_size" value="[rwsui_waterbar_textOutline_size]"/>
+		<style_entry name="text_hidden" value="[rwsui_statbar_text_hidden]"/>
+	</style>
+<!--_Water_Bar END-->
+
+<!--_XP_Bar START-->
+	<style name="rwsui_xpbar">
+		<style_entry name="border_color" value="[rwsui_xpbar_border_color]"/>
+		<style_entry name="fill_bg_color" value="[rwsui_xpbar_fill_bg_color]"/>
+		<style_entry name="standard_xp_color" value="[rwsui_xpbar_standard_color]"/>
+		<style_entry name="updating_xp_color" value="[rwsui_xpbar_updating_color]"/>
+		<style_entry name="deficit_xp_color" value="[rwsui_xpbar_deficit_color]"/>
+		<style_entry name="icon_atlas" value="{staticonatlas|once}"/>
+		<style_entry name="icon" value="ui_game_symbol_trophy"/>
+		<style_entry name="icon_color" value="[rwsui_xpbar_icon_color]"/>
+		<style_entry name="icon_hidden" value="[rwsui_statbar_icon_hidden]"/>
+		<style_entry name="text_color" value="[rwsui_xpbar_text_color]"/>
+		<style_entry name="textOutline_color" value="[rwsui_xpbar_textOutline_color]"/>
+		<style_entry name="textOutline_size" value="[rwsui_xpbar_textOutline_size]"/>
+		<style_entry name="text_hidden" value="[rwsui_statbar_text_hidden]"/>
+	</style>
+<!--_XP_Bar END-->
+
+<!--_Vehicle_Fuel_Bar START-->
+	<style name="rwsui_vehicle_fuelbar">
+		<style_entry name="stat_type" value="VehicleFuel"/>
+		<style_entry name="border_color" value="[rwsui_vehicle_fuelbar_border_color]"/>
+		<style_entry name="fill_bg_color" value="[rwsui_vehicle_fuelbar_fill_bg_color]"/>
+		<style_entry name="fill_color" value="[rwsui_vehicle_fuelbar_fill_color]"/>
+		<style_entry name="icon_atlas" value="{staticonatlas|once}"/>
 		<style_entry name="icon" value="{staticon|once}"/>
-		<style_entry name="icon_size" value="35,35"/>
-		<style_entry name="icon_pos" value="26,-24"/>
-		<style_entry name="icon_hidden" value="false"/>
+		<style_entry name="icon_color" value="[rwsui_vehicle_fuelbar_icon_color]"/>
+		<style_entry name="icon_hidden" value="[rwsui_statbar_icon_hidden]"/>
 		<style_entry name="text" value="{statcurrentwithmax}"/>
-		<style_entry name="text_pos" value="38,-11"/>
-		<style_entry name="font_size" value="28"/>
-		<style_entry name="text_width" value="125"/>
-		<style_entry name="text_height" value="26"/>
-		<style_entry name="text_justify" value="center"/>
-		<style_entry name="text_hidden" value="false"/>
+		<style_entry name="text_color" value="[rwsui_vehicle_fuelbar_text_color]"/>
+		<style_entry name="textOutline_color" value="[rwsui_vehicle_fuelbar_textOutline_color]"/>
+		<style_entry name="textOutline_size" value="[rwsui_vehicle_fuelbar_textOutline_size]"/>
+		<style_entry name="text_hidden" value="[rwsui_statbar_text_hidden]"/>
+		<style_entry name="fill" value="1"/>
 	</style>
+<!--_Vehicle_Fuel_Bar END-->
 
-	<style name="rwsui_statbar_vertical">
-		<style_entry name="pos" value="0,0"/>
-		<style_entry name="width" value="50"/>
-		<style_entry name="height" value="150"/>
-		<style_entry name="controller" value="HUDStatBar"/>
-		<style_entry name="border_depth" value="2"/>
-		<style_entry name="border_sprite" value="[default_sprite]"/>
-		<style_entry name="fillcenter" value="false"/>
-		<style_entry name="barBackground_fill" value="1"/>
-		<style_entry name="background_depth" value="1"/>
-		<style_entry name="background_sprite" value="[default_sprite]"/>
-		<style_entry name="background_pos" value="0,0"/>
-		<style_entry name="background_width" value="50"/>
-		<style_entry name="background_height" value="150"/>
-		<style_entry name="filldirection" value="vertical"/>
-		<style_entry name="fillinvert" value="false"/>
+<!--_Vehicle_Health_Bar START-->
+	<style name="rwsui_vehicle_healthbar">
+		<style_entry name="stat_type" value="VehicleHealth"/>
+		<style_entry name="border_color" value="[rwsui_vehicle_healthbar_border_color]"/>
+		<style_entry name="fill_bg_color" value="[rwsui_vehicle_healthbar_fill_bg_color]"/>
+		<style_entry name="fill_color" value="[rwsui_vehicle_healthbar_fill_color]"/>
+		<style_entry name="icon_atlas" value="{staticonatlas|once}"/>
 		<style_entry name="icon" value="{staticon|once}"/>
-		<style_entry name="icon_size" value="30,30"/>
-		<style_entry name="icon_pos" value="24,-130"/>
-		<style_entry name="icon_hidden" value="false"/>
-		<style_entry name="text" value="{statcurrent}"/>
-		<style_entry name="text_pos" value="1,-90"/>
-		<style_entry name="font_size" value="20"/>
-		<style_entry name="text_width" value="46"/>
-		<style_entry name="text_height" value="18"/>
-		<style_entry name="text_justify" value="center"/>
-		<style_entry name="text_hidden" value="false"/>
+		<style_entry name="icon_color" value="[rwsui_vehicle_healthbar_icon_color]"/>
+		<style_entry name="icon_hidden" value="[rwsui_statbar_icon_hidden]"/>
+		<style_entry name="text" value="{statcurrentwithmax}"/>
+		<style_entry name="text_color" value="[rwsui_vehicle_healthbar_text_color]"/>
+		<style_entry name="textOutline_color" value="[rwsui_vehicle_healthbar_textOutline_color]"/>
+		<style_entry name="textOutline_size" value="[rwsui_vehicle_healthbar_textOutline_size]"/>
+		<style_entry name="text_hidden" value="[rwsui_statbar_text_hidden]"/>
+		<style_entry name="fill" value="1"/>
 	</style>
+<!--_Vehicle_Health_Bar END-->
 
-	<style name="rwsui_statbar_radial">
-		<style_entry name="pos" value="0,0"/>
-		<style_entry name="width" value="75"/>
-		<style_entry name="height" value="75"/>
-		<style_entry name="controller" value="HUDStatBar"/>
-		<style_entry name="border_depth" value="1"/>
-		<style_entry name="border_sprite" value="ui_game_symbol_twitch_overhead_hp_ring"/>
-		<style_entry name="fillcenter" value="true"/>
-		<style_entry name="barBackground_fill" value="1"/>
-		<style_entry name="background_depth" value="2"/>
-		<style_entry name="background_sprite" value="ui_game_filled_circle"/>
-		<style_entry name="background_pos" value="5,-5"/>
-		<style_entry name="background_width" value="65"/>
-		<style_entry name="background_height" value="65"/>
-		<style_entry name="fillinvert" value="false"/>
-		<style_entry name="icon" value="{staticon|once}"/>
-		<style_entry name="icon_size" value="20,20"/>
-		<style_entry name="icon_pos" value="38,-51"/>
-		<style_entry name="icon_hidden" value="false"/>
-		<style_entry name="text" value="{statcurrent}"/>
-		<style_entry name="text_pos" value="39,-28"/>
-		<style_entry name="font_size" value="18"/>
-		<style_entry name="text_width" value="71"/>
-		<style_entry name="text_height" value="16"/>
-		<style_entry name="text_justify" value="center"/>
-		<style_entry name="text_hidden" value="false"/>
-		<style_entry name="border_thickness" value="4"/>
-		<style_entry name="centerBG_pos" value="0,0"/>
-		<style_entry name="centerBG_width" value="75"/>
-		<style_entry name="centerBG_height" value="75"/>
-	</style>
-
-	<style name="rwsui_statbar_flip_horizontal">
+<!--_Horizontal_Statbar_Adjustments START-->
+	<style name="rwsui_flip_horizontal_statbar">
 		<style_entry name="fillinvert" value="true"/>
 		<style_entry name="icon_pos" value="145,-24"/>
 		<style_entry name="text_pos" value="5,-11"/>
 	</style>
 
-	<style name="rwsui_statbar_half_horizontal">
+	<style name="rwsui_half_horizontal_statbar">
 		<style_entry name="width" value="85"/>
 		<style_entry name="icon_size" value="20,20"/>
-		<style_entry name="icon_pos" value="42,-12"/>
+		<style_entry name="icon_pos" value="40,-12"/>
 		<style_entry name="text_pos" value="2,-25"/>
 		<style_entry name="font_size" value="20"/>
 		<style_entry name="text_width" value="81"/>
 		<style_entry name="text_height" value="18"/>
 	</style>
+<!--_Horizontal_Statbar_Adjustments END-->
 
-	<style name="rwsui_statbar_mini_horizontal">
+<!--_Vertical_Statbar_Adjustments START-->
+	<style name="rwsui_vertical_statbar">
+		<style_entry name="width" value="50"/>
+		<style_entry name="height" value="150"/>
+		<style_entry name="icon_size" value="30,30"/>
+		<style_entry name="icon_pos" value="24,-130"/>
+		<style_entry name="text" value="{statcurrent}"/>
+		<style_entry name="text_pos" value="1,-90"/>
+		<style_entry name="text_width" value="46"/>
+		<style_entry name="font_size" value="20"/>
+		<style_entry name="text_height" value="18"/>
+		<style_entry name="filldirection" value="vertical"/>
+	</style>
+
+	<style name="rwsui_toolbelt_vertical_statbar">
+		<style_entry name="width" value="50"/>
+		<style_entry name="height" value="95"/>
+		<style_entry name="icon_size" value="30,30"/>
+		<style_entry name="icon_pos" value="25,-77"/>
+		<style_entry name="text" value="{statcurrent}"/>
+		<style_entry name="text_pos" value="2,-25"/>
+		<style_entry name="text_width" value="46"/>
+		<style_entry name="font_size" value="20"/>
+		<style_entry name="text_height" value="18"/>
+		<style_entry name="filldirection" value="vertical"/>
+	</style>
+<!--_Vertical_Statbar_Adjustments END-->
+
+<!--_Radial_Statbar_Adjustments START-->
+	<style name="rwsui_radial_statbar">
+		<style_entry name="width" value="75"/>
+		<style_entry name="height" value="75"/>
+		<style_entry name="border_pos" value="-${Round(grow_border/2, 0)},${Round(grow_border/2, 0)}"/>
+		<style_entry name="border_width" value="${Round(grow_border, 0)+width}"/>
+		<style_entry name="border_height" value="${Round(grow_border, 0)+height}"/>
+		<style_entry name="background_color" value="[rwsui_radial_statbar_bg_color]"/>
+		<style_entry name="fill_bg_pos" value="${Round(grow_border/2, 0)},-${Round(grow_border/2, 0)}"/>
+		<style_entry name="fill_bg_width" value="${width-Round(grow_border, 0)}"/>
+		<style_entry name="fill_bg_height" value="${height-Round(grow_border, 0)}"/>
+		<style_entry name="fill_pos" value="${Round(grow_border/2, 0)},-${Round(grow_border/2, 0)}"/>
+		<style_entry name="fill_width" value="${width-Round(grow_border, 0)}"/>
+		<style_entry name="fill_height" value="${height-Round(grow_border, 0)}"/>
+		<style_entry name="filldirection" value="radial360"/>
+	</style>
+<!--_Radial_Statbar_Adjustments END-->
+
+<!--_MiniHUD_Statbar_Adjustments START-->
+	<style name="rwsui_mini_horizontal_statbar">
 		<style_entry name="width" value="150"/>
 		<style_entry name="height" value="18"/>
 		<style_entry name="icon_size" value="14,14"/>
@@ -118,6 +271,11 @@
 		<style_entry name="text_width" value="146"/>
 		<style_entry name="font_size" value="18"/>
 		<style_entry name="text_height" value="16"/>
+	</style>
+
+	<style name="rwsui_flip_mini_horizontal_statbar">
+		<style_entry name="fillinvert" value="true"/>
+		<style_entry name="icon_pos" value="132,-9"/>
 	</style>
 
 	<style name="rwsui_toolbelt12_mini_horizontal">
@@ -129,169 +287,227 @@
 		<style_entry name="width" value="225"/>
 		<style_entry name="text_width" value="221"/>
 	</style>
+<!--_MiniHUD_Statbar_Adjustments END-->
 
-	<style name="rwsui_statbar_mini_flip_horizontal">
-		<style_entry name="fillinvert" value="true"/>
-		<style_entry name="icon_pos" value="132,-9"/>
+<!--_Custom_IconStatbar_Adjustments START-->
+	<!--Stealth-->
+	<style name="rwsui_custom_iconstatbar_stealth">
+		<style_entry name="border_depth" value="8"/>
+		<style_entry name="border_sprite" value="rwsui_ui_game_symbol_stealth2_border"/>
+		<style_entry name="background_color" value="[rwsui_custom_iconstatbar_bg_color]"/>
+		<style_entry name="background_sprite" value="rwsui_ui_game_symbol_stealth2"/>
+		<style_entry name="fill_bg_sprite" value="${background_sprite}"/>
+		<style_entry name="fill_sprite" value="${background_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
 	</style>
 
-	<style name="rwsui_statbar_toolbelt_vertical">
+	<!--Stamina-->
+	<style name="rwsui_custom_iconstatbar_stamina">
+		<style_entry name="width" value="65"/>
+		<style_entry name="border_depth" value="8"/>
+		<style_entry name="border_sprite" value="{# sprintactive ? 'rwsui_server_z_always_run_border' : 'rwsui_server_z_never_run_border'}"/>
+		<style_entry name="background_color" value="[rwsui_custom_iconstatbar_bg_color]"/>
+		<style_entry name="background_sprite" value="{# sprintactive ? 'rwsui_server_z_always_run' : 'rwsui_server_z_never_run'}"/>
+		<style_entry name="fill_bg_sprite" value="${background_sprite}"/>
+		<style_entry name="fill_sprite" value="${background_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
+	</style>
+
+	<!--Health-->
+	<style name="rwsui_custom_iconstatbar_health">
+		<style_entry name="border_depth" value="8"/>
+		<style_entry name="border_sprite" value="rwsui_ui_game_symbol_heart_border"/>
+		<style_entry name="background_pos" value="0,1"/>
+		<style_entry name="background_color" value="[rwsui_custom_iconstatbar_bg_color]"/>
+		<style_entry name="background_sprite" value="ui_game_symbol_twitch_regen"/>
+		<style_entry name="fill_bg_pos" value="0,1"/>
+		<style_entry name="fill_bg_sprite" value="${background_sprite}"/>
+		<style_entry name="fill_pos" value="0,1"/>
+		<style_entry name="fill_sprite" value="${background_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
+	</style>
+
+	<!--Food-->
+	<style name="rwsui_custom_iconstatbar_food">
+		<style_entry name="border_depth" value="8"/>
+		<style_entry name="border_sprite" value="rwsui_ui_game_symbol_harvest_border"/>
+		<style_entry name="background_color" value="[rwsui_custom_iconstatbar_bg_color]"/>
+		<style_entry name="background_sprite" value="rwsui_ui_game_symbol_harvest"/>
+		<style_entry name="fill_bg_sprite" value="${background_sprite}"/>
+		<style_entry name="fill_sprite" value="${background_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
+	</style>
+
+	<!--Water-->
+	<style name="rwsui_custom_iconstatbar_water">
+		<style_entry name="border_depth" value="8"/>
+		<style_entry name="border_sprite" value="rwsui_ui_game_symbol_water_border"/>
+		<style_entry name="background_color" value="[rwsui_custom_iconstatbar_bg_color]"/>
+		<style_entry name="background_sprite" value="ui_game_symbol_water"/>
+		<style_entry name="fill_bg_sprite" value="${background_sprite}"/>
+		<style_entry name="fill_sprite" value="${background_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
+	</style>
+
+	<!--XP-->
+	<style name="rwsui_custom_iconstatbar_xp">
+		<style_entry name="border_depth" value="8"/>
+		<style_entry name="border_sprite" value="rwsui_ui_game_symbol_trophy_border"/>
+		<style_entry name="background_color" value="[rwsui_custom_iconstatbar_bg_color]"/>
+		<style_entry name="background_sprite" value="rwsui_ui_game_symbol_trophy"/>
+		<style_entry name="fill_bg_sprite" value="${background_sprite}"/>
+		<style_entry name="fill_sprite" value="${background_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
+	</style>
+
+	<!--Vehicle Fuel-->
+	<style name="rwsui_custom_iconstatbar_vehicle_fuel">
+		<style_entry name="border_depth" value="8"/>
+		<style_entry name="border_sprite" value="rwsui_ui_game_symbol_gas_border"/>
+		<style_entry name="background_color" value="[rwsui_custom_iconstatbar_bg_color]"/>
+		<style_entry name="background_sprite" value="rwsui_ui_game_symbol_gas"/>
+		<style_entry name="fill_bg_sprite" value="${background_sprite}"/>
+		<style_entry name="fill_sprite" value="${background_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
+	</style>
+
+	<!--Vehicle Health-->
+	<style name="rwsui_custom_iconstatbar_vehicle_health">
 		<style_entry name="width" value="50"/>
-		<style_entry name="height" value="95"/>
-		<style_entry name="icon_pos" value="25,-77"/>
-		<style_entry name="text_pos" value="2,-25"/>
+		<style_entry name="border_depth" value="8"/>
+		<style_entry name="border_sprite" value="rwsui_ui_game_symbol_twitch_shield_border"/>
+		<style_entry name="background_color" value="[rwsui_custom_iconstatbar_bg_color]"/>
+		<style_entry name="background_sprite" value="rwsui_ui_game_symbol_twitch_shield"/>
+		<style_entry name="fill_bg_sprite" value="${background_sprite}"/>
+		<style_entry name="fill_sprite" value="${background_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
 	</style>
-<!--_StatBar_Defaults END-->
+<!--_Custom_IconStatbar_Adjustments END-->
 
-<!--_Text_Fixes START-->
-	<style name="rwsui_statcurrent_stamina">
-		<style_entry name="text" value="{# length(statcurrent)==0 ? '' : Round(float(statcurrent), 0)}"/>
-	</style>
-
-	<style name="rwsui_statcurrent_foodwater">
-		<style_entry name="text" value="{# statcurrent &lt; '99' ? statcurrent : '100'}%"/>
-	</style>
-
-	<style name="rwsui_statcurrentwithmax_foodwater">
-		<style_entry name="text" value="{# statcurrent &lt; '99' ? statcurrent : '100'}/100%"/>
-	</style>
-
-	<style name="rwsui_xpbar_shorten_text">
-		<style_entry name="text" value="{cvar($LastPlayerLevel)}"/>
-	</style>
-<!--_Text_Fixes END-->
-
-
-<!--_Stealth_Bar START-->
-	<style name="rwsui_statbar_stealth">
-		<style_entry name="stat_type" value="Stealth"/>
-		<style_entry name="barBackground_color" value="[rwsui_stealthbar_background_color]"/>
-		<style_entry name="barContent_color" value="{stealthcolor}"/>
-		<style_entry name="icon_color" value="[rwsui_stealthbar_icon_color]"/>
-		<style_entry name="text" value="{statcurrent}"/>
-		<style_entry name="text_color" value="[rwsui_stealthbar_text_color]"/>
-		<style_entry name="textOutline_color" value="[rwsui_stealthbar_textOutline_color]"/>
-		<style_entry name="textOutline_size" value="[rwsui_stealthbar_textOutline_color]"/>
-		<!--only applies to radial stealth bars-->
-		<style_entry name="border_color" value="[rwsui_stealthbar_border_color]"/>
-		<style_entry name="centerBG_color" value="[rwsui_stealthbar_centerBG_color]"/>
-	</style>
-<!--_Stealth_Bar END-->
-
-	<style name="rwsui_toolbelt_doubleStealth">
-		<style_entry name="pos" value="-13,20"/>
-		<style_entry name="width" value="388"/>
-		<style_entry name="height" value="22"/>
-		<style_entry name="icon_size" value="18,18"/>
-		<style_entry name="icon_pos" value="389,-10"/>
-		<style_entry name="text" value=""/>
+<!--_Simple_IconStatbar_Adjustments START-->
+	<!--Stealth-->
+	<style name="rwsui_simple_iconstatbar_stealth">
+		<style_entry name="border_sprite" value="ui_game_symbol_stealth2"/>
+		<style_entry name="background_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_bg_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_sprite" value="${border_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
 		<style_entry name="text_hidden" value="true"/>
 	</style>
 
-	<style name="rwsui_toolbelt12_doubleStealth">
-		<style_entry name="pos" value="-13,20"/>
-		<style_entry name="width" value="464"/>
-		<style_entry name="height" value="22"/>
-		<style_entry name="icon_size" value="18,18"/>
-		<style_entry name="icon_pos" value="465,-10"/>
-		<style_entry name="text" value=""/>
+	<!--Stamina-->
+	<style name="rwsui_simple_iconstatbar_stamina">
+		<style_entry name="width" value="65"/>
+		<style_entry name="border_sprite" value="{# sprintactive ? 'server_z_always_run' : 'server_z_never_run'}"/>
+		<style_entry name="background_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_bg_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_sprite" value="${border_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
 		<style_entry name="text_hidden" value="true"/>
 	</style>
 
-	<style name="rwsui_toolbelt15_doubleStealth">
-		<style_entry name="pos" value="-13,20"/>
-		<style_entry name="width" value="573"/>
-		<style_entry name="height" value="22"/>
-		<style_entry name="icon_size" value="18,18"/>
-		<style_entry name="icon_pos" value="574,-10"/>
-		<style_entry name="text" value=""/>
+	<!--Health-->
+	<style name="rwsui_simple_iconstatbar_health">
+		<style_entry name="border_sprite" value="ui_game_symbol_twitch_regen"/>
+		<style_entry name="background_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_bg_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_sprite" value="${border_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
 		<style_entry name="text_hidden" value="true"/>
 	</style>
 
-<!--_Stamina_Bar START-->
-	<style name="rwsui_statbar_stamina">
-		<style_entry name="stat_type" value="Stamina"/>
-		<style_entry name="barBackground_color" value="[rwsui_staminabar_background_color]"/>
-		<style_entry name="barContent_color" value="[rwsui_staminabar_content_color]"/>
-		<style_entry name="barBackground_fill" value="{statmodifiedmax}"/>
-		<style_entry name="icon" value="{# sprintactive ? 'server_z_always_run' : 'ui_game_symbol_agility'}"/>
-		<style_entry name="icon_color" value="[rwsui_staminabar_icon_color]"/>
-		<style_entry name="text_color" value="[rwsui_staminabar_text_color]"/>
-		<style_entry name="textOutline_color" value="[rwsui_staminabar_textOutline_color]"/>
-		<style_entry name="textOutline_size" value="[rwsui_staminabar_textOutline_size]"/>
-		<!--only applies to radial stamina bars-->
-		<style_entry name="border_color" value="[rwsui_staminabar_border_color]"/>
-		<style_entry name="centerBG_color" value="[rwsui_staminabar_centerBG_color]"/>
+	<!--Food-->
+	<style name="rwsui_simple_iconstatbar_food">
+		<style_entry name="border_sprite" value="ui_game_symbol_harvest"/>
+		<style_entry name="background_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_bg_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_sprite" value="${border_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
 	</style>
-<!--_Stamina_Bar END-->
 
-<!--_Health_Bar START-->
-	<style name="rwsui_statbar_health">
-		<style_entry name="stat_type" value="Health"/>
-		<style_entry name="barBackground_color" value="[rwsui_healthbar_background_color]"/>
-		<style_entry name="barContent_color" value="[rwsui_healthbar_content_color]"/>
-		<style_entry name="barBackground_fill" value="{statmodifiedmax}"/>
-		<style_entry name="icon_color" value="[rwsui_healthbar_icon_color]"/>
-		<style_entry name="text_color" value="[rwsui_healthbar_text_color]"/>
-		<style_entry name="textOutline_color" value="[rwsui_healthbar_textOutline_color]"/>
-		<style_entry name="textOutline_size" value="[rwsui_healthbar_textOutline_size]"/>
-		<!--only applies to radial stamina bars-->
-		<style_entry name="border_color" value="[rwsui_healthbar_border_color]"/>
-		<style_entry name="centerBG_color" value="[rwsui_healthbar_centerBG_color]"/>
+	<!--Water-->
+	<style name="rwsui_simple_iconstatbar_water">
+		<style_entry name="border_sprite" value="ui_game_symbol_water"/>
+		<style_entry name="background_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_bg_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_sprite" value="${border_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
 	</style>
-<!--_Health_Bar END-->
 
-<!--_Food_Bar START-->
-	<style name="rwsui_statbar_food">
-		<style_entry name="controller" value="HUDStatBar"/>
-		<style_entry name="stat_type" value="Food"/>
-		<style_entry name="barBackground_color" value="[rwsui_foodbar_background_color]"/>
-		<style_entry name="barContent_color" value="[rwsui_foodbar_content_color]"/>
-		<style_entry name="icon_color" value="[rwsui_foodbar_icon_color]"/>
-		<style_entry name="text_color" value="[rwsui_foodbar_text_color]"/>
-		<style_entry name="textOutline_color" value="[rwsui_foodbar_textOutline_color]"/>
-		<style_entry name="textOutline_size" value="[rwsui_foodbar_textOutline_size]"/>
-		<!--only applies to radial stamina bars-->
-		<style_entry name="border_color" value="[rwsui_foodbar_border_color]"/>
-		<style_entry name="centerBG_color" value="[rwsui_foodbar_centerBG_color]"/>
+	<!--XP-->
+	<style name="rwsui_simple_iconstatbar_xp">
+		<style_entry name="border_sprite" value="ui_game_symbol_trophy"/>
+		<style_entry name="background_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_bg_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_sprite" value="${border_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
 	</style>
-<!--_Food_Bar END-->
 
-<!--_Water_Bar START-->
-	<style name="rwsui_statbar_water">
-		<style_entry name="controller" value="HUDStatBar"/>
-		<style_entry name="stat_type" value="Water"/>
-		<style_entry name="barBackground_color" value="[rwsui_waterbar_background_color]"/>
-		<style_entry name="barContent_color" value="[rwsui_waterbar_content_color]"/>
-		<style_entry name="icon_color" value="[rwsui_waterbar_icon_color]"/>
-		<style_entry name="text_color" value="[rwsui_waterbar_text_color]"/>
-		<style_entry name="textOutline_color" value="[rwsui_waterbar_textOutline_color]"/>
-		<style_entry name="textOutline_size" value="[rwsui_waterbar_textOutline_size]"/>
-		<!--only applies to radial stamina bars-->
-		<style_entry name="border_color" value="[rwsui_waterbar_border_color]"/>
-		<style_entry name="centerBG_color" value="[rwsui_waterbar_centerBG_color]"/>
+	<!--Vehicle Fuel-->
+	<style name="rwsui_simple_iconstatbar_vehicle_fuel">
+		<style_entry name="border_sprite" value="ui_game_symbol_gas"/>
+		<style_entry name="background_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_bg_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_sprite" value="${border_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
 	</style>
-<!--_Water_Bar END-->
 
-<!--_XP_Bar START-->
-	<style name="rwsui_statbar_xp">
-		<style_entry name="xp_fill_speed" value="2"/>
-		<style_entry name="barBackground_color" value="[rwsui_xpbar_background_color]"/>
-		<style_entry name="standard_xp_color" value="[rwsui_xpbar_standard_color]"/>
-		<style_entry name="updating_xp_color" value="[rwsui_xpbar_updating_color]"/>
-		<style_entry name="deficit_xp_color" value="[rwsui_xpbar_deficit_color]"/>
-		<style_entry name="icon" value="ui_game_symbol_trophy"/>
-		<style_entry name="icon_color" value="[rwsui_xpbar_icon_color]"/>
-		<style_entry name="text" value="{# localization('xuiLevel')}    {cvar($LastPlayerLevel)}"/>
-		<style_entry name="text_color" value="[rwsui_xpbar_text_color]"/>
-		<style_entry name="textOutline_color" value="[rwsui_xpbar_textOutline_color]"/>
-		<style_entry name="textOutline_size" value="[rwsui_xpbar_textOutline_size]"/>
-		<!--only applies to radial stamina bars-->
-		<style_entry name="border_color" value="[rwsui_xpbar_border_color]"/>
-		<style_entry name="centerBG_color" value="[rwsui_xpbar_centerBG_color]"/>
+	<!--Vehicle Health-->
+	<style name="rwsui_simple_iconstatbar_vehicle_health">
+		<style_entry name="border_sprite" value="ui_game_symbol_twitch_shield"/>
+		<style_entry name="background_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_bg_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_sprite" value="${border_sprite}"/>
+		<style_entry name="filldirection" value="vertical"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
 	</style>
-<!--_XP_Bar END-->
+<!--_Simple_IconStatbar_Adjustments END-->
 
+<!--_ToolBelt_StealthBarx2_Adjustments START-->
+	<style name="rwsui_toolbelt12_stealthbarx2">
+		<style_entry name="width" value="902"/>
+		<style_entry name="fill_width" value="463"/>
+		<style_entry name="fill2_pos" value="444,0"/>
+		<style_entry name="icon_pos" value="451,-10"/>
+	</style>
+
+	<style name="rwsui_toolbelt15_stealthbarx2">
+		<style_entry name="width" value="1127"/>
+		<style_entry name="fill_width" value="575"/>
+		<style_entry name="fill2_pos" value="556,0"/>
+		<style_entry name="icon_pos" value="563,-10"/>
+	</style>
+<!--_ToolBelt_StealthBarx2_Adjustments END-->
+
+<!--_ToolBelt_XpBar_Adjustments START-->
 	<style name="rwsui_toolbelt_xpbar">
 		<style_entry name="xp_fill_speed" value="2.5"/>
 		<style_entry name="pos" value="0,-77"/>
@@ -304,19 +520,6 @@
 		<style_entry name="text_width" value="749"/>
 		<style_entry name="text_height" value="16"/>
 		<style_entry name="text_justify" value="left"/>
-	</style>
-
-	<style name="rwsui_toolbelt_xpbar_mini">
-		<style_entry name="xp_fill_speed" value="1.5"/>
-		<style_entry name="pos" value="300,-77"/>
-		<style_entry name="width" value="153"/>
-		<style_entry name="height" value="18"/>
-		<style_entry name="icon_size" value="14,14"/>
-		<style_entry name="icon_pos" value="18,-9"/>
-		<style_entry name="text_pos" value="0,-2"/>
-		<style_entry name="font_size" value="18"/>
-		<style_entry name="text_width" value="149"/>
-		<style_entry name="text_height" value="16"/>
 	</style>
 
 	<style name="rwsui_toolbelt12_xpbar">
@@ -333,19 +536,6 @@
 		<style_entry name="text_justify" value="left"/>
 	</style>
 
-	<style name="rwsui_toolbelt12_xpbar_mini">
-		<style_entry name="xp_fill_speed" value="1.5"/>
-		<style_entry name="pos" value="360,-77"/>
-		<style_entry name="width" value="183"/>
-		<style_entry name="height" value="18"/>
-		<style_entry name="icon_size" value="14,14"/>
-		<style_entry name="icon_pos" value="18,-9"/>
-		<style_entry name="text_pos" value="0,-2"/>
-		<style_entry name="font_size" value="18"/>
-		<style_entry name="text_width" value="179"/>
-		<style_entry name="text_height" value="16"/>
-	</style>
-
 	<style name="rwsui_toolbelt15_xpbar">
 		<style_entry name="xp_fill_speed" value="2.5"/>
 		<style_entry name="pos" value="0,-77"/>
@@ -360,7 +550,33 @@
 		<style_entry name="text_justify" value="left"/>
 	</style>
 
-	<style name="rwsui_toolbelt15_xpbar_mini">
+	<style name="rwsui_toolbelt_mini_xpbar">
+		<style_entry name="xp_fill_speed" value="1.5"/>
+		<style_entry name="pos" value="300,-77"/>
+		<style_entry name="width" value="153"/>
+		<style_entry name="height" value="18"/>
+		<style_entry name="icon_size" value="14,14"/>
+		<style_entry name="icon_pos" value="18,-9"/>
+		<style_entry name="text_pos" value="0,-2"/>
+		<style_entry name="font_size" value="18"/>
+		<style_entry name="text_width" value="149"/>
+		<style_entry name="text_height" value="16"/>
+	</style>
+
+	<style name="rwsui_toolbelt12_mini_xpbar">
+		<style_entry name="xp_fill_speed" value="1.5"/>
+		<style_entry name="pos" value="360,-77"/>
+		<style_entry name="width" value="183"/>
+		<style_entry name="height" value="18"/>
+		<style_entry name="icon_size" value="14,14"/>
+		<style_entry name="icon_pos" value="18,-9"/>
+		<style_entry name="text_pos" value="0,-2"/>
+		<style_entry name="font_size" value="18"/>
+		<style_entry name="text_width" value="179"/>
+		<style_entry name="text_height" value="16"/>
+	</style>
+
+	<style name="rwsui_toolbelt15_mini_xpbar">
 		<style_entry name="xp_fill_speed" value="1.5"/>
 		<style_entry name="pos" value="450,-77"/>
 		<style_entry name="width" value="228"/>
@@ -372,39 +588,54 @@
 		<style_entry name="text_width" value="224"/>
 		<style_entry name="text_height" value="16"/>
 	</style>
+<!--_ToolBelt_XpBar_Adjustments START-->
 
-<!--_Vehicle_Fuel_Bar START-->
-	<style name="rwsui_statbar_vehicle_fuel">
-		<style_entry name="stat_type" value="VehicleFuel"/>
-		<style_entry name="text" value="{statcurrentwithmax}"/>
-		<style_entry name="barBackground_color" value="[rwsui_vehicleFuel_background_color]"/>
-		<style_entry name="barContent_color" value="[rwsui_vehicleFuel_content_color]"/>
-		<style_entry name="icon_color" value="[rwsui_vehicleFuel_icon_color]"/>
-		<style_entry name="text_color" value="[rwsui_vehicleFuel_text_color]"/>
-		<style_entry name="textOutline_color" value="[rwsui_vehicleFuel_textOutline_color]"/>
-		<style_entry name="textOutline_size" value="[rwsui_vehicleFuel_textOutline_size]"/>
-		<!--only applies to radial stamina bars-->
-		<style_entry name="border_color" value="[rwsui_vehicleFuel_border_color]"/>
-		<style_entry name="centerBG_color" value="[rwsui_vehicleFuel_centerBG_color]"/>
+<!--_Toolbelt_Keys START-->
+	<style name="rwsui_tbkeys">
+		<style_entry name="text_color" value="[rwsui_tbkeys_text_color]"/>
+		<style_entry name="textOutline_color" value="[rwsui_tbkeys_textOutline_color]"/>
+		<style_entry name="textOutline_size" value="[rwsui_tbkeys_textOutline_size]"/>
 	</style>
-<!--_Vehicle_Fuel_Bar END-->
+<!--_Toolbelt_Keys END-->
 
-<!--_Vehicle_Health_Bar START-->
-	<style name="rwsui_statbar_vehicle_health">
-		<style_entry name="stat_type" value="VehicleHealth"/>
-		<style_entry name="text" value="{statcurrentwithmax}"/>
-		<style_entry name="barBackground_color" value="[rwsui_vehicleHealth_background_color]"/>
-		<style_entry name="barContent_color" value="[rwsui_vehicleHealth_content_color]"/>
-		<style_entry name="icon_color" value="[rwsui_vehicleHealth_icon_color]"/>
-		<style_entry name="text_color" value="[rwsui_vehicleHealth_text_color]"/>
-		<style_entry name="textOutline_color" value="[rwsui_vehicleHealth_textOutline_color]"/>
-		<style_entry name="textOutline_size" value="[rwsui_vehicleHealth_textOutline_size]"/>
-		<!--only applies to radial stamina bars-->
-		<style_entry name="border_color" value="[rwsui_vehicleHealth_border_color]"/>
-		<style_entry name="centerBG_color" value="[rwsui_vehicleHealth_centerBG_color]"/>
+<!--_Toolbelt_Keys_Background START-->
+	<style name="rwsui_tbkeys_background">
+		<style_entry name="border_color" value="[rwsui_tbkeys_border_color]"/>
+		<style_entry name="background_color" value="[rwsui_tbkeys_background_color]"/>
 	</style>
-<!--_Vehicle_Health_Bar END-->
 
+	<style name="rwsui_round_tbkeys_background">
+		<style_entry name="cell_height" value="24"/>
+		<style_entry name="border_depth" value="0"/>
+		<style_entry name="border_width" value="24"/>
+		<style_entry name="border_height" value="24"/>
+		<style_entry name="border_sprite" value="ui_game_symbol_twitch_overhead_hp_ring"/>
+		<style_entry name="background_pos" value="1,-1"/>
+		<style_entry name="background_width" value="22"/>
+		<style_entry name="background_height" value="22"/>
+		<style_entry name="background_sprite" value="ui_game_filled_circle"/>
+	</style>
+<!--_Toolbelt_Keys_Background END-->
+
+<!--_Toolbelt_Item_Stack START-->
+	<style name="rwsui_toolbelt_itemStack">
+		<style_entry name="select_color" value="[rwsui_toolbelt_select_color]"/>
+		<style_entry name="press_color" value="[limeGreen]"/>
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>
+		<style_entry name="background_color" value="[rwsui_toolbelt_innerborder_color]"/>
+		<style_entry name="highlight_color" value="[hoverColor]"/>
+		<style_entry name="holding_color" value="[rwsui_toolbelt_holding_color]"/>
+		<style_entry name="width" value="75"/>
+		<style_entry name="height" value="75"/>
+		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="on_press" value="true"/>
+		<style_entry name="sound_volume" value="0.75"/>
+		<style_entry name="pickup_sound" value="[pickup_click]"/>
+		<style_entry name="place_sound" value="[place_click]"/>
+	</style>
+<!--_Toolbelt_Item_Stack END-->
+
+<!--_Active_Item_Grid START-->
 	<style name="rwsui_statbar_activeItem">
 		<style_entry name="controller" value="HUDStatBar"/>
 		<style_entry name="stat_type" value="ActiveItem"/>
@@ -425,9 +656,10 @@
 		<style_entry name="textOutline_size" value="[rwsui_activeItem_textOutline_size]"/>
 		<style_entry name="text_hidden" value="false"/>
 	</style>
+<!--_Active_Item_Grid END-->
 
-	<style name="rwsui_activeItem_simpleBuff_horizontal">
-		<style_entry name="activeItemGrid_style" value="rwsui_statbar_activeItem, rwsui_activeItem_simpleBuff_horizontal"/>
+<!--_Active_Item_Styles START-->
+	<style name="rwsui_activeItem_simple_horizontal">
 		<style_entry name="pos" value="0,0"/>
 		<style_entry name="width" value="180"/>
 		<style_entry name="height" value="46"/>
@@ -443,8 +675,23 @@
 		<style_entry name="text_justify" value="right"/>
 	</style>
 
-	<style name="rwsui_activeItem_simpleBuff_vertical">
-		<style_entry name="activeItemGrid_style" value="rwsui_statbar_activeItem, rwsui_activeItem_simpleBuff_vertical"/>
+	<style name="rwsui_activeItem_simple_mini_horizontal">
+		<style_entry name="pos" value="0,0"/>
+		<style_entry name="width" value="150"/>
+		<style_entry name="height" value="18"/>
+		<style_entry name="background_pos" value="0,0"/>
+		<style_entry name="background_width" value="150"/>
+		<style_entry name="background_height" value="18"/>
+		<style_entry name="icon_size" value="14,14"/>
+		<style_entry name="icon_pos" value="135,-9"/>
+		<style_entry name="text_pos" value="45,-10"/>
+		<style_entry name="font_size" value="18"/>
+		<style_entry name="text_width" value="125"/>
+		<style_entry name="text_height" value="16"/>
+		<style_entry name="text_justify" value="right"/>
+	</style>
+
+	<style name="rwsui_activeItem_simple_vertical">
 		<style_entry name="pos" value="0,0"/>
 		<style_entry name="width" value="180"/>
 		<style_entry name="height" value="46"/>
@@ -460,8 +707,7 @@
 		<style_entry name="text_justify" value="right"/>
 	</style>
 
-	<style name="rwsui_activeItem_simpleBuff_round">
-		<style_entry name="activeItemGrid_style" value="rwsui_statbar_activeItem, rwsui_activeItem_simpleBuff_round"/>
+	<style name="rwsui_activeItem_simple_round">
 		<style_entry name="pos" value="0,0"/>
 		<style_entry name="width" value="80"/>
 		<style_entry name="height" value="80"/>
@@ -481,8 +727,7 @@
 		<style_entry name="text_height" value="18"/>
 	</style>
 
-	<style name="rwsui_activeItem_detailedBuff_horizontal">
-		<style_entry name="activeItemGrid_style" value="rwsui_statbar_activeItem, rwsui_activeItem_detailedBuff_horizontal"/>
+	<style name="rwsui_activeItem_detailed_horizontal">
 		<style_entry name="pos" value="0,0"/>
 		<style_entry name="width" value="46"/>
 		<style_entry name="height" value="46"/>
@@ -495,11 +740,28 @@
 		<style_entry name="font_size" value="28"/>
 		<style_entry name="text_width" value="240"/>
 		<style_entry name="text_height" value="26"/>
+		<style_entry name="textOutline_color" value="[rwsui_activeItem_textOutline_color]" />
 		<style_entry name="text_justify" value="right"/>
 	</style>
 
-	<style name="rwsui_activeItem_detailedBuff_vertical">
-		<style_entry name="activeItemGrid_style" value="rwsui_statbar_activeItem, rwsui_activeItem_detailedBuff_vertical"/>
+	<style name="rwsui_activeItem_detailed_mini_horizontal">
+		<style_entry name="pos" value="0,0"/>
+		<style_entry name="width" value="18"/>
+		<style_entry name="height" value="18"/>
+		<style_entry name="background_pos" value="0,0"/>
+		<style_entry name="background_width" value="18"/>
+		<style_entry name="background_height" value="18"/>
+		<style_entry name="icon_size" value="14,14"/>
+		<style_entry name="icon_pos" value="9,-9"/>
+		<style_entry name="text_pos" value="-125,-10"/>
+		<style_entry name="font_size" value="18"/>
+		<style_entry name="text_width" value="240"/>
+		<style_entry name="text_height" value="16"/>
+		<style_entry name="textOutline_color" value="[rwsui_activeItem_textOutline_color]" />
+		<style_entry name="text_justify" value="right"/>
+	</style>
+
+	<style name="rwsui_activeItem_detailed_vertical">
 		<style_entry name="pos" value="0,0"/>
 		<style_entry name="width" value="50"/>
 		<style_entry name="height" value="42"/>
@@ -512,11 +774,11 @@
 		<style_entry name="font_size" value="28"/>
 		<style_entry name="text_width" value="240"/>
 		<style_entry name="text_height" value="26"/>
+		<style_entry name="textOutline_color" value="[rwsui_activeItem_textOutline_color]" />
 		<style_entry name="text_justify" value="right"/>
 	</style>
 
-	<style name="rwsui_activeItem_detailedBuff_round">
-		<style_entry name="activeItemGrid_style" value="rwsui_statbar_activeItem, rwsui_activeItem_detailedBuff_round"/>
+	<style name="rwsui_activeItem_detailed_round">
 		<style_entry name="pos" value="0,0"/>
 		<style_entry name="width" value="42"/>
 		<style_entry name="height" value="42"/>
@@ -534,10 +796,13 @@
 		<style_entry name="font_size" value="26"/>
 		<style_entry name="text_width" value="240"/>
 		<style_entry name="text_height" value="24"/>
+		<style_entry name="textOutline_color" value="[rwsui_activeItem_textOutline_color]" />
 		<style_entry name="text_justify" value="right"/>
 	</style>
+<!--_Active_Item_Styles END-->
 
-	<style name="rwsui_collectedItemList">
+<!--_Collected_Item_List START-->
+	<style name="rwsui_collected_item_list">
 		<style_entry name="border_depth" value="2"/>
 		<style_entry name="border_sprite" value="[default_sprite]"/>
 		<style_entry name="border_color" value="[rwsui_collectedItemList_border_color]"/>
@@ -551,9 +816,10 @@
 		<style_entry name="text_justify" value="center"/>
 		<style_entry name="X_color" value="[rwsui_collectedItemList_X_color]"/>
 	</style>
+<!--_Collected_Item_List END-->
 
-	<style name="rwsui_collectedItemList_simpleBuff_horizontal">
-		<style_entry name="CIL_panel_style" value="rwsui_collectedItemList, rwsui_collectedItemList_simpleBuff_horizontal"/>
+<!--_Collected_Item_Styles START-->
+	<style name="rwsui_collectedItem_simple_horizontal">
 		<style_entry name="pos" value="0,0"/>
 		<style_entry name="width" value="180"/>
 		<style_entry name="height" value="46"/>
@@ -572,8 +838,26 @@
 		<style_entry name="X_height" value="26"/>
 	</style>
 
-	<style name="rwsui_collectedItemList_simpleBuff_vertical">
-		<style_entry name="CIL_panel_style" value="rwsui_collectedItemList, rwsui_collectedItemList_simpleBuff_vertical"/>
+	<style name="rwsui_collectedItem_simple_mini_horizontal">
+		<style_entry name="pos" value="0,0"/>
+		<style_entry name="width" value="150"/>
+		<style_entry name="height" value="18"/>
+		<style_entry name="background_pos" value="0,0"/>
+		<style_entry name="background_width" value="150"/>
+		<style_entry name="background_height" value="18"/>
+		<style_entry name="icon_size" value="14,14"/>
+		<style_entry name="icon_pos" value="135,-9"/>
+		<style_entry name="text_pos" value="45,-10"/>
+		<style_entry name="font_size" value="18"/>
+		<style_entry name="text_width" value="130"/>
+		<style_entry name="text_height" value="16"/>
+		<style_entry name="text_justify" value="right"/>
+		<style_entry name="X_pos" value="100,-9"/>
+		<style_entry name="X_width" value="14"/>
+		<style_entry name="X_height" value="14"/>
+	</style>
+
+	<style name="rwsui_collectedItem_simple_vertical">
 		<style_entry name="pos" value="0,0"/>
 		<style_entry name="width" value="180"/>
 		<style_entry name="height" value="46"/>
@@ -592,8 +876,7 @@
 		<style_entry name="X_height" value="26"/>
 	</style>
 
-	<style name="rwsui_collectedItemList_simpleBuff_round">
-		<style_entry name="CIL_panel_style" value="rwsui_collectedItemList, rwsui_collectedItemList_simpleBuff_round"/>
+	<style name="rwsui_collectedItem_simple_round">
 		<style_entry name="pos" value="0,0"/>
 		<style_entry name="width" value="80"/>
 		<style_entry name="height" value="80"/>
@@ -616,8 +899,7 @@
 		<style_entry name="X_height" value="18"/>
 	</style>
 
-	<style name="rwsui_collectedItemList_detailedBuff_horizontal">
-		<style_entry name="CIL_panel_style" value="rwsui_collectedItemList, rwsui_collectedItemList_detailedBuff_horizontal"/>
+	<style name="rwsui_collectedItem_detailed_horizontal">
 		<style_entry name="pos" value="0,0"/>
 		<style_entry name="width" value="46"/>
 		<style_entry name="height" value="46"/>
@@ -630,14 +912,34 @@
 		<style_entry name="font_size" value="28"/>
 		<style_entry name="text_width" value="240"/>
 		<style_entry name="text_height" value="26"/>
+		<style_entry name="textOutline_color" value="[rwsui_collectedItemList_textOutline_color]" />
 		<style_entry name="text_justify" value="right"/>
 		<style_entry name="X_pos" value="-18,-24"/>
 		<style_entry name="X_width" value="24"/>
 		<style_entry name="X_height" value="24"/>
 	</style>
 
-	<style name="rwsui_collectedItemList_detailedBuff_vertical">
-		<style_entry name="CIL_panel_style" value="rwsui_collectedItemList, rwsui_collectedItemList_detailedBuff_vertical"/>
+	<style name="rwsui_collectedItem_detailed_mini_horizontal">
+		<style_entry name="pos" value="0,0"/>
+		<style_entry name="width" value="18"/>
+		<style_entry name="height" value="18"/>
+		<style_entry name="background_pos" value="0,0"/>
+		<style_entry name="background_width" value="18"/>
+		<style_entry name="background_height" value="18"/>
+		<style_entry name="icon_size" value="14,14"/>
+		<style_entry name="icon_pos" value="10,-9"/>
+		<style_entry name="text_pos" value="-125,-9"/>
+		<style_entry name="font_size" value="18"/>
+		<style_entry name="text_width" value="240"/>
+		<style_entry name="text_height" value="16"/>
+		<style_entry name="textOutline_color" value="[rwsui_collectedItemList_textOutline_color]" />
+		<style_entry name="text_justify" value="right"/>
+		<style_entry name="X_pos" value="-12,-9"/>
+		<style_entry name="X_width" value="14"/>
+		<style_entry name="X_height" value="14"/>
+	</style>
+
+	<style name="rwsui_collectedItem_detailed_vertical">
 		<style_entry name="pos" value="0,0"/>
 		<style_entry name="width" value="50"/>
 		<style_entry name="height" value="42"/>
@@ -650,14 +952,14 @@
 		<style_entry name="font_size" value="26"/>
 		<style_entry name="text_width" value="240"/>
 		<style_entry name="text_height" value="26"/>
+		<style_entry name="textOutline_color" value="[rwsui_collectedItemList_textOutline_color]" />
 		<style_entry name="text_justify" value="right"/>
 		<style_entry name="X_pos" value="-18,-24"/>
 		<style_entry name="X_width" value="24"/>
 		<style_entry name="X_height" value="24"/>
 	</style>
 
-	<style name="rwsui_collectedItemList_detailedBuff_round">
-		<style_entry name="CIL_panel_style" value="rwsui_collectedItemList, rwsui_collectedItemList_detailedBuff_round"/>
+	<style name="rwsui_collectedItem_detailed_round">
 		<style_entry name="pos" value="0,0"/>
 		<style_entry name="width" value="42"/>
 		<style_entry name="height" value="42"/>
@@ -675,36 +977,23 @@
 		<style_entry name="font_size" value="26"/>
 		<style_entry name="text_width" value="240"/>
 		<style_entry name="text_height" value="24"/>
+		<style_entry name="textOutline_color" value="[rwsui_collectedItemList_textOutline_color]" />
 		<style_entry name="text_justify" value="right"/>
 		<style_entry name="X_pos" value="-17,-21"/>
 		<style_entry name="X_width" value="22"/>
 		<style_entry name="X_height" value="22"/>
 	</style>
+<!--_Collected_Item_Styles END-->
 
-	<!--Toolbelt Item Stack-->
-	<style name="rwsui_toolbelt_itemStack">
-		<style_entry name="select_color" value="[rwsui_toolbelt_select_color]"/>
-		<style_entry name="press_color" value="[limeGreen]"/>
-		<style_entry name="final_pressed_color" value="[lightGrey]"/>
-		<style_entry name="background_color" value="[rwsui_toolbelt_innerborder_color]"/>
-		<style_entry name="highlight_color" value="[hoverColor]"/>
-		<style_entry name="holding_color" value="[rwsui_toolbelt_holding_color]"/>
-		<style_entry name="width" value="75"/>
-		<style_entry name="height" value="75"/>
-		<style_entry name="hover_icon_grow" value="1.5"/>
-		<style_entry name="on_press" value="true"/>
-		<style_entry name="sound_volume" value="0.75"/>
-		<style_entry name="pickup_sound" value="[pickup_click]"/>
-		<style_entry name="place_sound" value="[place_click]"/>
-	</style>
-
-	<style name="rwsui_buffPanel">
+<!--_Buff_Panel START-->
+	<style name="rwsui_buff_panel">
 		<style_entry name="border_depth" value="2"/>
 		<style_entry name="border_sprite" value="[default_sprite]"/>
 		<style_entry name="border_color" value="[rwsui_buffpanel_border_color]"/>
 		<style_entry name="background_depth" value="1"/>
 		<style_entry name="background_sprite" value="[default_sprite]"/>
 		<style_entry name="background_color" value="[rwsui_buffpanel_background_color]"/>
+		<style_entry name="background_pos" value="0,0"/>
 		<style_entry name="fillcenter" value="false"/>
 		<style_entry name="icon_color" value="[rwsui_buffpanel_icon_color]"/>
 		<style_entry name="tooltip" value="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]"/>
@@ -715,50 +1004,12 @@
 		<style_entry name="textOutline_color" value="[rwsui_buffpanel_textOutline_color]"/>
 		<style_entry name="textOutline_size" value="[rwsui_buffpanel_textOutline_size]"/>
 	</style>
+<!--_Buff_Panel END-->
 
-	<style name="rwsui_vanillaBuff_horizontal">
-		<style_entry name="pos" value="0,0"/>
-		<style_entry name="width" value="168"/>
-		<style_entry name="height" value="46"/>
-		<style_entry name="icon_size" value="35,35"/>
-		<style_entry name="icon_pos" value="-72,15"/>
-		<style_entry name="text_pos" value="-42,-2"/>
-		<style_entry name="text_width" value="118"/>
-		<style_entry name="font_size" value="28"/>
-		<style_entry name="text_height" value="26"/>
-	</style>
-
-	<style name="rwsui_vanillaBuff_vertical">
-		<style_entry name="pos" value="0,0"/>
-		<style_entry name="width" value="203"/>
-		<style_entry name="height" value="46"/>
-		<style_entry name="icon_size" value="35,35"/>
-		<style_entry name="icon_pos" value="-89,16"/>
-		<style_entry name="text_pos" value="-75,-2"/>
-		<style_entry name="text_width" value="153"/>
-		<style_entry name="font_size" value="24"/>
-		<style_entry name="text_height" value="22"/>
-	</style>
-
-	<style name="rwsui_vanillaBuff_round">
-		<style_entry name="pos" value="0,0"/>
-		<style_entry name="width" value="225"/>
-		<style_entry name="height" value="40"/>
-		<style_entry name="icon_size" value="24,24"/>
-		<style_entry name="icon_pos" value="-95,11"/>
-		<style_entry name="text_pos" value="-86,-2"/>
-		<style_entry name="text_width" value="175"/>
-		<style_entry name="font_size" value="28"/>
-		<style_entry name="text_height" value="26"/>
-	</style>
-
-	<style name="rwsui_simpleBuff_horizontal">
-		<style_entry name="pos" value="0,0"/>
-		<style_entry name="buff_style" value="rwsui_buffPanel, rwsui_simpleBuff_horizontal"/>
-		<style_entry name="panel_offset" value="2"/>
+<!--_Buff_Styles START-->
+	<style name="rwsui_simple_buff_horizontal">
 		<style_entry name="width" value="55"/>
 		<style_entry name="height" value="46"/>
-		<style_entry name="background_pos" value="0,0"/>
 		<style_entry name="background_width" value="55"/>
 		<style_entry name="background_height" value="46"/>
 		<style_entry name="icon_size" value="24,24"/>
@@ -769,13 +1020,22 @@
 		<style_entry name="text_height" value="14"/>
 	</style>
 
-	<style name="rwsui_simpleBuff_vertical">
-		<style_entry name="pos" value="0,0"/>
-		<style_entry name="buff_style" value="rwsui_buffPanel, rwsui_simpleBuff_vertical"/>
-		<style_entry name="panel_offset" value="1"/>
+	<style name="rwsui_simple_buff_mini_horizontal">
+		<style_entry name="width" value="150"/>
+		<style_entry name="height" value="18"/>
+		<style_entry name="background_width" value="150"/>
+		<style_entry name="background_height" value="18"/>
+		<style_entry name="icon_size" value="14,14"/>
+		<style_entry name="icon_pos" value="10,-2"/>
+		<style_entry name="text_pos" value="10,-2"/>
+		<style_entry name="text_width" value="125"/>
+		<style_entry name="font_size" value="14"/>
+		<style_entry name="text_height" value="12"/>
+	</style>
+
+	<style name="rwsui_simple_buff_vertical">
 		<style_entry name="width" value="50"/>
 		<style_entry name="height" value="62"/>
-		<style_entry name="background_pos" value="0,0"/>
 		<style_entry name="background_width" value="50"/>
 		<style_entry name="background_height" value="62"/>
 		<style_entry name="icon_size" value="25,25"/>
@@ -786,10 +1046,7 @@
 		<style_entry name="text_height" value="14"/>
 	</style>
 
-	<style name="rwsui_simpleBuff_round">
-		<style_entry name="pos" value="0,0"/>
-		<style_entry name="buff_style" value="rwsui_buffPanel, rwsui_simpleBuff_round"/>
-		<style_entry name="panel_offset" value="0"/>
+	<style name="rwsui_simple_buff_round">
 		<style_entry name="width" value="60"/>
 		<style_entry name="height" value="60"/>
 		<style_entry name="border_depth" value="1"/>
@@ -808,13 +1065,9 @@
 		<style_entry name="text_height" value="12"/>
 	</style>
 
-	<style name="rwsui_detailedBuff_horizontal">
-		<style_entry name="pos" value="0,0"/>
-		<style_entry name="buff_style" value="rwsui_buffPanel, rwsui_detailedBuff_horizontal"/>
-		<style_entry name="panel_offset" value="2"/>
+	<style name="rwsui_detailed_buff_horizontal">
 		<style_entry name="width" value="46"/>
 		<style_entry name="height" value="46"/>
-		<style_entry name="background_pos" value="0,0"/>
 		<style_entry name="background_width" value="46"/>
 		<style_entry name="background_height" value="46"/>
 		<style_entry name="icon_size" value="26,26"/>
@@ -824,18 +1077,33 @@
 		<style_entry name="text_width" value="240"/>
 		<style_entry name="font_size" value="24"/>
 		<style_entry name="text_height" value="22"/>
+		<style_entry name="textOutline_color" value="[rwsui_buffpanel_textOutline_color]" />
 		<style_entry name="text_justify" value="left"/>
 		<style_entry name="tooltip" value=""/>
 		<style_entry name="on_hover" value="false"/>
 	</style>
 
-	<style name="rwsui_detailedBuff_vertical">
-		<style_entry name="pos" value="0,0"/>
-		<style_entry name="buff_style" value="rwsui_buffPanel, rwsui_detailedBuff_vertical"/>
-		<style_entry name="panel_offset" value="2"/>
+	<style name="rwsui_detailed_buff_mini_horizontal">
+		<style_entry name="width" value="18"/>
+		<style_entry name="height" value="18"/>
+		<style_entry name="background_width" value="18"/>
+		<style_entry name="background_height" value="18"/>
+		<style_entry name="icon_size" value="14,14"/>
+		<style_entry name="icon_pos" value="2,-2"/>
+		<style_entry name="text" value="{buffname|once}  [DECEA3]{buffdisplayinfo}[-]"/>
+		<style_entry name="text_pos" value="21,-2"/>
+		<style_entry name="text_width" value="240"/>
+		<style_entry name="font_size" value="16"/>
+		<style_entry name="text_height" value="14"/>
+		<style_entry name="textOutline_color" value="[rwsui_buffpanel_textOutline_color]" />
+		<style_entry name="text_justify" value="left"/>
+		<style_entry name="tooltip" value=""/>
+		<style_entry name="on_hover" value="false"/>
+	</style>
+
+	<style name="rwsui_detailed_buff_vertical">
 		<style_entry name="width" value="50"/>
 		<style_entry name="height" value="42"/>
-		<style_entry name="background_pos" value="0,0"/>
 		<style_entry name="background_width" value="50"/>
 		<style_entry name="background_height" value="42"/>
 		<style_entry name="icon_size" value="26,26"/>
@@ -845,15 +1113,13 @@
 		<style_entry name="text_width" value="240"/>
 		<style_entry name="font_size" value="24"/>
 		<style_entry name="text_height" value="22"/>
+		<style_entry name="textOutline_color" value="[rwsui_buffpanel_textOutline_color]" />
 		<style_entry name="text_justify" value="left"/>
 		<style_entry name="tooltip" value=""/>
 		<style_entry name="on_hover" value="false"/>
 	</style>
 
-	<style name="rwsui_detailedBuff_round">
-		<style_entry name="pos" value="0,0"/>
-		<style_entry name="buff_style" value="rwsui_buffPanel, rwsui_detailedBuff_round"/>
-		<style_entry name="panel_offset" value="0"/>
+	<style name="rwsui_detailed_buff_round">
 		<style_entry name="width" value="38"/>
 		<style_entry name="height" value="38"/>
 		<style_entry name="border_depth" value="1"/>
@@ -871,10 +1137,32 @@
 		<style_entry name="text_width" value="240"/>
 		<style_entry name="font_size" value="22"/>
 		<style_entry name="text_height" value="20"/>
+		<style_entry name="textOutline_color" value="[rwsui_buffpanel_textOutline_color]" />
 		<style_entry name="text_justify" value="left"/>
 		<style_entry name="tooltip" value=""/>
 		<style_entry name="on_hover" value="false"/>
 	</style>
+
+	<style name="rwsui_vanilla_buff_vertical">
+		<style_entry name="width" value="203"/>
+		<style_entry name="icon_pos" value="-89,16"/>
+		<style_entry name="text_pos" value="-75,-2"/>
+		<style_entry name="text_width" value="153"/>
+		<style_entry name="font_size" value="24"/>
+		<style_entry name="text_height" value="22"/>
+	</style>
+
+	<style name="rwsui_vanilla_buff_round">
+		<style_entry name="width" value="225"/>
+		<style_entry name="height" value="40"/>
+		<style_entry name="icon_size" value="24,24"/>
+		<style_entry name="icon_pos" value="-95,11"/>
+		<style_entry name="text_pos" value="-86,-2"/>
+		<style_entry name="text_width" value="175"/>
+		<style_entry name="font_size" value="28"/>
+		<style_entry name="text_height" value="26"/>
+	</style>
+<!--_Buff_Styles END-->
 
 </append>
 

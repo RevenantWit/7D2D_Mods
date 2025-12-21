@@ -1,0 +1,9 @@
+<configs>
+
+<set xpath="//rwsui_toolbeltXL_keys/@cols">12</set>
+
+<remove xpath="//rwsui_toolbeltXL_keys/grid/label[@text_key='rwsuiToolBeltXL_TextLabel13' or @text_key='rwsuiToolBeltXL_TextLabel14' or @text_key='rwsuiToolBeltXL_TextLabel15']"/>
+
+<set xpath="//rwsui_toolbelt_keys_bg/@cols">12</set>
+
+</configs>

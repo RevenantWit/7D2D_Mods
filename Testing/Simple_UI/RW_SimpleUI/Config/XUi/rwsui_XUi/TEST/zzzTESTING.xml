@@ -1,0 +1,27 @@
+<configs>
+
+<!--_CONTROLS_TESTING START-->
+<include filename="rwsui_XUi/TEST/0_Core/controls.xml" />
+<!--_CONTROLS_TESTING END-->
+
+
+<!--_STYLES_TESTING START-->
+<include filename="rwsui_XUi/TEST/0_Core/styles.xml" />
+<!--_STYLES_TESTING END-->
+
+
+	<!--_WINDOWS_TESTING START-->
+	<if cond="mod_loaded('RWSUI_TESTING') == 'false'">
+		<include filename="rwsui_XUi/TEST/HUD/LeftHUD.xml" />
+		<include filename="rwsui_XUi/TEST/HUD/BuffPanel.xml" />
+		<include filename="rwsui_XUi/TEST/HUD/RightHUD.xml" />
+		<include filename="rwsui_XUi/TEST/HUD/VehicleStatBars.xml" />
+		<include filename="rwsui_XUi/TEST/HUD/ToolBelt.xml" />
+		<include filename="rwsui_XUi/TEST/HUD/ToolBelt_Keys.xml" />
+	</if>
+	<!--_WINDOWS_TESTING END-->
+
+
+
+
+</configs>

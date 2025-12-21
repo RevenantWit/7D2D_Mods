@@ -25,14 +25,14 @@ File_Path="{rwsui_XUi/HUD/0_Common/ToolBelt_Keys/Round_Background/ToolBelt_Keys.
 
 
 <!--RWSUI_HUD_Settings Versions-->
-## Vanilla Buff Panel ##
-Version="{6.0}"
-
 ## Simple Buff Panel ##
-Version="{6.1}"
+Version="{3.1.0}"
+
+## Vanilla Buff Panel ##
+Version="{3.1.1}"
 
 ## Detailed Buff Panel ##
-Version="{6.2}"
+Version="{3.1.2}"
 
 
 <!--Quartz Settings Names-->

@@ -5,19 +5,19 @@
 	<window name="RWSUI_LeftHUD" anchor="LeftBottom" pos="4,148" >
 		<rect name="HUDLeftStatBars" side="right">
 			<!--Stealth Bar-->
-			<rwsui_hud_statBar_stealth style="rwsui_statbar, rwsui_statbar_stealth" pos="0,49" />
+			<rwsui_simple_statbar_stealth style="rwsui_stealthbar" pos="0,49" />
 
 			<!--Stamina Bar-->
-			<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_stamina" />
+			<rwsui_simple_statbar style="rwsui_staminabar" />
 
 			<!--Health Bar-->
-			<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_health" pos="0,-49" />
+			<rwsui_simple_statbar style="rwsui_healthbar" pos="0,-49" />
 
 			<!--Food Bar-->
-			<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_food, rwsui_statbar_half_horizontal, rwsui_statcurrentwithmax_foodwater" pos="0,-98" />
+			<rwsui_simple_statbar style="rwsui_foodbar, rwsui_half_horizontal_statbar" pos="0,-98" />
 
 			<!--Water Bar-->
-			<rwsui_hud_statBar style="rwsui_statbar, rwsui_statbar_water, rwsui_statbar_half_horizontal, rwsui_statcurrentwithmax_foodwater" pos="86,-98" />
+			<rwsui_simple_statbar style="rwsui_waterbar, rwsui_half_horizontal_statbar" pos="86,-98" />
 		</rect>
 	</window>
 

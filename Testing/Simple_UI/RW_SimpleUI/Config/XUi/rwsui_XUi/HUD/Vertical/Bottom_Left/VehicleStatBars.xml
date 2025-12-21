@@ -4,9 +4,9 @@
 
 	<rect name="VehicleStatBars" pos="-52,152" side="right">
 
-		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_vehicle_fuel" pos="-51,0" />
+		<rwsui_simple_statbar style="rwsui_vertical_statbar, rwsui_vehicle_fuelbar" pos="-51,0" />
 
-		<rwsui_hud_statBar style="rwsui_statbar_vertical, rwsui_statbar_vehicle_health" />
+		<rwsui_simple_statbar style="rwsui_vertical_statbar, rwsui_vehicle_healthbar" />
 
 	</rect>
 

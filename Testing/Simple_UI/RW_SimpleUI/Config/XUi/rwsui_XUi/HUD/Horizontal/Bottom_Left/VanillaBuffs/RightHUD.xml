@@ -4,9 +4,17 @@
 
 	<window name="RWSUI_RightHUD" anchor="RightBottom">
 
-		<rwsui_hud_collectedItemList_vanilla pos="-84,26" />
+		<rect controller="HUDStatBar" stat_type="VehicleHealth" pos="{# statvisible ? '0,0' : '0,0'}" >
 
-		<rwsui_hud_activeItemGrid_vanilla pos="-188,49" />
+			<rect controller="HUDStatBar" stat_type="ActiveItem" pos="{# statvisible ? '0,0' : '0,0'}" >
+
+				<rwsui_collected_item_list_vanilla pos="-84,26" />
+
+			</rect>
+
+		</rect>
+
+		<rwsui_active_item_grid_vanilla pos="-188,49" />
 
 	</window>
 

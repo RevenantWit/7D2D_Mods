@@ -1,0 +1,25 @@
+<configs>
+
+<!--Drone_Storage_Size-->
+<conditional>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'DroneStorageSize.roboticDrone') == '10_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">8,1</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'DroneStorageSize.roboticDrone') == '20_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">8,2</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'DroneStorageSize.roboticDrone') == '30_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">8,3</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'DroneStorageSize.roboticDrone') == '40_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">8,4</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'DroneStorageSize.roboticDrone') == '50_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">8,5</set>
+	</if>
+	<if cond="modsetting('RW_SimpleUI', 'world', 'DroneStorageSize.roboticDrone') == '60_Slots'">
+		<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">8,6</set>
+	</if>
+</conditional>
+
+</configs>

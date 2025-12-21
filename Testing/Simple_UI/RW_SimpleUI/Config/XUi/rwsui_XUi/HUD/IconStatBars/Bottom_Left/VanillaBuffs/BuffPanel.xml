@@ -1,0 +1,12 @@
+<configs>
+
+<append xpath="//window[@name='RWSUI_LeftHUD']">
+
+	<!--Buff Panel-->
+	<rect name="buffs" controller="HUDStatBar" stat_type="Stealth" pos="{# statvisible ? '0,0' : '0,0'}" >
+		<rwsui_vanilla_buffpanel pos="95,30" />
+	</rect>
+
+</append>
+
+</configs>
