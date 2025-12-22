@@ -1,0 +1,27 @@
+<configs>
+
+<append xpath="//window[@name='RWSUI_RightHUD']">
+
+	<rect name="VehicleStatBars" pos="-125,63" side="right">
+		<conditional evaluator="client">
+			<if cond="mod_loaded('RW_SimpleUI')">
+				<!--Vehicle Fuel Bar-->
+				<rwsui_custom_statbar style="rwsui_vehicle_fuelbar, rwsui_custom_iconstatbar_vehicle_fuel" pos="0,0" />
+
+				<!--Vehicle Health Bar-->
+				<rwsui_custom_statbar style="rwsui_vehicle_healthbar, rwsui_custom_iconstatbar_vehicle_health" pos="70,0" />
+			</if>
+			<else>
+				<!--Vehicle Fuel Bar-->
+				<rwsui_custom_statbar style="rwsui_vehicle_fuelbar, rwsui_simple_iconstatbar_vehicle_fuel" pos="0,0" />
+
+				<!--Vehicle Health Bar-->
+				<rwsui_custom_statbar style="rwsui_vehicle_healthbar, rwsui_simple_iconstatbar_vehicle_health" pos="70,0" />
+			</else>
+		</conditional>
+
+	</rect>
+
+</append>
+
+</configs>

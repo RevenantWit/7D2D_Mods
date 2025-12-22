@@ -1,0 +1,13 @@
+<configs>
+
+<set xpath="//rwsui_vanilla_statbar//filledsprite[@name='BarContent']/@fill">0</set>
+
+<set xpath="//rwsui_vanilla_statbar_stealth//filledsprite[@name='BarContent']/@fill">0</set>
+
+<set xpath="//rwsui_custom_statbar//sprite[@name='BarContent']/@fill">0</set>
+
+<set xpath="//rwsui_custom_statbar_stealth//sprite[@name='BarContent']/@fill">0</set>
+
+<set xpath="//rwsui_custom_statbar_stealthx2_fillOnly//filledsprite[@name='BarContent']/@fill">0</set>
+
+</configs>

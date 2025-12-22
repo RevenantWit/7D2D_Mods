@@ -5,28 +5,22 @@
 	<if cond="mod_loaded('RWSUI_DroneStorageSize')">
 		<conditional>
 			<if cond="mod_version('RWSUI_DroneStorageSize') == version(1,0)">
-				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">10,1</set>
+				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">8,1</set>
 			</if>
 			<if cond="mod_version('RWSUI_DroneStorageSize') == version(2,0)">
-				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">10,2</set>
+				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">8,2</set>
 			</if>
 			<if cond="mod_version('RWSUI_DroneStorageSize') == version(3,0)">
-				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">10,3</set>
+				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">8,3</set>
 			</if>
 			<if cond="mod_version('RWSUI_DroneStorageSize') == version(4,0)">
-				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">10,4</set>
+				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">8,4</set>
 			</if>
 			<if cond="mod_version('RWSUI_DroneStorageSize') == version(5,0)">
-				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">10,5</set>
+				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">8,5</set>
 			</if>
 			<if cond="mod_version('RWSUI_DroneStorageSize') == version(6,0)">
-				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">10,6</set>
-			</if>
-			<if cond="mod_version('RWSUI_DroneStorageSize') == version(7,0)">
-				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">10,7</set>
-			</if>
-			<if cond="mod_version('RWSUI_DroneStorageSize') == version(8,0)">
-				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">10,8</set>
+				<set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">8,6</set>
 			</if>
 		</conditional>
 	</if>

@@ -1,0 +1,10 @@
+<configs>
+
+<!--set xpath="//global/style_entry[@name='rwsui_statcurrent_foodwater_text']/@value">{# statcurrent &lt; '99' ? statcurrent : '100'}%</set-->
+
+<append xpath="//style[@name='rwsui_statbar_food' or @name='rwsui_statbar_water']">
+	<style_entry name="text" value="{# statcurrent &lt; '99' ? statcurrent : '100'}/100%"/>
+	<style_entry name="fill" value="1"/>
+</append>
+
+</configs>

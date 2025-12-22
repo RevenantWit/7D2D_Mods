@@ -8,13 +8,13 @@
 
 			<rect controller="HUDStatBar" stat_type="ActiveItem" pos="{# statvisible ? '0,34' : '0,0'}" >
 
-				<rwsui_hud_collectedItemList style="rwsui_collectedItemList_simpleBuff_round" pos="-80,80" />
+				<rwsui_collected_item_list collected_item_style="rwsui_collectedItem_simple_round" pos="-80,80" />
 
 			</rect>
 
 		</rect>
 
-		<rwsui_hud_activeItemGrid style="rwsui_activeItem_simpleBuff_round" pos="-80,80" />
+		<rwsui_active_item_grid width="80" height="80" active_item_style="rwsui_activeItem_simple_round" pos="-80,80" />
 
 	</window>
 

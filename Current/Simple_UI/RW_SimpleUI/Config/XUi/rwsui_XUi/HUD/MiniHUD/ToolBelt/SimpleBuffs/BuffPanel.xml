@@ -4,8 +4,8 @@
 
 	<rect name="hud" controller="HUDStatBar" stat_type="Health" visible="{statvisible}" >
 
-		<!--Simple Buff Panel-->
-		<rwsui_hud_simple_buffpanel3x10 style="rwsui_simpleBuff_horizontal" pos="-2,-99" />
+		<!--Buff Panel-->
+		<rwsui_detailed_buff_panel width="150" height="18" panel_offset="1" buff_style="rwsui_simple_buff_mini_horizontal" pos="-2,-128" />
 
 	</rect>
 

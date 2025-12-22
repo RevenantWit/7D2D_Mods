@@ -4,23 +4,23 @@
 
 	<window name="RWSUI_LeftHUD" anchor="LeftBottom" pos="5,146" >
 		<rect name="HUDLeftStatBars" side="right">
-			<!--Radial Stealth Bar-->
-			<rwsui_hud_statBarR_stealth style="rwsui_statbar_radial, rwsui_statbar_stealth" pos="154,11" />
+			<!--Stealth Bar-->
+			<rwsui_custom_statbar_stealth style="rwsui_stealthbar, rwsui_radial_statbar" pos="154,11" />
 
-			<!--Radial Stamina Bar-->
-			<rwsui_hud_statBarR style="rwsui_statbar_radial, rwsui_statbar_stamina, rwsui_statcurrent_stamina" pos="-1,11" />
+			<!--Stamina Bar-->
+			<rwsui_custom_statbar style="rwsui_staminabar, rwsui_radial_statbar" pos="-1,11" text="[rwsui_statcurrent_stamina_text]" />
 
-			<!--Radial Health Bar-->
-			<rwsui_hud_statBarR style="rwsui_statbar_radial, rwsui_statbar_health" pos="77,11" />
+			<!--Health Bar-->
+			<rwsui_custom_statbar style="rwsui_healthbar, rwsui_radial_statbar" pos="77,11" />
 
-			<!--Radial Food Bar-->
-			<rwsui_hud_statBarR style="rwsui_statbar_radial, rwsui_statbar_food, rwsui_statcurrent_foodwater" pos="-1,-68" />
+			<!--Food Bar-->
+			<rwsui_custom_statbar style="rwsui_foodbar, rwsui_radial_statbar" pos="-1,-68" text="[rwsui_statcurrent_foodwater_text]" />
 
-			<!--Radial Water Bar-->
-			<rwsui_hud_statBarR style="rwsui_statbar_radial, rwsui_statbar_water, rwsui_statcurrent_foodwater" pos="77,-68" />
+			<!--Water Bar-->
+			<rwsui_custom_statbar style="rwsui_waterbar, rwsui_radial_statbar" pos="77,-68" text="[rwsui_statcurrent_foodwater_text]" />
 
-			<!--Radial XP Bar-->
-			<rwsui_hud_xpBarR style="rwsui_statbar_radial, rwsui_statbar_xp, rwsui_xpbar_shorten_text" pos="154,-68" />
+			<!--XP Bar-->
+			<rwsui_custom_statbar_xp style="rwsui_xpbar, rwsui_radial_statbar" pos="154,-68" text="[rwsui_xpbar_level_only_text]" />
 		</rect>
 	</window>
 

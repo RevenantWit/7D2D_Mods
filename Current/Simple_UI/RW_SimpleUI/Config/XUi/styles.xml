@@ -2,124 +2,110 @@
 <!--CONTENTS START-->
 <!---->
 <!--_Core_Styles-->
-<!--_StatBar_Text_Remover-->
-<!--_StatBar_Icons_Remover-->
 <!---->
-<!--_Quartz_Only_Settings-->
-<!--_Food_Water_Actual_Values-->
+<!--_StatBar_Text_Setting_Addon-->
+<!--_StatBar_Icons_Setting_Addon-->
+<!---->
+<!--_12_Slot_ToolBelt_Patch-->
+<!--_15_Slot_ToolBelt_Patch-->
+<!--_Wookies_Cruise_Control_Patch-->
+<!---->
+<!--_Quartz_Food_Water_Controller_Patch-->
 <!---->
 <!--CONTENTS END-->
 
-
 <!--_Core_Styles Start-->
 <include filename="rwsui_XUi/0_Core/styles.xml"/>
-<!--_Core_Styles END-->
-
-<!--Patch if running game v2.5-->
+<!--Patch if running less than game v2.5-->
 <conditional>
-	<if cond="game_version() &gt;= version(1,2,5)">
-		<include filename="rwsui_XUi/Patches/Game_v2_5/styles.xml" />
+	<if cond="game_version() &lt; version(1,2,5)">
+		<include filename="rwsui_XUi/Patches/SimpleUI/Game_v2_5/0_Core/styles.xml" />
 	</if>
 </conditional>
+<!--_Core_Styles END-->
 
-<!--_StatBar_Text_Remover START-->
+<!--_StatBar_Text_Setting_Addon START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_StatBarsTextRemover')">
-		<include filename="rwsui_XUi/AddOns/StatBarTextRemover/styles.xml" />
+		<set xpath="//global/style_entry[@name='rwsui_statbar_text_hidden']/@value">true</set>
 	</if>
 	<if cond="mod_loaded('Gears')">
 		<conditional>
 			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.StatBars.StatBarText') == 'Off'">
-				<include filename="rwsui_XUi/AddOns/StatBarTextRemover/styles.xml" />
+				<set xpath="//global/style_entry[@name='rwsui_statbar_text_hidden']/@value">true</set>
 			</if>
 		</conditional>
 	</if>
 </conditional>
-<!--_StatBar_Text_Remover END-->
+<!--_StatBar_Text_Setting_Addon END-->
 
-<!--_StatBar_Icon_Remover START-->
+<!--_StatBar_Icon_Setting_Addon START-->
 <conditional>
 	<if cond="mod_loaded('RWSUI_StatBarsIconRemover')">
-		<include filename="rwsui_XUi/AddOns/StatBarIconRemover/styles.xml" />
+		<set xpath="//global/style_entry[@name='rwsui_statbar_icon_hidden']/@value">true</set>
 	</if>
 	<if cond="mod_loaded('Gears')">
 		<conditional>
 			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.StatBars.StatBarIcons') == 'Off'">
-				<include filename="rwsui_XUi/AddOns/StatBarIconRemover/styles.xml" />
+				<set xpath="//global/style_entry[@name='rwsui_statbar_icon_hidden']/@value">true</set> />
 			</if>
 		</conditional>
 	</if>
 </conditional>
-<!--_StatBar_Icon_Remover END-->
+<!--_StatBar_Icon_Setting_Addon END-->
 
-<!--_12_Slot_ToolBelt START-->
+<!--_12_Slot_ToolBelt_Patch START-->
 <conditional>
-	<if cond="mod_loaded('WMM12SlotToolbelt') or mod_loaded('TheMeanOnes12SlotToolbelt') or mod_loaded('Dewtas12SlotToolbelt')">
+	<if cond="mod_loaded('WMM12SlotToolbelt') or mod_loaded('TheMeanOnes12SlotToolbelt') or mod_loaded('Dewtas12SlotToolbelt') and mod_loaded('RWSUI_ToolBelt_Blocker') == 'false'">
 		<conditional>
-			<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
-				<!-- If Toolbelt Blocker is installed do nothing -->
-			</if>
 			<if cond="mod_loaded('Gears')">
 				<conditional>
 					<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
-						<set xpath="//style[contains(@name, 'detailedBuff_horizontal') or contains(@name, 'detailedBuff_vertical') or contains(@name, 'detailedBuff_round')]/style_entry[@name='font_size']/@value">24</set>
-						<set xpath="//style[contains(@name, 'detailedBuff_horizontal') or contains(@name, 'detailedBuff_vertical') or contains(@name, 'detailedBuff_round')]/style_entry[@name='text_height']/@value">22</set>
-						<set xpath="//style[@name='rwsui_detailedBuff_horizontal' or @name='rwsui_detailedBuff_vertical' or @name='rwsui_detailedBuff_round']/style_entry[@name='font_size']/@value">22</set>
-						<set xpath="//style[@name='rwsui_detailedBuff_horizontal' or @name='rwsui_detailedBuff_vertical' or @name='rwsui_detailedBuff_round']/style_entry[@name='text_height']/@value">20</set>
+						<include filename="rwsui_XUi/Patches/12SlotToolBelt/styles.xml" />
 					</if>
 				</conditional>
 			</if>
 			<else>
-				<set xpath="//style[contains(@name, 'detailedBuff_horizontal') or contains(@name, 'detailedBuff_vertical') or contains(@name, 'detailedBuff_round')]/style_entry[@name='font_size']/@value">24</set>
-				<set xpath="//style[contains(@name, 'detailedBuff_horizontal') or contains(@name, 'detailedBuff_vertical') or contains(@name, 'detailedBuff_round')]/style_entry[@name='text_height']/@value">22</set>
-				<set xpath="//style[@name='rwsui_detailedBuff_horizontal' or @name='rwsui_detailedBuff_vertical' or @name='rwsui_detailedBuff_round']/style_entry[@name='font_size']/@value">22</set>
-				<set xpath="//style[@name='rwsui_detailedBuff_horizontal' or @name='rwsui_detailedBuff_vertical' or @name='rwsui_detailedBuff_round']/style_entry[@name='text_height']/@value">20</set>
+				<include filename="rwsui_XUi/Patches/12SlotToolBelt/styles.xml" />
 			</else>
 		</conditional>
 	</if>
 </conditional>
-<!--_12_Slot_ToolBelt END-->
+<!--_12_Slot_ToolBelt_Patch END-->
 
-<!--_15_Slot_ToolBelt START-->
+<!--_15_Slot_ToolBelt_Patch START-->
 <conditional>
-	<if cond="mod_loaded('15SlotToolbelt') or mod_loaded('TheMeanOnes15SlotToolbelt') or mod_loaded('Dewtas15SlotToolbelt')">
+	<if cond="mod_loaded('15SlotToolbelt') or mod_loaded('TheMeanOnes15SlotToolbelt') or mod_loaded('Dewtas15SlotToolbelt') and mod_loaded('RWSUI_ToolBelt_Blocker') == 'false'">
 		<conditional>
-			<if cond="mod_loaded('RWSUI_ToolBelt_Blocker')">
-				<!-- If Toolbelt Blocker is installed do nothing -->
-			</if>
 			<if cond="mod_loaded('Gears')">
 				<conditional>
 					<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
-						<set xpath="//style[contains(@name, 'detailedBuff_horizontal') or contains(@name, 'detailedBuff_vertical') or contains(@name, 'detailedBuff_round')]/style_entry[@name='font_size']/@value">22</set>
-						<set xpath="//style[contains(@name, 'detailedBuff_horizontal') or contains(@name, 'detailedBuff_vertical') or contains(@name, 'detailedBuff_round')]/style_entry[@name='text_height']/@value">20</set>
-						<set xpath="//style[@name='rwsui_detailedBuff_horizontal' or @name='rwsui_detailedBuff_vertical' or @name='rwsui_detailedBuff_round']/style_entry[@name='font_size']/@value">20</set>
-						<set xpath="//style[@name='rwsui_detailedBuff_horizontal' or @name='rwsui_detailedBuff_vertical' or @name='rwsui_detailedBuff_round']/style_entry[@name='text_height']/@value">18</set>
+						<include filename="rwsui_XUi/Patches/15SlotToolBelt/styles.xml" />
 					</if>
 				</conditional>
 			</if>
 			<else>
-				<set xpath="//style[contains(@name, 'detailedBuff_horizontal') or contains(@name, 'detailedBuff_vertical') or contains(@name, 'detailedBuff_round')]/style_entry[@name='font_size']/@value">22</set>
-				<set xpath="//style[contains(@name, 'detailedBuff_horizontal') or contains(@name, 'detailedBuff_vertical') or contains(@name, 'detailedBuff_round')]/style_entry[@name='text_height']/@value">20</set>
-				<set xpath="//style[@name='rwsui_detailedBuff_horizontal' or @name='rwsui_detailedBuff_vertical' or @name='rwsui_detailedBuff_round']/style_entry[@name='font_size']/@value">20</set>
-				<set xpath="//style[@name='rwsui_detailedBuff_horizontal' or @name='rwsui_detailedBuff_vertical' or @name='rwsui_detailedBuff_round']/style_entry[@name='text_height']/@value">18</set>
+				<include filename="rwsui_XUi/Patches/15SlotToolBelt/styles.xml" />
 			</else>
 		</conditional>
 	</if>
 </conditional>
-<!--_15_Slot_ToolBelt END-->
+<!--_15_Slot_ToolBelt_Patch END-->
 
-<!--_Quartz_Only_Settings START-->
-<!--_Food_Water_Actual_Values START-->
+<!--_Wookies_Cruise_Control_Patch START-->
 <conditional>
-	<if cond="mod_loaded('Quartz') and mod_loaded('Gears')">
-		<conditional>
-			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.StatBars.FoodWaterTextAV') == 'On'">
-				<include filename="rwsui_XUi/QuartzOnly/FoodWaterTextAV/styles.xml" />
-			</if>
-		</conditional>
+	<if cond="mod_loaded('WMMVehicleCruiseControl')">
+		<include filename="rwsui_XUi/Patches/WookiesVCC/styles.xml" />
 	</if>
 </conditional>
-<!--_Food_Water_Actual_Values END-->
-<!--_Quartz_Only_Settings END-->
+<!--_Wookies_Cruise_Control_Patch END-->
+
+<!--_Quartz_Food_Water_Controller_Patch START-->
+<conditional>
+	<if cond="mod_loaded('Quartz')">
+		<include filename="rwsui_XUi/Patches/Quartz/Controllers/Food_Water/styles.xml" />
+	</if>
+</conditional>
+<!--_Quartz_Food_Water_Controller_Patch END-->
 
 </configs>

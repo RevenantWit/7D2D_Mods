@@ -4,7 +4,7 @@
     <Tab name="HUD" displayKey="rwsuiHUD_Tab" tooltipKey="rwsuiHUD_Tab_Desc">
       <Category name="StatBars" displayKey="rwsuiStatBar_Category" tooltipKey="">
         <Selector name="StatBarType" displayKey="rwsuiStatBar_Option" tooltipKey="rwsuiStatBar_Option_Desc" defaultValue="Horizontal">
-          <Property type="arrayValues" allowedValues="Horizontal,Vertical,Round,MiniHUD" />
+          <Property type="arrayValues" allowedValues="Horizontal,Vertical,Round,MiniHUD,Icon_StatBars" />
         </Selector>
         <Selector name="StatBarLocation" displayKey="rwsuiStatBarLocation_Option" tooltipKey="rwsuiStatBarLocation_Option_Desc" defaultValue="Bottom_Left">
           <Property type="arrayValues" allowedValues="Bottom_Left,ToolBelt" />
@@ -20,7 +20,6 @@
       <Category name="StatBars" displayKey="rwsuiStatBarsLabel_Category" tooltipKey="">
         <Switch name="StatBarText" displayKey="rwsuiStatBarText_Toggle" tooltipKey="rwsuiStatBarText_Toggle_Desc" defaultValue="On" leftValue="Off" rightValue="On" />
         <Switch name="StatBarIcons" displayKey="rwsuiStatBarIcons_Toggle" tooltipKey="rwsuiStatBarIcons_Toggle_Desc" defaultValue="On" leftValue="Off" rightValue="On" />
-        <Switch name="FoodWaterTextAV" displayKey="rwsuiFoodWaterTextAV_Toggle" tooltipKey="rwsuiFoodWaterTextAV_Toggle_Desc" defaultValue="On" leftValue="Off" rightValue="On" />
       </Category>
       <Category name="ToolBelt" displayKey="rwsuiToolBeltLabel_Category" tooltipKey="">
         <Switch name="ToolBeltKeys" displayKey="rwsuiToolBeltKeys_Toggle" tooltipKey="rwsuiToolBeltKeys_Toggle_Desc" defaultValue="On" leftValue="Off" rightValue="On" />
@@ -31,7 +30,6 @@
       <Category name="SimpleUIBlockers" displayKey="rwsuiSimpleUIBlockers_Category" tooltipKey="">
         <Switch name="HUDBlocker" displayKey="rwsuiHUDBlocker_Toggle" tooltipKey="rwsuiHUDBlocker_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
         <Switch name="ToolBeltBlocker" displayKey="rwsuiToolBeltBlocker_Toggle" tooltipKey="rwsuiToolBeltBlocker_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
-        <Switch name="VanillaTBStatBar" displayKey="rwsuiVTBStatBarBlocker_Toggle" tooltipKey="rwsuiVTBStatBarBlocker_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
       </Category>
       <Category name="PopUps" displayKey="rwsuiPopUp_Category" tooltipKey="">
         <Switch name="LocationPopUps" displayKey="rwsuiLocationPopUp_Toggle" tooltipKey="rwsuiLocationPopUp_Toggle_Desc" defaultValue="On" leftValue="Off" rightValue="On" />
@@ -52,13 +50,10 @@
       <Selector name="BackPackSize" displayKey="rwsuiPlayerBackPackSize_Option" tooltipKey="rwsuiPlayerBackPackSize_Option_Desc" defaultValue="Vanilla">
         <Property type="arrayValues" allowedValues="Vanilla,2_Pages,3_Pages,4_Pages,5_Pages,6_Pages" />
       </Selector>
-      <Selector name="PlayerBackPackSize" displayKey="old_rwsuiPlayerBackPackSize_Option" tooltipKey="old_rwsuiPlayerBackPackSize_Option_Desc" defaultValue="Vanilla">
-        <Property type="arrayValues" allowedValues="Vanilla,60_Slots,120_Slots" />
-      </Selector>
     </Category>
     <Category name="DroneStorageSize" displayKey="rwsuiDroneStorageSize_Category" tooltipKey="">
       <Selector name="roboticDrone" displayKey="rwsuiDroneStorageSize_Option" tooltipKey="rwsuiDroneStorageSize_Option_Desc" defaultValue="Vanilla">
-        <Property type="arrayValues" allowedValues="Vanilla,10_Slots,20_Slots,30_Slots,40_Slots,50_Slots,60_Slots,70_Slots,80_Slots" />
+        <Property type="arrayValues" allowedValues="Vanilla,8_Slots,16_Slots,24_Slots,32_Slots,40_Slots,48_Slots" />
       </Selector>
     </Category>
     <Category name="VehicleStorage" displayKey="rwsuiVehicleStorage_Category" tooltipKey="">
