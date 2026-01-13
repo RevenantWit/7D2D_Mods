@@ -1,0 +1,162 @@
+<config>
+
+<!--This file sets the tags used for zombie groups, messing with these can break this mod, edit at your own risk-->
+
+<!--Special Zombies Group Tag-->
+<csv xpath="//entity_class[
+	contains(@name, 'zombieFatCop') or
+	contains(@name, 'zombieWight') or
+	contains(@name, 'zombieDemolition') or
+	contains(@name, 'zombiePlagueSpitter') or
+	contains(@name, 'zombieRancher') or
+	contains(@name, 'zombieFrostclaw') or
+	contains(@name, 'zombieChuck') or
+	contains(@name, 'zombieMutated')
+]/property[@name='Tags']/@value" delim="," op="add" >rwSpecialZGroup</csv>
+
+<!--Regular Zombies Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'zombie') and
+	not(contains(@value, 'feral')) and
+	not(contains(@value, 'radiated')) and
+	not(contains(@value, 'spider')) and
+	not(contains(@value, 'rwSpecialZGroup')) and
+	not(contains(@value, 'animal')) and
+	not(contains(@value, 'charged')) and
+	not(contains(@value, 'infernal'))
+]/@value" delim="," op="add" >rwRegularZombies</csv>
+
+<!--Feral Regular Zombies Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'zombie') and
+	contains(@value, 'feral') and
+	not(contains(@value, 'radiated')) and
+	not(contains(@value, 'spider')) and
+	not(contains(@value, 'rwSpecialZGroup')) and
+	not(contains(@value, 'animal')) and
+	not(contains(@value, 'charged')) and
+	not(contains(@value, 'infernal'))
+]/@value" delim="," op="add" >rwFeralRegZombies</csv>
+
+<!--Radiated Regular Zombies Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'zombie') and
+	contains(@value, 'radiated') and
+	not(contains(@value, 'spider')) and
+	not(contains(@value, 'rwSpecialZGroup')) and
+	not(contains(@value, 'animal')) and
+	not(contains(@value, 'charged')) and
+	not(contains(@value, 'infernal'))
+]/@value" delim="," op="add" >rwRadRegZombies</csv>
+
+<!--Spider Zombies Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'zombie') and
+	not(contains(@value, 'feral')) and
+	not(contains(@value, 'radiated')) and
+	contains(@value, 'spider') and
+	not(contains(@value, 'rwSpecialZGroup')) and
+	not(contains(@value, 'animal')) and
+	not(contains(@value, 'charged')) and
+	not(contains(@value, 'infernal'))
+]/@value" delim="," op="add" >rwSpiderZombies</csv>
+
+<!--Feral Spider Zombies Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'zombie') and
+	contains(@value, 'feral') and
+	not(contains(@value, 'radiated')) and
+	contains(@value, 'spider') and
+	not(contains(@value, 'rwSpecialZGroup')) and
+	not(contains(@value, 'animal')) and
+	not(contains(@value, 'charged')) and
+	not(contains(@value, 'infernal'))
+]/@value" delim="," op="add" >rwFeralSpiderZombies</csv>
+
+<!--Radiated Spider Zombies Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'zombie') and
+	contains(@value, 'radiated') and
+	contains(@value, 'spider') and
+	not(contains(@value, 'rwSpecialZGroup')) and
+	not(contains(@value, 'animal')) and
+	not(contains(@value, 'charged')) and
+	not(contains(@value, 'infernal'))
+]/@value" delim="," op="add" >rwRadSpiderZombies</csv>
+
+<!--Special Zombies Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'zombie') and
+	not(contains(@value, 'feral')) and
+	not(contains(@value, 'radiated')) and
+	not(contains(@value, 'spider')) and
+	contains(@value, 'rwSpecialZGroup') and
+	not(contains(@value, 'animal')) and
+	not(contains(@value, 'charged')) and
+	not(contains(@value, 'infernal'))
+]/@value" delim="," op="add" >rwSpecialZombies</csv>
+
+<!--Feral Special Zombies Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'zombie') and
+	contains(@value, 'feral') and
+	not(contains(@value, 'radiated')) and
+	not(contains(@value, 'spider')) and
+	contains(@value, 'rwSpecialZGroup') and
+	not(contains(@value, 'animal')) and
+	not(contains(@value, 'charged')) and
+	not(contains(@value, 'infernal'))
+]/@value" delim="," op="add" >rwFeralSpecZombies</csv>
+
+<!--Radiated Special Zombies Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'zombie') and
+	contains(@value, 'radiated') and
+	not(contains(@value, 'spider')) and
+	contains(@value, 'rwSpecialZGroup') and
+	not(contains(@value, 'animal')) and
+	not(contains(@value, 'charged')) and
+	not(contains(@value, 'infernal'))
+]/@value" delim="," op="add" >rwRadSpecZombies</csv>
+
+<!--Zombie Dogs Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'animal') and
+	contains(@value, 'zombie') and
+	contains(@value, 'dog') and
+	not(contains(@value, 'boss'))
+]/@value" delim="," op="add" >rwZombieDogs</csv>
+
+<!--Zombie Bears Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'animal') and
+	contains(@value, 'zombie') and
+	contains(@value, 'bear') and
+	not(contains(@value, 'boss'))
+]/@value" delim="," op="add" >rwZombieBears</csv>
+
+<!--Regular Zombie Vultures Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'animal') and
+	contains(@value, 'zombie') and
+	contains(@value, 'vulture') and
+	not(contains(@value, 'radiated')) and
+	not(contains(@value, 'boss'))
+]/@value" delim="," op="add" >rwRegZombieVultures</csv>
+
+<!--Radiated Zombie Vultures Tag-->
+<csv xpath="//entity_class/property[@name='Tags'][
+	contains(@value, 'animal') and
+	contains(@value, 'zombie') and
+	contains(@value, 'vulture') and
+	contains(@value, 'radiated') and
+	not(contains(@value, 'boss'))
+]/@value" delim="," op="add" >rwRadZombieVultures</csv>
+
+<!--Dire Wolf Tag-->
+<csv xpath="//entity_class[@name='animalDireWolf']/property[@name='Tags']/@value" delim="," op="add" >rwDireWolf</csv>
+
+<!--Boar Boss Grace's Tag-->
+<csv xpath="//entity_class[@name='animalBossGrace']/property[@name='Tags']/@value" delim="," op="add" >rwBoarBossGrace</csv>
+
+</config>

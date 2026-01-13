@@ -1,0 +1,38 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+rwczdmHeadDamage,,,,,Head Damage,,Kopfverletzungen,Daño en la cabeza,Dommages à la tête,Danni alla testa,頭部損傷,머리 부상,Uszkodzenie głowy,Lesão na cabeça,Повреждение головы,Kafa Hasarı,头部损伤,頭部損傷
+rwczdmHeadDamage_Desc,,,,,,,,,,,,,,,,,,
+rwczdmBodyDamage,,,,,Body Damage,,Karosserieschäden,Daño corporal,Dommages corporels,Danni al corpo,身体の損傷,신체 손상,Uszkodzenie ciała,Danos corporais,Повреждения тела,Vücut Hasarı,身体损伤,身體損傷
+rwczdmBodyDamage_Desc,,,,,,,,,,,,,,,,,,
+rwczdmZombie_V2_Desc,,,,,,,,,,,,,,,,,,
+rwczdmSpecialZ_Desc,,,,,,,,,,,,,,,,,,
+rwczdmSpecialZ_V2_Desc,,,,,,,,,,,,,,,,,,
+
+rwczdmRegularZombie,,,,,Regular Zombies,,Normale Zombies,Zombis regulares,Zombies ordinaires,Zombi normali,通常のゾンビ,일반 좀비,Zwykłe zombie,Zumbis comuns,Обычные зомби,Normal Zombiler,普通僵尸,普通殭屍
+rwczdmRegularZ_Category,,,,,Normal,,Normal,Normal,Normale,Normale,普通,정상,Normalna,Normal,Нормальный,Normal,普通的,普通的
+rwczdmRegularZF_Category,,,,,Feral,,Wild,Salvaje,Sauvage,Feroce,野生の,야생,Dziki,Selvagem,Дикий,Vahşi,野性,野性
+rwczdmRegularZR_Category,,,,,Radiated,,Bestrahlt,Radiado,Rayonné,irradiato,放射された,방사된,Promieniowany,Radiado,Излученный,Radyasyon,辐射,輻射
+rwczdmRegularZC_Category,,,,,Charged,,Angeklagt,Cargado,Chargé,Caricato,起訴された,충전됨,Oskarżony,Cobrado,Обвинен,Ücretlendirildi,带电,帶電
+rwczdmRegularZI_Category,,,,,Infernal,,Infernal,Infernal,Infernal,Infernale,地獄の,지독한,Piekielny,Infernal,Адский,Cehennemsel,地狱,地獄
+
+rwczdmSpiderZombie,,,,,Spider Zombies,,Spinnenzombies,Zombis araña,Zombies araignées,Zombi ragno,スパイダーゾンビ,스파이더 좀비,Pająki Zombie,Zumbis-aranha,Паукообразные зомби,Örümcek Zombiler,蜘蛛僵尸,蜘蛛殭屍
+rwczdmSpiderZ_Category,,,,,Normal,,Normal,Normal,Normale,Normale,普通,정상,Normalna,Normal,Нормальный,Normal,普通的,普通的
+rwczdmSpiderZF_Category,,,,,Feral,,Wild,Salvaje,Sauvage,Feroce,野生の,야생,Dziki,Selvagem,Дикий,Vahşi,野性,野性
+rwczdmSpiderZR_Category,,,,,Radiated,,Bestrahlt,Radiado,Rayonné,irradiato,放射された,방사된,Promieniowany,Radiado,Излученный,Radyasyon,辐射,輻射
+rwczdmSpiderZC_Category,,,,,Charged,,Angeklagt,Cargado,Chargé,Caricato,起訴された,충전됨,Oskarżony,Cobrado,Обвинен,Ücretlendirildi,带电,帶電
+rwczdmSpiderZI_Category,,,,,Infernal,,Infernal,Infernal,Infernal,Infernale,地獄の,지독한,Piekielny,Infernal,Адский,Cehennemsel,地狱,地獄
+
+rwczdmSpecialZombie,,,,,Special Zombies,,Spezial-Zombies,Zombies especiales,Zombies spéciaux,Zombi speciali,スペシャルゾンビ,특수 좀비,Specjalne zombie,Zumbis Especiais,Особые зомби,Özel Zombiler,特殊僵尸,特殊殭屍
+rwczdmSpecialZ_Category,,,,,Normal,,Normal,Normal,Normale,Normale,普通,정상,Normalna,Normal,Нормальный,Normal,普通的,普通的
+rwczdmSpecialZF_Category,,,,,Feral,,Wild,Salvaje,Sauvage,Feroce,野生の,야생,Dziki,Selvagem,Дикий,Vahşi,野性,野性
+rwczdmSpecialZR_Category,,,,,Radiated,,Bestrahlt,Radiado,Rayonné,irradiato,放射された,방사된,Promieniowany,Radiado,Излученный,Radyasyon,辐射,輻射
+rwczdmSpecialZC_Category,,,,,Charged,,Angeklagt,Cargado,Chargé,Caricato,起訴された,충전됨,Oskarżony,Cobrado,Обвинен,Ücretlendirildi,带电,帶電
+rwczdmSpecialZI_Category,,,,,Infernal,,Infernal,Infernal,Infernal,Infernale,地獄の,지독한,Piekielny,Infernal,Адский,Cehennemsel,地狱,地獄
+
+rwczdmZombieAnimal,,,,,Zombie Animals,,Zombie-Tiere,Animales zombis,Animaux zombies,Animali zombi,ゾンビ動物,좀비 동물들,Zwierzęta zombie,Animais Zumbis,Животные-зомби,Zombi Hayvanlar,僵尸动物,殭屍動物
+rwczdmZombieDog_Category,,,,,Dog,,Hund,Perro,Chien,Cane,犬,개,Pies,Cachorro,Собака,Köpek,狗,狗
+rwczdmZombieBear_Category,,,,,Bear,,Tragen,Oso,Ours,Orso,クマ,곰,Niedźwiedź,Urso,Медведь,Ayı,熊,熊
+rwczdmZombieVultureReg_Category,,,,,Vulture,,Geier,Buitre,Vautour,Avvoltoio,ハゲワシ,무자비한 사람,Sęp,Abutre,Стервятник,Akbaba,秃鹫,禿鷹
+rwczdmZombieVultureRad_Category,,,,,Radiated Vulture,,Strahlengeier,Buitre radiado,Vautour radié,Avvoltoio radiato,ホウシャクワシ,방사독수리,Sęp promienisty,Abutre-radiado,Лучистый гриф,Işınlı Akbaba,辐射秃鹫,輻射禿鷹
+rwczdmDireWolf_Category,,,,,Dire Wolf,,Schattenwolf,Lobo terrible,Loup sinistre,Lupo feroce,ダイアウルフ,다이어 울프,Wilk straszny,Lobo Gigante,Ужасный Волк,Korkunç Kurt,恐狼,恐狼
+rwczdmBoarBossGrace_Category,,,,,Boar Boss,,Eberboss,Jefe jabalí,Chef Sanglier,Capo Cinghiale,イノシシのボス,보어 보스,Szef Dzika,Chefe Javali,Главарь кабанов,Domuz Patronu,野猪头,野豬頭
+rwczdmModdedZA_Category,,,,,Mod Added,,Mod hinzugefügt,Mod añadido,Mod ajouté,Mod aggiunto,Modを追加しました,모드가 추가되었습니다,Dodano mod,Mod adicionado,Мод добавлен,Mod eklendi,模组已添加,模組已添加

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_CZDM"/>
+	<DisplayName value="Customizable Zombie Damage Multiplier"/>
+	<Version value="2.0.0"/>
+	<Description value="Sets a separate body and head damage multiplier for various zombie groups. By default this is a headshots only mod for all zombies."/>
+	<Author value="RevenantWit"/>
+	<Website value="https://community.7daystodie.com/topic/32952-revs-simple-mods"/>
+	<Icon value="Gears/SimpleUI_Gears_Icon.png" />
+</xml>

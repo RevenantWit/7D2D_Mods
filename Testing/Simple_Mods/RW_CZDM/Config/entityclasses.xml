@@ -1,0 +1,37 @@
+<config>
+
+<!--_Spider_Tag_Fix START-->
+<conditional>
+	<!--Fix missing tag on spider zombie if running game v2.0 or v2.1-->
+	<if cond="game_version() &gt;= version(1,2,0) and game_version() &lt; version(1,2,2)">
+		<csv xpath="//entity_class[starts-with(@name, 'zombieSpider')]/property[@name='Tags'][not(contains(@value, 'spider'))]/@value" delim="," op="add" >spider</csv>
+	</if>
+</conditional>
+<!--_Spider_Tag_Fix END-->
+
+<!--_Core_Files Start-->
+<include filename="rw_Config/0_Core/Modifiers.xml"/>
+<include filename="rw_Config/0_Core/Tags.xml"/>
+<!--_Core_Files END-->
+
+<!--_Game_v2_0_Patch START-->
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+		<include filename="rw_Config/Patches/Game_v2_0/Modifiers.xml"/>
+		<include filename="rw_Config/Patches/Game_v2_0/Tags.xml"/>
+	</if>
+</conditional>
+<!--_Game_v2_0_Patch END-->
+
+<!--_Gears_Settings START-->
+<conditional>
+	<if cond="mod_loaded('Gears')">
+		<include filename="rw_Config/GearsSettings/RegularZombies.xml"/>
+		<include filename="rw_Config/GearsSettings/SpiderZombies.xml"/>
+		<include filename="rw_Config/GearsSettings/SpecialZombies.xml"/>
+		<include filename="rw_Config/GearsSettings/ZombieAnimals.xml"/>
+	</if>
+</conditional>
+<!--_Gears_Settings END-->
+
+</config>
