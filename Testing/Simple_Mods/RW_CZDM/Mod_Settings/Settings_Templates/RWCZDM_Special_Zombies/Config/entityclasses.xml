@@ -1,4 +1,16 @@
 <config>
+<!--CONTENTS START-->
+<!---->
+<!--_SPECIAL_ZOMBIES-->
+<!---->
+<!--_NORMAL-->
+<!--_FERAL-->
+<!--_RADIATED-->
+<!--_CHARGED-->
+<!--_INFERNAL-->
+<!---->
+<!--CONTENTS END-->
+
 <!--Check to make sure RW_CZDM mod is installed before trying to change it's settings-->
 <conditional>
 	<if cond="mod_loaded('RW_CZDM')">

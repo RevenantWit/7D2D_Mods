@@ -1,4 +1,26 @@
 <config>
+<!--CONTENTS START-->
+<!---->
+<!--_REGULAR_ZOMBIES-->
+<!--_SPIDER_ZOMBIES-->
+<!--_SPECIAL_ZOMBIES-->
+<!--_ZOMBIE_ANIMALS-->
+<!---->
+<!--_NORMAL-->
+<!--_FERAL-->
+<!--_RADIATED-->
+<!--_CHARGED-->
+<!--_INFERNAL-->
+<!---->
+<!--_DOG-->
+<!--_BEAR-->
+<!--_VULTURE-->
+<!--_RADIATED_VULTURE-->
+<!--_DIRE_WOLF-->
+<!--_BOAR_BOSS-->
+<!---->
+<!--CONTENTS END-->
+
 <!--Check to make sure RW_CZDM mod is installed before trying to change it's settings-->
 <conditional>
 	<if cond="mod_loaded('RW_CZDM')">

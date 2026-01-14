@@ -1,4 +1,16 @@
 <config>
+<!--CONTENTS START-->
+<!---->
+<!--_DOG-->
+<!--_BEAR-->
+<!--_VULTURE-->
+<!--_RADIATED_VULTURE-->
+<!--_DIRE_WOLF-->
+<!--_BOAR_BOSS-->
+<!--_MODDED_ZOMBIE_ANIMALS-->
+<!---->
+<!--CONTENTS END-->
+
 <!--Check to make sure RW_CZDM mod is installed before trying to change it's settings-->
 <conditional>
 	<if cond="mod_loaded('RW_CZDM')">
@@ -50,6 +62,18 @@
 		<!--Head Damage Multiplier-->
 		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwBoarBossGrace']]/passive_effect/@value">0</set>
 	<!--_BOAR_BOSS END-->
+
+	<!--_MODDED_ZOMBIE_ANIMALS START-->
+	<!--This only runs if the addon for this setting is installed-->
+	<conditional>
+		<if cond="mod_loaded('RWCZDM_00Modded_Zombie_Animals')">
+			<!--Body Damage Multiplier-->
+			<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwZombieAnimalsMod']]/passive_effect/@value">-0.80</set>
+			<!--Head Damage Multiplier-->
+			<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwZombieAnimalsMod']]/passive_effect/@value">0</set>
+		</if>
+	</conditional>
+	<!--_MODDED_ZOMBIE_ANIMALS END-->
 <!--_ZOMBIE_ANIMALS END-->
 	</if>
 </conditional>
