@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<Name value="RWCZDM_00Modded_Zombie_Animals"/>
+	<Name value="RWCZDM_Modded_Zombie_Animals"/>
 	<DisplayName value="RW_CZDM Modded Zombie Animals Patch"/>
 	<Version value="1.0.0"/>
 	<Description value="Addon patch that causes RW_CZDM to add and set a custom body and head damage multiplier for Zombie Animals added by mods and are not already covered by RW_CZDM."/>

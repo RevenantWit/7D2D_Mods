@@ -37,7 +37,7 @@
 
 <!--_MODDED_ZOMBIE_ANIMALS_PATCH START-->
 <conditional>
-	<if cond="mod_loaded('RWCZDM_00Modded_Zombie_Animals')">
+	<if cond="mod_loaded('RWCZDM_Modded_Zombie_Animals')">
 		<include filename="rw_Config/Patches/Modded_Zombie_Animals/Modifiers.xml"/>
 		<include filename="rw_Config/Patches/Modded_Zombie_Animals/Tags.xml"/>
 	</if>
@@ -53,7 +53,7 @@
 		<include filename="rw_Config/GearsSettings/ZombieAnimals.xml"/>
 		<!--_MODDED_ZOMBIE_ANIMALS_PATCH START-->
 		<conditional>
-			<if cond="mod_loaded('RWCZDM_00Modded_Zombie_Animals')">
+			<if cond="mod_loaded('RWCZDM_Modded_Zombie_Animals')">
 				<include filename="rw_Config/Patches/Modded_Zombie_Animals/Gears_Settings.xml"/>
 			</if>
 		</conditional>
