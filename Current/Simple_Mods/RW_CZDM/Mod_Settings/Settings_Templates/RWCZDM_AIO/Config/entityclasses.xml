@@ -1,0 +1,205 @@
+<config>
+<!--CONTENTS START-->
+<!---->
+<!--_REGULAR_ZOMBIES-->
+<!--_SPIDER_ZOMBIES-->
+<!--_SPECIAL_ZOMBIES-->
+<!--_ZOMBIE_ANIMALS-->
+<!---->
+<!--_NORMAL-->
+<!--_FERAL-->
+<!--_RADIATED-->
+<!--_CHARGED-->
+<!--_INFERNAL-->
+<!---->
+<!--_DOG-->
+<!--_BEAR-->
+<!--_VULTURE-->
+<!--_RADIATED_VULTURE-->
+<!--_DIRE_WOLF-->
+<!--_BOAR_BOSS-->
+<!---->
+<!--CONTENTS END-->
+
+<!--Check to make sure RW_CZDM mod is installed before trying to change it's settings-->
+<conditional>
+	<if cond="mod_loaded('RW_CZDM')">
+
+<!--All values used in each group below are a percentage add-->
+<!--This means 0.10 = 10% and 1.00 = 100%  /  so for example 2.50 would be 250% -->
+<!--A positive or negative value can be used so for instance body damage set to -1.00 is equal to -100% body damage-->
+<!--A zero can be used if not wanting to affect damage-->
+
+<!--_REGULAR_ZOMBIES START-->
+	<!--_NORMAL START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwRegularZombies']]/passive_effect/@value">-1.00</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwRegularZombies']]/passive_effect/@value">0</set>
+	<!--_NORMAL END-->
+
+	<!--_FERAL START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwFeralRegZombies']]/passive_effect/@value">-1.00</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwFeralRegZombies']]/passive_effect/@value">0</set>
+	<!--_FERAL END-->
+
+	<!--_RADIATED START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwRadRegZombies']]/passive_effect/@value">-1.00</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwRadRegZombies']]/passive_effect/@value">0</set>
+	<!--_RADIATED END-->
+
+<!--The following groups only apply if running game version 2.0 or higher-->
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+	<!--_CHARGED START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwChargedRegZombies']]/passive_effect/@value">-1.00</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwChargedRegZombies']]/passive_effect/@value">0</set>
+	<!--_CHARGED END-->
+
+	<!--_INFERNAL START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwInfernalRegZombies']]/passive_effect/@value">-1.00</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwInfernalRegZombies']]/passive_effect/@value">0</set>
+	<!--_INFERNAL END-->
+	</if>
+</conditional>
+<!--_REGULAR_ZOMBIES END-->
+
+<!--_SPIDER_ZOMBIES START-->
+	<!--_NORMAL START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwSpiderZombies']]/passive_effect/@value">-0.90</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwSpiderZombies']]/passive_effect/@value">0</set>
+	<!--_NORMAL END-->
+
+	<!--_FERAL START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwFeralSpiderZombies']]/passive_effect/@value">-0.90</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwFeralSpiderZombies']]/passive_effect/@value">0</set>
+	<!--_FERAL END-->
+
+	<!--_RADIATED START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwRadSpiderZombies']]/passive_effect/@value">-0.90</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwRadSpiderZombies']]/passive_effect/@value">0</set>
+	<!--_RADIATED END-->
+
+<!--The following groups only apply if running game version 2.0 or higher-->
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+	<!--_CHARGED START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwChargedSpiderZombies']]/passive_effect/@value">-0.90</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwChargedSpiderZombies']]/passive_effect/@value">0</set>
+	<!--_CHARGED END-->
+
+	<!--_INFERNAL START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwInfernalSpiderZombies']]/passive_effect/@value">-0.90</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwInfernalSpiderZombies']]/passive_effect/@value">0</set>
+	<!--_INFERNAL END-->
+	</if>
+</conditional>
+<!--_SPIDER_ZOMBIES END-->
+
+<!--_SPECIAL_ZOMBIES START-->
+	<!--_NORMAL START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwSpecialZombies']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwSpecialZombies']]/passive_effect/@value">0</set>
+	<!--_NORMAL END-->
+
+	<!--_FERAL START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwFeralSpecZombies']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwFeralSpecZombies']]/passive_effect/@value">0</set>
+	<!--_FERAL END-->
+
+	<!--_RADIATED START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwRadSpecZombies']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwRadSpecZombies']]/passive_effect/@value">0</set>
+	<!--_RADIATED END-->
+
+<!--The following groups only apply if running game version 2.0 or higher-->
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+	<!--_CHARGED START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwChargedSpecZombies']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwChargedSpecZombies']]/passive_effect/@value">0</set>
+	<!--_CHARGED END-->
+
+	<!--_INFERNAL START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwInfernalSpecZombies']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwInfernalSpecZombies']]/passive_effect/@value">0</set>
+	<!--_INFERNAL END-->
+	</if>
+</conditional>
+<!--_SPECIAL_ZOMBIES END-->
+
+<!--_ZOMBIE_ANIMALS START-->
+	<!--_DOG START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwZombieDogs']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwZombieDogs']]/passive_effect/@value">0</set>
+	<!--_DOG END-->
+
+	<!--_BEAR START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwZombieBears']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwZombieBears']]/passive_effect/@value">0</set>
+	<!--_BEAR END-->
+
+	<!--_VULTURE START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwRegZombieVultures']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwRegZombieVultures']]/passive_effect/@value">0</set>
+	<!--_VULTURE END-->
+
+	<!--_RADIATED_VULTURE START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwRadZombieVultures']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwRadZombieVultures']]/passive_effect/@value">0</set>
+	<!--_RADIATED_VULTURE END-->
+
+	<!--_DIRE_WOLF START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwDireWolf']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwDireWolf']]/passive_effect/@value">0</set>
+	<!--_DIRE_WOLF END-->
+
+	<!--_BOAR_BOSS START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwBoarBossGrace']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwBoarBossGrace']]/passive_effect/@value">0</set>
+	<!--_BOAR_BOSS END-->
+<!--_ZOMBIE_ANIMALS END-->
+	</if>
+</conditional>
+
+</config>

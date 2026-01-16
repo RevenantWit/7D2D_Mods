@@ -1,0 +1,295 @@
+<config>
+<!--CONTENTS START-->
+<!---->
+<!--_REGULAR_ZOMBIES-->
+<!--_SPIDER_ZOMBIES-->
+<!--_SPECIAL_ZOMBIES-->
+<!--_ZOMBIE_ANIMALS-->
+<!---->
+<!--_NORMAL-->
+<!--_FERAL-->
+<!--_RADIATED-->
+<!---->
+<!--_DOG-->
+<!--_BEAR-->
+<!--_VULTURE-->
+<!--_RADIATED_VULTURE-->
+<!--_DIRE_WOLF-->
+<!--_BOAR_BOSS-->
+<!---->
+<!--CONTENTS END-->
+
+<!--All values used in each group below are a percentage add-->
+<!--This means 0.10 = 10% and 1.00 = 100%  /  so for example 2.50 would be 250% -->
+<!--A positive or negative value can be used so for instance body damage set to -1.00 is equal to -100% body damage-->
+<!--A zero can be used if not wanting to affect damage-->
+
+<append xpath="//entity_class[@name='playerMale']">
+
+<!--_REGULAR_ZOMBIES START-->
+	<!--_NORMAL START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRegularZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-1.00"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRegularZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_NORMAL END-->
+
+	<!--_FERAL START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwFeralRegZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-1.00"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwFeralRegZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_FERAL END-->
+
+	<!--_RADIATED START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadRegZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-1.00"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadRegZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_RADIATED END-->
+<!--_REGULAR_ZOMBIES END-->
+
+<!--_SPIDER_ZOMBIES START-->
+	<!--_NORMAL START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwSpiderZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-0.90"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwSpiderZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_NORMAL END-->
+
+	<!--_FERAL START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwFeralSpiderZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-0.90"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwFeralSpiderZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_FERAL END-->
+
+	<!--_RADIATED START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadSpiderZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-0.90"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadSpiderZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_RADIATED END-->
+<!--_SPIDER_ZOMBIES START-->
+
+<!--_SPECIAL_ZOMBIES START-->
+<!--Zombie Cops, Zombie Wights, Demolition Zombies, Frost Claws, Zombie Chuck, Plaque Spitters, Zombie Rancher, Mutated Zombies-->
+	<!--_NORMAL START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwSpecialZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-0.80"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwSpecialZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_NORMAL END-->
+
+	<!--_FERAL START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwFeralSpecZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-0.80"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwFeralSpecZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_FERAL END-->
+
+	<!--_RADIATED START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadSpecZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-0.80"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadSpecZombies"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_RADIATED END-->
+<!--_SPECIAL_ZOMBIES END-->
+
+<!--_ZOMBIE_ANIMALS START-->
+	<!--_DOG START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwZombieDogs"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-0.80"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwZombieDogs"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_DOG END-->
+
+	<!--_BEAR START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwZombieBears"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-0.80"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwZombieBears"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_BEAR END-->
+
+	<!--_VULTURE START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRegZombieVultures"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-0.80"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRegZombieVultures"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_VULTURE END-->
+
+	<!--_RADIATED_VULTURE START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadZombieVultures"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-0.80"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwRadZombieVultures"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_RADIATED_VULTURE END-->
+
+	<!--_DIRE_WOLF START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwDireWolf"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="-0.80"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwDireWolf"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_DIRE_WOLF END-->
+
+	<!--_BOAR_BOSS START-->
+		<!--Body Damage-->
+		<effect_group name="rwBodyDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="!HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwBoarBossGrace"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Body Damage Multiplier Value-->
+		</effect_group>
+		<!--Head Damage-->
+		<effect_group name="rwHeadDamageModifier">
+			<requirement name="IsAlive" target="other"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+			<requirement name="EntityTagCompare" target="other" tags="rwBoarBossGrace"/>
+			<passive_effect name="DamageModifier" operation="perc_add" value="0.00"/><!--Head Damage Multiplier Value-->
+		</effect_group>
+	<!--_BOAR_BOSS END-->
+<!--_ZOMBIE_ANIMALS END-->
+
+</append>
+
+</config>

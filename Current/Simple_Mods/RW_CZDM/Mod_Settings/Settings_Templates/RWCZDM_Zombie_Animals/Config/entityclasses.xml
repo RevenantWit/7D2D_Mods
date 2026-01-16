@@ -1,0 +1,81 @@
+<config>
+<!--CONTENTS START-->
+<!---->
+<!--_DOG-->
+<!--_BEAR-->
+<!--_VULTURE-->
+<!--_RADIATED_VULTURE-->
+<!--_DIRE_WOLF-->
+<!--_BOAR_BOSS-->
+<!--_MODDED_ZOMBIE_ANIMALS-->
+<!---->
+<!--CONTENTS END-->
+
+<!--Check to make sure RW_CZDM mod is installed before trying to change it's settings-->
+<conditional>
+	<if cond="mod_loaded('RW_CZDM')">
+
+<!--All values used in each group below are a percentage add-->
+<!--This means 0.10 = 10% and 1.00 = 100%  /  so for example 2.50 would be 250% -->
+<!--A positive or negative value can be used so for instance body damage set to -1.00 is equal to -100% body damage-->
+<!--A zero can be used if not wanting to affect damage-->
+
+<!--_ZOMBIE_ANIMALS START-->
+	<!--_DOG START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwZombieDogs']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwZombieDogs']]/passive_effect/@value">0</set>
+	<!--_DOG END-->
+
+	<!--_BEAR START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwZombieBears']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwZombieBears']]/passive_effect/@value">0</set>
+	<!--_BEAR END-->
+
+	<!--_VULTURE START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwRegZombieVultures']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwRegZombieVultures']]/passive_effect/@value">0</set>
+	<!--_VULTURE END-->
+
+	<!--_RADIATED_VULTURE START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwRadZombieVultures']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwRadZombieVultures']]/passive_effect/@value">0</set>
+	<!--_RADIATED_VULTURE END-->
+
+	<!--_DIRE_WOLF START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwDireWolf']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwDireWolf']]/passive_effect/@value">0</set>
+	<!--_DIRE_WOLF END-->
+
+	<!--_BOAR_BOSS START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwBoarBossGrace']]/passive_effect/@value">-0.80</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwBoarBossGrace']]/passive_effect/@value">0</set>
+	<!--_BOAR_BOSS END-->
+
+	<!--_MODDED_ZOMBIE_ANIMALS START-->
+	<!--This only runs if the addon for this setting is installed-->
+	<conditional>
+		<if cond="mod_loaded('RWCZDM_00Modded_Zombie_Animals')">
+			<!--Body Damage Multiplier-->
+			<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwZombieAnimalsMod']]/passive_effect/@value">-0.80</set>
+			<!--Head Damage Multiplier-->
+			<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwZombieAnimalsMod']]/passive_effect/@value">0</set>
+		</if>
+	</conditional>
+	<!--_MODDED_ZOMBIE_ANIMALS END-->
+<!--_ZOMBIE_ANIMALS END-->
+	</if>
+</conditional>
+
+</config>

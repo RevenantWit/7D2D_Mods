@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RWCZDM_AIO"/>
+	<DisplayName value="AIO Zombies Settings for RW_CZDM"/>
+	<Version value="1.0.0"/>
+	<Description value="Template for setting custom body and head damage multipliers for all zombie groups in RW_CZDM"/>
+	<Author value="RevenantWit"/>
+	<Website value="https://community.7daystodie.com/topic/32952-revs-simple-mods"/>
+</xml>

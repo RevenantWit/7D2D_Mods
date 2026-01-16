@@ -1,0 +1,107 @@
+<config>
+<!--CONTENTS START-->
+<!---->
+<!--_ZOMBIE_ANIMALS START-->
+<!---->
+<!--_DOG START-->
+<!--_BEAR START-->
+<!--_VULTURE START-->
+<!--_RADIATED_VULTURE START-->
+<!--_DIRE_WOLF START-->
+<!--_BOAR_BOSS START-->
+<!---->
+<!--CONTENTS END-->
+
+<!--_ZOMBIE_ANIMALS START-->
+	<!--_DOG START-->
+		<!--Body Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieDog.BodyDamage') != '-0.80'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwZombieDogs']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieDog.BodyDamage')</set>
+			</if>
+		</conditional>
+		<!--Head Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieDog.HeadDamage') != '0.00'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwZombieDogs']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieDog.HeadDamage')</set>
+			</if>
+		</conditional>
+	<!--_DOG END-->
+
+	<!--_BEAR START-->
+		<!--Body Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieBear.BodyDamage') != '-0.80'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwZombieBears']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieBear.BodyDamage')</set>
+			</if>
+		</conditional>
+		<!--Head Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieBear.HeadDamage') != '0.00'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwZombieBears']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieBear.HeadDamage')</set>
+			</if>
+		</conditional>
+	<!--_BEAR END-->
+
+	<!--_VULTURE START-->
+		<!--Body Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieVultureReg.BodyDamage') != '-0.80'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwRegZombieVultures']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieVultureReg.BodyDamage')</set>
+			</if>
+		</conditional>
+		<!--Head Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieVultureReg.HeadDamage') != '0.00'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwRegZombieVultures']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieVultureReg.HeadDamage')</set>
+			</if>
+		</conditional>
+	<!--_VULTURE END-->
+
+	<!--_RADIATED_VULTURE START-->
+		<!--Body Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieVultureRad.BodyDamage') != '-0.80'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwRadZombieVultures']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieVultureRad.BodyDamage')</set>
+			</if>
+		</conditional>
+		<!--Head Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieVultureRad.HeadDamage') != '0.00'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwRadZombieVultures']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'ZombieAnimal.ZombieVultureRad.HeadDamage')</set>
+			</if>
+		</conditional>
+	<!--_RADIATED_VULTURE END-->
+
+	<!--_DIRE_WOLF START-->
+		<!--Body Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'ZombieAnimal.DireWolf.BodyDamage') != '-0.80'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwDireWolf']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'ZombieAnimal.DireWolf.BodyDamage')</set>
+			</if>
+		</conditional>
+		<!--Head Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'ZombieAnimal.DireWolf.HeadDamage') != '0.00'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwDireWolf']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'ZombieAnimal.DireWolf.HeadDamage')</set>
+			</if>
+		</conditional>
+	<!--_DIRE_WOLF END-->
+
+	<!--_BOAR_BOSS START-->
+		<!--Body Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'ZombieAnimal.BoarBossGrace.BodyDamage') != '-0.00'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwBoarBossGrace']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'ZombieAnimal.BoarBossGrace.BodyDamage')</set>
+			</if>
+		</conditional>
+		<!--Head Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'ZombieAnimal.BoarBossGrace.HeadDamage') != '0.00'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwBoarBossGrace']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'ZombieAnimal.BoarBossGrace.HeadDamage')</set>
+			</if>
+		</conditional>
+	<!--_BOAR_BOSS END-->
+<!--_ZOMBIE_ANIMALS END-->
+
+</config>

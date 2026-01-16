@@ -1,0 +1,67 @@
+<config>
+<!--CONTENTS START-->
+<!---->
+<!--_SPIDER_ZOMBIES-->
+<!---->
+<!--_NORMAL-->
+<!--_FERAL-->
+<!--_RADIATED-->
+<!--_CHARGED-->
+<!--_INFERNAL-->
+<!---->
+<!--CONTENTS END-->
+
+<!--Check to make sure RW_CZDM mod is installed before trying to change it's settings-->
+<conditional>
+	<if cond="mod_loaded('RW_CZDM')">
+
+<!--All values used in each group below are a percentage add-->
+<!--This means 0.10 = 10% and 1.00 = 100%  /  so for example 2.50 would be 250% -->
+<!--A positive or negative value can be used so for instance body damage set to -1.00 is equal to -100% body damage-->
+<!--A zero can be used if not wanting to affect damage-->
+
+<!--_SPIDER_ZOMBIES START-->
+	<!--_NORMAL START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwSpiderZombies']]/passive_effect/@value">-0.90</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwSpiderZombies']]/passive_effect/@value">0</set>
+	<!--_NORMAL END-->
+
+	<!--_FERAL START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwFeralSpiderZombies']]/passive_effect/@value">-0.90</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwFeralSpiderZombies']]/passive_effect/@value">0</set>
+	<!--_FERAL END-->
+
+	<!--_RADIATED START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwRadSpiderZombies']]/passive_effect/@value">-0.90</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwRadSpiderZombies']]/passive_effect/@value">0</set>
+	<!--_RADIATED END-->
+
+<!--The following groups only apply if running game version 2.0 or higher-->
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+	<!--_CHARGED START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwChargedSpiderZombies']]/passive_effect/@value">-0.90</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwChargedSpiderZombies']]/passive_effect/@value">0</set>
+	<!--_CHARGED END-->
+
+	<!--_INFERNAL START-->
+		<!--Body Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwInfernalSpiderZombies']]/passive_effect/@value">-0.90</set>
+		<!--Head Damage Multiplier-->
+		<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwInfernalSpiderZombies']]/passive_effect/@value">0</set>
+	<!--_INFERNAL END-->
+	</if>
+</conditional>
+<!--_SPIDER_ZOMBIES END-->
+	</if>
+</conditional>
+
+</config>

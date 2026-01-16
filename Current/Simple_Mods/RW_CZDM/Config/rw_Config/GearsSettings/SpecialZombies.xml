@@ -1,0 +1,96 @@
+<config>
+<!--CONTENTS START-->
+<!---->
+<!--_SPECIAL_ZOMBIES-->
+<!---->
+<!--_NORMAL-->
+<!--_FERAL-->
+<!--_RADIATED-->
+<!--_CHARGED-->
+<!--_INFERNAL-->
+<!---->
+<!--CONTENTS END-->
+
+<!--_SPECIAL_ZOMBIES START-->
+	<!--_NORMAL START-->
+		<!--Body Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'SpecialZombie.Regular.BodyDamage') != '-0.80'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwSpecialZombies']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'SpecialZombie.Regular.BodyDamage')</set>
+			</if>
+		</conditional>
+		<!--Head Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'SpecialZombie.Regular.HeadDamage') != '0.00'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwSpecialZombies']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'SpecialZombie.Regular.HeadDamage')</set>
+			</if>
+		</conditional>
+	<!--_NORMAL END-->
+
+	<!--_FERAL START-->
+		<!--Body Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'SpecialZombie.Feral.BodyDamage') != '-0.80'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwFeralSpecZombies']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'SpecialZombie.Feral.BodyDamage')</set>
+			</if>
+		</conditional>
+		<!--Head Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'SpecialZombie.Feral.HeadDamage') != '0.00'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwFeralSpecZombies']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'SpecialZombie.Feral.HeadDamage')</set>
+			</if>
+		</conditional>
+	<!--_FERAL END-->
+
+	<!--_RADIATED START-->
+		<!--Body Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'SpecialZombie.Radiated.BodyDamage') != '-0.80'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwRadSpecZombies']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'SpecialZombie.Radiated.BodyDamage')</set>
+			</if>
+		</conditional>
+		<!--Head Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'SpecialZombie.Radiated.HeadDamage') != '0.00'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwRadSpecZombies']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'SpecialZombie.Radiated.HeadDamage')</set>
+			</if>
+		</conditional>
+	<!--_RADIATED END-->
+
+<!--The following groups only apply if running game version 2.0 or higher-->
+<conditional>
+	<if cond="game_version() &gt;= version(1,2,0)">
+	<!--_CHARGED START-->
+		<!--Body Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'SpecialZombie.Charged.BodyDamage') != '-0.80'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwChargedSpecZombies']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'SpecialZombie.Charged.BodyDamage')</set>
+			</if>
+		</conditional>
+		<!--Head Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'SpecialZombie.Charged.HeadDamage') != '0.00'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwChargedSpecZombies']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'SpecialZombie.Charged.HeadDamage')</set>
+			</if>
+		</conditional>
+	<!--_CHARGED END-->
+
+	<!--_INFERNAL START-->
+		<!--Body Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'SpecialZombie.Infernal.BodyDamage') != '-0.80'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwBodyDamageModifier' and ./requirement[@tags='rwInfernalSpecZombies']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'SpecialZombie.Infernal.BodyDamage')</set>
+			</if>
+		</conditional>
+		<!--Head Damage Multiplier-->
+		<conditional>
+			<if cond="modsetting('RW_CZDM', 'Global', 'SpecialZombie.Infernal.HeadDamage') != '0.00'">
+				<set xpath="//entity_class[@name='playerMale']/effect_group[@name='rwHeadDamageModifier' and ./requirement[@tags='rwInfernalSpecZombies']]/passive_effect/@value">modsetting('RW_CZDM', 'Global', 'SpecialZombie.Infernal.HeadDamage')</set>
+			</if>
+		</conditional>
+	<!--_INFERNAL END-->
+	</if>
+</conditional>
+<!--_SPECIAL_ZOMBIES END-->
+
+</config>
