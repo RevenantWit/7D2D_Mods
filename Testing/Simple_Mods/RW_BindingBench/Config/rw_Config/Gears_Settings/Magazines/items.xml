@@ -1,0 +1,61 @@
+<configs>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'World', 'Magazines.mItemStackSize') != '20'">
+		<set xpath="//item[@name='masterSkillMagazine']/property[@name='Stacknumber']/@value">modsetting('RW_BindingBench', 'World', 'Magazines.mItemStackSize')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'World', 'Magazines.mResourceStackSize') != '500'">
+		<set xpath="//item[@name='resourceRWSkillPapers']/property[@name='Stacknumber']/@value">modsetting('RW_BindingBench', 'World', 'Magazines.mResourceStackSize')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'Magazines.Item.Weight') != '2'">
+		<set xpath="//item[@name='masterSkillMagazine']/property[@name='Weight']/@value">modsetting('RW_BindingBench', 'Global', 'Magazines.Item.Weight')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'Magazines.Item.EconomicValue') != '100'">
+		<set xpath="//item[@name='masterSkillMagazine']/property[@name='EconomicValue']/@value">modsetting('RW_BindingBench', 'Global', 'Magazines.Item.EconomicValue')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'Magazines.Resource.CraftingIngredientTime') != '3.0'">
+		<set xpath="//item[@name='resourceRWSkillPapers']/property[@name='CraftingIngredientTime']/@value">modsetting('RW_BindingBench', 'Global', 'Magazines.Resource.CraftingIngredientTime')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'Magazines.Resource.FuelValue') != '5'">
+		<set xpath="//item[@name='resourceRWSkillPapers']/property[@name='FuelValue']/@value">modsetting('RW_BindingBench', 'Global', 'Magazines.Resource.FuelValue')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'Magazines.Resource.EconomicValue') != '25'">
+		<set xpath="//item[@name='resourceRWSkillPapers']/property[@name='EconomicValue']/@value">modsetting('RW_BindingBench', 'Global', 'Magazines.Resource.EconomicValue')</set>
+	</if>
+</conditional>
+
+<!--
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'Magazines.Resource.CustomIconTint') != '336600'">
+		<set xpath="//item[@name='resourceRWSkillPapers']/property[@name='CustomIconTint']/@value">modsetting('RW_BindingBench', 'Global', 'Magazines.Resource.CustomIconTint')</set>
+	</if>
+</conditional>
+-->
+
+
+</configs>

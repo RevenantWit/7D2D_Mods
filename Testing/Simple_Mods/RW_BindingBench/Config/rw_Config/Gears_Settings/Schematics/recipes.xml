@@ -1,0 +1,163 @@
+<configs>
+
+<!--_T1_SCHEMATICS START-->
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT1.CraftTime') != '90'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT1']/@craft_time">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT1.CraftTime')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT1.CraftXpGain') != '0'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT1']/@craft_exp_gain">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT1.CraftXpGain')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT1.BlueprintScrapsCount') != '7'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT1']/ingredient[@name='resourceRWBlueprintScraps']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT1.BlueprintScrapsCount')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT1.DuctTapeCount') != '2'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT1']/ingredient[@name='resourceDuctTape']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT1.DuctTapeCount')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT1.GlueCount') != '3'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT1']/ingredient[@name='resourceGlue']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT1.GlueCount')</set>
+	</if>
+</conditional>
+<!--_T1_SCHEMATICS END-->
+
+<!--_T2_SCHEMATICS START-->
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT2.CraftTime') != '120'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT2']/@craft_time">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT2.CraftTime')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT2.CraftXpGain') != '0'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT2']/@craft_exp_gain">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT2.CraftXpGain')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT2.BlueprintScrapsCount') != '10'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT2']/ingredient[@name='resourceRWBlueprintScraps']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT2.BlueprintScrapsCount')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT2.DuctTapeCount') != '2'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT2']/ingredient[@name='resourceDuctTape']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT2.DuctTapeCount')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT2.GlueCount') != '3'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT2']/ingredient[@name='resourceGlue']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT2.GlueCount')</set>
+	</if>
+</conditional>
+<!--_T2_SCHEMATICS END-->
+
+<!--_T3_SCHEMATICS START-->
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT3.CraftTime') != '150'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT3']/@craft_time">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT3.CraftTime')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT3.CraftXpGain') != '0'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT3']/@craft_exp_gain">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT3.CraftXpGain')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT3.BlueprintScrapsCount') != '14'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT3']/ingredient[@name='resourceRWBlueprintScraps']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT3.BlueprintScrapsCount')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT3.DuctTapeCount') != '2'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT3']/ingredient[@name='resourceDuctTape']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT3.DuctTapeCount')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT3.GlueCount') != '3'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT3']/ingredient[@name='resourceGlue']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT3.GlueCount')</set>
+	</if>
+</conditional>
+<!--_T3_SCHEMATICS END-->
+
+<!--_T4_SCHEMATICS START-->
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT4.CraftTime') != '180'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT4']/@craft_time">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT4.CraftTime')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT4.CraftXpGain') != '0'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT4']/@craft_exp_gain">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT4.CraftXpGain')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT4.BlueprintScrapsCount') != '20'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT4']/ingredient[@name='resourceRWBlueprintScraps']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT4.BlueprintScrapsCount')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT4.DuctTapeCount') != '2'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT4']/ingredient[@name='resourceDuctTape']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT4.DuctTapeCount')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT4.GlueCount') != '3'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and @tags='rwSchematicRecipeT4']/ingredient[@name='resourceGlue']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeT4.GlueCount')</set>
+	</if>
+</conditional>
+<!--_T4_SCHEMATICS END-->
+
+<!--_SUPER_CORN START-->
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeSuperCorn.CraftTime') != '300'">
+		<set xpath="//recipe[@name='plantedGraceCorn1Schematic']/@craft_time">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeSuperCorn.CraftTime')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeSuperCorn.CraftXpGain') != '0'">
+		<set xpath="//recipe[@name='plantedGraceCorn1Schematic']/@craft_exp_gain">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeSuperCorn.CraftXpGain')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeSuperCorn.BlueprintScrapsCount') != '75'">
+		<set xpath="//recipe[@name='plantedGraceCorn1Schematic']/ingredient[@name='resourceRWBlueprintScraps']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeSuperCorn.BlueprintScrapsCount')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeSuperCorn.DuctTapeCount') != '2'">
+		<set xpath="//recipe[@name='plantedGraceCorn1Schematic']/ingredient[@name='resourceDuctTape']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeSuperCorn.DuctTapeCount')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Schematics.RecipeSuperCorn.GlueCount') != '3'">
+		<set xpath="//recipe[@name='plantedGraceCorn1Schematic']/ingredient[@name='resourceGlue']/@count">modsetting('RW_BindingBench', 'global', 'Schematics.RecipeSuperCorn.GlueCount')</set>
+	</if>
+</conditional>
+<!--_SUPER_CORN END-->
+
+</configs>

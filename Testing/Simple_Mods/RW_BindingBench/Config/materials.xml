@@ -1,0 +1,86 @@
+<configs>
+<!--CONTENTS START-->
+<!---->
+<!--_PERK_BOOKS-->
+<!--_MAGAZINES-->
+<!--_SCHEMATICS-->
+<!---->
+<!--CONTENTS END-->
+
+<!--_PERK_BOOKS START-->
+<conditional>
+	<!--Add perk book related material if RWBB_PerkBook_Blocker is not installed-->
+	<!--This is first so that it can override gears setting-->
+	<if cond="mod_loaded('RWBB_PerkBook_Blocker') == 'false'">
+
+		<!--Check to see if Gears is installed before checking against Gears settings-->
+		<conditional>
+			<if cond="mod_loaded('Gears')">
+
+				<!--Add perk book related material if gears world setting for perk book blocker is not On-->
+				<conditional>
+					<if cond="modsetting('RW_BindingBench', 'world', 'PerkBooks.pbBlocker') != 'On'">
+						<include filename="rw_Config/Perk_Books/materials.xml"/>
+					</if>
+				</conditional>
+			</if>
+			<!--If RWBB_PerkBook_Blocker and Gears is not installed add the perk book related material (Default Fallback)-->
+			<else>
+				<include filename="rw_Config/Perk_Books/materials.xml"/>
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!--_PERK_BOOKS END-->
+
+<!--_MAGAZINES START-->
+<conditional>
+	<!--Add magazine related material if RWBB_Magazine_Blocker is not installed-->
+	<if cond="mod_loaded('RWBB_Magazine_Blocker') == 'false'">
+
+		<!--Check to see if Gears is installed before checking against Gears settings-->
+		<conditional>
+			<if cond="mod_loaded('Gears')">
+
+				<!--Add magazine related material if gears world setting for perk book blocker is not On-->
+				<conditional>
+					<if cond="modsetting('RW_BindingBench', 'world', 'Magazines.mBlocker') != 'On'">
+						<include filename="rw_Config/Magazines/materials.xml"/>
+					</if>
+				</conditional>
+			</if>
+			<!--If RWBB_Magazine_Blocker and Gears is not installed add the magazine related material (Default Fallback)-->
+			<else>
+				<include filename="rw_Config/Magazines/materials.xml"/>
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!--_MAGAZINES END-->
+
+<!--_SCHEMATICS START-->
+<conditional>
+	<!--Add schematic related material if RWBB_Schematic_Blocker is not installed-->
+	<if cond="mod_loaded('RWBB_Schematic_Blocker') == 'false'">
+
+		<!--Check to see if Gears is installed before checking against Gears settings-->
+		<conditional>
+			<if cond="mod_loaded('Gears')">
+
+				<!--Add schematic related material if gears world setting for schematic blocker is not On-->
+				<conditional>
+					<if cond="modsetting('RW_BindingBench', 'world', 'Schematics.sBlocker') != 'On'">
+						<include filename="rw_Config/Schematics/materials.xml"/>
+					</if>
+				</conditional>
+			</if>
+			<!--If RWBB_Schematic_Blocker and Gears is not installed add the perk book related material (Default Fallback)-->
+			<else>
+				<include filename="rw_Config/Schematics/materials.xml"/>
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!--_SCHEMATICS END-->
+
+</configs>

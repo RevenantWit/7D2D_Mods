@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModSettings>
+  <Global>
+    <Tab name="PerkBooks" displayKey="lblCategoryRWPerkBooks" tooltipKey="">
+      <Category name="Item" displayKey="lblCategoryRWPerkBooks" tooltipKey="">
+        <Slider name="Weight" displayKey="rwbbiItemWeight" tooltipKey="rwbbiItemWeight_Desc" defaultValue="2">
+          <Property increment="1" minValue="2" maxValue="20" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="EconomicValue" displayKey="rwbbiEconomicValue" tooltipKey="rwbbiItemValue_Desc" defaultValue="500">
+          <Property increment="1" minValue="0" maxValue="5000" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+      <Category name="Resource" displayKey="resourceRWPerkPapers" tooltipKey="">
+        <Slider name="CraftingIngredientTime" displayKey="rwbbiResourceCraftTime" tooltipKey="rwbbiResourceCraftTime_Desc" defaultValue="3.0">
+          <Property increment="0.1" minValue="0.1" maxValue="10.0" type="incrementalValuesFloat" />
+          <Property type="formatter" formatString="0.0" />
+        </Slider>
+        <Slider name="FuelValue" displayKey="rwbbiResourceFuelValue" tooltipKey="rwbbiResourceFuelValue_Desc" defaultValue="5">
+          <Property increment="1" minValue="0" maxValue="100" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="EconomicValue" displayKey="rwbbiEconomicValue" tooltipKey="rwbbiResourceValue_Desc" defaultValue="55">
+          <Property increment="1" minValue="0" maxValue="5000" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+      <Category name="Recipe" displayKey="rwbbrPerkBooks_Category" tooltipKey="">
+        <Slider name="CraftTime" displayKey="rwbbrCraftTime" tooltipKey="rwbbrCraftTime_Desc" defaultValue="120">
+          <Property increment="1" minValue="1" maxValue="600" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="CraftXpGain" displayKey="rwbbrCraftXp" tooltipKey="rwbbrCraftXp_Desc" defaultValue="0">
+          <Property increment="1" minValue="0" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="PerkPapersCount" displayKey="resourceRWPerkPapers" tooltipKey="" defaultValue="10">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="LeatherCount" displayKey="resourceLeather" tooltipKey="" defaultValue="3">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="GlueCount" displayKey="resourceGlue" tooltipKey="" defaultValue="5">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+    </Tab>
+    <Tab name="Magazines" displayKey="lblCategoryRWSkillMagazines" tooltipKey="">
+      <Category name="Item" displayKey="lblCategoryRWSkillMagazines" tooltipKey="">
+        <Slider name="Weight" displayKey="rwbbiItemWeight" tooltipKey="rwbbiItemWeight_Desc" defaultValue="2">
+          <Property increment="1" minValue="2" maxValue="20" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="EconomicValue" displayKey="rwbbiEconomicValue" tooltipKey="rwbbiItemValue_Desc" defaultValue="100">
+          <Property increment="1" minValue="0" maxValue="5000" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+      <Category name="Resource" displayKey="resourceRWSkillPapers" tooltipKey="">
+        <Slider name="CraftingIngredientTime" displayKey="rwbbiResourceCraftTime" tooltipKey="rwbbiResourceCraftTime_Desc" defaultValue="3.0">
+          <Property increment="0.1" minValue="0.1" maxValue="10.0" type="incrementalValuesFloat" />
+          <Property type="formatter" formatString="0.0" />
+        </Slider>
+        <Slider name="FuelValue" displayKey="rwbbiResourceFuelValue" tooltipKey="rwbbiResourceFuelValue_Desc" defaultValue="5">
+          <Property increment="1" minValue="0" maxValue="100" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="EconomicValue" displayKey="rwbbiEconomicValue" tooltipKey="rwbbiResourceValue_Desc" defaultValue="25">
+          <Property increment="1" minValue="0" maxValue="5000" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+      <Category name="Recipe" displayKey="rwbbrMagazines_Category" tooltipKey="">
+        <Slider name="CraftTime" displayKey="rwbbrCraftTime" tooltipKey="rwbbrCraftTime_Desc" defaultValue="120">
+          <Property increment="1" minValue="1" maxValue="600" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="CraftXpGain" displayKey="rwbbrCraftXp" tooltipKey="rwbbrCraftXp_Desc" defaultValue="0">
+          <Property increment="1" minValue="0" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="SkillPapersCount" displayKey="resourceRWSkillPapers" tooltipKey="" defaultValue="5">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="PaperCount" displayKey="resourcePaper" tooltipKey="" defaultValue="2">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="GlueCount" displayKey="resourceGlue" tooltipKey="" defaultValue="3">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+    </Tab>
+    <Tab name="Schematics" displayKey="lblCategoryRWSchematics" tooltipKey="">
+      <Category name="Item" displayKey="lblCategoryRWSchematics" tooltipKey="">
+        <Slider name="Weight" displayKey="rwbbiItemWeight" tooltipKey="rwbbiItemWeight_Desc" defaultValue="2">
+          <Property increment="1" minValue="2" maxValue="20" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="EconomicValue" displayKey="rwbbiEconomicValue" tooltipKey="rwbbiItemValue_Desc" defaultValue="800">
+          <Property increment="1" minValue="0" maxValue="5000" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+      <Category name="Resource" displayKey="resourceRWBlueprintScraps" tooltipKey="">
+        <Slider name="CraftingIngredientTime" displayKey="rwbbiResourceCraftTime" tooltipKey="rwbbiResourceCraftTime_Desc" defaultValue="3.0">
+          <Property increment="0.1" minValue="0.1" maxValue="10.0" type="incrementalValuesFloat" />
+          <Property type="formatter" formatString="0.0" />
+        </Slider>
+        <Slider name="FuelValue" displayKey="rwbbiResourceFuelValue" tooltipKey="rwbbiResourceFuelValue_Desc" defaultValue="5">
+          <Property increment="1" minValue="0" maxValue="100" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="EconomicValue" displayKey="rwbbiEconomicValue" tooltipKey="rwbbiResourceValue_Desc" defaultValue="88">
+          <Property increment="1" minValue="0" maxValue="5000" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+      <Category name="RecipeT1" displayKey="rwbbrT1Schematics_Category" tooltipKey="rwbbrT1Schematics_Desc">
+        <Slider name="CraftTime" displayKey="rwbbrCraftTime" tooltipKey="rwbbrCraftTime_Desc" defaultValue="90">
+          <Property increment="1" minValue="1" maxValue="600" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="CraftXpGain" displayKey="rwbbrCraftXp" tooltipKey="rwbbrCraftXp_Desc" defaultValue="0">
+          <Property increment="1" minValue="0" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="BlueprintScrapsCount" displayKey="resourceRWBlueprintScraps" tooltipKey="" defaultValue="7">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="DuctTapeCount" displayKey="resourceDuctTape" tooltipKey="" defaultValue="2">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="GlueCount" displayKey="resourceGlue" tooltipKey="" defaultValue="3">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+      <Category name="RecipeT2" displayKey="rwbbrT2Schematics_Category" tooltipKey="rwbbrT2Schematics_Desc">
+        <Slider name="CraftTime" displayKey="rwbbrCraftTime" tooltipKey="rwbbrCraftTime_Desc" defaultValue="120">
+          <Property increment="1" minValue="1" maxValue="600" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="CraftXpGain" displayKey="rwbbrCraftXp" tooltipKey="rwbbrCraftXp_Desc" defaultValue="0">
+          <Property increment="1" minValue="0" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="BlueprintScrapsCount" displayKey="resourceRWBlueprintScraps" tooltipKey="" defaultValue="10">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="DuctTapeCount" displayKey="resourceDuctTape" tooltipKey="" defaultValue="2">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="GlueCount" displayKey="resourceGlue" tooltipKey="" defaultValue="3">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+      <Category name="RecipeT3" displayKey="rwbbrT3Schematics_Category" tooltipKey="rwbbrT3Schematics_Desc">
+        <Slider name="CraftTime" displayKey="rwbbrCraftTime" tooltipKey="rwbbrCraftTime_Desc" defaultValue="150">
+          <Property increment="1" minValue="1" maxValue="600" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="CraftXpGain" displayKey="rwbbrCraftXp" tooltipKey="rwbbrCraftXp_Desc" defaultValue="0">
+          <Property increment="1" minValue="0" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="BlueprintScrapsCount" displayKey="resourceRWBlueprintScraps" tooltipKey="" defaultValue="14">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="DuctTapeCount" displayKey="resourceDuctTape" tooltipKey="" defaultValue="2">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="GlueCount" displayKey="resourceGlue" tooltipKey="" defaultValue="3">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+      <Category name="RecipeT4" displayKey="rwbbrT4Schematics_Category" tooltipKey="rwbbrT4Schematics_Desc">
+        <Slider name="CraftTime" displayKey="rwbbrCraftTime" tooltipKey="rwbbrCraftTime_Desc" defaultValue="180">
+          <Property increment="1" minValue="1" maxValue="600" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="CraftXpGain" displayKey="rwbbrCraftXp" tooltipKey="rwbbrCraftXp_Desc" defaultValue="0">
+          <Property increment="1" minValue="0" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="BlueprintScrapsCount" displayKey="resourceRWBlueprintScraps" tooltipKey="" defaultValue="20">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="DuctTapeCount" displayKey="resourceDuctTape" tooltipKey="" defaultValue="2">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="GlueCount" displayKey="resourceGlue" tooltipKey="" defaultValue="3">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+      <Category name="RecipeSuperCorn" displayKey="rwbbrSuperCorn_Category" tooltipKey="rwbbrSuperCorn_Desc">
+        <Slider name="CraftTime" displayKey="rwbbrCraftTime" tooltipKey="rwbbrCraftTime_Desc" defaultValue="180">
+          <Property increment="1" minValue="1" maxValue="600" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="CraftXpGain" displayKey="rwbbrCraftXp" tooltipKey="rwbbrCraftXp_Desc" defaultValue="0">
+          <Property increment="1" minValue="0" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="BlueprintScrapsCount" displayKey="resourceRWBlueprintScraps" tooltipKey="" defaultValue="75">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="DuctTapeCount" displayKey="resourceDuctTape" tooltipKey="" defaultValue="2">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+        <Slider name="GlueCount" displayKey="resourceGlue" tooltipKey="" defaultValue="3">
+          <Property increment="1" minValue="1" maxValue="500" type="incrementalValuesInt" />
+          <Property type="formatter" formatString="0" />
+        </Slider>
+      </Category>
+    </Tab>
+  </Global>
+  <World>
+    <Category name="PerkBooks" displayKey="lblCategoryRWPerkBooks" tooltipKey="">
+      <Switch name="pbBlocker" displayKey="rwbbPerkBooksBlocker_Toggle" tooltipKey="rwbbPerkBooksBlocker_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
+      <Slider name="pbItemStackSize" displayKey="rwbbPerkBooksStackSize" tooltipKey="rwbbPerkBooksStackSize_Desc" defaultValue="20">
+        <Property increment="1" minValue="1" maxValue="5000" type="incrementalValuesInt" />
+        <Property type="formatter" formatString="0" />
+      </Slider>
+      <Slider name="pbResourceStackSize" displayKey="rwbbPerkPapersStackSize" tooltipKey="rwbbPerkPapersStackSize_Desc" defaultValue="500">
+        <Property increment="1" minValue="1" maxValue="5000" type="incrementalValuesInt" />
+        <Property type="formatter" formatString="0" />
+      </Slider>
+    </Category>
+    <Category name="Magazines" displayKey="lblCategoryRWSkillMagazines" tooltipKey="">
+      <Switch name="mBlocker" displayKey="rwbbMagazinesBlocker_Toggle" tooltipKey="rwbbMagazinesBlocker_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
+      <Slider name="mItemStackSize" displayKey="rwbbMagazinesStackSize" tooltipKey="rwbbMagazinesStackSize_Desc" defaultValue="20">
+        <Property increment="1" minValue="1" maxValue="5000" type="incrementalValuesInt" />
+        <Property type="formatter" formatString="0" />
+      </Slider>
+      <Slider name="mResourceStackSize" displayKey="rwbbSkillPapersStackSize" tooltipKey="rwbbSkillPapersStackSize_Desc" defaultValue="500">
+        <Property increment="1" minValue="1" maxValue="5000" type="incrementalValuesInt" />
+        <Property type="formatter" formatString="0" />
+      </Slider>
+    </Category>
+    <Category name="Schematics" displayKey="lblCategoryRWSchematics" tooltipKey="">
+      <Switch name="sBlocker" displayKey="rwbbSchematicsBlocker_Toggle" tooltipKey="rwbbSchematicsBlocker_Toggle_Desc" defaultValue="Off" leftValue="Off" rightValue="On" />
+      <Slider name="sItemStackSize" displayKey="rwbbSchematicsStackSize" tooltipKey="rwbbSchematicsStackSize_Desc" defaultValue="5">
+        <Property increment="1" minValue="1" maxValue="5000" type="incrementalValuesInt" />
+        <Property type="formatter" formatString="0" />
+      </Slider>
+      <Slider name="sResourceStackSize" displayKey="rwbbBlueprintScrapsStackSize" tooltipKey="rwbbBlueprintScrapsStackSize_Desc" defaultValue="500">
+        <Property increment="1" minValue="1" maxValue="5000" type="incrementalValuesInt" />
+        <Property type="formatter" formatString="0" />
+      </Slider>
+    </Category>
+  </World>
+</ModSettings>

@@ -1,0 +1,59 @@
+<configs>
+
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'World', 'PerkBooks.pbItemStackSize') != '20'">
+		<set xpath="//item[@name='bookFiremansAlmanacHeat']/property[@name='Stacknumber']/@value">modsetting('RW_BindingBench', 'World', 'PerkBooks.pbItemStackSize')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'World', 'PerkBooks.pbResourceStackSize') != '500'">
+		<set xpath="//item[@name='resourceRWPerkPapers']/property[@name='Stacknumber']/@value">modsetting('RW_BindingBench', 'World', 'PerkBooks.pbResourceStackSize')</set>
+	</if>
+</conditional>
+
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'PerkBooks.Item.Weight') != '2'">
+		<set xpath="//item[@name='bookFiremansAlmanacHeat']/property[@name='Weight']/@value">modsetting('RW_BindingBench', 'Global', 'PerkBooks.Item.Weight')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'PerkBooks.Item.EconomicValue') != '500'">
+		<set xpath="//item[@name='bookFiremansAlmanacHeat']/property[@name='EconomicValue']/@value">modsetting('RW_BindingBench', 'Global', 'PerkBooks.Item.EconomicValue')</set>
+	</if>
+</conditional>
+
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'PerkBooks.Resource.CraftingIngredientTime') != '3.0'">
+		<set xpath="//item[@name='resourceRWPerkPapers']/property[@name='CraftingIngredientTime']/@value">modsetting('RW_BindingBench', 'Global', 'PerkBooks.Resource.CraftingIngredientTime')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'PerkBooks.Resource.FuelValue') != '5'">
+		<set xpath="//item[@name='resourceRWPerkPapers']/property[@name='FuelValue']/@value">modsetting('RW_BindingBench', 'Global', 'PerkBooks.Resource.FuelValue')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'PerkBooks.Resource.EconomicValue') != '55'">
+		<set xpath="//item[@name='resourceRWPerkPapers']/property[@name='EconomicValue']/@value">modsetting('RW_BindingBench', 'Global', 'PerkBooks.Resource.EconomicValue')</set>
+	</if>
+</conditional>
+
+<!--
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'PerkBooks.Resource.CustomIconTint') != '663300'">
+		<set xpath="//item[@name='resourceRWPerkPapers']/property[@name='CustomIconTint']/@value">modsetting('RW_BindingBench', 'Global', 'PerkBooks.Resource.CustomIconTint')</set>
+	</if>
+</conditional>
+-->
+
+</configs>

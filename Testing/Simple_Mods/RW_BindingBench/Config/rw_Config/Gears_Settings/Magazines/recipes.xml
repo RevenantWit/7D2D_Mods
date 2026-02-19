@@ -1,0 +1,39 @@
+<configs>
+
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Magazines.Recipe.CraftTime') != '90'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and ./ingredient[@name='resourceRWSkillPapers']]/@craft_time">modsetting('RW_BindingBench', 'global', 'Magazines.Recipe.CraftTime')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Magazines.Recipe.CraftXpGain') != '0'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and ./ingredient[@name='resourceRWSkillPapers']]/@craft_exp_gain">modsetting('RW_BindingBench', 'global', 'Magazines.Recipe.CraftXpGain')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Magazines.Recipe.SkillPapersCount') != '5'">
+		<set xpath="//recipe[@craft_area='RWBindingBench']/ingredient[@name='resourceRWSkillPapers']/@count">modsetting('RW_BindingBench', 'global', 'Magazines.Recipe.SkillPapersCount')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Magazines.Recipe.PaperCount') != '2'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and ./ingredient[@name='resourceRWSkillPapers']]/ingredient[@name='resourcePaper']/@count">modsetting('RW_BindingBench', 'global', 'Magazines.Recipe.PaperCount')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'Magazines.Recipe.GlueCount') != '3'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and ./ingredient[@name='resourceRWSkillPapers']]/ingredient[@name='resourceGlue']/@count">modsetting('RW_BindingBench', 'global', 'Magazines.Recipe.GlueCount')</set>
+	</if>
+</conditional>
+
+</configs>

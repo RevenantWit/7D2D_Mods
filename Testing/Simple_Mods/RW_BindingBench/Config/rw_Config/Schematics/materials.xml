@@ -1,0 +1,21 @@
+<configs>
+
+<!--Add new material. This is the new material used in the items.xml to control what we get back when scrapping-->
+<!--This is just a copy of Mpaper just with a new id and experience is set to 0-->
+<append xpath="/materials">
+
+<material id="MrwBlueprintScraps">
+	<property name="damage_category" value="cloth"/>
+	<property name="surface_category" value="cloth"/>
+	<property name="forge_category" value="paper"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="wood"/>
+	<property name="stability_glue" value="20"/>
+	<property name="Mass" type="int" value="5"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="Experience" value="0"/>
+</material>
+
+</append>
+
+</configs>

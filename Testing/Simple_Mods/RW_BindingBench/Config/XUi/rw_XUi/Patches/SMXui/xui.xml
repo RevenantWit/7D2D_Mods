@@ -1,0 +1,7 @@
+<configs>
+
+<set xpath="//ruleset/window_group[@name='workstation_RWBindingBench']/window[@name='windowCraftingList']/@name">windowCraftingListWorkstation</set>
+
+<set xpath="//ruleset/window_group[@name='workstation_RWBindingBench']/window[@name='windowCraftingQueue']/@name">windowCraftingQueueWorkstation</set>
+
+</configs>

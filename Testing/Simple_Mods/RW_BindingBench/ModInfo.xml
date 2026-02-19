@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="RW_BindingBench"/>
+	<DisplayName value="Binding Bench"/>
+	<Version value="3.0.0"/>
+	<Description value="Scrap books, magazines, and schematics into their own scrap item which can be used at a workstation to craft a book, magazine, or schematic of your choosing. Also has some settings that can be changed with gears or using a presetup addon template."/>
+	<Author value="RevenantWit"/>
+	<Website value="https://community.7daystodie.com/topic/32952-revs-simple-mods"/>
+	<Icon value="Gears/SimpleUI_Gears_Icon.png" />
+</xml>

@@ -1,0 +1,21 @@
+<configs>
+
+<!--Add Binding Bench window group. This determines what windows are used when opening the Binding Bench-->
+<append xpath="//ruleset">
+	<window_group name="workstation_RWBindingBench" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true" defaultSelected="bp.content">
+		<window name="windowCraftingList"/>
+		<window name="craftingInfoPanel"/>
+		<window name="windowCraftingQueue"/>
+		<window name="windowOutput" />
+		<window name="windowNonPagingHeader" />
+	</window_group>
+</append>
+
+<!--SMXui Patch for Binding Bench-->
+<conditional>
+	<if cond="mod_loaded('zSMXui')">
+		<include filename="rw_XUi/Patches/SMXui/xui.xml"/>
+	</if>
+</conditional>
+
+</configs>

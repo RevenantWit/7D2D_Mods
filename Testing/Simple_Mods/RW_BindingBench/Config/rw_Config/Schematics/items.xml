@@ -1,0 +1,37 @@
+<configs>
+
+<!--Add material, weight, and group to the master schematic for mods-->
+<append xpath="//item[@name='schematicNoQualityMaster']" >
+	<property name="Material" value="MrwBlueprintScraps" />
+	<property name="Weight" value="2" />
+	<property name="Group" value="Books,SchematicsOnly,TCReading,RWSchematics"/>
+</append>
+
+<!--Add material, weight, and group to the master schematic for food/farming-->
+<append xpath="//item[@name='schematicNoQualityRecipeMaster']" >
+	<property name="Material" value="MrwBlueprintScraps" />
+	<property name="Weight" value="2" />
+	<property name="Group" value="Books,SchematicsOnly,TCReading,RWSchematics"/>
+</append>
+
+<!--Add new scrap items. This will be the item you get back when scrapping-->
+<append xpath="/items">
+	<!--Blueprint Scraps (schematic scrap)-->
+	<item name="resourceRWBlueprintScraps">
+		<property name="CustomIcon" value="resourcePaper"/>
+		<property name="CustomIconTint" value="003366"/>
+		<property name="Tags" value="junk"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="MrwBlueprintScraps"/>
+		<property name="Weight" value="1" />
+		<property name="Stacknumber" value="500"/>
+		<property name="FuelValue" value="5"/>
+		<property name="EconomicValue" value="25"/>
+		<property name="Group" value="Resources"/>
+		<property name="CraftingIngredientTime" value="3.0"/>
+	</item>
+</append>
+
+</configs>

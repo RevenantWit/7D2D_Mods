@@ -1,0 +1,11 @@
+<configs>
+
+<!--
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'BindingBench.Block.CustomTint') != '663300'">
+		<set xpath="//block[@name='RWBindingBench']/property[@name='CustomIconTint' or @name='TintColor']/@value">modsetting('RW_BindingBench', 'Global', 'BindingBench.Block.CustomTint')</set>
+	</if>
+</conditional>
+-->
+
+</configs>

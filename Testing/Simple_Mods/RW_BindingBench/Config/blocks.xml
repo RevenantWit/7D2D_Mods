@@ -1,0 +1,12 @@
+<configs>
+<!--CONTENTS START-->
+<!---->
+<!--_WORKBENCH-->
+<!---->
+<!--CONTENTS END-->
+
+<!--_WORKBENCH START-->
+<include filename="rw_Config/Workbench/blocks.xml"/>
+<!--_WORKBENCH END-->
+
+</configs>

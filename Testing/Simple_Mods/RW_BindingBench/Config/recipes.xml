@@ -1,0 +1,146 @@
+<configs>
+<!--CONTENTS START-->
+<!---->
+<!--_WORKBENCH-->
+<!---->
+<!--_PERK_BOOKS-->
+<!--_MAGAZINES-->
+<!--_SCHEMATICS-->
+<!---->
+<!--CONTENTS END-->
+
+<!--_WORKBENCH START-->
+<include filename="rw_Config/Workbench/recipes.xml"/>
+<!--_WORKBENCH END-->
+
+<!--_PERK_BOOKS START-->
+<conditional>
+	<!--Add perk book related recipes if RWBB_PerkBook_Blocker is not installed-->
+	<!--This is first so that it can override gears setting-->
+	<if cond="mod_loaded('RWBB_PerkBook_Blocker') == 'false'">
+
+		<!--Check to see if Gears is installed before checking against Gears settings-->
+		<conditional>
+			<if cond="mod_loaded('Gears')">
+
+				<!--Add perk book related recipes if gears world setting for perk book blocker is not On-->
+				<conditional>
+					<if cond="modsetting('RW_BindingBench', 'world', 'PerkBooks.pbBlocker') != 'On'">
+						<include filename="rw_Config/Perk_Books/recipes.xml"/>
+
+						<!--Remove sledge book recipes if not running game v2.0 or above-->
+						<conditional>
+							<if cond="game_version() &lt; version(1,2,0)">
+								<remove xpath="//recipe[starts-with(@name, 'bookSledgeSaga')]"/>
+							</if>
+						</conditional>
+
+						<!--Adjust perk book related recipes based on gears settings-->
+						<!--Adjusting the same settings manually is done through a presetup template with labeled set lines -->
+						<include filename="rw_Config/Gears_Settings/Perk_Books/recipes.xml"/>
+					</if>
+				</conditional>
+			</if>
+			<!--If RWBB_PerkBook_Blocker and Gears is not installed add the perk book related recipes (Default Fallback)-->
+			<else>
+				<include filename="rw_Config/Perk_Books/recipes.xml"/>
+
+				<!--Remove sledge book recipes if not running game v2.0 or above-->
+				<conditional>
+					<if cond="game_version() &lt; version(1,2,0)">
+						<remove xpath="//recipe[starts-with(@name, 'bookSledgeSaga')]"/>
+					</if>
+				</conditional>
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!--_PERK_BOOKS END-->
+
+<!--_MAGAZINES START-->
+<conditional>
+	<!--Add magazine related recipes if RWBB_Magazine_Blocker is not installed-->
+	<if cond="mod_loaded('RWBB_Magazine_Blocker') == 'false'">
+
+		<!--Check to see if Gears is installed before checking against Gears settings-->
+		<conditional>
+			<if cond="mod_loaded('Gears')">
+
+				<!--Add magazine related recipes if gears world setting for perk book blocker is not On-->
+				<conditional>
+					<if cond="modsetting('RW_BindingBench', 'world', 'Magazines.mBlocker') != 'On'">
+						<include filename="rw_Config/Magazines/recipes.xml"/>
+
+						<!--Adjust magazine related recipes based on gears settings-->
+						<!--Adjusting the same settings manually is done through a presetup template with labeled set lines -->
+						<include filename="rw_Config/Gears_Settings/Magazines/recipes.xml"/>
+					</if>
+				</conditional>
+			</if>
+			<!--If RWBB_Magazine_Blocker and Gears is not installed add the magazine related recipes (Default Fallback)-->
+			<else>
+				<include filename="rw_Config/Magazines/recipes.xml"/>
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!--_MAGAZINES END-->
+
+<!--_SCHEMATICS START-->
+<conditional>
+	<!--Add schematic related recipes if RWBB_Schematic_Blocker is not installed-->
+	<if cond="mod_loaded('RWBB_Schematic_Blocker') == 'false'">
+
+		<!--Check to see if Gears is installed before checking against Gears settings-->
+		<conditional>
+			<if cond="mod_loaded('Gears')">
+
+				<!--Add schematic related recipes if gears world setting for schematic blocker is not On-->
+				<conditional>
+					<if cond="modsetting('RW_BindingBench', 'world', 'Schematics.sBlocker') != 'On'">
+						<include filename="rw_Config/Schematics/recipes.xml"/>
+
+						<!--Remove insulated lining and cooling mesh recipes if running game v2.0 or above-->
+						<conditional>
+							<if cond="game_version() &gt;= version(1,2,0)">
+								<remove xpath="//recipe[@name='modArmorInsulatedLinerSchematic' or @name='modArmorCoolingMeshSchematic']"/>
+							</if>
+						</conditional>
+
+						<!--Remove vehicle storage mod recipe if not running game v2.5 or above-->
+						<conditional>
+							<if cond="game_version() &lt; version(1,2,5)">
+								<remove xpath="//recipe[@name='modVehicleStorageSchematic']"/>
+							</if>
+						</conditional>
+
+						<!--Adjust schematic related recipes based on gears settings-->
+						<!--Adjusting the same settings manually is done through a presetup template with labeled set lines -->
+						<include filename="rw_Config/Gears_Settings/Schematics/recipes.xml"/>
+					</if>
+				</conditional>
+			</if>
+			<!--If RWBB_Schematic_Blocker and Gears is not installed add the schematic related recipes (Default Fallback)-->
+			<else>
+				<include filename="rw_Config/Schematics/recipes.xml"/>
+
+				<!--Remove insulated lining and cooling mesh recipes if running game v2.0 or above-->
+				<conditional>
+					<if cond="game_version() &gt;= version(1,2,0)">
+						<remove xpath="//recipe[@name='modArmorInsulatedLinerSchematic' or @name='modArmorCoolingMeshSchematic']"/>
+					</if>
+				</conditional>
+
+				<!--Remove vehicle storage mod recipe if not running game v2.5 or above-->
+				<conditional>
+					<if cond="game_version() &lt; version(1,2,5)">
+						<remove xpath="//recipe[@name='modVehicleStorageSchematic']"/>
+					</if>
+				</conditional>
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!--_SCHEMATICS END-->
+
+</configs>

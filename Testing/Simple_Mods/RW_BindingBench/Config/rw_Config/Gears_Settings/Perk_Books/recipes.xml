@@ -1,0 +1,38 @@
+<configs>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'PerkBooks.Recipe.CraftTime') != '120'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and ./ingredient[@name='resourceRWPerkPapers']]/@craft_time">modsetting('RW_BindingBench', 'global', 'PerkBooks.Recipe.CraftTime')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'PerkBooks.Recipe.CraftXpGain') != '0'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and ./ingredient[@name='resourceRWPerkPapers']]/@craft_exp_gain">modsetting('RW_BindingBench', 'global', 'PerkBooks.Recipe.CraftXpGain')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'PerkBooks.Recipe.PerkPapersCount') != '10'">
+		<set xpath="//recipe[@craft_area='RWBindingBench']/ingredient[@name='resourceRWPerkPapers']/@count">modsetting('RW_BindingBench', 'global', 'PerkBooks.Recipe.PerkPapersCount')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'PerkBooks.Recipe.LeatherCount') != '3'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and ./ingredient[@name='resourceRWPerkPapers']]/ingredient[@name='resourceLeather']/@count">modsetting('RW_BindingBench', 'global', 'PerkBooks.Recipe.LeatherCount')</set>
+	</if>
+</conditional>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'global', 'PerkBooks.Recipe.GlueCount') != '5'">
+		<set xpath="//recipe[@craft_area='RWBindingBench' and ./ingredient[@name='resourceRWPerkPapers']]/ingredient[@name='resourceGlue']/@count">modsetting('RW_BindingBench', 'global', 'PerkBooks.Recipe.GlueCount')</set>
+	</if>
+</conditional>
+
+</configs>

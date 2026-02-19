@@ -1,0 +1,34 @@
+<config>
+
+<!--Add a category list for the binding bench so it will display the new groups that were added to everything.-->
+<append xpath="/ui_display_info/crafting_category_display">
+
+		<crafting_category_list display_type="RWBindingBench">
+			<crafting_category name="RWPerkBooks" icon="ui_game_symbol_book" display_name="lblCategoryRWPerkBooks" />
+			<crafting_category name="RWSkillMagazines" icon="ui_game_symbol_hammer" display_name="lblCategoryRWSkillMagazines" />
+			<crafting_category name="RWSchematics" icon="ui_game_symbol_schematic" display_name="lblCategoryRWSchematics" />
+		</crafting_category_list>
+</append>
+
+
+<conditional>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_BindingBench', 'world', 'PerkBooks.pbBlocker') == 'On'">
+				<remove xpath="//crafting_category_display/crafting_category_list[@display_type='RWBindingBench']/crafting_category[@name='RWPerkBooks']"/>
+			</if>
+		</conditional>
+		<conditional>
+			<if cond="modsetting('RW_BindingBench', 'world', 'Magazines.mBlocker') == 'On'">
+				<remove xpath="//crafting_category_display/crafting_category_list[@display_type='RWBindingBench']/crafting_category[@name='RWSkillMagazines']"/>
+			</if>
+		</conditional>
+		<conditional>
+			<if cond="modsetting('RW_BindingBench', 'world', 'Schematics.sBlocker') == 'On'">
+				<remove xpath="//crafting_category_display/crafting_category_list[@display_type='RWBindingBench']/crafting_category[@name='RWSchematics']"/>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+
+</config>

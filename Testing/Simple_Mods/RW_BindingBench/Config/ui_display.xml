@@ -1,0 +1,12 @@
+<config>
+<!--CONTENTS START-->
+<!---->
+<!--_WORKBENCH-->
+<!---->
+<!--CONTENTS END-->
+
+<!--_WORKBENCH START-->
+<include filename="rw_Config/Workbench/ui_display.xml"/>
+<!--_WORKBENCH END-->
+
+</config>

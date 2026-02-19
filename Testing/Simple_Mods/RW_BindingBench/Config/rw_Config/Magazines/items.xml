@@ -1,0 +1,32 @@
+<configs>
+
+<!--Add material and weight to the master magazine-->
+<append xpath="//item[@name='masterSkillMagazine']" >
+	<property name="Material" value="MrwSkillPapers" />
+	<property name="Weight" value="2" />
+</append>
+
+<!--Add new group to the master magazine-->
+<csv xpath="//item[@name='masterSkillMagazine']/property[@name='Group']/@value" delim="," op="add" >RWSkillMagazines</csv>
+
+<!--Add new scrap item. This will be the item you get back when scrapping-->
+<append xpath="/items">
+	<!--Skill Papers (magazine scrap)-->
+	<item name="resourceRWSkillPapers">
+		<property name="CustomIcon" value="resourcePaper"/>
+		<property name="CustomIconTint" value="336600"/>
+		<property name="Tags" value="junk"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="MrwSkillPapers"/>
+		<property name="Weight" value="1" />
+		<property name="Stacknumber" value="500"/>
+		<property name="FuelValue" value="5"/>
+		<property name="EconomicValue" value="25"/>
+		<property name="Group" value="Resources"/>
+		<property name="CraftingIngredientTime" value="3.0"/>
+	</item>
+</append>
+
+</configs>

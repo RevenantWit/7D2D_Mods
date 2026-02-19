@@ -1,0 +1,35 @@
+<configs>
+
+<!--Add material and weight to the master perk book-->
+<append xpath="//item[@name='bookFiremansAlmanacHeat']" >
+	<property name="Material" value="MrwPerkPapers" />
+	<property name="Weight" value="2" />
+</append>
+
+<!--Add new group to the master perk book-->
+<csv xpath="//item[@name='bookFiremansAlmanacHeat']/property[@name='Group']/@value" delim="," op="add">RWPerkBooks</csv>
+
+<!--Add new group to the first perk book in each series-->
+<csv xpath="//item[starts-with(@name, 'book') and not(contains(@name, 'FiremansAlmanac')) and ./property[@name='Extends' and @value='bookFiremansAlmanacHeat']]/property[@name='Group']/@value" delim="," op="add">RWPerkBooks</csv>
+
+<!--Add new scrap item. This will be the item you get back when scrapping-->
+<append xpath="/items">
+	<!--Perk Papers (perk book scrap)-->
+	<item name="resourceRWPerkPapers">
+		<property name="CustomIcon" value="resourcePaper"/>
+		<property name="CustomIconTint" value="663300"/>
+		<property name="Tags" value="junk"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="MrwPerkPapers"/>
+		<property name="Weight" value="1" />
+		<property name="Stacknumber" value="500"/>
+		<property name="FuelValue" value="5"/>
+		<property name="EconomicValue" value="55"/>
+		<property name="Group" value="Resources"/>
+		<property name="CraftingIngredientTime" value="3.0"/>
+	</item>
+</append>
+
+</configs>

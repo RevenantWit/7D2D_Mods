@@ -1,0 +1,58 @@
+<configs>
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'World', 'Schematics.sItemStackSize') != '5'">
+		<set xpath="//item[@name='schematicMaster']/property[@name='Stacknumber']/@value">modsetting('RW_BindingBench', 'World', 'Schematics.sItemStackSize')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'World', 'Schematics.sResourceStackSize') != '500'">
+		<set xpath="//item[@name='resourceRWBlueprintScraps']/property[@name='Stacknumber']/@value">modsetting('RW_BindingBench', 'World', 'Schematics.sResourceStackSize')</set>
+	</if>
+</conditional>
+
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'Schematics.Item.Weight') != '2'">
+		<set xpath="//item[@name='schematicNoQualityMaster' or @name='schematicNoQualityRecipeMaster']/property[@name='Weight']/@value">modsetting('RW_BindingBench', 'Global', 'Schematics.Item.Weight')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'Schematics.Item.EconomicValue') != '800'">
+		<set xpath="//item[@name='schematicMaster']/property[@name='EconomicValue']/@value">modsetting('RW_BindingBench', 'Global', 'Schematics.Item.EconomicValue')</set>
+	</if>
+</conditional>
+
+
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'Schematics.Resource.CraftingIngredientTime') != '3.0'">
+		<set xpath="//item[@name='resourceRWBlueprintScraps']/property[@name='CraftingIngredientTime']/@value">modsetting('RW_BindingBench', 'Global', 'Schematics.Resource.CraftingIngredientTime')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'Schematics.Resource.FuelValue') != '5'">
+		<set xpath="//item[@name='resourceRWBlueprintScraps']/property[@name='FuelValue']/@value">modsetting('RW_BindingBench', 'Global', 'Schematics.Resource.FuelValue')</set>
+	</if>
+</conditional>
+
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'Schematics.Resource.EconomicValue') != '88'">
+		<set xpath="//item[@name='resourceRWBlueprintScraps']/property[@name='EconomicValue']/@value">modsetting('RW_BindingBench', 'Global', 'Schematics.Resource.EconomicValue')</set>
+	</if>
+</conditional>
+
+<!--
+<conditional>
+	<if cond="modsetting('RW_BindingBench', 'Global', 'Schematics.Resource.CustomIconTint') != '663300'">
+		<set xpath="//item[@name='resourceRWBlueprintScraps']/property[@name='CustomIconTint']/@value">modsetting('RW_BindingBench', 'Global', 'Schematics.Resource.CustomIconTint')</set>
+	</if>
+</conditional>
+-->
+
+</configs>

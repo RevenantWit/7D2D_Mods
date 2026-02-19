@@ -1,0 +1,14 @@
+<configs>
+
+<append xpath="/recipes">
+	<!--Binding Bench Recipe-->
+	<recipe name="RWBindingBench" count="1" craft_time="210" craft_exp_gain="0" craft_area="workbench">
+		<ingredient name="resourceForgedIron" count="50"/>
+		<ingredient name="resourceMechanicalParts" count="25"/>
+		<ingredient name="resourceDuctTape" count="10"/>
+		<ingredient name="resourceNail" count="50"/>
+		<ingredient name="resourceWood" count="50"/>
+	</recipe>
+</append>
+
+</configs>
