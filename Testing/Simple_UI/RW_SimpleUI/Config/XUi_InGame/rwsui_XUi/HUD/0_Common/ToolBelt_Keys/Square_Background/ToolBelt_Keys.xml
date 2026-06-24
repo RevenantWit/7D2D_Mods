@@ -1,0 +1,24 @@
+<configs>
+
+<append xpath="//window[@name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/rect[@name='windowToolbelt']">
+
+	<!--Toolbelt Keys Background-->
+	<rwsui_toolbelt_keys_bg style="rwsui_tbkeys_background" pos="30,18" />
+
+</append>
+
+<append xpath="//window[@name='RWSUI_ToolBelt10']/rect[@name='windowToolbelt']">
+
+	<!--Toolbelt Keys Text-->
+	<rwsui_toolbelt_keys style="rwsui_tbkeys" />
+
+</append>
+
+<append xpath="//window[@name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']/rect[@name='windowToolbelt']">
+
+	<!--ToolbeltXL Keys Text-->
+	<rwsui_toolbeltXL_keys style="rwsui_tbkeys" />
+
+</append>
+
+</configs>

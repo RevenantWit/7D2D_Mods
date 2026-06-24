@@ -1,0 +1,19 @@
+<configs>
+
+<append xpath="/templates">
+
+	<rwsui_wookiesVCC_statbar pos="0,0" width="171" height="46" border_depth="3" border_pos="0,0" border_width="${width}" border_height="${height}" border_color="[black]" border_sprite="menu_empty" border_fillcenter="false" grow_border="4" background_pos="0,0" background_width="${width}" background_height="${height}" background_color="[black]" background_sprite="menu_empty" fill_pos="1,-1" fill_width="${width-2}" fill_height="${height-2}" fill_sprite="menu_empty" icon_pos="26,-24" icon_atlas="{uiatlas}" icon="ui_game_symbol_drive" icon_color="[white]" icon_size="35,35" icon_hidden="false" text_pos="20,-11" text_width="125" font_size="28" text_height="26" text_color="[white]" text_justify="center" textOutline_color="[transparent]" textOutline_size="1,1" text_hidden="false">
+
+		<rect width="${width}" height="${height}" pos="${pos}" controller="XUiC_WMMCruiseControl, WMMVehicleCruiseControl" visible="True">
+			<sprite depth="0" name="border" pos="${border_pos}" width="${border_width}" height="${border_height}" color="${border_color}" sprite="${border_sprite}" type="sliced" fillcenter="${border_fillcenter}" />
+			<sprite depth="2" name="background" pos="${background_pos}" width="${background_width}" height="${background_height}" color="${background_color}" sprite="${background_sprite}" type="sliced" />
+			<sprite depth="${border_depth}" name="border" pos="${border_pos}" width="${border_width}" height="${border_height}" color="${border_color}" sprite="${border_sprite}" type="sliced" fillcenter="${border_fillcenter}" />
+			<sprite depth="4" name="BarContent" pos="${fill_pos}" width="${fill_width}" height="${fill_height}" sprite="${fill_sprite}" type="filled" fill="1" />
+			<sprite depth="6" name="Icon" pos="${icon_pos}" size="${icon_size}" atlas="${icon_atlas}" sprite="${icon}" color="${icon_color}" pivot="center" foregroundlayer="true" force_hide="${icon_hidden}"/>
+			<label depth="6" name="TextContent" pos="${text_pos}" width="${text_width}" font_size="${font_size}" height="${text_height}" color="${text_color}" justify="${text_justify}" text="Cruise" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" force_hide="${text_hidden}" />
+		</rect>
+	</rwsui_wookiesVCC_statbar>
+
+</append>
+
+</configs>

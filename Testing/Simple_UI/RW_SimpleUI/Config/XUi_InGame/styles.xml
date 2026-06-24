@@ -1,0 +1,105 @@
+<configs>
+<!--CONTENTS START-->
+<!---->
+<!--_Core_Styles-->
+<!---->
+<!--_StatBar_Text_Setting_Addon-->
+<!--_StatBar_Icons_Setting_Addon-->
+<!---->
+<!--_12_Slot_ToolBelt_Patch-->
+<!--_15_Slot_ToolBelt_Patch-->
+<!--_Wookies_Cruise_Control_Patch-->
+<!---->
+<!--_Quartz_Food_Water_Controller_Patch-->
+<!---->
+<!--CONTENTS END-->
+
+<!--_Core_Styles Start-->
+<include filename="rwsui_XUi/0_Core/styles.xml"/>
+<!--_Core_Styles END-->
+
+<!--_StatBar_Text_Setting_Addon START-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_StatBarsTextRemover')">
+		<set xpath="//global/style_entry[@name='rwsui_statbar_text_visible']/@value">false</set>
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.StatBars.StatBarText') == 'Off'">
+				<set xpath="//global/style_entry[@name='rwsui_statbar_text_visible']/@value">false</set>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+<!--_StatBar_Text_Setting_Addon END-->
+
+<!--_StatBar_Icon_Setting_Addon START-->
+<conditional>
+	<if cond="mod_loaded('RWSUI_StatBarsIconRemover')">
+		<set xpath="//global/style_entry[@name='rwsui_statbar_icon_visible']/@value">false</set>
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.StatBars.StatBarIcons') == 'Off'">
+				<set xpath="//global/style_entry[@name='rwsui_statbar_icon_visible']/@value">false</set> />
+			</if>
+		</conditional>
+	</if>
+</conditional>
+<!--_StatBar_Icon_Setting_Addon END-->
+
+<!--_12_Slot_ToolBelt_Patch START-->
+<conditional>
+	<if cond="mod_loaded('WMM12SlotToolbelt') or mod_loaded('TheMeanOnes12SlotToolbelt') or mod_loaded('Dewtas12SlotToolbelt') and mod_loaded('RWSUI_ToolBelt_Blocker') == 'false'">
+		<conditional>
+			<if cond="mod_loaded('Gears')">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
+						<include filename="rwsui_XUi/Patches/12SlotToolBelt/styles.xml" />
+					</if>
+				</conditional>
+			</if>
+			<else>
+				<include filename="rwsui_XUi/Patches/12SlotToolBelt/styles.xml" />
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!--_12_Slot_ToolBelt_Patch END-->
+
+<!--_15_Slot_ToolBelt_Patch START-->
+<conditional>
+	<if cond="mod_loaded('15SlotToolbelt') or mod_loaded('TheMeanOnes15SlotToolbelt') or mod_loaded('Dewtas15SlotToolbelt') and mod_loaded('RWSUI_ToolBelt_Blocker') == 'false'">
+		<conditional>
+			<if cond="mod_loaded('Gears')">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'global', 'Misc.SimpleUIBlockers.ToolBeltBlocker') == 'Off'">
+						<include filename="rwsui_XUi/Patches/15SlotToolBelt/styles.xml" />
+					</if>
+				</conditional>
+			</if>
+			<else>
+				<include filename="rwsui_XUi/Patches/15SlotToolBelt/styles.xml" />
+			</else>
+		</conditional>
+	</if>
+</conditional>
+<!--_15_Slot_ToolBelt_Patch END-->
+
+<!--_Wookies_Cruise_Control_Patch START-->
+<conditional>
+	<if cond="mod_loaded('WMMVehicleCruiseControl')">
+		<include filename="rwsui_XUi/Patches/WookiesVCC/styles.xml" />
+	</if>
+</conditional>
+<!--_Wookies_Cruise_Control_Patch END-->
+
+<!--_Quartz_Food_Water_Controller_Patch START-->
+<conditional>
+	<if cond="mod_loaded('Quartz')">
+		<include filename="rwsui_XUi/Patches/Quartz/Controllers/Food_Water/styles.xml" />
+	</if>
+</conditional>
+<!--_Quartz_Food_Water_Controller_Patch END-->
+
+</configs>

@@ -1,0 +1,411 @@
+<configs>
+
+<conditional>
+	<!--HUD Settings Addon-->
+	<if cond="mod_loaded('RWSUI_HUD_Settings')">
+
+		<conditional>
+			<!--Vertical StatBars (v2.x.x)-->
+			<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(2,0,0) and mod_version('RWSUI_HUD_Settings') &lt; version(3,0,0)">
+
+				<conditional>
+					<!--ToolBelt StatBars (v2.1.x)-->
+					<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(2,1,0)">
+
+						<conditional>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(2,1,1)">
+
+							</if>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(2,1,2)">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</if>
+					<!--Bottom Left StatBars (v2.0.x)-->
+					<else>
+
+						<conditional>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(2,0,1)">
+
+							</if>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(2,0,2)">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</else>
+				</conditional>
+			</if>
+			<!--Round StatBars (v3.x.x)-->
+			<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(3,0,0) and mod_version('RWSUI_HUD_Settings') &lt; version(4,0,0)">
+
+				<conditional>
+					<!--ToolBelt StatBars (v3.1.x)-->
+					<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(3,1,0)">
+
+						<conditional>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(3,1,1)">
+
+							</if>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(3,1,2)">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</if>
+					<!--Bottom Left StatBars (v3.0.x)-->
+					<else>
+
+						<conditional>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(3,0,1)">
+
+							</if>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(3,0,2)">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</else>
+				</conditional>
+			</if>
+
+			<!--MiniHUD StatBars (v4.x.x)-->
+			<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(4,0,0) and mod_version('RWSUI_HUD_Settings') &lt; version(5,0,0)">
+
+				<conditional>
+					<!--ToolBelt StatBars (v4.1.x)-->
+					<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(4,1,0)">
+
+						<conditional>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(4,1,1)">
+
+							</if>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(4,1,2)">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</if>
+					<!--Bottom Left StatBars (v4.0.x)-->
+					<else>
+
+						<conditional>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(4,0,1)">
+
+							</if>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(4,0,2)">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</else>
+				</conditional>
+			</if>
+
+			<!--Icon StatBars (v5.x.x)-->
+			<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(5,0,0) and mod_version('RWSUI_HUD_Settings') &lt; version(6,0,0)">
+
+				<conditional>
+					<!--ToolBelt StatBars (v5.1.x)-->
+					<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(5,1,0)">
+
+						<conditional>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(5,1,1)">
+
+							</if>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(5,1,2)">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</if>
+					<!--Bottom Left StatBars (v5.0.x)-->
+					<else>
+
+						<conditional>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(5,0,1)">
+
+							</if>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(5,0,2)">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</else>
+				</conditional>
+			</if>
+
+			<!--Horizontal StatBars (v1.x.x)-->
+			<else>
+
+				<conditional>
+					<!--ToolBelt StatBars (v1.1.x)-->
+					<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(1,1,0)">
+
+						<conditional>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(1,1,1)">
+
+							</if>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(1,1,2)">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</if>
+					<!--Bottom Left StatBars (v1.0.x)-->
+					<else>
+
+						<conditional>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(1,0,1)">
+
+							</if>
+							<if cond="mod_version('RWSUI_HUD_Settings') == version(1,0,2)">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</else>
+				</conditional>
+			</else>
+		</conditional>
+	</if>
+
+	<!--Gears Settings-->
+	<if cond="mod_loaded('Gears')">
+
+		<conditional>
+			<!--Vertical StatBars-->
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'Vertical'">
+
+				<conditional>
+					<!--ToolBelt StatBars-->
+					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
+
+						<conditional>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
+
+							</if>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</if>
+					<!--Bottom Left StatBars-->
+					<else>
+
+						<conditional>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
+
+							</if>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</else>
+				</conditional>
+			</if>
+
+			<!--Round StatBars-->
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'Round'">
+
+				<conditional>
+					<!--ToolBelt StatBars-->
+					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
+
+						<conditional>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
+
+							</if>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</if>
+					<!--Bottom Left StatBars-->
+					<else>
+
+						<conditional>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
+
+							</if>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</else>
+				</conditional>
+			</if>
+
+			<!--MiniHUD StatBars-->
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'MiniHUD'">
+
+				<conditional>
+					<!--ToolBelt StatBars-->
+					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
+
+						<conditional>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
+
+							</if>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</if>
+					<!--Bottom Left StatBars-->
+					<else>
+
+						<conditional>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
+
+							</if>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</else>
+				</conditional>
+			</if>
+
+		<!--Icon StatBars-->
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'Icon_StatBars'">
+
+				<conditional>
+					<!--ToolBelt StatBars-->
+					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
+
+						<conditional>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
+
+							</if>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</if>
+					<!--Bottom Left StatBars-->
+					<else>
+
+						<conditional>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
+
+							</if>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</else>
+				</conditional>
+			</if>
+
+			<!--Horizontal StatBars-->
+			<else>
+
+				<conditional>
+					<!--ToolBelt StatBars-->
+					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') == 'ToolBelt'">
+
+						<conditional>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
+
+							</if>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</if>
+					<!--Bottom Left StatBars-->
+					<else>
+
+						<conditional>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Vanilla'">
+
+							</if>
+							<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.BuffPanels.BuffPanel') == 'Detailed_Buffs'">
+
+							</if>
+							<else>
+
+							</else>
+						</conditional>
+
+					</else>
+				</conditional>
+			</else>
+		</conditional>
+	</if>
+
+	<!--Fallback to default if hud settings addon or gears is not installed.-->
+	<else>
+
+	</else>
+</conditional>
+
+</configs>

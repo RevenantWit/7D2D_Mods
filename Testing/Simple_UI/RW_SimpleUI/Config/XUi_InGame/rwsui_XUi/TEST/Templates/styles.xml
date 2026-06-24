@@ -1,0 +1,16 @@
+<configs>
+
+<append xpath="/styles/global">
+
+
+
+</append>
+
+
+<append xpath="/styles">
+
+
+
+</append>
+
+</configs>

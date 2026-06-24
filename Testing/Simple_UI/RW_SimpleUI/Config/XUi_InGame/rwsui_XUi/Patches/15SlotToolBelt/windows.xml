@@ -1,0 +1,48 @@
+<configs>
+
+<conditional>
+	<!--HUD Settings Addon-->
+	<if cond="mod_loaded('RWSUI_HUD_Settings')">
+		<conditional>
+			<!--Icon StatBars (v5.x.x)-->
+			<if cond="mod_version('RWSUI_HUD_Settings') &gt;= version(5,0,0) and mod_version('RWSUI_HUD_Settings') &lt; version(6,0,0)">
+				<conditional>
+					<if cond="mod_version('RWSUI_HUD_Settings') &lt; version(5,1,0) or mod_version('RWSUI_HUD_Settings') &gt;= version(5,2,0)">
+						<set xpath="//window[@name='RWSUI_LeftHUD']/rect//rwsui_custom_statbar_stealth[@pos='325,0']/@pos">300,0</set>
+
+						<set xpath="//window[@name='RWSUI_LeftHUD']/rect//rwsui_custom_statbar[@pos='58,0']/@pos">56,0</set>
+
+						<set xpath="//window[@name='RWSUI_LeftHUD']/rect//rwsui_custom_statbar[@pos='130,0']/@pos">122,0</set>
+
+						<set xpath="//window[@name='RWSUI_LeftHUD']/rect//rwsui_custom_statbar[@pos='195,0']/@pos">182,0</set>
+
+						<set xpath="//window[@name='RWSUI_LeftHUD']/rect//rwsui_custom_statbar_xp[@pos='255,0']/@pos">240,0</set>
+					</if>
+				</conditional>
+			</if>
+		</conditional>
+	</if>
+	<!--Gears Settings-->
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+		<!--Icon StatBars-->
+			<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarType') == 'Icon_StatBars'">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'global', 'HUD.StatBars.StatBarLocation') != 'ToolBelt'">
+						<set xpath="//window[@name='RWSUI_LeftHUD']/rect//rwsui_custom_statbar_stealth[@pos='325,0']/@pos">300,0</set>
+
+						<set xpath="//window[@name='RWSUI_LeftHUD']/rect//rwsui_custom_statbar[@pos='58,0']/@pos">56,0</set>
+
+						<set xpath="//window[@name='RWSUI_LeftHUD']/rect//rwsui_custom_statbar[@pos='130,0']/@pos">122,0</set>
+
+						<set xpath="//window[@name='RWSUI_LeftHUD']/rect//rwsui_custom_statbar[@pos='195,0']/@pos">182,0</set>
+
+						<set xpath="//window[@name='RWSUI_LeftHUD']/rect//rwsui_custom_statbar_xp[@pos='255,0']/@pos">240,0</set>
+					</if>
+				</conditional>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+
+</configs>

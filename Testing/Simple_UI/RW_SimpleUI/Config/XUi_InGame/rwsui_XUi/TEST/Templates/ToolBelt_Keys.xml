@@ -1,0 +1,13 @@
+<configs>
+
+<append xpath="//window[@name='RWSUI_ToolBelt10']/rect[@name='windowToolbelt']">
+
+	<!--Toolbelt Keys Background-->
+
+
+	<!--Toolbelt Keys Text-->
+
+
+</append>
+
+</configs>
