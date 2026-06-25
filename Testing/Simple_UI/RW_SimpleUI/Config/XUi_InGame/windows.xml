@@ -588,18 +588,18 @@
 		<include filename="rwsui_XUi/AddOns/BigBag/backpack.xml" />
 
 		<!--Patch oversized loot window on death bag to be scrollable if Quartz is installed-->
-		<conditional>
+		<!--conditional>
 			<if cond="mod_loaded('Quartz')">
 				<include filename="rwsui_XUi/Patches/Quartz/Scrollable/windowLooting/windows.xml" />
 			</if>
-		</conditional>
+		</conditional-->
 
 		<!--Adjust backpack tabs to number of pages selected if not using the biggest setting-->
 		<include filename="rwsui_XUi/AddOns/BigBag/backpack_size.xml" />
 
 		<!--Patch to make backpack tab buttons thinner when using 5 or 6 page backpack with Beyond Storage 2-->
 		<conditional>
-			<if cond="mod_loaded('BeyondStorage2')">
+			<if cond="mod_loaded('BeyondStorage2') or mod_loaded('BeyondStorage3')">
 				<include filename="rwsui_XUi/Patches/BeyondStorage2/windows.xml" />
 			</if>
 		</conditional>
@@ -614,18 +614,18 @@
 
 				<!--Patch oversized loot window on death bag to be scrollable if Quartz is installed-->
 				<!--This conditional check should not be needed if gears is installed but better safe than sorry-->
-				<conditional>
+				<!--conditional>
 					<if cond="mod_loaded('Quartz')">
 						<include filename="rwsui_XUi/Patches/Quartz/Scrollable/windowLooting/windows.xml" />
 					</if>
-				</conditional>
+				</conditional-->
 
 				<!--Adjust backpack tabs to number of pages selected if not using the biggest setting-->
 				<include filename="rwsui_XUi/AddOns/BigBag/backpack_size.xml" />
 
 				<!--Patch to make backpack tab buttons thinner when using 5 or 6 page backpack with Beyond Storage 2-->
 				<conditional>
-					<if cond="mod_loaded('BeyondStorage2')">
+					<if cond="mod_loaded('BeyondStorage2') or mod_loaded('BeyondStorage3')">
 						<include filename="rwsui_XUi/Patches/BeyondStorage2/windows.xml" />
 					</if>
 				</conditional>
