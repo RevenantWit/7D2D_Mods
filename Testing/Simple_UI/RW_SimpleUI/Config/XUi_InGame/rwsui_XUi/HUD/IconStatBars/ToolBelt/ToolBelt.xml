@@ -5,7 +5,7 @@
 	<window name="RWSUI_ToolBelt10" anchor="CenterBottom" pos="-376,80" cursor_area="true">
 		<rect name="windowToolbelt" width="753" height="78" depth="5" backgroundcolor="[black]" controller="ToolbeltWindow">
 
-			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" gamepad_selectable="false" />
+			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" snap="false" gamepad_selectable="false" />
 			
 			<!--Toolbelt-->
 			<rwsui_toolbelt clear_inventory1_pos="765,19" clear_inventory2_pos="765,53" />
@@ -58,7 +58,7 @@
 	<window name="RWSUI_ToolBelt12" anchor="CenterBottom" pos="-451,80" cursor_area="true">
 		<rect name="windowToolbelt" width="903" height="78" depth="5" backgroundcolor="[black]" controller="ToolbeltWindow">
 
-			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" gamepad_selectable="false" />
+			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" snap="false" gamepad_selectable="false" />
 			
 			<!--Toolbelt-->
 			<rwsui_toolbelt cols="12" clear_inventory1_pos="915,19" clear_inventory2_pos="915,53" />
@@ -111,7 +111,7 @@
 	<window name="RWSUI_ToolBelt15" anchor="CenterBottom" pos="-563,99" cursor_area="true">
 		<rect name="windowToolbelt" width="1128" height="78" depth="5" backgroundcolor="[black]" controller="ToolbeltWindow">
 
-			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" gamepad_selectable="false" />
+			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" snap="false" gamepad_selectable="false" />
 			
 			<!--Toolbelt-->
 			<rwsui_toolbelt cols="15"  clear_inventory1_pos="1140,19" clear_inventory2_pos="1140,53" />

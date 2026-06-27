@@ -677,16 +677,16 @@
 <!--_Wookies_Cruise_Control_Patch END-->
 
 <!--_Quartz_Food_Water_Controller_Patch START-->
-<conditional>
+<!-- <conditional>
 	<if cond="mod_loaded('Quartz')">
-		<conditional>
+		<conditional> -->
 			<!--Patch if running game v2.5 or above-->
-			<if cond="game_version() &gt;= version(1,2,5)">
+<!-- 			<if cond="game_version() &gt;= version(1,2,5)">
 				<include filename="rwsui_XUi/Patches/Quartz/Controllers/Food_Water/windows.xml" />
 			</if>
 		</conditional>
 	</if>
-</conditional>
+</conditional> -->
 <!--_Quartz_Food_Water_Controller_Patch END-->
 
 

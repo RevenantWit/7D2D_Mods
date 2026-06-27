@@ -25,7 +25,7 @@
 				</conditional>
 			</if>
 			<else>
-				<set xpath="/xui/window_group[@name='toolbelt']/window[@name='HUDLeftStatBars' or @name='RevsWW_LeftHUD' or @name='RevsWW_MultiHUD' or @name='RWSUI_LeftHUD']/@name">RWSUI_LeftHUD</set>
+				<set xpath="/xui/window_group[@name='toolbelt']/window[@name='HUDLeftStatBars' or @name='RWSUI_LeftHUD']/@name">RWSUI_LeftHUD</set>
 				<set xpath="/xui/window_group[@name='toolbelt']/window[@name='HUDRightStatBars' or @name='RWSUI_RightHUD']/@name">RWSUI_RightHUD</set>
 			</else>
 		</conditional>
@@ -70,7 +70,7 @@
 
 <!--_12_Slot_ToolBelt_Patch START-->
 <conditional>
-	<if cond="mod_loaded('WMM12SlotToolbelt') or mod_loaded('TheMeanOnes12SlotToolbelt') or mod_loaded('Dewtas12SlotToolbelt') and mod_loaded('RWSUI_ToolBelt_Blocker') == 'false'">
+	<if cond="mod_loaded('WMM12SlotToolbelt') or mod_loaded('TheMeanOnes12SlotToolbelt') or mod_loaded('Dewtas12SlotToolbelt') or mod_loaded('ToolbeltExpansion') and mod_loaded('RWSUI_ToolBelt_Blocker') == 'false'">
 		<conditional>
 			<if cond="mod_loaded('Gears')">
 				<conditional>

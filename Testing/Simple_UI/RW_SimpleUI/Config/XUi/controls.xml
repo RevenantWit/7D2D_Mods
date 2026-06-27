@@ -27,7 +27,7 @@
 
 <!--_12_Slot_ToolBelt_Patch START-->
 <conditional>
-	<if cond="mod_loaded('WMM12SlotToolbelt') or mod_loaded('TheMeanOnes12SlotToolbelt') or mod_loaded('Dewtas12SlotToolbelt') and mod_loaded('RWSUI_ToolBelt_Blocker') == 'false'">
+	<if cond="mod_loaded('WMM12SlotToolbelt') or mod_loaded('TheMeanOnes12SlotToolbelt') or mod_loaded('Dewtas12SlotToolbelt') or mod_loaded('ToolbeltExpansion') and mod_loaded('RWSUI_ToolBelt_Blocker') == 'false'">
 		<conditional>
 			<if cond="mod_loaded('Gears')">
 				<conditional>
