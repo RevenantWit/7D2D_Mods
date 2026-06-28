@@ -12,8 +12,6 @@
 <!--_15_Slot_ToolBelt_Patch-->
 <!--_Wookies_Cruise_Control_Patch-->
 <!---->
-<!--_Quartz_Food_Water_Controller_Patch-->
-<!---->
 <!--CONTENTS END-->
 
 <!--_HUD_Settings START-->
@@ -522,23 +520,24 @@
 <conditional>
 	<!-- If ToolbeltKeys Remover version number is 1.1 remove only the toolbelt keys background -->
 	<if cond="mod_loaded('RWSUI_ToolBeltKeys_Remover') and mod_version('RWSUI_ToolBeltKeys_Remover') == version(1,1)">
-		<include filename="rwsui_XUi/AddOns/ToolBeltKeys_Remover/remove_bg.xml" />
+		<remove xpath="//window[@name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']//rwsui_toolbelt_keys_bg"/>
 	</if>
 	<!-- If ToolbeltKeys Remover is installed remove the toolbelt keys and background from being displayed above toolbelt -->
 	<if cond="mod_loaded('RWSUI_ToolBeltKeys_Remover')">
-		<include filename="rwsui_XUi/AddOns/ToolBeltKeys_Remover/remove_keys.xml" />
-		<include filename="rwsui_XUi/AddOns/ToolBeltKeys_Remover/remove_bg.xml" />
-
+		<remove xpath="//window[@name='RWSUI_ToolBelt10']//rwsui_toolbelt_keys"/>
+		<remove xpath="//window[@name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']//rwsui_toolbeltXL_keys"/>
+		<remove xpath="//window[@name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']//rwsui_toolbelt_keys_bg"/>
 	</if>
 	<if cond="mod_loaded('Gears')">
 		<conditional>
 			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.ToolBelt.ToolBeltKeys') == 'Off'">
-				<include filename="rwsui_XUi/AddOns/ToolBeltKeys_Remover/remove_keys.xml" />
+				<remove xpath="//window[@name='RWSUI_ToolBelt10']//rwsui_toolbelt_keys"/>
+				<remove xpath="//window[@name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']//rwsui_toolbeltXL_keys"/>
 			</if>
 		</conditional>
 		<conditional>
 			<if cond="modsetting('RW_SimpleUI', 'global', 'Labels.ToolBelt.ToolBeltKeysBG') == 'Off'">
-				<include filename="rwsui_XUi/AddOns/ToolBeltKeys_Remover/remove_bg.xml" />
+				<remove xpath="//window[@name='RWSUI_ToolBelt10' or @name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']//rwsui_toolbelt_keys_bg"/>
 			</if>
 		</conditional>
 	</if>
@@ -675,19 +674,6 @@
 	</if>
 </conditional>
 <!--_Wookies_Cruise_Control_Patch END-->
-
-<!--_Quartz_Food_Water_Controller_Patch START-->
-<!-- <conditional>
-	<if cond="mod_loaded('Quartz')">
-		<conditional> -->
-			<!--Patch if running game v2.5 or above-->
-<!-- 			<if cond="game_version() &gt;= version(1,2,5)">
-				<include filename="rwsui_XUi/Patches/Quartz/Controllers/Food_Water/windows.xml" />
-			</if>
-		</conditional>
-	</if>
-</conditional> -->
-<!--_Quartz_Food_Water_Controller_Patch END-->
 
 
 

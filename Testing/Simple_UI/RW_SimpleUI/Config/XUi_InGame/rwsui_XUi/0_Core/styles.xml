@@ -42,7 +42,7 @@
 <!--_StatBar_Visibility_Settings START-->
 	<style_entry name="rwsui_statbar_icon_visible" value="true"/>
 	<style_entry name="rwsui_statbar_text_visible" value="true"/>
-<!--_StatBar_Force_Hide_Settings END-->
+<!--_StatBar_Visibility_Settings END-->
 
 <!--_StatBar_Text_Adjustments START-->
 	<style_entry name="rwsui_statcurrent_stamina_text" value="{# length(statcurrent)==0 ? '' : Round(float(statcurrent), 0)}"/>

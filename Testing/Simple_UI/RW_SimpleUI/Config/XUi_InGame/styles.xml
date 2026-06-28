@@ -97,7 +97,7 @@
 <!--_Quartz_Food_Water_Controller_Patch START-->
 <!-- <conditional>
 	<if cond="mod_loaded('Quartz')">
-		<include filename="rwsui_XUi/Patches/Quartz/Controllers/Food_Water/styles.xml" />
+		<set xpath="//global/style_entry[@name='rwsui_statcurrent_foodwater_text']/@value">{statcurrent}</set>
 	</if>
 </conditional> -->
 <!--_Quartz_Food_Water_Controller_Patch END-->
