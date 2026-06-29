@@ -38,4 +38,57 @@
 	</else>
 </conditional>
 
+<!--Fix for using vanilla scrollview/scrollbar in game v3.0 and above-->
+<!-- Adjust dropped bag sizes to avoid issues -->
+<conditional>
+	<if cond="game_version() &gt;= version(1,3,0)">
+		<conditional>
+			<if cond="mod_version('RWSUI_BackPack_Size') == version(2,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='cntDropBag']/@size">9,20</set>
+				<set xpath="/lootcontainers/lootcontainer[starts-with(@name, 'zPack')]/@size">9,20</set>
+			</if>
+			<if cond="mod_version('RWSUI_BackPack_Size') == version(3,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='cntDropBag']/@size">9,25</set>
+				<set xpath="/lootcontainers/lootcontainer[starts-with(@name, 'zPack')]/@size">9,25</set>
+			</if>
+			<if cond="mod_version('RWSUI_BackPack_Size') == version(4,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='cntDropBag']/@size">9,30</set>
+				<set xpath="/lootcontainers/lootcontainer[starts-with(@name, 'zPack')]/@size">9,30</set>
+			</if>
+			<if cond="mod_version('RWSUI_BackPack_Size') == version(5,0)">
+				<set xpath="/lootcontainers/lootcontainer[@name='cntDropBag']/@size">9,35</set>
+				<set xpath="/lootcontainers/lootcontainer[starts-with(@name, 'zPack')]/@size">9,35</set>
+			</if>
+			<if cond="mod_loaded('Gears')">
+				<conditional>
+					<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '2_Pages'">
+						<set xpath="/lootcontainers/lootcontainer[@name='cntDropBag']/@size">9,20</set>
+						<set xpath="/lootcontainers/lootcontainer[starts-with(@name, 'zPack')]/@size">9,20</set>
+					</if>
+					<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '3_Pages'">
+						<set xpath="/lootcontainers/lootcontainer[@name='cntDropBag']/@size">9,25</set>
+						<set xpath="/lootcontainers/lootcontainer[starts-with(@name, 'zPack')]/@size">9,25</set>
+					</if>
+					<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '4_Pages'">
+						<set xpath="/lootcontainers/lootcontainer[@name='cntDropBag']/@size">9,30</set>
+						<set xpath="/lootcontainers/lootcontainer[starts-with(@name, 'zPack')]/@size">9,30</set>
+					</if>
+					<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '5_Pages'">
+						<set xpath="/lootcontainers/lootcontainer[@name='cntDropBag']/@size">9,35</set>
+						<set xpath="/lootcontainers/lootcontainer[starts-with(@name, 'zPack')]/@size">9,35</set>
+					</if>
+					<else>
+						<set xpath="/lootcontainers/lootcontainer[@name='cntDropBag']/@size">9,40</set>
+						<set xpath="/lootcontainers/lootcontainer[starts-with(@name, 'zPack')]/@size">9,40</set>
+					</else>
+				</conditional>
+			</if>
+			<else>
+				<set xpath="/lootcontainers/lootcontainer[@name='cntDropBag']/@size">9,40</set>
+				<set xpath="/lootcontainers/lootcontainer[starts-with(@name, 'zPack')]/@size">9,40</set>
+			</else>
+		</conditional>
+	</if>
+</conditional>
+
 </configs>

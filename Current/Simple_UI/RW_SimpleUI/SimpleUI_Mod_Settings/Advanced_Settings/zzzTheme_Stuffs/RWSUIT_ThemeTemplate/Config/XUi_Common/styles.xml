@@ -23,9 +23,20 @@
 <conditional>
 	<if cond="mod_loaded('RW_SimpleUI')">
 
+		<!--Round hud statbars background color-->
 		<set xpath="//global/style_entry[@name='rwsui_radial_statbar_bg_color']/@value">[black]</set>
 
+		<!--Icon statbars background color-->
 		<set xpath="//global/style_entry[@name='rwsui_custom_iconstatbar_bg_color']/@value">0,0,0,160</set>
+
+		<!--Default color for backpack page tabs and scrollbar color when using the expanded backpack-->
+		<!--7 Days 3.0 and up only, these two options will not apply on earlier versions of the game-->
+		<conditional>
+			<if cond="game_version() &gt;= version(1,3,0)">
+				<set xpath="//global/style_entry[@name='rwsui_backpackTabs_default_color']/@value">64,64,64</set>
+				<set xpath="//global/style_entry[@name='rwsui_scrollbar_color']/@value">11,11,179</set>
+			</if>
+		</conditional>
 
 		<!--_Stealth_Bar START-->
 		<set xpath="//global/style_entry[@name='rwsui_stealthbar_border_color']/@value">[black]</set>

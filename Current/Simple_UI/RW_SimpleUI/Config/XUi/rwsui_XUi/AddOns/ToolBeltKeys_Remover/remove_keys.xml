@@ -1,7 +1,0 @@
-<configs>
-
-<remove xpath="//window[@name='RWSUI_ToolBelt10']//rwsui_toolbelt_keys"/>
-
-<remove xpath="//window[@name='RWSUI_ToolBelt12' or @name='RWSUI_ToolBelt15']//rwsui_toolbeltXL_keys"/>
-
-</configs>

@@ -1,0 +1,12 @@
+<configs>
+
+<set xpath="//style[@name='rwsui_activeItem_detailed_horizontal' or @name='rwsui_activeItem_detailed_vertical' or @name='rwsui_activeItem_detailed_round']/style_entry[@name='font_size']/@value">24</set>
+<set xpath="//style[@name='rwsui_activeItem_detailed_horizontal' or @name='rwsui_activeItem_detailed_vertical' or @name='rwsui_activeItem_detailed_round']/style_entry[@name='text_height']/@value">22</set>
+
+<set xpath="//style[@name='rwsui_collectedItem_detailed_horizontal' or @name='rwsui_collectedItem_detailed_vertical' or @name='rwsui_collectedItem_detailed_round']/style_entry[@name='font_size']/@value">24</set>
+<set xpath="//style[@name='rwsui_collectedItem_detailed_horizontal' or @name='rwsui_collectedItem_detailed_vertical' or @name='rwsui_collectedItem_detailed_round']/style_entry[@name='text_height']/@value">22</set>
+
+<set xpath="//style[@name='rwsui_detailed_buff_horizontal' or @name='rwsui_detailed_buff_vertical' or @name='rwsui_detailed_buff_round']/style_entry[@name='font_size']/@value">22</set>
+<set xpath="//style[@name='rwsui_detailed_buff_horizontal' or @name='rwsui_detailed_buff_vertical' or @name='rwsui_detailed_buff_round']/style_entry[@name='text_height']/@value">20</set>
+
+</configs>

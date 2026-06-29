@@ -1,0 +1,23 @@
+<configs>
+
+<append xpath="/windows">
+
+	<window name="RWSUI_RightHUD" anchor="RightBottom">
+
+		<rect controller="HUDStatBar" stat_type="VehicleHealth" pos="{# statvisible ? '0,0' : '0,0'}" >
+
+			<rect controller="HUDStatBar" stat_type="ActiveItem" pos="{# statvisible ? '0,0' : '0,0'}" >
+				<!--Collected Item List-->
+
+
+			</rect>
+
+		</rect>
+		<!--Active Item Grid-->
+
+
+	</window>
+
+</append>
+
+</configs>

@@ -1,0 +1,15 @@
+<configs>
+
+<append xpath="//window[@name='RWSUI_RightHUD']">
+
+	<rect name="VehicleStatBars" pos="-175,99" side="right">
+
+		<rwsui_simple_statbar style="rwsui_vehicle_fuelbar, rwsui_flip_horizontal_statbar" />
+
+		<rwsui_simple_statbar style="rwsui_vehicle_healthbar, rwsui_flip_horizontal_statbar" pos="0,-49" />
+
+	</rect>
+
+</append>
+
+</configs>

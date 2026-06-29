@@ -1,0 +1,72 @@
+<configs>
+
+<append xpath="/styles">
+
+<!--_vertical_statbar-->
+	<style name="rwsui_wookiesVCC_vertical_statbar">
+		<style_entry name="width" value="50"/>
+		<style_entry name="height" value="150"/>
+		<style_entry name="fill_height" value="${height}"/>
+		<style_entry name="icon_size" value="30,30"/>
+		<style_entry name="icon_pos" value="24,-130"/>
+		<style_entry name="text_pos" value="1,-90"/>
+		<style_entry name="text_width" value="46"/>
+		<style_entry name="font_size" value="20"/>
+		<style_entry name="text_height" value="18"/>
+	</style>
+
+<!--_radial_statbar-->
+	<style name="rwsui_wookiesVCC_radial_statbar">
+		<style_entry name="width" value="75"/>
+		<style_entry name="height" value="75"/>
+		<style_entry name="border_pos" value="-${Round(grow_border/2, 0)},${Round(grow_border/2, 0)}"/>
+		<style_entry name="border_width" value="${Round(grow_border, 0)+width}"/>
+		<style_entry name="border_height" value="${Round(grow_border, 0)+height}"/>
+		<style_entry name="border_sprite" value="ui_game_symbol_twitch_overhead_hp_ring"/>
+		<style_entry name="border_fillcenter" value="true"/>
+		<style_entry name="background_sprite" value="ui_game_filled_circle"/>
+		<style_entry name="fill_pos" value="${Round(grow_border/2, 0)},-${Round(grow_border/2, 0)}"/>
+		<style_entry name="fill_width" value="${width-Round(grow_border, 0)}"/>
+		<style_entry name="fill_height" value="${height-Round(grow_border, 0)}"/>
+		<style_entry name="fill_sprite" value="${border_sprite}"/>
+		<style_entry name="icon_size" value="20,20"/>
+		<style_entry name="icon_pos" value="38,-50"/>
+		<style_entry name="text_pos" value="2,-21"/>
+		<style_entry name="text_width" value="71"/>
+		<style_entry name="font_size" value="18"/>
+		<style_entry name="text_height" value="16"/>
+	</style>
+
+<!--_simple_iconstatbar-->
+	<style name="rwsui_wookiesVCC_simple_iconstatbar">
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="border_sprite" value="ui_game_symbol_drive"/>
+		<style_entry name="border_fillcenter" value="true"/>
+		<style_entry name="background_sprite" value="${border_sprite}"/>
+		<style_entry name="fill_pos" value="0,0"/>
+		<style_entry name="fill_width" value="${width}"/>
+		<style_entry name="fill_height" value="${height}"/>
+		<style_entry name="fill_sprite" value="${border_sprite}"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
+	</style>
+
+<!--_custom_iconstatbar-->
+	<style name="rwsui_wookiesVCC_custom_iconstatbar">
+		<style_entry name="width" value="60"/>
+		<style_entry name="height" value="60"/>
+		<style_entry name="border_sprite" value="rwsui_ui_game_symbol_drive_border"/>
+		<style_entry name="border_fillcenter" value="true"/>
+		<style_entry name="background_sprite" value="rwsui_ui_game_symbol_drive"/>
+		<style_entry name="fill_pos" value="0,0"/>
+		<style_entry name="fill_width" value="${width}"/>
+		<style_entry name="fill_height" value="${height}"/>
+		<style_entry name="fill_sprite" value="${background_sprite}"/>
+		<style_entry name="icon_hidden" value="true"/>
+		<style_entry name="text_hidden" value="true"/>
+	</style>
+
+</append>
+
+</configs>

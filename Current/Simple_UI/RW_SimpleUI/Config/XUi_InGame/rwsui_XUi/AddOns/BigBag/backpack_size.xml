@@ -1,0 +1,42 @@
+<configs>
+
+<conditional>
+	<if cond="mod_version('RWSUI_BackPack_Size') == version(2,0)">
+		<set xpath="/windows/window[@name='windowBackpack']//rect/rect/grid[@name='tabButtons' and @cols='6']/@cols">2</set>
+		<remove xpath="//window[@name='windowBackpack']//rect//rect[@tab_key='3' or @tab_key='4' or @tab_key='5' or @tab_key='6']"/>
+	</if>
+	<if cond="mod_version('RWSUI_BackPack_Size') == version(3,0)">
+		<set xpath="//window[@name='windowBackpack']//rect/rect/grid[@name='tabButtons']/@cols">3</set>
+		<remove xpath="//window[@name='windowBackpack']//rect//rect[@tab_key='4' or @tab_key='5' or @tab_key='6']"/>
+	</if>
+	<if cond="mod_version('RWSUI_BackPack_Size') == version(4,0)">
+		<set xpath="//window[@name='windowBackpack']//rect/rect/grid[@name='tabButtons']/@cols">4</set>
+		<remove xpath="//window[@name='windowBackpack']//rect//rect[@tab_key='5' or @tab_key='6']"/>
+	</if>
+	<if cond="mod_version('RWSUI_BackPack_Size') == version(5,0)">
+		<set xpath="//window[@name='windowBackpack']//rect/rect/grid[@name='tabButtons']/@cols">5</set>
+		<remove xpath="//window[@name='windowBackpack']//rect//rect[@tab_key='6']"/>
+	</if>
+	<if cond="mod_loaded('Gears')">
+		<conditional>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '2_Pages'">
+				<set xpath="//window[@name='windowBackpack']//rect/rect/grid[@name='tabButtons']/@cols">2</set>
+				<remove xpath="//window[@name='windowBackpack']//rect//rect[@tab_key='3' or @tab_key='4' or @tab_key='5' or @tab_key='6']"/>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '3_Pages'">
+				<set xpath="//window[@name='windowBackpack']//rect/rect/grid[@name='tabButtons']/@cols">3</set>
+				<remove xpath="//window[@name='windowBackpack']//rect//rect[@tab_key='4' or @tab_key='5' or @tab_key='6']"/>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '4_Pages'">
+				<set xpath="//window[@name='windowBackpack']//rect/rect/grid[@name='tabButtons']/@cols">4</set>
+				<remove xpath="//window[@name='windowBackpack']//rect//rect[@tab_key='5' or @tab_key='6']"/>>
+			</if>
+			<if cond="modsetting('RW_SimpleUI', 'world', 'PlayerBackPack.BackPackSize') == '5_Pages'">
+				<set xpath="//window[@name='windowBackpack']//rect/rect/grid[@name='tabButtons']/@cols">5</set>
+				<remove xpath="//window[@name='windowBackpack']//rect//rect[@tab_key='6']"/>
+			</if>
+		</conditional>
+	</if>
+</conditional>
+
+</configs>

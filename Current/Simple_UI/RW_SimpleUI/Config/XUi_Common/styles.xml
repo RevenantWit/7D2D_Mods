@@ -21,9 +21,16 @@
 
 <append xpath="/styles/global">
 
+	<!--Round hud statbars background color-->
 	<style_entry name="rwsui_radial_statbar_bg_color" value="[black]"/>
 
+	<!--Icon statbars background color-->
 	<style_entry name="rwsui_custom_iconstatbar_bg_color" value="0,0,0,160"/>
+
+	<!--Default color for backpack page tabs and scrollbar color when using the expanded backpack-->
+	<!--7 Days 3.0 and up only, these two options will not apply on earlier versions of the game-->
+	<style_entry name="rwsui_backpackTabs_default_color" value="64,64,64"/>
+	<style_entry name="rwsui_scrollbar_color" value="11,11,179"/>
 
 <!--_Stealth_Bar START-->
 	<style_entry name="rwsui_stealthbar_border_color" value="[black]"/>

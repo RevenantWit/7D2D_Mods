@@ -1,0 +1,525 @@
+<configs>
+<!--CONTENTS START-->
+<!---->
+<!--_Simple_StatBar-->
+<!--_Simple_StatBar_Stealth-->
+<!--_Simple_StatBar_XP-->
+<!---->
+<!--_Custom_StatBar-->
+<!--_Custom_StatBar_Stealth-->
+<!--_Custom_StatBar_Stealthx2_Fill_Only-->
+<!--_Custom_StatBar_XP-->
+<!---->
+<!--_No_Fill_StatBar-->
+<!---->
+<!--_Active_Item_Grid-->
+<!--_Collected_Item_List-->
+<!---->
+<!--_ToolBelt_Item_Stack-->
+<!--_ToolBelt-->
+<!--_ToolBelt_Keys-->
+<!--_ToolBelt_Keys_Background-->
+<!---->
+<!--_Buff_Panels-->
+<!---->
+<!--CONTENTS END-->
+
+<append xpath="/templates">
+
+<!--_Simple_StatBar START-->
+	<rwsui_simple_statbar pos="0,0" width="171" height="46" controller="HUDStatBar" stat_type="Stamina" border_color="0,0,0,255" fill_bg_color="110,110,110,160" fill_color="0,54,255,160" filldirection="horizontal" fillinvert="false" fill="{statmodifiedmax}" icon_pos="26,-24" icon_atlas="{staticonatlas}" icon="{staticon}" icon_color="[white]" icon_size="35,35" icon_visible="true" text_pos="38,-11" text_color="[white]" text_justify="center" text="{statcurrentwithmax}" text_width="125" font_size="28" text_height="26" textOutline_color="[black]" textOutline_size="1,1" text_visible="true" >
+
+		<rect pos="${pos}" width="${width}" height="${height}" controller="${controller}" stat_type="${stat_type}" visible="{statvisible}">
+
+			<sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
+
+			<sprite depth="2" name="background" color="0,0,0,160" type="sliced" />
+
+			<filledsprite depth="3" name="background" color="${fill_bg_color}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="${fill}" />
+
+			<filledsprite depth="5" name="BarContent" color="${fill_color}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="{statfill}" />
+
+			<sprite depth="6" name="Icon" pos="${icon_pos}" size="${icon_size}" atlas="${icon_atlas}" sprite="${icon}" color="${icon_color}" pivot="center" foregroundlayer="true" visible="${icon_visible}"/>
+
+			<label depth="7" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" visible="${text_visible}" />
+
+			<sprite depth="8" name="border" color="${border_color}" type="sliced" fillcenter="false"/>
+
+			<filledsprite depth="8" name="background" color="${border_color}" fillcenter="false" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="${fill}" />
+
+			<filledsprite depth="3" name="background" color="${border_color}" fillcenter="false" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="${fill}" />
+		</rect>
+	</rwsui_simple_statbar>
+<!--_Simple_StatBar END-->
+
+<!--_Simple_StatBar_Stealth START-->
+	<rwsui_simple_statbar_stealth pos="0,0" width="171" height="46" controller="HUDStatBar" border_color="0,0,0,255" fill_bg_color="110,110,110,160" fill_safe_color="0,54,255,128" fill_danger_color="180,180,0,255" filldirection="horizontal" fillinvert="false" icon_atlas="{staticonatlas}" icon="{staticon}" icon_color="[white]" icon_size="35,35" icon_pos="26,-24" icon_visible="true" text_pos="38,-11" text_color="[white]" text_justify="center" text="{statcurrent}" text_width="125" font_size="28" text_height="26" textOutline_color="[black]" textOutline_size="1,1" text_visible="true" >
+
+		<rect pos="${pos}" width="${width}" height="${height}" controller="${controller}" stat_type="Stealth" visible="{statvisible}">
+
+			<sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
+
+			<sprite depth="2" name="background" color="0,0,0,160" type="sliced" />
+
+			<filledsprite depth="3" name="background" color="${fill_bg_color}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="1" />
+
+			<filledsprite depth="5" name="BarContent" color="${fill_safe_color}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="{statfill}" visible="{# stealthcolor == '50,135,0,255'}" />
+
+			<filledsprite depth="5" name="BarContent" color="${fill_danger_color}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="{statfill}" controller="${controller}" stat_type="Stealth" visible="{# stealthcolor != '50,135,0,255'}" />
+
+			<sprite depth="6" name="Icon" pos="${icon_pos}" size="${icon_size}" atlas="${icon_atlas}" sprite="${icon}" color="${icon_color}" pivot="center" foregroundlayer="true" visible="${icon_visible}"/>
+
+			<label depth="7" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" visible="${text_visible}" />
+
+			<sprite depth="8" name="border" color="${border_color}" type="sliced" fillcenter="false"/>
+
+			<filledsprite depth="8" name="background" color="${border_color}" fillcenter="false" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="1" />
+
+			<filledsprite depth="3" name="background" color="${border_color}" fillcenter="false" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="1" />
+		</rect>
+	</rwsui_simple_statbar_stealth>
+<!--_Simple_StatBar_Stealth END-->
+
+<!--_Simple_StatBar_XP START-->
+	<rwsui_simple_statbar_xp pos="0,0" width="171" height="46" border_color="0,0,0,255" fill_bg_color="110,110,110,160" standard_xp_color="128,4,128,255" updating_xp_color="128,4,128,255" deficit_xp_color="222,20,20,255" filldirection="horizontal" fillinvert="false" icon_atlas="{staticonatlas}" icon="ui_game_symbol_trophy" icon_color="[white]" icon_size="35,35" icon_pos="26,-24" icon_visible="true" text_pos="38,-11" text_color="[white]" text_justify="center" text="{# localization('xuiLevel')}    {cvar($LastPlayerLevel)}" text_width="125" font_size="28" text_height="26" textOutline_color="[black]" textOutline_size="1,1" text_visible="true" xp_fill_speed="2" >
+
+		<rect pos="${pos}" width="${width}" height="${height}" controller="ToolbeltWindow" standard_xp_color="${standard_xp_color}" updating_xp_color="${updating_xp_color}" deficit_xp_color="${deficit_xp_color}" xp_fill_speed="${xp_fill_speed}">
+
+			<sprite depth="1" name="border" color="0,0,0,128" type="sliced" />
+
+			<sprite depth="2" name="background" color="0,0,0,160" type="sliced" />
+
+			<filledsprite depth="3" name="background" color="${fill_bg_color}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="1" />
+
+			<filledsprite depth="5" name="BarContent" color="{xpcolor}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="{xp}" />
+
+			<sprite depth="6" name="Icon" pos="${icon_pos}" size="${icon_size}" atlas="${icon_atlas}" sprite="${icon}" color="${icon_color}" pivot="center" foregroundlayer="true" visible="${icon_visible}"/>
+
+			<label depth="7" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" visible="${text_visible}" />
+
+			<sprite depth="8" name="border" color="${border_color}" type="sliced" fillcenter="false"/>
+
+			<filledsprite depth="8" name="background" color="${border_color}" fillcenter="false" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="1" />
+
+			<filledsprite depth="3" name="background" color="${border_color}" fillcenter="false" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="1" />
+		</rect>
+	</rwsui_simple_statbar_xp>
+<!--_Simple_StatBar_XP END-->
+
+<!--_Custom_StatBar START-->
+	<rwsui_custom_statbar pos="0,0" width="60" height="60" controller="HUDStatBar" stat_type="Stamina" border_depth="3" border_pos="0,0" border_width="${width}" border_height="${height}" border_color="[black]" border_sprite="ui_game_symbol_twitch_overhead_hp_ring" border_fillcenter="true" grow_border="4" background_pos="0,0" background_width="${width}" background_height="${height}" background_color="0,0,0,160" background_sprite="ui_game_filled_circle" fill_bg_pos="0,0" fill_bg_width="${width}" fill_bg_height="${height}" fill_bg_color="[darkestGrey]" fill_bg_sprite="ui_game_symbol_twitch_overhead_hp_ring" fill_pos="0,0" fill_width="${width}" fill_height="${height}" fill_color="0,54,255,200" fill_sprite="ui_game_symbol_twitch_overhead_hp_ring" filldirection="vertical" fillinvert="false" fill="{statmodifiedmax}" icon_atlas="{staticonatlas}" icon="{staticon}" icon_color="[white]" icon_size="20,20" icon_pos="38,-50" icon_visible="false" text_pos="2,-21" text_color="[white]" text_justify="center" text="{statcurrent}" text_width="71" font_size="18" text_height="16" textOutline_color="[black]" textOutline_size="1,1" text_visible="false" >
+
+		<rect pos="${pos}" width="${width}" height="${height}" controller="${controller}" stat_type="${stat_type}" visible="{statvisible}">
+
+			<sprite depth="0" name="border" pos="${border_pos}" width="${border_width}" height="${border_height}" color="${border_color}" sprite="${border_sprite}" type="sliced" fillcenter="${border_fillcenter}" />
+
+			<sprite depth="2" name="background" pos="${background_pos}" width="${background_width}" height="${background_height}" color="${background_color}" sprite="${background_sprite}" type="sliced" />
+
+			<sprite depth="4" name="background" pos="${fill_bg_pos}" width="${fill_bg_width}" height="${fill_bg_height}" color="${fill_bg_color}" sprite="${fill_bg_sprite}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="${fill}" />
+
+			<sprite depth="5" name="BarContent" pos="${fill_pos}" width="${fill_width}" height="${fill_height}" color="${fill_color}" sprite="${fill_sprite}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="{statfill}" />
+
+			<sprite depth="6" name="Icon" pos="${icon_pos}" size="${icon_size}" atlas="${icon_atlas}" sprite="${icon}" color="${icon_color}" pivot="center" foregroundlayer="true" visible="${icon_visible}"/>
+
+			<label depth="7" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" visible="${text_visible}" />
+
+			<sprite depth="${border_depth}" name="border" pos="${border_pos}" width="${border_width}" height="${border_height}" color="${border_color}" sprite="${border_sprite}" type="sliced" fillcenter="${border_fillcenter}" />
+		</rect>
+	</rwsui_custom_statbar>
+<!--_Custom_StatBar END-->
+
+<!--_Custom_StatBar_Stealth START-->
+	<rwsui_custom_statbar_stealth pos="0,0" width="60" height="60" controller="HUDStatBar" border_depth="3" border_pos="0,0" border_width="${width}" border_height="${height}" border_color="[black]" border_sprite="ui_game_symbol_twitch_overhead_hp_ring" border_fillcenter="true" grow_border="4" background_pos="0,0" background_width="${width}" background_height="${height}" background_color="0,0,0,160" background_sprite="ui_game_filled_circle" fill_bg_pos="0,0" fill_bg_width="${width}" fill_bg_height="${height}" fill_bg_color="[darkestGrey]" fill_bg_sprite="ui_game_symbol_twitch_overhead_hp_ring" fill_pos="0,0" fill_width="${width}" fill_height="${height}" fill_safe_color="0,54,255,128" fill_danger_color="180,180,0,255" fill_sprite="ui_game_symbol_twitch_overhead_hp_ring" filldirection="vertical" fillinvert="false" icon_atlas="{staticonatlas}" icon="{staticon}" icon_color="[white]" icon_size="20,20" icon_pos="38,-50" icon_visible="false" text_pos="2,-21" text_color="[white]" text_justify="center" text="{statcurrent}" text_width="71" font_size="18" text_height="16" textOutline_color="[black]" textOutline_size="1,1" text_visible="false" >
+
+		<rect pos="${pos}" width="${width}" height="${height}" controller="${controller}" stat_type="Stealth" visible="{statvisible}">
+
+			<sprite depth="0" name="border" pos="${border_pos}" width="${border_width}" height="${border_height}" color="${border_color}" sprite="${border_sprite}" type="sliced" fillcenter="${border_fillcenter}" />
+
+			<sprite depth="2" name="background" pos="${background_pos}" width="${background_width}" height="${background_height}" color="${background_color}" sprite="${background_sprite}" />
+
+			<sprite depth="4" name="background" pos="${fill_bg_pos}" width="${fill_bg_width}" height="${fill_bg_height}" color="${fill_bg_color}" sprite="${fill_bg_sprite}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="1" />
+
+			<sprite depth="5" name="BarContent" pos="${fill_pos}" width="${fill_width}" height="${fill_height}" color="${fill_safe_color}" sprite="${fill_sprite}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="{statfill}" visible="{# stealthcolor == '50,135,0,255'}" />
+
+			<sprite depth="5" name="BarContent" pos="${fill_pos}" width="${fill_width}" height="${fill_height}" color="${fill_danger_color}" sprite="${fill_sprite}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="{statfill}" controller="${controller}" stat_type="Stealth" visible="{# stealthcolor != '50,135,0,255'}" />
+
+			<sprite depth="6" name="Icon" pos="${icon_pos}" size="${icon_size}" atlas="${icon_atlas}" sprite="${icon}" color="${icon_color}" pivot="center" foregroundlayer="true" visible="${icon_visible}"/>
+
+			<label depth="7" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" visible="${text_visible}" />
+
+			<sprite depth="${border_depth}" name="border" pos="${border_pos}" width="${border_width}" height="${border_height}" color="${border_color}" sprite="${border_sprite}" type="sliced" fillcenter="${border_fillcenter}" />
+		</rect>
+	</rwsui_custom_statbar_stealth>
+<!--_Custom_StatBar_Stealth END-->
+
+<!--_Custom_StatBar_Stealthx2_Fill_Only Start-->
+	<rwsui_custom_statbar_stealthx2_fillOnly pos="0,20" width="752" height="20" fill_width="388" fill_height="${height}" fill_safe_color="50,135,0,255" fill_danger_color="180,180,0,255" sprite="ui_game_header_insert" filldirection="horizontal" fill1_pos="-4,0" fill2_pos="369,0" fill1_invert="true" fill2_invert="false" icon="{staticon}" icon_color="[white]" icon_size="18,18" icon_pos="376,-10" icon_visible="true">
+
+		<rect width="${width}" height="${height}" pos="${pos}" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">
+
+			<filledsprite depth="3" name="BarContent" pos="${fill1_pos}" width="${fill_width}" height="${fill_height}" sprite="${sprite}" color="${fill_safe_color}" type="filled" filldirection="${filldirection}" fillinvert="${fill1_invert}" fill="{statfill}" visible="{# stealthcolor == '50,135,0,255'}" />
+
+			<filledsprite depth="4" name="BarContent" pos="${fill1_pos}" width="${fill_width}" height="${fill_height}" sprite="${sprite}" color="${fill_danger_color}" type="filled" filldirection="${filldirection}" fillinvert="${fill1_invert}" fill="{statfill}" controller="HUDStatBar" stat_type="Stealth" visible="{# stealthcolor != '50,135,0,255'}" />
+
+			<filledsprite depth="2" name="BarContent" pos="${fill2_pos}" width="${fill_width}" height="${fill_height}" sprite="${sprite}" color="${fill_safe_color}" type="filled" filldirection="${filldirection}" fillinvert="${fill2_invert}" fill="{statfill}" controller="HUDStatBar" stat_type="Stealth" visible="{# stealthcolor == '50,135,0,255'}" />
+
+			<filledsprite depth="4" name="BarContent" pos="${fill2_pos}" width="${fill_width}" height="${fill_height}" sprite="${sprite}" color="${fill_danger_color}" type="filled" filldirection="${filldirection}" fillinvert="${fill2_invert}" fill="{statfill}" controller="HUDStatBar" stat_type="Stealth" visible="{# stealthcolor != '50,135,0,255'}" />
+
+			<sprite depth="5" name="Icon" atlas="{staticonatlas}" sprite="${icon}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" visible="${icon_visible}" />
+		</rect>
+	</rwsui_custom_statbar_stealthx2_fillOnly>
+<!--_Custom_StatBar_Stealthx2_Fill_Only END-->
+
+<!--_Custom_StatBar_XP START-->
+	<rwsui_custom_statbar_xp pos="0,0" width="60" height="60" border_depth="3" border_pos="0,0" border_width="${width}" border_height="${height}" border_color="[black]" border_sprite="ui_game_symbol_twitch_overhead_hp_ring" border_fillcenter="true" grow_border="4" background_pos="0,0" background_width="${width}" background_height="${height}" background_color="0,0,0,160" background_sprite="ui_game_filled_circle" fill_bg_pos="0,0" fill_bg_width="${width}" fill_bg_height="${height}" fill_bg_color="[darkestGrey]" fill_bg_sprite="ui_game_symbol_twitch_overhead_hp_ring" fill_pos="0,0" fill_width="${width}" fill_height="${height}" standard_xp_color="128,4,128,255" updating_xp_color="128,4,128,255" deficit_xp_color="222,20,20,255" fill_sprite="ui_game_symbol_twitch_overhead_hp_ring" filldirection="vertical" fillinvert="false" icon_atlas="{staticonatlas}" icon="ui_game_symbol_trophy" icon_color="[white]" icon_size="20,20" icon_pos="38,-50" icon_visible="false" text_pos="2,-21" text_color="[white]" text_justify="center" text="{# localization('xuiLevel')}    {cvar($LastPlayerLevel)}" text_width="71" font_size="18" text_height="16" textOutline_color="[black]" textOutline_size="1,1" text_visible="false" xp_fill_speed="1.5" >
+
+		<rect pos="${pos}" width="${width}" height="${height}" controller="ToolbeltWindow" standard_xp_color="${standard_xp_color}" updating_xp_color="${updating_xp_color}" deficit_xp_color="${deficit_xp_color}" xp_fill_speed="${xp_fill_speed}">
+
+			<sprite depth="0" name="border" pos="${border_pos}" width="${border_width}" height="${border_height}" color="${border_color}" sprite="${border_sprite}" type="sliced" fillcenter="${border_fillcenter}" />
+
+			<sprite depth="2" name="background" pos="${background_pos}" width="${background_width}" height="${background_height}" color="${background_color}" sprite="${background_sprite}" type="sliced" />
+
+			<sprite depth="4" name="background" pos="${fill_bg_pos}" width="${fill_bg_width}" height="${fill_bg_height}" color="${fill_bg_color}" sprite="${fill_bg_sprite}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="1" />
+
+			<sprite depth="5" name="BarContent" pos="${fill_pos}" width="${fill_width}" height="${fill_height}" color="{xpcolor}" sprite="${fill_sprite}" type="filled" filldirection="${filldirection}" fillinvert="${fillinvert}" fill="{xp}" />
+
+			<sprite depth="6" name="Icon" pos="${icon_pos}" size="${icon_size}" atlas="${icon_atlas}" sprite="${icon}" color="${icon_color}" pivot="center" foregroundlayer="true" visible="${icon_visible}"/>
+
+			<label depth="7" name="TextContent" pos="${text_pos}" color="${text_color}" justify="${text_justify}" text="${text}" width="${text_width}" font_size="${font_size}" height="${text_height}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" visible="${text_visible}" />
+
+			<sprite depth="${border_depth}" name="border" pos="${border_pos}" width="${border_width}" height="${border_height}" color="${border_color}" sprite="${border_sprite}" type="sliced" fillcenter="${border_fillcenter}" />
+		</rect>
+	</rwsui_custom_statbar_xp>
+<!--_Custom_StatBar_XP END-->
+
+<!--_No_Fill_StatBar START-->
+	<rwsui_statbar_no_fill pos="0,0" width="171" height="46" controller="HUDStatBar" stat_type="Stamina" border_depth="2" border_sprite="[default_sprite]" border_color="[black]" fillcenter="false" background_depth="1" background_pos="0,0" background_width="171" background_height="46" background_sprite="[default_sprite]" background_color="[darkestGrey]" icon="{staticon}" icon_color="[white]" icon_size="35,35" icon_pos="26,-24" icon_visible="false" text="{statcurrentwithmax}" text_color="[white]" text_width="125" font_size="28" text_height="26" textOutline_color="[black]" textOutline_size="1,1" text_justify="center" text_pos="38,-11" text_visible="true">
+
+		<rect width="${width}" height="${height}" pos="${pos}" controller="${controller}" stat_type="${stat_type}" visible="{statvisible}">
+			<sprite depth="0" name="border" sprite="${border_sprite}" color="${border_color}" type="sliced" fillcenter="${fillcenter}" />
+			<sprite depth="${background_depth}" name="background" pos="${background_pos}" width="${background_width}" height="${background_height}" sprite="${background_sprite}" color="${background_color}" type="sliced" />
+			<sprite depth="${border_depth}" name="border" sprite="${border_sprite}" color="${border_color}" type="sliced" fillcenter="${fillcenter}" />
+			<sprite depth="3" name="Icon" atlas="{staticonatlas}" sprite="${icon}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" visible="${icon_visible}" controller="HUDStatBar" stat_type="${stat_type}" />
+			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" font_size="${font_size}" height="${text_height}" color="${text_color}" text="${text}" justify="${text_justify}" pivot="center" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" visible="${text_visible}" />
+		</rect>
+	</rwsui_statbar_no_fill>
+<!--_No_Fill_StatBar END-->
+
+<!--_Active_Item_Grid START-->
+	<rwsui_statbar_active_item>
+		<rect width="${width}" height="${height}" pos="${pos}" controller="${controller}" stat_type="${stat_type}" visible="{statvisible}">
+			<sprite depth="0" name="border" sprite="${border_sprite}" color="${border_color}" type="sliced" fillcenter="${fillcenter}" />
+			<sprite depth="${background_depth}" name="background" pos="${background_pos}" width="${background_width}" height="${background_height}" sprite="${background_sprite}" color="${background_color}" type="sliced" />
+			<sprite depth="${border_depth}" name="border" sprite="${border_sprite}" color="${border_color}" type="sliced" fillcenter="${fillcenter}" />
+			<sprite depth="3" name="Icon" atlas="{staticonatlas}" sprite="${icon}" color="${icon_color}" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" visible="${icon_visible}" controller="HUDStatBar" stat_type="${stat_type}" />
+			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" font_size="${font_size}" height="${text_height}" color="${text_color}" text="${text}" justify="${text_justify}" pivot="center" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" visible="${text_visible}" />
+		</rect>
+	</rwsui_statbar_active_item>
+
+	<rwsui_active_item_grid pos="0,0" width="180" height="46" active_item_style="rwsui_activeItem_simple_horizontal">
+		<grid name="hud" pos="${pos}" rows="2" cols="1" width="${width}" cell_width="${width}" cell_height="${height}" repeat_content="false" side="right">
+			<rwsui_statbar_active_item style="rwsui_statbar_activeItem, ${active_item_style}" />
+		</grid>
+	</rwsui_active_item_grid>
+
+	<rwsui_active_item_grid_vanilla pos="0,0">
+		<grid name="hud" pos="${pos}" rows="2" cols="1" width="168" cell_width="168" cell_height="46" repeat_content="false" side="right">
+			<rect width="188" height="46" controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
+				<sprite depth="3" pos="3,0"  name="BarContent" sprite="{statimage}" height="46" width="182" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas}" sprite="{staticon}" size="39,35" pos="135,-6" color="{staticoncolor}" foregroundlayer="true" />
+				<label depth="6" name="TextContent" pos="120,-28" font_size="28" color="[white]" justify="right" pivot="right" text="{statcurrentwithmax}" width="250" height="26" />
+			</rect>
+		</grid>
+	</rwsui_active_item_grid_vanilla>
+<!--_Active_Item_Grid END-->
+
+<!--_Collected_Item_List START-->
+	<rwsui_collected_item_panel>
+		<rect width="${width}" height="${height}" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" >
+			<sprite depth="0" name="border" sprite="${border_sprite}" color="${border_color}" type="sliced" fillcenter="${fillcenter}" />
+			<sprite depth="${background_depth}" name="background" pos="${background_pos}" width="${background_width}" height="${background_height}" sprite="${background_sprite}" color="${background_color}" type="sliced" />
+			<sprite depth="${border_depth}" name="border" sprite="${border_sprite}" color="${border_color}" type="sliced" fillcenter="${fillcenter}" />
+			<sprite depth="3" name="Icon" atlas="ItemIconAtlas" size="${icon_size}" pos="${icon_pos}" pivot="center" foregroundlayer="true" />
+			<label depth="4" name="TextContent" pos="${text_pos}" width="${text_width}" font_size="${font_size}" height="${text_height}" color="${text_color}" justify="${text_justify}" pivot="center" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" />
+			<sprite depth="4" pos="${X_pos}" pivot="center" width="${X_width}" height="${X_height}" name="Negative" sprite="ui_game_symbol_x" color="${X_color}" />
+		</rect>
+	</rwsui_collected_item_panel>
+
+	<rwsui_collected_item_list pos="0,0" collected_item_style="rwsui_collectedItem_simple_horizontal">
+		<rect name="CollectedItemList" controller="CollectedItemList" pos="${pos}" side="right" pivot="BottomLeft">
+			<rwsui_collected_item_panel style="rwsui_collected_item_list, ${collected_item_style}" />
+		</rect>
+	</rwsui_collected_item_list>
+
+	<rwsui_collected_item_list_vanilla pos="0,0">
+		<rect name="hud" pos="${pos}" side="right" controller="CollectedItemList" pivot="BottomLeft">
+			<rect width="168" height="46" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" >
+				<sprite depth="1" pos="0,0"  name="Background" sprite="ui_game_popup" height="44" width="162" pivot="center" />
+				<sprite depth="2" name="Icon" atlas="ItemIconAtlas"  size="38,38" pos="55,0" pivot="center" foregroundlayer="true"/>
+				<label depth="3" pos="17,-2" name="TextContent" font_size="28" color="[white]" justify="right" height="26" pivot="right"/>
+				<sprite depth="3" pos="-8,10" width="26" height="26" name="Negative" sprite="ui_game_symbol_x" color="[red]" />
+			</rect>
+		</rect>
+	</rwsui_collected_item_list_vanilla>
+<!--_Collected_Item_List END-->
+
+<!--_ToolBelt_Item_Stack START-->
+	<rwsui_toolbelt_item_stack controller="ItemStack" on_scroll="false" allow_dropping="true" prefix_id="false" show_favorites="false" cell_size="[itemStack:width]">
+		<rect controller="${controller}" style="rwsui_toolbelt_itemStack, hover" width="${cell_size}" height="${cell_size}" on_scroll="${on_scroll}" allow_dropping="${allow_dropping}" prefix_id="${prefix_id}" show_favorites="${show_favorites}" tooltip="{tooltip}" enabled="{# !defined('userlockmode') or !userlockmode}" visible="{# !defined('container_slots') or (int(${repeat_i}) &lt; int(container_slots)) }" >
+			<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" color="[rwsui_toolbelt_border_color]" type="sliced" fillcenter="false"
+				width="${3+cell_size}" height="${3+cell_size}" />
+			<sprite depth="3" name="background" sprite="menu_empty3px" color="{selectionbordercolor}" type="sliced" fillcenter="false"
+				width="${-2+cell_size}" height="${-2+cell_size}" />
+			<sprite depth="2" name="highlightOverlay" color="[rwsui_toolbelt_background_color]" pos="-1,1" type="sliced"
+				width="${-1+cell_size}" height="${-1+cell_size}" />
+
+			<texture depth="3" name="backgroundTexture" material="Materials/Transparent Colored"
+				size="${-2+cell_size},${-2+cell_size}" />
+			<sprite depth="8" name="favoriteIcon" width="24" height="24" sprite="server_favorite" pos="2,-2" foregroundlayer="true" visible="{isfavorite}"/>
+			<sprite depth="7" name="itemIcon" width="${-11+cell_size}" height="${-11+cell_size}" atlas="ItemIconAtlas" sprite="{itemicon}" pivot="center" foregroundlayer="true" color="{iconcolor}"
+				pos="${Floor(cell_size/2)},${-Floor(cell_size/2)}" />
+			<sprite depth="8" name="lockTypeIcon" width="24" height="24" sprite="{locktypeicon}" pos="2,-2" foregroundlayer="true"/>
+			<sprite depth="8" name="itemtypeicon" width="24" height="24" sprite="ui_game_symbol_{itemtypeicon}" pos="2,-2" foregroundlayer="true" visible="{hasitemtypeicon}" color="{itemtypeicontint}" />
+
+			<sprite depth="2" name="durabilityBackground" sprite="menu_empty3px" color="185,0,0,255" type="sliced" globalopacitymod="0" visible="{haspermadurability}"
+				width="${-5+cell_size}" height="10" pos="1,${-Floor(4*cell_size/5)}" />
+			<sprite depth="4" name="durability" sprite="menu_empty2px" color="[darkGrey]" fill="{removeddurabilityfill}" type="filled" fillspritepad="true" globalopacitymod="0" visible="{hasdurability}"
+				width="${-5+cell_size}" height="10" pos="1,${-Floor(4*cell_size/5)}" />
+			<filledsprite depth="5" name="durability" sprite="menu_empty2px" color="{durabilitycolor}" fill="{durabilityfill}" type="filled" globalopacitymod="0" visible="{hasdurability}"
+				width="${-5+cell_size}" height="10" pos="1,${-Floor(4*cell_size/5)}" />
+
+			<label depth="8" name="stackValue" height="28" text="{itemcount}" font_size="26" effect="outline" justify="{#hasdurability ? 'Center' : 'Right'}"
+				pos="-2,${-Floor(3*cell_size/5)}" width="${-5+cell_size}" />
+			<label depth="8" name="timer" height="24" font_size="24" justify="center" pivot="center" color="[beige]" effect="outline"
+				pos="${Floor(cell_size/2)},${-Floor(cell_size/2)}" width="${-5+cell_size}" effect_distance="1,1" effect_color="0,0,0,255" />
+			<sprite depth="9" name="cancel" sprite="ui_game_symbol_x" color="255,0,0,255" type="sliced" visible="{# ishovered and islocked}" foregroundlayer="true"
+				width="${-5+cell_size}" height="${-5+cell_size}" />
+			<sprite depth="13" name="assembleIcon" sprite="{stacklockicon}" color="{stacklockcolor}" visible="{isassemblelocked}" pos="14,-14" foregroundlayer="true"
+				size="${-35+cell_size},${-35+cell_size}" />
+
+			<sprite depth="14" name="quickswapIcon" size="30,30" sprite="server_refresh" pos="40,-2" foregroundlayer="true" visible="{isQuickSwap}" />
+
+			<button name="rectSlotLock" depth="15" style="press, hover" width="${-2+cell_size}" height="${-2+cell_size}" visible="{# defined('userlockmode') and userlockmode}" sprite="" hoverscale="1" use_selection_box="true">
+				<sprite depth="16" name="slotLockIcon" width="24" height="24" sprite="{# !defined('userlockmode') ? '' : (userlockedslot ? 'ui_game_symbol_lock' : 'ui_game_symbol_unlock') }" pos="50, -14" style="icon32px" pivot="center" color="{# !defined('userlockmode') ? '255,255,255,1' : (userlockedslot ? '222,206,163' : '255,255,255') }" />
+			</button>
+			<sprite depth="15" name="iconSlotLock" width="20" height="20" sprite="ui_game_symbol_lock" pos="50, -14" style="icon32px" pivot="center" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="[lightGrey]" />
+		</rect>
+	</rwsui_toolbelt_item_stack>
+<!--_ToolBelt_Item_Stack END-->
+
+<!--_ToolBelt START-->
+	<rwsui_toolbelt pos="3,-3" cols="10" clear_inventory1_pos="765,-32" clear_inventory2_pos="765,50">
+		<rect name="Toolbelt" pos="${pos}" controller="Toolbelt">
+			<grid depth="10" name="inventory" rows="1" cols="${cols}" pos="0,0" cell_width="75" cell_height="75" repeat_content="true">
+				<rwsui_toolbelt_item_stack name="0" />
+			</grid>
+			<button depth="3" name="btnClearInventory1" sprite="ui_game_symbol_trash" tooltip_key="lblClearInventory" pos="${clear_inventory1_pos}" style="icon32px, press, hover" pivot="center" sound="[paging_click]" visible="{creativewindowopen}" />
+			<grid depth="10" name="inventory2" rows="1" cols="${cols}" pos="0,82" cell_width="75" cell_height="75" repeat_content="true" visible="{secondrow}">
+				<rwsui_toolbelt_item_stack name="0" />
+			</grid>
+			<button depth="3" name="btnClearInventory2" sprite="ui_game_symbol_trash" tooltip_key="lblClearInventory" pos="${clear_inventory2_pos}" style="icon32px, press, hover" pivot="center" sound="[paging_click]" visible="{# creativewindowopen and secondrow}" />
+		</rect>
+	</rwsui_toolbelt>
+<!--_ToolBelt END-->
+
+<!--_ToolBelt_Keys START-->
+	<rwsui_toolbelt_keys pos="0,16" depth="5" rows="1" cols="10" height="20" width="75" text_color="[white]" textOutline_color="[transparent]" textOutline_size="1,1" text_justify="center">
+
+		<grid name="toolbelt_keys" pos="${pos}" depth="${depth}" rows="${rows}" cols="${cols}" cell_width="${width}" cell_height="${height}" repeat_content="true">
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text=" [action:local:Inventory${1+repeat_i}]" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" parse_actions="true" max_line_count="1"/>
+		</grid>
+	</rwsui_toolbelt_keys>
+
+	<rwsui_toolbeltXL_keys pos="2,16" depth="5" rows="1" cols="15" height="20" width="75" text_color="[white]" textOutline_color="[transparent]" textOutline_size="1,1" text_justify="center">
+		<grid name="toolbelt_keys" pos="${pos}" depth="${depth}" rows="${rows}" cols="${cols}" cell_width="${width}" cell_height="${height}" repeat_content="false">
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel1" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel2" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel3" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel4" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel5" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel6" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel7" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel8" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel9" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel10" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel11" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel12" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel13" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel14" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+			<label depth="${depth}" width="${width}" font_size="${height}" height="${height-2}" text_key="rwsuiToolBeltXL_TextLabel15" color="${text_color}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" justify="${text_justify}" />
+		</grid>
+	</rwsui_toolbeltXL_keys>
+<!--_ToolBelt_Keys END-->
+
+<!--_ToolBelt_Keys_Background START-->
+	<rwsui_toolbelt_keys_bg pos="0,0" rows="1" cols="10" cell_width="75" cell_height="18" border_depth="2" border_pos="0,0" border_width="20" border_height="20" border_sprite="menu_empty2px" border_color="[black]" border_rotation="0" background_pos="0,0" background_width="20" background_height="19" background_sprite="menu_empty" background_color="[darkestGrey]" background_rotation="0">
+
+		<grid depth="0" name="toolbelt_keys_background" pos="${pos}" rows="${rows}" cols="${cols}" cell_width="${cell_width}" cell_height="${cell_height}" repeat_content="true" >
+			<rect>
+				<sprite depth="1" name="background" pos="${background_pos}" width="${background_width}" height="${background_height}" sprite="${background_sprite}" color="${background_color}" rotation="${background_rotation}" type="sliced" foregroundlayer="false" />
+				<sprite depth="${border_depth}" name="border" pos="${border_pos}" width="${border_width}" height="${border_height}" sprite="${border_sprite}" color="${border_color}" rotation="${border_rotation}" type="sliced" fillcenter="false" foregroundlayer="false" />
+			</rect>
+		</grid>
+	</rwsui_toolbelt_keys_bg>
+<!--_ToolBelt_Keys_Background END-->
+
+<!--_Buff_Panels START-->
+	<rwsui_buff_panel_buff>
+		<rect pos="${pos}" width="${width}" height="${height}" controller="ActiveBuffEntry" disableautobackground="true" >	
+			<sprite depth="0" name="border" sprite="${border_sprite}" color="${border_color}" type="sliced" fillcenter="${fillcenter}" visible="{# bufficon != ''}" />
+			<sprite depth="${background_depth}" name="background" pos="${background_pos}" width="${background_width}" height="${background_height}" sprite="${background_sprite}" color="${background_color}" type="sliced" visible="{# bufficon != ''}" />
+			<sprite depth="${border_depth}" name="border" sprite="${border_sprite}" color="${border_color}" type="sliced" fillcenter="${fillcenter}" visible="{# bufficon != ''}" />
+			<sprite depth="3" name="Icon" sprite="{bufficon}" size="${icon_size}" pos="${icon_pos}" color="${icon_color}" foregroundlayer="true" tooltip="${tooltip}" on_hover="${on_hover}" />
+			<label depth="4" name="Text" pos="${text_pos}" width="${text_width}" font_size="${font_size}" color="${text_color}" text="${text}" justify="${text_justify}" effect="Outline8" effect_color="${textOutline_color}" effect_distance="${textOutline_size}" />
+		</rect>
+	</rwsui_buff_panel_buff>
+
+	<rwsui_simple_buff_panel3x10 pos="0,0" width="55" height="46" panel_offset="2" buff_style="rwsui_simple_buff_horizontal">
+		<rect name="BuffPanel" pos="${pos}" controller="ActiveBuffList" >
+			<!--Row 1-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,0" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},0" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},0" />
+			<!--Row 2-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${Round(panel_offset, 0)+height}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${Round(panel_offset, 0)+height}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${Round(panel_offset, 0)+height}" />
+			<!--Row 3-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*2+(Round(panel_offset, 0)*2)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*2+(Round(panel_offset, 0)*2)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*2+(Round(panel_offset, 0)*2)}" />
+			<!--Row 4-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*3+(Round(panel_offset, 0)*3)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*3+(Round(panel_offset, 0)*3)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*3+(Round(panel_offset, 0)*3)}" />
+			<!--Row 5-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*4+(Round(panel_offset, 0)*4)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*4+(Round(panel_offset, 0)*4)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*4+(Round(panel_offset, 0)*4)}" />
+			<!--Row 6-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*5+(Round(panel_offset, 0)*5)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*5+(Round(panel_offset, 0)*5)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*5+(Round(panel_offset, 0)*5)}" />
+			<!--Row 7-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*6+(Round(panel_offset, 0)*6)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*6+(Round(panel_offset, 0)*6)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*6+(Round(panel_offset, 0)*6)}" />
+			<!--Row 8-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*7+(Round(panel_offset, 0)*7)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*7+(Round(panel_offset, 0)*7)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*7+(Round(panel_offset, 0)*7)}" />
+			<!--Row 9-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*8+(Round(panel_offset, 0)*8)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*8+(Round(panel_offset, 0)*8)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*8+(Round(panel_offset, 0)*8)}" />
+			<!--Row 10-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*9+(Round(panel_offset, 0)*9)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*9+(Round(panel_offset, 0)*9)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*9+(Round(panel_offset, 0)*9)}" />
+		</rect>
+	</rwsui_simple_buff_panel3x10>
+
+	<rwsui_simple_buff_panel4x10 pos="0,0" width="50" height="62" panel_offset="2" buff_style="rwsui_simple_buff_vertical">
+		<rect name="BuffPanel" pos="${pos}" controller="ActiveBuffList" >
+			<!--Row 1-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,0" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},0" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},0" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*3+(Round(panel_offset, 0)*3)},0" />
+			<!--Row 2-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${Round(panel_offset, 0)+height}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${Round(panel_offset, 0)+height}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${Round(panel_offset, 0)+height}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*3+(Round(panel_offset, 0)*3)},${Round(panel_offset, 0)+height}" />
+			<!--Row 3-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*2+(Round(panel_offset, 0)*2)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*2+(Round(panel_offset, 0)*2)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*2+(Round(panel_offset, 0)*2)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*3+(Round(panel_offset, 0)*3)},${height*2+(Round(panel_offset, 0)*2)}" />
+			<!--Row 4-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*3+(Round(panel_offset, 0)*3)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*3+(Round(panel_offset, 0)*3)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*3+(Round(panel_offset, 0)*3)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*3+(Round(panel_offset, 0)*3)},${height*3+(Round(panel_offset, 0)*3)}" />
+			<!--Row 5-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*4+(Round(panel_offset, 0)*4)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*4+(Round(panel_offset, 0)*4)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*4+(Round(panel_offset, 0)*4)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*3+(Round(panel_offset, 0)*3)},${height*4+(Round(panel_offset, 0)*4)}" />
+			<!--Row 6-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*5+(Round(panel_offset, 0)*5)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*5+(Round(panel_offset, 0)*5)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*5+(Round(panel_offset, 0)*5)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*3+(Round(panel_offset, 0)*3)},${height*5+(Round(panel_offset, 0)*5)}" />
+			<!--Row 7-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*6+(Round(panel_offset, 0)*6)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*6+(Round(panel_offset, 0)*6)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*6+(Round(panel_offset, 0)*6)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*3+(Round(panel_offset, 0)*3)},${height*6+(Round(panel_offset, 0)*6)}" />
+			<!--Row 8-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*7+(Round(panel_offset, 0)*7)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*7+(Round(panel_offset, 0)*7)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*7+(Round(panel_offset, 0)*7)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*3+(Round(panel_offset, 0)*3)},${height*7+(Round(panel_offset, 0)*7)}" />
+			<!--Row 9-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*8+(Round(panel_offset, 0)*8)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*8+(Round(panel_offset, 0)*8)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*8+(Round(panel_offset, 0)*8)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*3+(Round(panel_offset, 0)*3)},${height*8+(Round(panel_offset, 0)*8)}" />
+			<!--Row 10-->
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*9+(Round(panel_offset, 0)*9)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${Round(panel_offset, 0)+width},${height*9+(Round(panel_offset, 0)*9)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*2+(Round(panel_offset, 0)*2)},${height*9+(Round(panel_offset, 0)*9)}" />
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="${width*3+(Round(panel_offset, 0)*3)},${height*9+(Round(panel_offset, 0)*9)}" />
+		</rect>
+	</rwsui_simple_buff_panel4x10>
+
+	<rwsui_detailed_buff_panel pos="0,0" width="46" height="46" panel_offset="2" buff_style="rwsui_detailed_buff_horizontal">
+		<rect name="BuffList" pos="${pos}" controller="ActiveBuffList">
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,0" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${Round(panel_offset, 0)+height}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*2+(Round(panel_offset, 0)*2)}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*3+(Round(panel_offset, 0)*3)}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*4+(Round(panel_offset, 0)*4)}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*5+(Round(panel_offset, 0)*5)}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*6+(Round(panel_offset, 0)*6)}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*7+(Round(panel_offset, 0)*7)}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*8+(Round(panel_offset, 0)*8)}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*9+(Round(panel_offset, 0)*9)}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*10+(Round(panel_offset, 0)*10)}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*11+(Round(panel_offset, 0)*11)}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*12+(Round(panel_offset, 0)*12)}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*13+(Round(panel_offset, 0)*13)}" />
+
+			<rwsui_buff_panel_buff style="rwsui_buff_panel, ${buff_style}" pos="0,${height*14+(Round(panel_offset, 0)*14)}" />
+		</rect>
+	</rwsui_detailed_buff_panel>
+
+	<rwsui_vanilla_buffpanel pos="0,0" width="168" height="46" icon_size="35,35" icon_pos="-72,15" text_pos="-42,-2" text_width="118" font_size="28" text_height="26">
+		<rect name="hud" pos="${pos}" side="left" controller="BuffPopoutList" pivot="BottomLeft" >
+			<rect width="${width}" height="${height}" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" style="press" sound="[recipe_click]" on_hover="true" >
+				<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="${height}" width="${width-5}" pivot="center" flip="Horizontally" color="[transparent]" />
+				<filledsprite depth="4" pos="-80,0" name="BarContent" color="0,0,0,0" size="${width-8},${height-6}" pivot="Left" type="filled"/>
+				<sprite depth="4" name="Icon" size="${icon_size}" pos="${icon_pos}" color="[transparent]"/>
+				<label depth="6" name="TextContent" pos="${text_pos}" font_size="${font_size}" color="[white]" justify="center" width="${text_width}" height="${text_height}" pivot="left"/>
+			</rect>
+		</rect>
+	</rwsui_vanilla_buffpanel>
+<!--_Buff_Panels END-->
+
+</append>
+
+</configs>
