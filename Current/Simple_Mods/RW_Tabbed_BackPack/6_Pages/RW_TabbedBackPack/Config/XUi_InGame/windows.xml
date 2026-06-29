@@ -89,4 +89,12 @@
 	</rect>
 </append>
 
+<!--Patch to make backpack tab buttons thinner when using Beyond Storage 3-->
+<conditional>
+	<if cond="mod_loaded('BeyondStorage3')">
+		<set xpath="//window[@name='windowBackpack']//rect/grid[@name='tabButtons' and @cell_width='35']/@cell_width">23</set>
+		<set xpath="//window[@name='windowBackpack']//rect/grid[@name='tabButtons']/rect/simplebutton[@name='tabButton' and @width='35']/@width">23</set>
+	</if>
+</conditional>
+
 </configs>
