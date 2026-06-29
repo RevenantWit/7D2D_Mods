@@ -5,7 +5,14 @@
 	<if cond="mod_loaded('RW_SimpleUI') == 'false'">
 
 		<!-- Unlocked number of slots in backpack by default -->
-		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+		<conditional>
+			<if cond="game_version() &gt;= version(1,3,0)">
+				<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/triggered_effect[@cvar='.carryCapacityBase'][@operation='set']/@value">45</set>
+			</if>
+			<else>
+				<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity'][@value='27']/@value">45</set>
+			</else>
+		</conditional>
 
 		<!-- Total number of slots in backpack -->
 		<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize'][@value='45']/@value">180</set>
